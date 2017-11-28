@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+
+/* 内容 */
+.empty{
+    height: 110px;
+}
+
+.content{
+    height: 1173px;
+    width: 100%;
+    min-width: 1280px;
+    background: url(../img/vip_rule/di-.png) no-repeat center;
+}
+
+.form{
+    width: 1200px;
+    margin: auto;
+    overflow:hidden;
+}
+
+.label{
+    margin-left: 60px;
+    width: 1140px;
+    height: 211px;
+    position: relative;
+}
+.inner{
+	 width: 1140px;
+    height: 211px;
+    position: absolute;
+    z-index: 99;
+}
+
+.leaf{
+    background: url(../img/common/leaf2.gif) no-repeat center;
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    z-index: 4;
+    top: 110px;
+    min-width: 1280px;
+    left:0;
+}
+
+.rule{
+    margin-top: 45px;
+    font-size: 0;
+}
+   
+.rule>div{
+    float:left;
+}
+
+.ruleContent{
+    position: relative;
+    width: 869px;
+    height: 645px;
+    background: url(../img/vip_rule/zhangc.png) no-repeat center;
+    margin-left: 75px;
+    margin-top: -60px;
+    /*outline: 1px solid gold;*/
+}
+
+.ruleContent-box{
+    position: absolute;
+    line-height: 25px;
+    font-size: 14px;
+    color: #f5b93b;
+    font-weight: 700;
+    width: 690px;
+    left: 9%;
+    /*margin: auto;*/
+    /*transform: translate(-50%);*/
+    top: 190px;
+    height: 355px;
+    /*outline: 1px solid red;*/
+    overflow: hidden;
+    /* overflow: auto; */
+}
+
+.choose{
+    width: 229px;
+    height: 586px;
+    background: url(../img/vip_rule/pillars.png) no-repeat left;
+    overflow: hidden;
+}
+
+.chooseA_1{
+    margin-left: 40px;
+}
+
+.chooseA_2{
+    margin-top: 25px;
+}
+
+.chooseA_3{
+    margin-top: 40px;
+    margin-left: 30px
+}
+
+.chooseA_4{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.changePage {
+    position: absolute;
+    top: 570px;
+    width: 110px;
+    height: 30px;
+    margin-left: 345px;
+}
+.changePage span {
+    cursor: pointer;
+    margin: auto;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #f5b93b;
+}
+pre{
+    margin-top: 10px;
+}
+pre:not(:first-of-type){
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

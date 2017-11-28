@@ -1,0 +1,234 @@
+
+.secondNav {
+  background-color: #3d2b15;
+  height: 1px;
+  border: none;
+  margin: 0 0 20px 0;
+}
+/*导航*/
+.breadCrumbs {
+  font-size: 18px;
+}
+
+  .breadCrumbs > div {
+    height: 100%;
+    margin: auto;
+    padding: 3% 0;
+  }
+
+    .breadCrumbs > div span {
+      margin-right: 1%;
+      font-family: 'Optima Regular';
+      color: #ffda84;
+    }
+
+.toIndex:hover,
+.toShow:hover,
+.gallery:hover {
+  color: #edc048;
+  cursor: pointer;
+}
+/*内容*/
+.sands-introduce-img {
+  height: 100%;
+}
+
+.sands-introduce-imgMask {
+  position: relative;
+  width: 682px;
+  margin: 80px auto 82px;
+  /*overflow: hidden;*/
+  height: 386px;
+}
+
+/*介绍文字*/
+.introduce-text-info {
+  width: 100%;
+}
+
+.
+{
+  width: 80%;
+}
+
+  .textP p {
+    width: 80%;
+    line-height: 28px;
+    margin: auto;
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'Futura Bk BT Book'
+  }
+    .textP p strong {
+      font-family: 'Optima Regular'
+    }
+.textImg {
+  width: 80%;
+  margin: 5% auto;
+}
+
+/*媒体查询*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+  /* 兼容iphone5 */
+  .sands-introduce-img {
+    width: 80%;
+  }
+
+  .sands-introduce-imgMask {
+    width: 100% !important;
+  }
+  /*介绍文字*/
+  .textP {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  /*.sands-introduce-img{
+        width: 80%;
+    }*/
+  .sands-introduce-imgMask {
+    width: 100%;
+    height: 360px
+  }
+
+    .sands-introduce-imgMask .mask {
+      display: block;
+    }
+  /*介绍文字*/
+  .textP {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .sands-introduce-imgMask {
+    width: 90%;
+  }
+
+  .textP p {
+    width: 100%;
+    font-family: 'Futura Bk BT Book'
+  }
+    .textP p strong {
+      font-family: 'Optima Regular'
+    }
+  .textImg {
+    width: 90%;
+    margin: 5% auto;
+  }
+  /*视频*/
+  .vedioBox {
+    margin-left: -365px;
+    width: 730px;
+    height: 440px;
+  }
+
+  .sands-introduce-imgMask .mask {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .sands-introduce-imgMask {
+    width: 80%;
+  }
+
+  .textP p {
+    width: 100%;
+    font-family: 'Futura Bk BT Book'
+  }
+    .textP p strong {
+      font-family: 'Optima Regular'
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+}
+
+@media only screen and (min-width: 1400px) {
+  .content {
+    margin: auto;
+    width: 74% !important;
+  }
+
+  .breadCrumbs {
+    width: 74% !important;
+  }
+}
+
+/*页面的相关链接*/
+.relatedLink {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+  .relatedLink h3 {
+    font-family: 'Optima Regular';
+    color: #edc048;
+    margin-bottom: 20px;
+  }
+
+  .relatedLink p {
+    margin: 10px 0px;
+    color: #ffda84;
+  }
+
+  .relatedLink a :hover {
+    text-decoration: underline;
+    color: #ffda84;
+  }
+
+video {
+  width: 100%;
+}
+
+
+/*修改*/
+@media screen and (max-width: 768px) {
+  .breadCrumbs {
+    display: none;
+  }
+
+  main aside {
+    margin-left: 0px;
+  }
+
+  .ands-introduce-img {
+    width: 100%;
+  }
+
+  .sands-introduce-imgMask {
+    position: relative;
+    width: 682px;
+    margin: 50px auto 30px;
+    overflow: initial;
+    height: auto;
+  }
+
+  .textP p {
+    width: 100%;
+    line-height: 28px;
+    margin: auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Futura Bk BT Book'
+  }
+    .textP p strong {
+      font-family: 'Optima Regular'
+    }
+
+  .relatedLink {
+    display: none;
+  }
+
+  .line {
+    margin-top: 60px;
+  }
+}

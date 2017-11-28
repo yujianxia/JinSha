@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <Copyright>Copyright © 2016 Stepon Technology CO.,LTD</Copyright>
+    <Description>Data entities for web application</Description>
+    <Product>Stepon Web Application</Product>
+    <Company>Stepon Technology</Company>
+    <AssemblyName>SteponTech.Data</AssemblyName>
+    <Name>SteponTech.Data</Name>
+    <PackageId>SteponTech.Data</PackageId>
+    <Authors>Stepon Technology</Authors>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.6\SteponTech.Data.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stepon.Data.PgSql" Version="1.0.3.10" />
+    <PackageReference Include="StepOn.Mvc" Version="1.0.1.11" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,108 @@
+body{padding: 0;margin: 0;height: 100%;}
+.content{
+	position: relative;
+    min-width: 1280px;
+    height: 1185px;
+    background-image: url("../img/strategy_animation/back.png");
+    background-position: center;
+    /*outline: 1px solid red;*/
+}
+.glass{
+	position: absolute;
+	top: -20px;
+	width: 100%;
+    left:0;
+}
+.content-box{
+    width: 1200px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+}
+.crumbs{
+    width: 100%;
+    height: 212px;
+    /*outline: 1px solid red;*/
+}
+.nav1{
+    width: 225px;
+    height: 600px;
+    /*outline: 1px solid red;*/
+    float: left;
+}
+.nav1 img{
+    /*outline: 1px solid red;*/
+}
+.nav1-1{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.nav1-2{
+    /*margin-left: 45px;*/
+    /*margin-top: 20px;*/
+}
+.nav1-3{
+    margin-left: 15px;
+}
+.nav1-4{
+    margin-left: 42px;
+    margin-top: 30px;
+}
+.nav1-5{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.content-conter{
+    /*margin-top: 50px;*/
+    width: 970px;
+    height: 800px;
+    /*outline: 1px solid red;*/
+    float: right;
+}
+.video-box{
+    width: 500px;
+    height: 318px;
+    background-color: white;
+    border-radius: 9px;
+    margin-left: 231px;
+    margin-top: 76px;
+    overflow: hidden;
+    border: 5px solid #c8994f;
+}
+.video-box:hover{
+    border: 5px solid #a9641a;
+}
+.conter-box{
+    width: 810px;
+    height: 235px;
+    /*outline: 1px solid red;*/
+    margin: auto;
+    margin-top: 20px;
+}
+.box{
+    width: 202px;
+    height: 235px;
+    background-image: url("../img/strategy_animation/tucen1.png");
+    /*outline: 1px solid red;*/
+    float: left;
+}
+.box:hover{
+    background-image: url("../img/strategy_animation/tucen2.png");
+}
+.box img{
+    width: 170px;
+    height: 153px;
+    /*border: 2px solid white;*/
+    border-radius: 70px;
+    margin: auto;
+    display: inline-block;
+    margin-left: 16px;
+    margin-top: 15px;
+}
+.box p{
+    /*outline: 1px solid red;*/
+    text-align: center;
+    color: #ebd9a8;
+    font-size: 18px;
+    margin-top: 5px;
+}

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Events</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/common/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/activities/activities.css" />
+    <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <!--[if gte IE 8]>
+          <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+      <![endif]-->
+
+    <style type="text/css">
+        /*标题样式共用*/
+        .intosandsTitle {
+            font-family: 'Optima Regular';
+            color: #edc048;
+            font-size: 29px;
+            margin-top: 80px;
+            font-weight: bold;
+        }
+        /*馆长致辞模块*/
+        .boss-speech {
+            width: 100%;
+            border-top: 1px solid #3d2b15 !important;
+            margin: 60px 0px 80px 0px;
+        }
+
+        .boss-introduce {
+            width: 100%;
+        }
+
+            .boss-introduce > p {
+                margin: 80px 0px;
+            }
+        /*馆长的帅照*/
+        .boss-img > img {
+            position: relative;
+        }
+
+        .boss-img div span {
+            margin-left: 10px;
+        }
+        /*馆长的致辞*/
+        .boss-speech-info {
+            font-family: 'Futura Bk BT Book';
+            color: #ffda84;
+        }
+
+            .boss-speech-info > div {
+                width: 95%;
+                margin-top: 15%;
+            }
+
+            .boss-speech-info h4 {
+                font-size: 18px;
+                font-family: 'Optima Regular';
+                color: #edc048;
+                margin-bottom: 3%;
+            }
+
+        .infoP {
+            /*限制行数*/
+            position: relative;
+            line-height: 28px;
+            max-height: 196px;
+            overflow: hidden;
+        }
+
+
+        .boss-speech-info p {
+            font-family: 'Futura Bk BT Book';
+            line-height: 28px;
+            width: 100%;
+            font-size: 16px;
+        }
+        /*展开更多*/
+        .boss-speech-more {
+            cursor: pointer;
+            width: 340px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'Futura Bk BT Book';
+            font-size: 16px;
+            color: #ffda84;
+            border: 1px solid #ffda84;
+            margin: 10% auto;
+        }
+
+            .boss-speech-more:hover {
+                color: #170801;
+                background-color: #ffda84;
+            }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+      <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--分享开始   JiaThis Button BEGIN -->
+    <script>
+        var jiathis_config = {
+            siteNum: 15,
+            sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+            summary: "",
+            boldNum: 6,
+            showClose: true,
+            shortUrl: false,
+            hideMore: false
+        }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+    <!--分享结束   JiaThis Button end -->
+    <!--这是hearder-->
+    <div class="container-fluid ">
+        <!--顶部开始-->
+        <div class="row nav-bg b3-border">
+            <div class="container padding_0  aa">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                            <img src="../img/index/banner/logo.png" alt="" class="img-responsive center-block" />
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                            <div class="top-list">
+                                <ul>
+                                    <li><a href="/JinSha/Index">English</a></li>
+                                    <li id="China" class="China">Chinese <img class="Uparr" src="../img/arrows/san.png" /></li>
+                                    <ol id="hideOl" class="hideOl">
+                                        <li>General</li>
+                                        <li class="stude">Academic</li>
+                                        <li class="children">Education</li>
+                                    </ol>
+                                </ul>
+                            </div>
+                            <div class="menu-btn">
+                                <img src="../common/headerImg/menu.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-top-list">
+                    <ul>
+                        <a href="">
+                            <li>Chinese</li>
+                        </a>
+                        <a href="">
+                            <li><a href="/JinSha/Index">English</a></li>
+                        </a>
+                        <a href="">
+                            <li>Academic</li>
+                        </a>
+                        <a href="">
+                            <li>Education</li>
+                        </a>
+                        @if (ViewBag.Head != null)
+                        {
+                            foreach (var item in ViewBag.Head)
+                            {
+                                if (item.ModelName == "Home")
+                                {
+                                    <a href="/JinSha/Index">
+                                        <li>HOME</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "ABOUT")
+                                {
+                                    <a href="/About/Intosands">
+                                        <li>ABOUT</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "VISIT")
+                                {
+                                    <a href="/VisitGuide/VisitGuide">
+                                        <li>VISIT</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "GUIDE")
+                                {
+                                    <a href="/Exhibition/Index">
+                                        <li>GUIDE</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "NEWS")
+                                {
+                                    <a href="/NEWS/Index">
+                                        <li>NEWS</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "CREATIVITY")
+                                {
+                                    <a href="/Creation/Index">
+                                        <li>ARTS</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "COLLECTIONS")
+                                {
+                                    <a href="/Collection/Index">
+                                        <li>COLLECTIONS</li>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="active" href="/Culture/Index">
+                                        <li>EVENTS</li>
+                                    </a>
+
+                                }
+                            }
+
+                        }
+                    </ul>
+                </div>
+                <div class="row mAp0">
+                    <div class="nav-list">
+                        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                            <ul>
+                                @if (ViewBag.Head != null)
+                                {
+                                    foreach (var item in ViewBag.Head)
+                                    {
+                                        if (item.ModelName == "HOME")
+                                        {
+                                            <a href="/JinSha/Index">
+                                                <li>HOME</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "ABOUT")
+                                        {
+                                            <a href="/About/Intosands">
+                                                <li>ABOUT</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "VISIT")
+                                        {
+                                            <a href="/VisitGuide/VisitGuide">
+                                                <li>VISIT</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "GUIDE")
+                                        {
+                                            <a href="/Exhibition/Index">
+                                                <li>GUIDE</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "NEWS")
+                                        {
+                                            <a href="/NEWS/Index">
+                                                <li>NEWS</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "CREATIVITY")
+                                        {
+                                            <a href="/Creation/Index">
+                                                <li>ARTS</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "COLLECTIONS")
+                                        {
+                                            <a href="/Collection/Index">
+                                                <li>COLLECTIONS</li>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a class="active" href="/Culture/Index">
+                                                <li>EVENTS</li>
+                                            </a>
+
+                                        }
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <!--Banner图-->
+        <div class="banner ">
+            @if (ViewBag.Banner != null)
+            {
+                var src = "/upload/banner/" + ViewBag.Banner.FileName + "";
+                <img data-original="@src" alt="" class="img-responsive center-block lazy">
+            }
+        </div>
+        <!--Banner图下面的内容-->
+        <div class="content container">
+            <div class="row">
+                <div class="cont_nav">
+                    @if (ViewBag.Colunms.Count > 0)
+                    {
+                        foreach (var col in ViewBag.Colunms)
+                        {
+                            <a href="#@col.Id" class="linkRouter">
+                                <span>@col.Name</span>
+                            </a>
+                        }
+
+                    }
+                </div>
+                <!--金沙太阳节-->
+                @foreach (var col in ViewBag.Colunms)
+                {
+                    if (col.Name == "Jinsha Sun Festival")
+                    {
+                        @if (ViewBag.SunFes.Count > 0)
+                        {
+                            var src0 = "/upload/Information/" + ViewBag.SunFes[0].Id + "/" + ViewBag.SunFes[0].Photo;
+                            <!--金沙太阳节-->
+                            <div id="@col.Id" class="content-1">
+                                <div class="content-1-nav clearfix">
+                                    <span>Jinsha Sun Festival</span>
+                                </div>
+                                @*<p class="more hidden-md hidden-sm hidden-xs"> What’s on </p>*@
+                                <div class="content-1-box clearfix">
+                                    <div class="content-1-pic col-md-10 col-lg-7">
+                                        <img class="lazy" data-original="@src0">
+                                    </div>
+                                    <div class="content-1-text col-lg-5 col-md-10">
+                                        <h6>@ViewBag.SunFes[0].Title</h6>
+                                        <div>
+                                            <p id="spantime" tag="@ViewBag.SunFes[0].InformationTime">Dates：</p>
+                                            <p>Venue：@ViewBag.SunFes[0].Address</p>
+                                            <div class="cut"></div>
+                                        </div>
+                                        <p class="content contentP">@Html.Raw(ViewBag.SunFes[0].Content)</p>
+                                        <a href="/culture/SunFestival?id=@ViewBag.SunFes[0].Id">Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-2 clearfix">
+                                @if (ViewBag.AboutSunFes != null)
+                                {
+                                    <div class="content-2-left col-lg-6 col-md-10">
+                                        <p class="title"> About Jinsha Sun Festival </p>
+                                        <p class="content">
+                                            @Html.Raw(ViewBag.AboutSunFes.Describe)
+                                        </p>
+                                    </div>
+                                }
+                                <div class="content-2-right col-lg-6 col-md-10">
+                                    <div>
+                                        <form action="" method="post" class="form-control select">
+                                            <div id="divselect">
+                                                <cite onchange="window.location=this.href;">Years</cite>
+                                                <ul>
+                                                    @for (var i = 1; i < ViewBag.SunYear.Count; i++)
+                                                    {
+                                                        
+                                                            <li><a href="/Culture/SunFestival?id=@ViewBag.SunYear[i].Id" selectid="@i">@ViewBag.SunYear[i].Year</a></li>
+                                                        
+                                                    }
+                                                </ul>
+                                            </div>
+                                            <input name="" type="hidden" value="" id="inputselect" />
+                                        </form>
+                                        @*<p> Previous events </p>*@
+                                    </div>
+                                    <div class="slideBox2">
+                                        <div class="hd">
+                                            <ul>
+                                                @if (ViewBag.AboutSunFesPic.Count > 0)
+                                                {
+
+                                                    for (var i = 0; i < ViewBag.AboutSunFesPic.Count; i++)
+                                                    {
+                                                        <li></li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </div>
+                                        <div class="bd">
+                                            <ul>
+                                                @if (ViewBag.AboutSunFesPic.Count > 0)
+                                                {
+                                                    for (var i = 0; i < ViewBag.AboutSunFesPic.Count; i++)
+                                                    {
+                                                        var src2 = "/upload/Information/" + ViewBag.AboutSunFes.Id + "/" + ViewBag.AboutSunFesPic[i];
+                                                        <li><img data-original="@src2" class="lazy" /></li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </div>
+                                        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+                                        <a class="prev" href="javascript:void(0)"></a>
+                                        <a class="next" href="javascript:void(0)"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    @*if (col.Name == "Jinsha Rostrum")
+    {
+          <!--金沙讲坛-->
+        <div id="@col.Id" class="content-3">
+            <div class="content-3-top clearfix">
+                <span>Jinsha Rostrum</span>
+                <a href="/culture/LectureNotice">Learn more ></a>
+            </div>
+            <div class="content-3-middle clearfix">
+                <span> Upcoming lectures </span>
+                <span class="with"> About Jinsha Rostrum </span>
+            </div>
+            <div class="content-3-down clearfix">
+                <div class="content-3-left col-lg-6 col-md-6 ">
+                    @if (ViewBag.LecturePre.Count > 0)
+                    {
+                        for (var i = 0; i < ViewBag.LecturePre.Count; i++)
+                        {
+                            var src = "/upload/Information/" + ViewBag.LecturePre[i].Id + "/" + ViewBag.LecturePre[i].Photo;
+                            <div class="content-3-box">
+                                <a href="/culture/LectureDetail?id=@ViewBag.LecturePre[i].Id">
+                                    <img data-original="@src" class="lazy">
+                                    <div class="content-3-box-text">
+                                        <p>Time：@ViewBag.LecturePre[i].InformationTime</p>
+                                        <p>Topic：@ViewBag.LecturePre[i].ActivitySite</p>
+                                        <p>By：@ViewBag.LecturePre[i].Speaker</p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    }
+                </div>
+                <!--关于金沙讲坛-->
+                @if (ViewBag.LectureAbout != null)
+                {
+                    var src = "/upload/Information/" + ViewBag.LectureAbout.Id + "/" + ViewBag.LectureAbout.Photo;
+                    <a href="/culture/LectureIntro"><img data-original="@src" class="lazy col-lg-6 col-md-6 col-sm-10 col-xs-10 down_pic"></a>
+                }
+            </div>
+        </div>
+
+    }*@
+                if (col.Name == "International Programs")
+                {
+
+                         <!--国际文化交流活动-->
+                        <div id="@col.Id" class="content-4 clearfix">
+                            <p>International Programs</p>
+                            <div id="picSlideWrap" class="clearfix">
+                                <br>
+                                <div class="imgnav" id="imgnav">
+                                    <div id="img">
+                                        @{
+                                            if (ViewBag.InterNationList != null)
+                                            {
+                                                foreach (var item in ViewBag.InterNationList)
+                                                {
+                                                    var imgsrc = "/upload/Information/" + item.Id + "/" + item.Photo + "";
+                                                    <img onclick="location.href = '/Culture/IntroType?id=@item.Id'" data-original="@imgsrc" style="display: none;" class="lazy load_lazy">
+                                                }
+                                            }
+                                            if (ViewBag.InterNation != null)
+                                            {
+                                                foreach (var item in ViewBag.InterNation)
+                                                {
+                                                    var imgsrc = "/upload/Information/" + item.Id + "/" + item.Photo + "";
+                                                    <img onclick="location.href = '/Culture/IntroType?id=@item.Id'" data-original="@imgsrc" style="display: none;" class="lazy load_lazy">
+                                                }
+                                            }
+                                        }
+                                    </div>
+                                    <div id="cbtn">
+                                        <i class="picSildeLeft">
+                                            @*<img src="../../img/creation/icon_left.png" class="pic_left">*@
+                                            <img data-original="../../img/creation/icon_left_pre.png" alt="" class="hover_left lazy">
+                                        </i>
+                                        <i class="picSildeRight">
+                                            @*<img src="../../img/creation/icon_right_nor.png" class="pic_right">*@
+                                            <img data-original="../../img/creation/icon_right_pre.png" alt="" class="hover_right lazy">
+                                        </i>
+                                        <div id="cSlideUl" class="">
+                                            <ul>
+                                                @{
+                                                    if (ViewBag.InterNationList != null)
+                                                    {
+                                                        foreach (var item in ViewBag.InterNationList)
+                                                        {
+                                                            <li class="load_li"><span>@item.Title</span></li>
+                                                        }
+                                                    }
+                                                    if (ViewBag.InterNation != null)
+                                                    {
+                                                        foreach (var item in ViewBag.InterNation)
+                                                        {
+                                                            <li class="load_li"><span>@item.Title</span></li>
+                                                        }
+                                                    }
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end滚动看图-->
+                        </div>
+                    }
+                    if (col.Name == "Cultural Events")
+                    {
+                        <input id="xlwhhd" hidden="hidden" value="@col.Id"/>
+                          <!--系列文化活动-->
+                        <div id="@col.Id" class="content-5">
+                            <div class="content-5-nav clearfix">
+                                <p>Cultural Events</p>
+                                <div class="content-5-a hidden-xs">
+                                    <span class="on">10<sup>th</sup> Anniversary Jinsha</span>
+                                    <span>International Museum Day</span>
+                                    <span>National Cultural Heritage Day</span>
+                                </div>
+                            </div>
+                            <div class="content-5-box clearfix">
+                                <!--金沙十年-->
+                                <div class="activity_news subPages row">
+                                    <div id="showroom" class="showroom">
+                                        @*@if (ViewBag.Ten.Count > 0)
+    {
+        for (var i = 0; i < ViewBag.Ten.Count; i++)
+        {
+            var src = "/upload/Information/" + ViewBag.Ten[i].Id + "/" + ViewBag.Ten[i].Photo;
+            var time = ViewBag.Ten[i].CreationDate.ToString("yyyy-MM-dd");
+            <div class="showroom-one row">
+                <a href="/Culture/ActivityDetail?id=@ViewBag.Ten[i].Id">
+                    <div class="showroom-img col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <img data-original="@src" class="lazy" />
+                    </div>
+                </a>
+                <a href="/Culture/ActivityDetail?id=@ViewBag.Ten[i].Id">
+                    <div class="showroom-info col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                        <h3>@ViewBag.Ten[i].Title</h3>
+                        <p class="showroom-time">Updated time: @time</p>
+                        <p class="showroom-p">
+                            @ViewBag.Ten[i].Intro
+                        </p>
+                        <a href="/Culture/ActivityDetail?id=@ViewBag.Ten[i].Id">
+                            <div class="showroom-btn">Learn more</div>
+                        </a>
+                    </div>
+                </a>
+            </div>
+        }
+    }*@
+                                    </div>
+                                    <div class="pageToolbar" id="ten"></div>
+                                </div>
+
+
+
+                                <!--国际博物馆日-->
+                                <div class="activity_news subPages row country">
+                                    <div id="showroom2" class="showroom">
+                                        @*@if (ViewBag.Muse.Count > 0)
+    {
+        for (var i = 0; i < ViewBag.Muse.Count; i++)
+        {
+            var src = "/upload/Information/" + ViewBag.Muse[i].Id + "/" + ViewBag.Muse[i].Photo;
+            var time = ViewBag.Muse[i].CreationDate.ToString("yyyy-MM-dd");
+            <div class="showroom-one row">
+                <!--特展厅图片1-->
+                <a href="/Culture/ActivityDetail?id=@ViewBag.Muse[i].Id">
+                    <div class="showroom-img col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <img data-original="@src" class="lazy" />
+                    </div>
+                </a>
+                <!--特展厅文字1-->
+                <a href="/Culture/ActivityDetail?id=@ViewBag.Muse[i].Id">
+                    <div class="showroom-info col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                        <h3>@ViewBag.Muse[i].Title</h3>
+                        <p class="showroom-time">Updated time: @time</p>
+                        <p class="showroom-p">
+                            @ViewBag.Muse[i].Intro
+                        </p>
+                        <a href="/Culture/ActivityDetail?id=@ViewBag.Muse[i].Id">
+                            <div class="showroom-btn">Learn more</div>
+                        </a>
+                    </div>
+                </a>
+            </div>
+        }
+    }*@
+
+
+                                    </div>
+                                    <div class="pageToolbar" id="mus"></div>
+                                </div>
+                                <!--文化遗产日-->
+                                <div class="activity_news subPages row yichan">
+                                    <div id="showroom3" class="showroom">
+
+
+                                        @*@if (ViewBag.Legacy.Count > 0)
+    {
+        for (var i = 0; i < ViewBag.Legacy.Count; i++)
+        {
+            var src = "/upload/Information/" + ViewBag.Legacy[i].Id + "/" + ViewBag.Legacy[i].Photo;
+            var time = ViewBag.Muse[i].CreationDate.ToString("yyyy-MM-dd");
+            <div class="showroom-one row">
+                <!--特展厅图片1-->
+                <a href="/Culture/ActivityDetail?id=@ViewBag.Legacy[i].Id">
+                    <div class="showroom-img col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <img data-original="@src" class="lazy" />
+                    </div>
+                </a>
+                <!--特展厅文字1-->
+                <a href="/Culture/ActivityDetail?id=@ViewBag.Legacy[i].Id">
+                    <div class="showroom-info col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                        <h3>@ViewBag.Legacy[i].Title</h3>
+                        <p class="showroom-time">Updated time: @time</p>
+                        <p class="showroom-p">
+                            @ViewBag.Legacy[i].Intro
+                        </p>
+                        <a href="/Culture/ActivityDetail?id=@ViewBag.Legacy[i].Id">
+                            <div class="showroom-btn">Learn more</div>
+                        </a>
+                    </div>
+                </a>
+            </div>
+        }
+    }*@
+                                    </div>
+                                    <div class="pageToolbar" id="legacy"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    }
+                }
+
+
+
+
+
+                <!--新增栏目-->
+                @if (ViewBag.NewCol != null)
+            {
+                for (var i = 0; i < ViewBag.NewCol.Count; i++)
+                {
+                    var src = "/upload/Information/" + ViewBag.NewCol[i].Id + "/" + ViewBag.NewCol[i].Photo;
+                        <div id="speech" class="boss-speech row">
+                            <div class="boss-introduce">
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 intosandsTitle">@ViewBag.NewCol[i].ColumName</p>
+                                <div class="boss-imginfo col-lg-12 col-md-12 col-sm-12 col-xs-12 img-responsive">
+                                    <!--图片-->
+                                    <div class="boss-img  col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                                        <img data-original="@src" alt="" class="img-responsive lazy">
+                                    </div>
+                                    <!--文字内容-->
+                                    <div class="boss-speech-info clearfix col-lg-7 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
+                                        <div class="center-block " id="bossInfoBox">
+                                            <h4>@ViewBag.NewCol[i].Title</h4>
+                                            <p class="infoP">
+                                                @ViewBag.NewCol[i].Intro
+                                            </p>
+                                            <a href="/Jinsha/NewDetail?id=@ViewBag.NewCol[i].Id "><div class="boss-speech-more">Learn more</div></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+
+
+
+            </div>
+        </div>
+    </main>
+    <hr id="hd_bottom_1" />
+    @if (ViewBag.Footer != null)
+    {
+        <script src="/js/activities/slide2.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/paging.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/activities/activities.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="/common/common.js"></script>
+        <footer class="container footer ">
+            <div class="row">
+                <!--联系我们-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                    <p class="callmeP1">Contact Us</p>
+                    <p class="callmeP2">Phone:<span> @ViewBag.Footer.PhoneNumber</span></p>
+                    <p class="callmeP3">Address:<span> @ViewBag.Footer.Address</span></p>
+                    <div class="row twopic">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                            <img class="img-responsive lazy" data-original="@ViewBag.Footer.Wechat" />
+                            <p><img data-original="../common/footerImg/bottom_wechat.png" class="lazy"/><span>Follow our WeChat</span></p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <img class="img-responsive lazy" data-original="@ViewBag.Footer.Watermark" />
+                            <p><img data-original="../common/footerImg/weibo-icon.png" class="lazy"/><span class="color">Follow our WeiBo</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--友情链接-->
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                    <p class="linkP1">Links of Interest</p>
+                    <!--博物馆-->
+                    <div class="footer-museum divselect">
+                        <cite onchange="window.location=this.href;">Museums</cite>
+                        <ul id="OtherList" tag="@ViewBag.Footer.MuseumLink"></ul>
+                    </div>
+                    <!--政府-->
+                    <div class="footer-government divselect">
+                        <cite onchange="window.location=this.href;">Others</cite>
+                        <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                        <script>
+                            $(function () {
+                                var data = JSON.parse($('#GovernmentalList').attr('tag'));
+                                var cc1 = "";
+                                $.each(data, function (i, item) {
+                                    cc1 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                //console.log(cc1);
+                                $('#GovernmentalList').append(cc1);
+
+                                var data2 = JSON.parse($('#OtherList').attr('tag'));
+                                var cc2 = "";
+                                $.each(data2, function (i, item) {
+                                    cc2 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                //console.log(cc2);
+                                $('#OtherList').append(cc2);
+
+                            });
+                        </script>
+                    </div>
+
+                    <p class="help">Plan Your Visit</p>
+                    <div class="link-btm-info">
+                        @if (ViewBag.JumpLink != null)
+                        {
+                            List<SteponTech.Data.BaseModels.ColunmsView> visitColunms = ViewBag.JumpLink;
+                            var openingHours = visitColunms.FirstOrDefault(e => e.Name == "Opening Hours");
+                            var gettingHere = visitColunms.FirstOrDefault(e => e.Name == "Getting Here");
+                            var services = visitColunms.FirstOrDefault(e => e.Name == "Services");
+                            var visitTips = visitColunms.FirstOrDefault(e => e.Name == "Visitor Regulations");
+                            <ul>
+                                @if (openingHours != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@openingHours.Id">
+                                        <li class="opening">Opening Hours</li>
+                                    </a>
+                                }
+                                @if (gettingHere != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@gettingHere.Id">
+                                        <li> Getting Here</li>
+                                    </a>
+                                }
+                            </ul>
+                            <ul>
+                                @if (services != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@services.Id">
+                                        <li class="Services">Services</li>
+                                    </a>
+                                }
+                                @if (visitTips != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@visitTips.Id">
+                                        <li> Visitor Regulations</li>
+                                    </a>
+                                }
+                            </ul>
+
+                        }
+                    </div>
+                </div>
+                <!--版权-->
+                <div class="col-xs-12  copyright padding_0">
+                    <div>
+                        <img class="img-responsive lazy" data-original="../common/footerImg/bottom_logo.png" />
+                    </div>
+                    <p class="copyrightP1">Jinsha Site Museum All Rights Reserved</p>
+                    <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                </div>
+            </div>
+        </footer>
+    }
+    <!--返回顶部-->
+    <div class="toTop" style="display: none;">
+        <img class="bgarr lazy" data-original="/img/arrows/return_nor.png" />
+        <img class="hoverImg lazy" data-original="/img/arrows/return_pre.png">
+    </div>
+</body>
+<script src="~/js/jquery.lazyload.min.js"></script>
+<script>
+                            $(function () {
+                                var span = $("#spantime").attr("tag");
+                                var time = getCurrentDate(new Date(span));
+                                $("#spantime").append(time);
+
+                            });
+
+
+
+                            function getCurrentDate(datetime) {
+                                var date = datetime;
+                                var monthArray = new Array
+                                    ("January", "February", "March", "April", "May", "June", "July", "August",
+                                    "September", "October", "November", "December");
+                                var weekArray = new Array("Sunday", "Monday", "Tuesday",
+                                    "Wednesday", "Thursday", "Friday", "Saturday");
+                                month = date.getMonth();
+                                day = date.getDate();
+                                if (day.toString().length == 1) {
+                                    day = "0" + day.toString();
+                                }
+                                return monthArray[month] + " " + day + ", " + date.getFullYear();
+                            }
+                            $(function () {
+                                $("img.lazy").lazyload({
+                                    effect: "fadeIn"
+                                });
+                                $(".load_li").click(function () {
+                                    var index = $(this).index()
+                                    $(".load_lazy").eq(index).lazyload({
+                                        effect: "fadeIn"
+                                    })
+                                })
+                            });
+</script>
+</html>

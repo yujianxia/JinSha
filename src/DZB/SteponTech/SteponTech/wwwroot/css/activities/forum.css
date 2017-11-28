@@ -1,0 +1,278 @@
+@media screen and (max-width: 766px) {
+	.activity_news ul li .news_pic,
+	.activity_news ul li .news_inner {
+		float: none;
+		margin: 0 auto;
+	}
+	.forum .title_select div.box {
+		width: 192px;
+	}
+	.forum .title_select div.box a {
+		margin: 0;
+	}
+	.forum_content ul li {
+		float: none;
+		margin: 60px auto 0;
+	}
+}
+
+body {
+	background: #170801;
+	color: #d8b866;
+}
+
+#hd_bottom {
+	background-color: #dab766;
+	height: 4px;
+	border: none;
+	margin: 0px;
+}
+
+.row {
+	width: 100%;
+}
+
+.banner {
+    width: 100%;
+    max-height: 570px;
+    overflow: hidden;
+}
+
+p {
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+@media screen and (min-width: 1400px) {
+	.container {
+		width: 74%;
+	}
+}
+
+#hd_bottom_1 {
+	background-color: #dab766;
+	height: 1px;
+	border: none;
+	margin: 0px;
+}
+
+.b-border {
+	border: 0;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+	text-decoration: none;
+	outline: none;
+	color: #d8b866;
+}
+
+.linkRoute {
+	height: 100px;
+	line-height: 100px;
+	border-bottom: 1px solid #3d2b15;
+	color: #feefc6;
+	margin-bottom: 55px;
+}
+
+.linkRoute a {
+	color: #ffe9b7;
+	margin: 0 15px;
+	font-size: 14px;
+}
+
+.linkRoute a:hover {
+	color: #dab766;
+}
+
+.linkRoute .firstLink {
+	margin-left: 0;
+}
+
+.forum .title_select {
+	height: 54px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #3d2b15;
+}
+
+.forum .title_select .box {
+	width: 260px;
+	margin: 0 auto;
+}
+
+.forum .title_select a {
+	display: block;
+	float: left;
+	padding: 0 16px;
+	margin-right: 60px;
+	height: 54px;
+	color: #ffe9b7;
+	line-height: 54px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.forum .title_select .active {
+	border-bottom: 2px solid #dab765;
+	color: #c8a65c;
+}
+
+.forum .title_select .trailer {
+	float: left;
+}
+
+.forum .title_select .review {
+	float: right;
+	margin-right: 0;
+}
+
+.forum .forum_2 {
+	display: none;
+}
+
+.forum .forum_content ul li {
+	margin-top: 60px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid #3d2b15;
+}
+
+.forum .forum_content ul li .new_pic {
+	position: relative;
+	padding: 15px;
+}
+
+.forum .forum_content ul li .new_pic img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.forum .forum_content ul li .new_pic .time {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	width: 103px;
+	line-height: 34px;
+	text-align: center;
+	height: 34px;
+	background: #dab765;
+	color: #000000;
+}
+
+.forum .forum_content ul li .new_pic .news_title p {
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.forum .activity_news {
+	padding-top: 20px;
+	display: none;
+}
+
+.forum .activity_news li {
+	overflow: hidden;
+	padding-top: 40px;
+	padding-bottom: 35px;
+	border-bottom: 1px solid #3d2b15;
+	position: relative;
+}
+
+.forum .activity_news li a:hover {
+	color: #feefc6 !important;
+}
+
+.forum .activity_news .news_pic img {
+	width: 100%;
+}
+
+.forum .activity_news .news_inner {
+	padding-right: 0;
+	position: relative;
+}
+
+.forum .activity_news .news_inner h3 {
+	height: 50px;
+	line-height: 30px;
+	font-size: 18px;
+}
+
+.forum .activity_news .news_inner p {
+	line-height: 24px;
+}
+
+.forum .activity_news .more {
+	position: absolute;
+	right: 0;
+	bottom: 35px;
+}
+
+.forum .activity_news .more:hover {
+	color: #feefc6;
+}
+
+
+/*# sourceMappingURL=forum.css.map */
+/*页面的相关链接*/
+.relatedLink{
+	width: 100%;
+	min-height: 100px;
+	height: auto;
+	margin-bottom: 80px;
+	margin-top: 60px;
+}
+.relatedLink h3{
+    color: #edc048;
+    margin-bottom: 20px;
+}
+.relatedLink p{
+	margin: 10px 0px;
+}
+.relatedLink a :hover{
+	text-decoration:underline
+}
+a:hover{
+  color:#ffebbf;
+}
+@media screen and (max-width: 1400px) {
+    .new_pic img {
+        height: 280px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .new_pic img {
+        height: 330px;
+    }
+}
+
+
+/*修改*/
+@media only screen and (max-width:768px) {
+    .linkRoute {
+    display:none;
+    }
+    .forum .title_select {
+        height: 54px;
+        margin: 10px auto 20px;
+        border-bottom: 1px solid #3d2b15;
+    }
+    .forum .forum_content ul li .new_pic {
+        position: relative;
+       padding: 0px;
+    }
+
+}

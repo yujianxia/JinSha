@@ -1,0 +1,122 @@
+body{padding: 0;margin: 0;height: 100%;}
+.content{
+    min-width: 1280px;
+    height: 1934px;
+    background-image: url("../img/treasureChest_manual_details/back4.png");
+    background-position: center;
+    overflow: hidden
+}
+.content-box{
+    width: 1200px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+}
+.crumbs{
+    width: 100%;
+    height: 212px;
+    /*outline: 1px solid red;*/
+}
+.crumbs img{
+    cursor:pointer;
+    /*outline: 1px solid red;*/
+    margin-left: -5px;
+}
+#content-conter1{
+    width: 1200px;
+    /*outline: 1px solid red;*/
+    height: 1452px;
+    background-image: url("../img/treasureChest_manual_details/book.png");
+    margin-top: 100px;
+    cursor:pointer;
+    /*display: none;*/
+}
+.book-box{
+    display: inline-block;
+    width: 520px;
+    height: 700px;
+    /*outline: 1px solid red;*/
+    /*margin: auto;*/
+    margin-left: 405px;
+    margin-top: 370px;
+}
+.book-box h1{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    color: #efd734;
+}
+.book-box h1:hover{
+    color: #edbe32;
+}
+.book-box img {
+    width: 350px;
+    height: 450px;
+    /*outline: 1px solid red;*/
+    margin-top: 30px;
+    margin-left: 75px;
+    border: 10px solid #f2e5bb;
+    border-radius: 20px;
+}
+#content-conter2{
+    width: 1200px;
+    /*outline: 1px solid red;*/
+    height: 1452px;
+    display: none;
+}
+.book-box2{
+    width: 1594px;
+    /*outline: 1px solid red;*/
+    height: 1110px;
+    /*min-width: 1280px;*/
+    background-image: url("../img/treasureChest_manual_details/book4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 200px;
+    position: relative;
+    left: -197px;
+}
+.book-left{
+    display: inline-block;
+    width: 550px;
+    height: 600px;
+    /*outline: 1px solid red;*/
+    float: left;
+    margin-left: 197px;
+    margin-top: 300px;
+    background-image: url("../img/treasureChest_manual_details/book2-left.png");
+    background-repeat: no-repeat;
+}
+.book-right{
+    display: inline-block;
+    width: 550px;
+    height: 580px;
+    /*outline: 1px solid red;*/
+    float: right;
+    margin-right: 197px;
+    margin-top: 320px;
+    background-image: url("../img/treasureChest_manual_details/book2-right.png");
+    background-repeat: no-repeat;
+}
+.page{
+    width: 307px;
+    height: 190px;
+    /*outline: 1px solid red;*/
+    float: right;
+    margin-top: 20px;
+    margin-right: 197px;
+    background-image: url("../img/treasureChest_manual_details/zhenzhu.png");
+}
+.page img{
+    cursor:pointer;
+}
+#upPage{
+    position: relative;
+    left: 10px;
+    top: 40px;
+}
+#nextPage{
+    position: relative;
+    left: 120px;
+    top: 50px;
+}

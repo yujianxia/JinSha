@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <Copyright>Copyright © 2016 Stepon Technology CO.,LTD</Copyright>
+    <Description>Reuseable components for web application</Description>
+    <Product>Stepon Web Application</Product>
+    <Company>Stepon Technology</Company>
+    <AssemblyName>SteponTech.Utils</AssemblyName>
+    <Name>SteponTech.Utils</Name>
+    <PackageId>SteponTech.Utils</PackageId>
+    <Authors>Stepon Technology</Authors>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="RestSharp.NetCore" Version="105.2.4-rc4-24214-01" />
+    <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
+    <PackageReference Include="ZKWeb.System.Drawing" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SteponTech.Data\SteponTech.Data.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,971 @@
+main {
+  margin-bottom: 120px;
+  margin-top: 88px;
+}
+article {
+  padding: 0px !important;
+}
+cont-left-show {
+    position: relative;
+}
+ cont-left-show ul {
+        margin-left: 20%;
+    }
+a:hover,
+a:focus,
+a:visited {
+  color: #dab766;
+}
+.meg-input {
+  -webkit-appearance: none;
+  outline: none;
+  border-style: none;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.hide {
+  display: none;
+}
+.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.col-sm-2{
+  width:20%;
+}
+/*左边的选项*/
+.cont-left li {
+  width: 100px;
+  border-left: 3px solid #170801;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #ffebbf;
+  padding: 4px 0 4px 20px;
+}
+.cont-left li:hover {
+  border-left: 3px solid #dab766;
+  color: #dab766;
+}
+.clicked{
+  border-left: 3px solid #dab766 !important;
+  color: #dab766 !important;
+}
+/*会员章程*/
+.content {
+  height: 1000px;
+  overflow-y: scroll;
+  padding: 0 86px 48px 100px;
+  border: 1px solid #3d2c15;
+}
+.content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #170a01;
+}
+
+.content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #170a01;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #3d2c15;
+}
+/* 滑动条ie */
+.content{
+  scrollbar-face-color:#3d2c15; /*滚动条3D表面（ThreedFace）的颜色*/ 
+scrollbar-highlight-color:#3d2c15; /*滚动条3D界面的亮边（ThreedHighlight）颜色*/ 
+scrollbar-shadow-color:#3d2c15; /*滚动条3D界面的暗边（ThreedShadow）颜色*/ 
+scrollbar-3dlight-color:#3d2c15; /*滚动条亮边框颜色*/ 
+scrollbar-arrow-color:#dab766; /*滚动条方向箭头的颜色 */ 
+scrollbar-track-color:#170a01; /*滚动条的拖动区域(TrackBar)颜色*/
+scrollbar-darkshadow-color:#170a01; /*滚动条暗边框（ThreedDarkShadow）颜色*/ }
+}
+/* firefoxn 滑动条 */
+/* AGENT_SHEET */
+@-moz-document url-prefix(http://),
+        url-prefix(https://),
+        url("chrome://browser/content/bookmarks/bookmarksPanel.xul"),
+        url("chrome://browser/content/browser.xul"),
+        url("chrome://browser/content/history/history-panel.xul") {
+        /* THIS WHOLE CODE SECTION AUTOHIDES ONLY THE VERTICAL SCROLLBARS OF WEBPAGES */
+        scrollbar *
+        scrollbar scrollbarbutton { display: none ! important; }
+        scrollbar scrollbarbutton { visibility: collapse !important }
+
+
+        scrollbar[orient="vertical"]{
+        background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAACCAYAAABsfz2XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAhSURBVHjaYvj//z8DMvb39/+PLoaMmRhIBAAAAAD//wMAB6Qizv4lfkgAAAAASUVORK5CYII=") ! important;
+
+        -moz-appearance: none !important;
+        background-color: transparent !important;
+        opacity: .75 !important;
+        min-width: 9px !important;
+        max-width: 9px !important;
+        }
+
+        /*CAN CHANGE SCROLLBAR WIDTH FROM Default 17px (MUST CHANGE BOTH min-width and max-width to exact same px */
+        /*Default vertical scrollbar width is 17px */
+        scrollbar[orient="vertical"]:hover
+        {
+        opacity: 1 !important;
+        -moz-appearance: none !important;
+        background-color: red !important;
+        min-width: 9px !important;
+        max-width: 9px !important;
+        }
+        /************************************************************************/
+
+
+
+        /* button you drag down the strip */
+
+          scrollbar thumb[orient="vertical"]
+        {
+        background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAnSURBVHjaYmQofPWfgQjwv0+UkYGBgYGJgUQwqmGkaAAAAAD//wMA+/4EFULQY9sAAAAASUVORK5CYII=") ! important;
+
+
+        -moz-appearance: none !important;
+        border-radius: 4px !important;
+        min-width: 8px !important;
+        max-width: 8px !important;
+        border: 1px !important;
+        }
+
+        /* HOVER:button you drag down the strip */
+
+          scrollbar thumb[orient="vertical"]:hover
+
+        {background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAnSURBVHjaYmQofPWfgQjwv0+UkYGBgYGJgUQwqmGkaAAAAAD//wMA+/4EFULQY9sAAAAASUVORK5CYII=") ! important;
+
+        border-radius: 4px !important;
+        border: 0px !important;
+        }
+
+        /***************************************************************************/
+
+
+
+        /*////////////////////////////////////////////////////////////////////////////*/
+
+
+        /* THIS WHOLE CODE SECTION AUTOHIDES ONLY THE HORIZONTAL SCROLLBARS OF WEBPAGES */
+        /*can increase min-height 5px and max-height 5px to have more grab space for horizontal scrollbar (min-height and max-height must be exact same px)*/
+
+        scrollbar[orient="horizontal"]{
+        background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAMCAYAAABIvGxUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAmSURBVHjaYvz//z8DAwMDAxMDFGAyGP39/f8zMDAwMBKhGA8DMAB8qAf8L6w8LwAAAABJRU5ErkJggg==") ! important;
+
+        -moz-appearance: none !important;
+        background-color: transparent !important;
+        opacity: .75 !important;
+        min-height: 9px !important;
+        max-height: 9px !important;
+        }
+
+
+        /*CAN MAKE HORIZONTAL SCROLLBARS LESS HEIGHT when hovered BELOW:MUST HAVE min-height and max-height exact same px */
+        /* Default horizontal height is 17px */
+        scrollbar[orient="horizontal"]:hover
+        {
+        opacity: 1 !important;
+        -moz-appearance: none !important;
+        background-color: transparent !important;
+        min-height: 9px !important;
+        max-height: 9px !important;
+        }
+
+
+        /*////////////////////// bar /////////////////////////////////////////*/
+
+        /* button you drag down the strip */
+
+          scrollbar thumb[orient="horizontal"]
+        {
+        background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAmSURBVHjaYmQofPWfgQTAxEAiGNUwODQw/v//n7Y2AAAAAP//AwCb0AVuQc6u0wAAAABJRU5ErkJggg==") ! important;
+
+
+        -moz-appearance: none !important;
+        border-radius: 4px !important;
+        min-height: 8px !important;
+        max-height: 8px !important;
+        border: 1px !important;
+        margin-left: 0px !important;
+        }
+
+        /* HOVER:button you drag down the strip */
+
+          scrollbar thumb[orient="horizontal"]:hover
+
+        {background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAmSURBVHjaYmQofPWfgQTAxEAiGNUwODQw/v//n7Y2AAAAAP//AwCb0AVuQc6u0wAAAABJRU5ErkJggg==") ! important;
+
+        border-radius: 4px !important;
+        border: 0px !important;
+        }
+
+
+        /*///////////////////////////////////////////////////////////////////*/
+
+
+        /* REMOVES THE SCROLLBAR CORNERS THAT CAN BE SEEN ON DARK COLORED WEBPAGES */
+
+        scrollcorner{opacity: 0 !important;}
+
+        scrollbar scrollcorner:hover {background:transparent !important;}
+
+        }
+
+.content p{
+	/*margin-bottom: 22px;*/
+	line-height: 38px;
+	text-indent: 2em;
+}
+.content h4{
+margin-top: 58px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    color: #ffe9b7;
+    text-align: center;
+}
+.content h5{
+	font-size: 15px;
+	color:#ffe9b7;
+	 padding: 5px;
+}
+.content input{
+	/*outline: 1px solid red;*/
+	-webkit-appearance: none;
+	background:transparent;
+	outline: none;
+	border-style:none;
+}
+/*我的活动*/
+/*切换的内容 正在报名*/
+.show-box>div:last-child{border-bottom: 1px solid #170800 !important;}
+.cont-sign{height: 1100px;overflow: hidden;margin-top:100px;padding: 0px;}
+.cont-sign-info,.cont-end-info{width: 100%;border-bottom: 1px solid #3e2b15;}
+.cont-sign-info>div,.cont-end-info>div{width: 100%;margin:40px 0px;}
+.cont-sign-text,.cont-end-text{position: relative;}
+.cont-sign-text p,.cont-end-text p{margin: 0px 0px 4px;}
+.cont-sign-text h3:nth-child(1),.cont-end-text p:nth-child(1){margin: 0px 0px 11%;}
+.cont-sign-img,.cont-end-img{padding: 0px;}
+.cont-sign-btnhide{position: absolute;display: block;width: 140px;height: 40px;text-align: center;color: black;line-height: 40px;background-color: #DAB766;right: 0px;bottom: 0px;font-size: 16px;cursor: pointer;}
+.cont-sign-btnshow{display: none;width: 140px;height: 40px;text-align: center;color: black;line-height: 40px;background-color: #DAB766;font-size: 16px;cursor: pointer;}
+#first-info{
+  margin-top: 80px;
+}
+
+.tabs {
+  /* margin-bottom: 101px !important; */
+  position: absolute;
+  top: 0;
+}
+.tabs li {
+  float: left;
+  padding: 0px 30px 10px;
+  cursor: pointer;
+  color: #ffebbf;
+}
+.tabs-line {
+  color: #dab766 !important;
+  border-bottom: 3px solid #dab766;
+}
+.volunteer,
+.culture {
+      font-size: 18px;
+    margin-right: 4px;
+    width: 152px;
+    text-align: center;
+}
+.tabs>li:hover {
+  border-bottom: 3px solid #dab766 !important;
+  color: #dab766 !important;
+  cursor: pointer !important;
+}
+.cont-sign-img img{
+width:90%!important;
+max-width: 100%!important; 
+}
+/*查看详情*/
+.activities-btn {
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  border: 1px solid #dab765;
+  font-size: 14px;
+  transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  margin-top: 50px;
+  background-color: #dab765;
+  color: black;
+  width: 100px;
+}
+
+/*我的积分*/
+.Number-cell {
+}
+.titleAll {
+  background-color: #2b1a0b;
+}
+.titleBox {
+  height: 81px;
+  width: 80%;
+}
+.title-box {
+  margin-top: 19px;
+  /*margin-left: 13%;*/
+  float: left;
+}
+.num-title {
+  font-size: 18px;
+}
+.points {
+  font-size: 30px;
+  margin-top: 28px;
+}
+.exchange-btn {
+  padding: 13px 38px;
+  border: 1px solid #dab765;
+  width: 137px;
+  float: right;
+  margin-top: 20px;
+}
+.exchange-btn:hover {
+  cursor: pointer;
+  background-color: #dab765;
+  color: #000;
+}
+.form-title {
+  margin-top: 47px;
+  margin-bottom: 7px;
+  background-color: #2b1a0b;
+  padding: 13px 0px;
+}
+.form-title > div {
+  display: inline-block;
+  text-align: center;
+}
+.form-title :nth-child(2) {
+  border-left: 1px solid #4e391d;
+  border-right: 1px solid #4e391d;
+}
+.form-cell {
+  border-bottom: 1px solid #3d2c15;
+}
+.form-cell-box {
+  width: 80%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.form-cell-box:nth-child(1) {
+  line-height: 19px;
+}
+.form-cell-box:nth-child(2) {
+  text-align: center;
+}
+.time > span {
+  float: right;
+  margin-right: 16%;
+}
+.point-change {
+  float: right;
+  margin-right: 1%;
+  font-size: 20px;
+}
+/*我的兑换*/
+.exchange-cell {
+  width: 100%;
+}
+.img-responsive {
+  display: block;
+  max-width: 90%;
+  height: auto;
+}
+/*我的积分信息*/
+.exchange-cell-myInfo {
+  width: 100%;
+}
+.exchange-cell-myInfo > div {
+  padding: 2%;
+  background-color: #2b190b;
+}
+.myinfo-box1{
+  margin-left: 4%;
+  min-width: 150px;
+}
+.myinfo-box2{
+float:right;
+margin-right: 10%;
+}
+.exchange-cell-myInfo .myinfo-text {
+  font-size: 16px;
+}
+.exchange-cell-myInfo .myInfo-score {
+  font-size: 26px;
+  font-weight: 400;
+}
+/*我的积分Tab切换*/
+.exchange-cell-tabNav {
+  width: 100%;
+  margin-top: 3%;
+}
+.exchange-cell-tabNav ul {
+  color: #dac495;
+}
+.exchange-cell-tabNav ul li {
+  float: left;
+  padding: 1% 2%;
+  font-size: 17px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+.exchange-cell-tabNav .tabNav-active {
+  border-bottom: 3px solid #d8b865;
+  color: #dab765;
+}
+.exchange-cell-tabNav ul li:hover {
+  border-bottom: 3px solid #d8b865;
+  color: #dab765;
+}
+.exchange-cell-tabNav .second-li{
+  margin-left: 4px;
+}
+/*积分商城内容*/
+.exchange-cell-shop {
+  width: 100%;
+}
+    .exchange-cell-shop .threePart-box > .part-img {
+        padding: 4% 0;
+        border-bottom: 1px solid #2b190b;
+    }
+.exchange-cell-shop .part-img .part-img-infoBox {
+  width: 80%;
+  cursor: pointer;
+}
+.exchange-cell-shop .part-img .part-img-infoBox img {
+  width: 100%;
+  position: relative;
+}
+.part-img-infoBox .part-img-mask {
+  text-align: center;
+  width: 72%;
+  padding: 3%;
+  font-size: 15px;
+  position: absolute;
+  bottom: 58px;
+  color: black;
+  background-color: rgba(225, 197, 132, .7);
+  display: none;
+}
+.part-img-infoBox:hover .part-img-mask {
+  display: block;
+}
+.part-img-score {
+  font-size: 22px;
+  font-weight: 400;
+}
+.part-img-infoBox .img-infoBox-text {
+  padding-top: 3%;
+}
+.myexchange {
+  display: none;
+}
+
+
+/*我的信息*/
+.informs-cell {
+  position: relative;
+}
+.save-btn {
+    background-color: #dab766;
+    color: #170800;
+    padding: 9px 29px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #dab766;
+    outline: none;
+    position: absolute;
+    right: 50px;
+    top:10px;
+}
+.meg-cell {
+  padding: 16px 0;
+}
+.my-card{
+  padding-top: 0px;
+}
+.inform-title {
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+  font-weight: normal;
+  margin-right: 3%;
+}
+.infor-meg {
+  display: inline-block;
+  margin-left: 0;
+  min-width: 140px;
+}
+.phone,.e-mail{
+  border: none;
+  background-color: #170801;
+  outline: none;
+}
+.input-active{
+   padding: 6px 12px;
+  border: 1px solid #3d2c15;
+  border-radius: 6px;
+  background-color: #3d2c15;
+  height: 42px;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+.meg-input {
+  width: 80%;
+  height: 42px;
+  padding: 6px 12px;
+  border: 1px solid #3d2c15;
+  border-radius: 6px;
+  background-color: #3d2c15;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.42857143;
+  display: inline-block;
+  color: #dab766;
+}
+input[type=radio] {
+  background-color: #000;
+}
+.phone-update, .e-mail-update {
+  color: #d63f3b;
+  margin-left: 5%;
+}
+.phone-update:hover,.e-mail-update:hover{
+  cursor: pointer;
+}
+/* .mySelect{
+  overflow: scroll;
+}
+.mySelect::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #170a01;
+}
+
+.mySelect::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #170a01;
+}
+
+.mySelect::-webkit-scrollbar-thumb
+{
+	background-color: #3d2c15;
+} */
+.name-width {
+  width: 40%;
+}
+#date {
+  width: 140px;
+}
+/* 性别 */
+.man i,
+.woman i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #d9b765;
+  display: block;
+  float: left;
+  background-color: #170801;
+}
+.man:hover,
+.woman:hover{
+  cursor: pointer;
+}
+.man,
+.woman {
+  width: 50px;
+  float: left;
+  line-height: 14px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.man span,
+.woman span {
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+.textRight {
+  text-align: right;
+}
+.bg {
+  background: url(../../img/vip/checked.png) center no-repeat;
+}
+/* 选择地址 */
+.mycity-box{
+  display: inline-block;
+}
+.bm-line {
+  border-bottom: 1px solid #dab766;
+}
+/*媒体查询*/
+@media only screen and (max-width: 768px) {
+  /*.container,.container-fluid{
+    padding-left:15px;
+    padding-right:15px;
+  }*/
+  .cont-left{
+    width:100%;
+  }
+    cont-left-show ul {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+  .cont-left li{
+    width:20%;
+        padding: 0px;
+    text-align: center;
+    padding-bottom: 12px;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .clicked{
+    border-bottom:0px!important;
+    border-left: 0px !important;
+    color:#dab766 !important;
+  }
+  .content{
+    padding: 0px 15px 40px 15px;
+  }
+  .name-width{
+    width:80%;
+  }
+  .city-picker-span{
+    width:80% !important;
+  }
+  .sex-box{
+    float:left;
+  }
+  #date{
+    width:80%;
+  }
+  #first-info{
+    margin-top: 0px;
+  }
+  #first-info :first-child{
+    margin-top: 0px;
+  }
+.cont-sign-text h3:nth-child(1), .cont-end-text p:nth-child(1){
+  margin-bottom: 6%;
+}
+.cont-sign-btnhide, .cont-end-btnhide{
+  margin-right: 3%;
+}
+ .form-title :nth-child(1){
+  width: 50%;
+}
+.form-title :nth-child(2){
+  width: 22%;
+}
+.form-title :nth-child(3){
+  width: 25%;
+}
+/* .col-sm-6{
+  width:50%;
+}
+.col-sm-3{
+  width: 25%;
+} */
+
+}
+@media only screen and (max-width: 768px) {
+  .part-img-infoBox:hover .part-img-mask {
+     bottom:55.5px !important; 
+  }
+  .time > span {
+    margin-right: -2%;
+  }
+  .exchange-cell-myInfo :nth-child(1){
+    margin-left: 0px;
+  }
+  .cont-sign-btnhide{
+	display: none !important;
+}
+.content{
+      padding: 0 60px 48px 60px;
+}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .part-img-infoBox:hover .part-img-mask {
+     bottom:56px !important; 
+  }
+  .time > span {
+    margin-right: -2%;
+  }
+  .exchange-cell-myInfo :nth-child(1){
+    margin-left: 0px;
+  }
+  .cont-sign-btnhide{
+	display: none !important;
+}
+.content{
+      padding: 0 60px 48px 60px;
+}
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .part-img-infoBox:hover .part-img-mask {
+     bottom: 57px !important; 
+  }
+  .time > span {
+    margin-right: 6%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .part-img-infoBox:hover .part-img-mask {
+    /* bottom: 20% !important; */
+  }
+  .time > span {
+    margin-right: 13.5%;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1445px) {
+  .part-img-infoBox:hover .part-img-mask {
+    /* bottom: 21.5% !important; */
+  }
+  .time > span {
+    margin-right: 13.8%;
+  }
+  .container{
+    width:74%;
+  }
+}
+@media only screen and (min-width: 1445px) and (max-width: 1550px) {
+  .part-img-infoBox:hover .part-img-mask {
+    /* bottom: 20.5% !important; */
+  }
+  .time > span {
+    margin-right: 14.2%;
+  }
+  .container{
+    width:74%;
+  }
+}
+@media only screen and (min-width: 1550px) and (max-width: 1650px) {
+  .part-img-infoBox:hover .part-img-mask {
+    /* bottom: 19.5% !important; */
+  }
+  .time > span {
+    margin-right: 14.6%;
+  }
+  .container{
+    width:74%;
+  }
+}
+@media only screen and (min-width: 1650px) and (max-width: 1750px) {
+  .part-img-infoBox:hover .part-img-mask {
+    /* bottom: 18.8% !important; */
+  }
+  .time > span {
+    margin-right: 14.6%;
+  }
+  .container{
+    width:74%;
+  }
+}
+@media only screen and (min-width: 1750px) {
+  .part-img-infoBox:hover .part-img-mask {
+    /* bottom: 18.5% !important; */
+  }
+  .time > span {
+    margin-right: 15%;
+  }
+  .container{
+    width:74%;
+  }
+}
+@media only screen and (min-width: 1850px) {
+  .part-img-infoBox:hover .part-img-mask {
+    /* bottom: 17.5% !important; */
+  }
+  .container{
+    width:74%;
+  }
+}
+/*修改*/
+.cont-sign-img, .cont-end-img {
+    padding: 0px;
+    height: 250px;
+    overflow: hidden;
+}
+.cont-sign-text {
+    height: 250px;
+}@media only screen and (max-width: 768px) {
+    .cont-left ul {
+    display:inline-block;
+    width:100%;
+    }
+    .cont-left li {
+        width: 20%;
+        padding: 0px;
+        text-align: center;
+        padding-bottom: 12px;
+        font-size: 14px;
+        float: left;
+        margin-bottom: 40px;
+    }
+
+    .container-fluid {
+        padding-left: 0px; 
+         padding-right: 0px; 
+    }
+    main {
+        margin-bottom: 60px;
+        margin-top: 30px;
+    }
+    .cont-right {
+    padding:0px 15px !important;
+    }
+    .content {
+         padding: 0px 10px; 
+    }
+    .exchange-btn {
+        padding: 5px 10px;
+        border: 1px solid #dab765;
+        width: auto;
+        float: right;
+        margin-top: 24px;
+    }
+    .titleBox {
+        height: 81px;
+        width: 98%;
+    }
+    .exchange-cell-myInfo > div {
+        padding: 2%;
+        height: 60px;
+        line-height: 46px;
+        background-color: #2b190b;
+    }
+    .exchange-cell-myInfo .myInfo-score {
+        font-size: 16px;
+        font-weight: 400; 
+    }
+    .save-btn {
+        background-color: #dab766;
+        color: #170800;
+        padding: 6px 12px;
+        font-size: 14px;
+        border-radius: 4px;
+        border: 1px solid #dab766;
+        outline: none;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .volunteer, .culture {
+        font-size: 12px;
+        margin-right: 4px;
+        width: 90px;
+        text-align: center;
+    }
+    .tabs li {
+        float: left;
+        padding: 0px 10px 10px;
+        cursor: pointer;
+        color: #ffebbf;
+    }
+    .cont-sign-img, .cont-end-img {
+        padding: 0px;
+        height: 250px;
+        overflow: hidden;
+    }
+        .cont-sign-img img {
+            width: 100%!important;
+        }
+    .cont-sign-text {
+    text-align:center;
+    }
+    .tabs {
+         margin-bottom: 60px !important; 
+       position:initial; 
+    }
+    .exchange-cell-tabNav ul li {
+        float: left;
+        padding: 1% 2%;
+        font-size: 14px;
+        margin-left: 5%;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

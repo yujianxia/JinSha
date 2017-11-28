@@ -1,0 +1,6 @@
+SteponTech
+obj
+*.csproj
+bin
+.vs
+upload

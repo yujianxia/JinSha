@@ -1,0 +1,70 @@
+body{padding: 0;margin: 0;height: 100%;}
+.content{
+	position: relative;
+    min-width: 1280px;
+    height: 1039px;
+    background-image: url("../img/treasureChest/treasureChestback.png");
+    background-position: center;
+}
+.content-box{
+    width: 1200px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+}
+.crumbs{
+    width: 225px;
+    height: 212px;
+    /*outline: 1px solid red;*/
+    position:relative;
+}
+.inner{
+    position:absolute;
+    z-index:99;
+}
+.crumbs img{
+    cursor:pointer;
+}
+.content-centre{
+    width: 738px;
+    margin:0 auto;
+    height: 404px;
+    /*outline: 1px solid red;*/
+    margin-top: 80px;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+}
+.bubble1 {
+    width: 296px;
+    height: 296px;
+    float: left;
+    /*outline: 1px solid red;*/
+}
+.bubble2 {
+    width: 296px;
+    height: 296px;
+    float: right;
+    /*outline: 1px solid red;*/
+}
+.bubbleHover1{
+    position: relative;
+    top: -404px;
+    display: none;
+}
+.bubbleHover2{
+    position: relative;
+    top: -404px;
+    display: none;
+}
+
+.glass {
+    width: 100%;
+    min-width: 1280px;
+    height: 280px;
+    background-image: url(../img/common/leaf2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left:0;
+    top:0;
+}

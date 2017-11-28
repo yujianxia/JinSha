@@ -1,0 +1,170 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金沙遗址博物馆青教版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/img/common/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/strategy_valuableBook_map.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <div class="versions">
+                <a href="">
+                    <img src="/img/common/Chinese.png" alt="">
+                </a>
+                <div>
+                    <a href="">
+                        <img src="/img/common/English.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="/img/common/xueshu.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="/Strategy/Intro" class="a1"></a>
+                <a href="/PlayJinSha/YoungExperience" class="a2"></a>
+                <a href="/News/NewsList" class="a4"></a>
+                <a href="/JinShaChest/Index" class="a3"></a>
+                <img src="/img/common/logo.gif" id="icon-logo" alt="logo" />
+            </div>
+            <div class="login">
+                <div class="loginoptrator">
+                    <a href="/Member/Login" class="signUp">
+                        <img src="/img/common/signUp.png" alt="">
+                    </a>
+                    <a href="/Member/VIPInstructions" class="signIn">
+                        <img src="/img/common/signIn.png" alt="">
+                    </a>
+                </div>
+                <div class="infoOptrator">
+                    <a class="users">
+                        <img src="/img/common/users.png" alt="">
+                    </a>
+                    <a href="/VIP/MyInformation" class="myInfo">
+                        <img src="/img/common/myInfo.png" alt="">
+                    </a>
+                    <a class="loginOut">
+                        <img src="/img/common/loginOut.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a class="greenTeaching"></a>
+    </div>
+    <div style="height: 105px"></div>
+    <div class="content">
+        <div class="content-box">
+            <div class="crumbs">
+                <img src="/img/strategy_valuableBook/present.png" alt="当前位置">
+                <a href="/Home/Index"><img src="/img/strategy_valuableBook/home.png" alt="首页"></a>
+                <a href="/Strategy/Intro"><img src="/img/strategy_valuableBook/gonglue.png" alt="金沙攻略"></a>
+                <a href="/Strategy/ValuableBook"><img src="/img/strategy_valuableBook/baodian.png" alt="金沙宝典"></a>
+                <img src="/img/strategy_valuableBook/ditu.png" alt="地图">
+            </div>
+            <div class="nav1">
+                <a href="/Strategy/Intro">
+                    <img src="/img/strategy_valuableBook/renshi.png" alt="" class="nav1-1">
+                </a>
+                <a href="/Strategy/Animation">
+                    <img src="/img/strategy_valuableBook/donghuajinsha.png" alt="" class="nav1-2">
+                </a>
+                <a href="/Strategy/Question">
+                    <img src="/img/strategy_valuableBook/quwen.png" alt="" class="nav1-3">
+                </a>
+                <a href="/Strategy/ChildrenTalk">
+                    <img src="/img/strategy_valuableBook/mengwan.png" alt="" class="nav1-4">
+                </a>
+                <a href="/Strategy/ValuableBookMap">
+                    <img src="/img/strategy_valuableBook/jinshabaodian.png" alt="" class="nav1-5">
+                </a>
+            </div>
+            <div class="content-box-middle">
+                <div class="btn">
+                    <a href="/Strategy/ValuableBookMap"><img src="/img/strategy_valuableBook/ditu2.png" alt="" class="btn1"></a>
+                    <a href="/Strategy/ValuableBook"><img src="/img/strategy_valuableBook/zhinan2.png" alt="" class="btn2"></a>
+                </div>
+                <!--全景-->
+                <div class="panorama">
+                    <a href="http://www.360vrpano.com/index.php/Project/viewProject/id/10796.html?from=groupmessage&isappinstalled=0">
+                        @if (ViewBag.BookInfo != null)
+                        {
+                            <img src="/upload/Information/@ViewBag.BookInfo.Id/@ViewBag.BookInfo.Photo" alt="">
+                            <span class="view">全景导览</span>
+                        }
+                    </a>
+                </div>
+            </div>
+            <!--寻觅地图-->
+            <div class="content-box-right1">
+                <div class="right-1">
+                    <img src="/img/strategy_valuableBook/xunmiditu.png" alt="">
+                </div>
+            </div>
+            <div class="alert">
+                <img class="maps" src="/img/strategy_valuableBook/daditu.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="mark"></div>
+        @if (ViewBag.Footer != null)
+        {
+            <ul class="foot">
+                <li>
+                    <p>电话：@ViewBag.Footer.Phone</p>
+                    <p class="footText">地址：@ViewBag.Footer.Address</p>
+                    <div class="code wechatcode">
+                        <img src="@ViewBag.Footer.WeChart" alt="" class="footText">
+                        <p class="footWeixin">
+                            <img src="/img/common/weixin_2.png" alt="">
+                            <span>关注官方微信</span>
+                        </p>
+                    </div>
+                    <div class="code weibocode">
+                        <img src="@ViewBag.Footer.WeChart" alt="" class="footText">
+                        <p class="footWeixin">
+                            <img src="/img/common/weibo-icon.png" alt="">
+                            <span>关注官方微博</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="foot-li2">
+                    <a href="http://map.baidu.com/?newmap=1&s=inf%26uid%3Ded4f5b58efb42cd248cc4af2%26wd%3D%E9%87%91%E6%B2%99%E9%81%97%E5%9D%80+%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%26all%3D1%26c%3D75&from=alamap&tpl=map_singlepoint" target="_blank">
+                        动态地图导航
+                        <img src="/img/common/position.png" alt="">
+                    </a>
+                    <p class="group">社教QQ1群号:@ViewBag.Footer.QQGroup</p>
+                    <p class="group2">社教QQ2群号:@ViewBag.Footer.QQGroup2</p>
+                </li>
+                <li>
+                    <p>游览帮助</p>
+                    @if (ViewBag.Infomations?.Count > 0)
+                    {
+                        <div class="group">
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[0].Id">@ViewBag.Infomations[0].Title</a>
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[1].Id">@ViewBag.Infomations[1].Title</a>
+                        </div>
+                        <div class="service">
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[2].Id">@ViewBag.Infomations[2].Title</a>
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[3].Id">@ViewBag.Infomations[3].Title</a>
+                        </div>
+                    }
+                    <p class="number"><span>金沙遗址博物馆版权所有</span><span>@ViewBag.Footer.RegisterNo</span></p>
+                </li>
+            </ul>
+        }
+    </div>
+</body>
+<script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/css/common/common.js"></script>
+<script src="/js/strategy_valuableBook.js" type="text/javascript" charset="utf-8"></script>
+</html>

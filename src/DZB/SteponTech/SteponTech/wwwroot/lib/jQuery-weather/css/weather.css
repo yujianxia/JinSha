@@ -1,0 +1,58 @@
+body  {background-color: #170801}
+*{
+    margin: 0;
+    padding: 0;
+}
+#weather {
+    width:450px;
+    border: 1px solid #DAB766;
+    height: 115px;
+    color:#DAB766;
+}
+#weather i {
+    background: no-repeat;
+    display:inline-block;
+    width: 64px;
+    height:64px;
+    font-size:20px;
+    font-style:normal;
+    text-align:center;
+    background-size: 64px 64px;
+}
+#weather .weatherBox{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+#weather span {
+    display: inline-block;
+}
+#weather .weatherBox p, #weather .weatherBox i{
+   float: left;
+}
+#weather .weatherBox i{
+    outline: 1px solid  yellow;
+}
+#weather .weatherBox p{
+    outline: 1px solid  whitesmoke;
+}
+#weather .weatherBox p span{
+    /*width: 10%;*/
+    outline: 1px solid  whitesmoke;
+}
+#weather .weatherBox p .qiwen{
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 20px;
+}
+#weather .weatherBox p .tianqi{
+    margin-left: 20px;
+}
+#weather i.icon-xiaoyu { background-image:url(../icon/xiaoyu.png); }
+#weather i.icon-zhenyu { background-image:url(../icon/zhenyu.png); }
+#weather i.icon-zhongyu { background-image:url(../icon/zhongyu.png); }
+#weather i.icon-dayu { background-image:url(../icon/dayu.png); }
+#weather i.icon-qing { background-image:url(../icon/qing.png); }
+#weather i.icon-duoyun { background-image:url(../icon/duoyun.png); }
+#weather i.icon-yin { background-image:url(../icon/yin.png); }

@@ -1,0 +1,42 @@
+{
+  "userManagement": {
+    "show": true,
+    "list": [true, true]
+  },
+  "authorityManagement": {
+    "show": true,
+    "list": [true, true]
+  },
+  "bannerManagement": {
+    "show": true,
+    "list": [true, true]
+  },
+  "moduleManagement": {
+    "show": true,
+    "list": [true, true]
+  },
+  "infoManagement": {
+    "show": true,
+    "list": [true, true]
+  },
+  "resourceManagement": {
+    "show": false,
+    "list": [true, true]
+  },
+  "columnManagement": {
+    "show": true,
+    "list": [true, true]
+  },
+  "dataStatistics": {
+    "show": true,
+    "list": [true, true]
+  },
+  "systemLo": {
+    "show": true,
+    "list": [true, true]
+  },
+  "settingManagement": {
+    "show": true,
+    "list": [true, true]
+  }
+}

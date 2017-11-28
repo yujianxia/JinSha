@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secsettings>
+	<policy id="aes-0001" key="1234567812345671" ivbase="92623567851" seed="123" seq="81"/>
+	<policy id="aes-0002" key="1234567812345672" ivbase="98423567852" seed="324" seq="11"/>
+	<policy id="aes-0003" key="1234567812345673" ivbase="93623567853" seed="567" seq="12"/>
+	<policy id="aes-0004" key="1234567812345674" ivbase="98623567854" seed="897" seq="21"/>
+	<policy id="aes-0005" key="1234567812345675" ivbase="98123567855" seed="897" seq="13"/>
+	<policy id="aes-0006" key="1234567812345676" ivbase="98623167856" seed="123" seq="51"/>
+	<policy id="aes-0007" key="1234567812345677" ivbase="98623561857" seed="124" seq="16"/>
+	<policy id="aes-0008" key="1234567812345678" ivbase="98621567858" seed="998" seq="71"/>
+	<policy id="aes-0009" key="1234567812345679" ivbase="98623561859" seed="142" seq="18"/>
+	<policy id="aes-0010" key="1234567812345610" ivbase="98623167899" seed="357" seq="91"/>
+	<policy id="aes-0011" key="1234567812345611" ivbase="98623167889" seed="897" seq="10"/>
+	<policy id="aes-0012" key="1234567812345612" ivbase="98623167689" seed="697" seq="19"/>
+</secsettings>

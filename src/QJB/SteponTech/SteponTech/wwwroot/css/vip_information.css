@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+
+
+
+/* 内容 */
+/*.content:before{
+    display: block;
+    height: 195px;
+}*/
+.empty{
+    height: 110px;
+}
+.content{
+    height: 1173px;
+    width: 100%;
+    background: url(../img/vip_information/content.png) no-repeat center;
+    min-width: 1280px;
+}
+
+.form{
+    width: 1200px;
+    margin: auto;
+    overflow:hidden;
+}
+
+.label{
+    margin-left: 60px;
+    width: 1140px;
+    height: 211px;
+    position: relative;
+}
+.innerText{
+	 width: 1140px;
+    height: 211px;
+    position: absolute;
+    z-index: 99;
+}
+
+.leaf{
+    background: url(../img/common/leaf2.gif) no-repeat center;
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    z-index: 4;
+    top: 110px;
+    min-width: 1280px;
+    left:0;
+}
+.rule{
+    font-size: 0;
+}
+
+.rule>div{
+    float:left;
+}
+
+.choose{
+    width: 229px;
+    height: 586px;
+    background: url(../img/vip_information/pillars.png) no-repeat left;
+    overflow: hidden;
+    vertical-align: top;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+.chooseA_1{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.chooseA_2{
+    margin-top: 25px;
+}
+
+.chooseA_3{
+    margin-top: 40px;
+    margin-left: 30px
+}
+
+.chooseA_4{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.information{
+    width: 739px;
+    height: 825px;
+    background: url(../img/vip_information/information_2.png) no-repeat left;
+    margin-left: 50px;
+}
+
+.informationFrom{
+    width: 480px;
+    margin: auto;
+    font-size: 17px;
+    color: #aa3d38;
+    font-weight: 700; 
+    margin-top: 230px;
+    line-height: 35px;
+}
+.informationFrom p{
+	margin: 5px 0;
+}
+.informationFrom input{
+	width: 217px;
+	outline: none;
+	border: 0;
+	background: transparent;
+	font-size: 17px;
+	height: 38px;
+	line-height: 38px;
+	display: inline-block;
+	vertical-align: top;
+	color: #aa3d38;
+	font-weight: bold;
+	text-indent: 15px;
+}
+.informationFrom button{
+    border:none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-left: 160px;
+}
+#email{
+	width: 217px;
+}
+.modify{
+    margin-left: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.modify img{
+    vertical-align: text-top;
+}
+.informationFrom select, .date{
+    width: 217px;
+    height: 33px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #aa3d38;
+    border-radius: 5px;
+    color: #aa3d38;
+    font-weight: 700; 
+    font-size: 17px;
+}
+.information input[type='radio']{
+    display:none;
+}
+.information label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    font-size: 13px;
+    margin-left: 30px;
+ }
+ .information label:before{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    background-color: #aa3d38;
+}
+.information input[type='radio'] + label:before{
+    border-radius: 7px;
+}
+.information input[type='radio']:checked+label:before{
+    content: "\2022";
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    line-height: 14px;
+}
+.addOn{
+    width: 100px;
+    height: 30px;
+}
+select{
+    padding-left: 10px;
+}
+.iDate input{
+    background-color: rgba(0,0,0,0);
+    color: #aa3d38;
+}
+.iDate.date{
+    margin-left: 60px;
+    width:217px;
+    position: relative;
+}
+.iDate .addOn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+}
+.dataSpan{
+    position: absolute;
+    left: -60px;
+}
+.informationFrom i{
+	display: none;
+	color: red;
+}

@@ -1,0 +1,246 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+    font-size: 0;
+}
+li{
+	list-style: none;
+}
+html,body{
+	height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+.wrapper{
+	position: relative;
+	height: 1432px;
+	background-image: url("../img/play_form/bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*草*/
+.glass{
+	position: relative;
+	width: 100%;
+	height: 140px;
+	margin-top: -30px;
+	margin-bottom: 74px;
+}
+.glass_nav{
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	height: 280px;
+	background-image: url("../img/common/leaf2.gif");
+	background-repeat: no-repeat;
+    left:0;
+    top:0;
+	background-position: center;
+}
+/*树叶飘动*/
+
+
+.label{
+	width: 1100px;
+	margin: 0 auto;
+	margin-top: -30px;
+	overflow: hidden;
+}
+.label .inner{
+	z-index: 11;
+	position: absolute;
+}
+.label a{
+	float: left;
+}
+.label a:nth-child(1){
+	margin-left: 10px;
+}
+.main{
+    margin: 0 auto;
+    width: 1100px;
+    height: 1097px;
+    position: relative;
+    text-align: center;
+}
+.btn_doThis{
+	position: absolute;
+	left: 545px;
+	z-index: 9999;
+	bottom: 70px;
+}
+.main .right{
+	z-index: 10;
+	width: 1118px;
+	height:1336px;
+	background-image: url("../img/play_form/bg_2.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 79px;
+	top: -271px;
+}
+.main .right_mask{
+	display: none;
+	width: 1154px;
+	height:1003px;
+	background-image: url("../img/play_form/mask_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	left: 116px;
+	top: -304px;
+}
+.main .right_mask .mask_inner{
+	position: absolute;
+	left: 266px;
+	top: 400px;
+}
+.main .title_join{
+	position: absolute;
+	left: 287px;
+	top: 373px;
+	overflow: hidden;
+}
+.main .title_join dt{
+	float: left;
+	margin-right: 24px;
+}
+.main .title_join dt img{
+	width: 100%;
+}
+.main .title_join dd{
+	float: left;
+}
+.main .title_join dd h3{
+	margin-bottom: 14px;
+	text-align: left;
+	font-size:17px;
+	height: 17px;
+	line-height: 17px;
+}
+.main .title_join dd p{
+	text-align: left;
+	line-height: 21px;
+	font-size: 16px;
+}
+.main .title_join dd p span{
+	color: #fff;
+	font-size: 14px;
+}
+.main .title_join dd a{
+	float: left;
+}
+.main .inner_join{
+	width: 626px;
+	height: 626px;
+	position: absolute;
+	left: 299px;
+	top: 553px;
+}
+.main .inner_join h3{
+	text-align: left;
+	margin-bottom: 35px;
+}
+.main .inner_join p{
+    padding-right:14px;
+	line-height: 27px;
+	font-size: 14px;
+	margin-left: 15px;
+	text-align: left;
+}
+
+.title{
+	height: 601px;
+	width: 225px;
+	float: left;
+	position: relative;
+	margin-left: 15px;
+	z-index: 1000;
+	background-image: url("../img/play_form/line.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.title a{
+	display: block;
+}
+.title_a1{
+	margin-left: 40px;
+	margin-top: 30px;
+ }
+.title_a2{
+	margin-left: 20px;
+	margin-top: 30px;
+}
+.title_a3{
+	margin-left: 30px;
+}
+.title_a4{
+	margin-left: 10px;
+}
+.title_a5{
+	margin-left: 40px;
+	margin-top: 30px;
+}
+.title_a6{
+	margin-left: -8px;
+}
+.ground{
+	height: 424px;
+	width: 100%;
+	position: absolute;
+	bottom: -34px;
+	background-image: url("../img/play_form/di.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*//mask*/
+.login-mask {
+    display:none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 608px;
+    height: 379px;
+    background: url('../img/common/login-mask.png') no-repeat left top;
+}
+
+.icon-close {
+    position: absolute;
+    right: 0;
+    width: 70px;
+    height: 101px;
+    background: url('../img/common/close-login.png') no-repeat left top;
+    cursor: pointer;
+}
+
+.login-inner {
+    text-align: center;
+    margin-top: 110px;
+}
+
+.login-btn {
+    display: block;
+    width: 246px;
+    height: 86px;
+    background: url('../img/common/login-now.png') no-repeat left top;
+    margin: 50px auto 0;
+    cursor: pointer;
+}
+#actitvtycontent{
+    height:580px;
+}

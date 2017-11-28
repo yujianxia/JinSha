@@ -1,0 +1,246 @@
+body{padding: 0;margin: 0;height: 100%;}
+.content{
+	position: relative;
+    min-width: 1280px;
+    height: 1708px;
+    background-image: url("../img/strategy_question/back.png");
+    background-position: center;
+}
+/*树叶飘动*/
+/*树叶飘动*/
+.glass{
+    width: 100%;
+    min-width: 1280px;
+    height: 280px;
+    top: 0;
+    background-image: url(../img/common/leaf2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left:0;
+}
+
+.content-box{
+    position:relative;
+    width: 1200px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+}
+.crumbs{
+    position:absolute;
+    width: 100%;
+    height: 212px;
+    /*outline: 1px solid red;*/
+   position: relative;
+}
+.inner{
+	position: absolute;
+	width: 100%;
+	height: 212px;
+	z-index: 999;
+}
+.nav1{
+    width: 225px;
+    height: 600px;
+    /*outline: 1px solid red;*/
+    float: left;
+    /*margin-top: 100px;*/
+}
+.nav1 img{
+    /*outline: 1px solid red;*/
+}
+.nav1-1{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.nav1-2{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+.nav1-3{
+    margin-top: 10px;
+}
+.nav1-4{
+    margin-left: 35px;
+    margin-top: 30px;
+}
+.nav1-5{
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.content-conter{
+    width: 970px;
+    height: 1280px;
+    /*outline: 1px solid red;*/
+    float: right;
+}
+.video{
+    width: 800px;
+    height: 460px;
+    /*border: 1px solid red;*/
+    background-color: white;
+    border-radius: 20px;
+    overflow:hidden;
+    margin-left: 80px;
+    margin-top: 80px;
+}
+.question-box{
+    width: 970px;
+    height: 600px;
+    /*outline: 1px solid red;*/
+    margin-top: 50px;
+}
+.box{
+    width: 275px;
+    height: 220px;
+    background-image: url("../img/strategy_question/box.png");
+    /*outline: 1px solid red;*/
+    float: left;
+    margin: 40px 22px;
+}
+.page .pre,.page .next{
+	display: inline-block;
+}
+.box-img{
+    width: 197px;
+    height: 113px;
+    margin-top: 30px;
+    margin-left: 36px;
+    display: inline-block;
+    overflow:hidden;
+    /*border: 1px solid #9f742f;*/
+    background-color: white;
+    border-radius: 15px;
+}
+.box-img img{
+	width: 197px;
+    height: 113px;
+}
+.box-text{
+    color: #fbe5af;
+    /*outline: 1px solid red;*/
+    text-align: center;
+    font-size: 18px;
+    margin-top: 16px;
+}
+.page{
+	overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height: 85px;
+}
+.page span{
+	cursor: pointer;
+}
+.page button{
+	border: 1px solid #ccc;
+    background-color: #bad142;
+    color: #546500;
+    border-radius: 5px;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+.page button:hover{
+    background-color: #f2a416;
+    color: #944000;
+}
+.page a{
+	vertical-align: bottom;
+    margin: 0 5px;
+    color: #525b00;
+    font-size: 12px;
+    width: 30px;
+    height: 37px;
+    text-align: center;
+    line-height: 25px;
+    background-image: url(../img/play_news/Shape-3-copy-21.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.page a:hover{
+	background-image: url(../img/strategy_question/page-nor.png);
+	color: #923400;
+}
+.page a.on{
+	background-image: url(../img/strategy_question/page-nor.png);
+	color: #923400;
+}
+/*分页*/
+
+.pageToolbar {
+	margin-top: 60px;
+}
+.pageToolbar .ui-paging-container ul{
+	text-align: center;
+}
+.pageToolbar .ui-paging-container ul li{
+	cursor: pointer;
+	margin: 0 10px;
+}
+.pageToolbar .ui-paging-container ul .js-page-first,
+.pageToolbar .ui-paging-container ul .js-page-last {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #ffda84;
+	font-size: 14px;
+	color: #170801;
+	display: none!important;
+}
+
+.pageToolbar .ui-paging-container ul [data-page] {
+	vertical-align: bottom;
+    margin: 0 5px;
+    color: #525b00;
+    font-size: 12px;
+    width: 30px;
+    height: 37px;
+    text-align: center;
+    line-height: 25px;
+    background-image: url(../img/strategy_question/Shape-3-copy-19.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pageToolbar .ui-paging-container ul .focus{
+	background-image: url(../img/strategy_question/page-nor.png);
+}
+.pageToolbar .ui-paging-container ul .js-page-prev,
+.pageToolbar .ui-paging-container ul .js-page-next {
+	width: 77px;
+	height: 44px;
+}
+.pageToolbar .ui-paging-container ul .js-page-prev{
+	background: url(../img/strategy_question/up.png) no-repeat center ;
+}
+.pageToolbar .ui-paging-container ul .js-page-next{
+	background: url(../img/strategy_question/next.png) no-repeat center ;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar {
+	height: 30px;
+	vertical-align: top;
+	display: none!important;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar .ui-paging-count {
+	width: 60px;
+	height: 30px;
+	border: 1px solid #d8b865;
+	background-color: transparent;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar a {
+	font-size: 14px;
+	line-height: 30px;
+	border: 0;
+	color: #b59852;
+}
+.ui-paging-container li {
+    display: inline-block;
+    color: #666;
+}

@@ -1,0 +1,1173 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>志愿者</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/volunteer/volunteer.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/common.css" />
+    <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js "></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--顶部开始-->
+        <div class="row nav-bg b3-border">
+            <div class="container padding_0 aa">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12 hh ">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                            <img src="../../common/headerImg/logo.png" alt="" class="img-responsive center-block" />
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                            <div class="top-list">
+                                <ul>
+                                    <li>大众版</li>
+                                    <li>英文版</li>
+                                    <li>学术版</li>
+                                    <li>青教版</li>
+                                    @{
+                                        if (ViewBag.IsLogin == null)
+                                        {
+                                            <li class="top-listLi5">
+                                                <a href="/Vip/Sign">注册</a>
+                                            </li>
+                                            <li class="top-listLi6">|</li>
+                                            <li class="top-listLi7">
+                                                <a href="/Vip/Login">登录</a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="top-listLi5">
+                                                <a id="loginout" style="cursor:pointer">退出登录</a>
+                                            </li>
+                                            <li class="top-listLi6">
+                                                @if (ViewBag.IsLogin.Length > 4)
+                                                {
+                                                    ViewBag.IsLogin = ViewBag.IsLogin.Substring(0, 4) + "...";
+                                                    <a href="/Vip/Index">
+                                                        @ViewBag.IsLogin
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <a href="/Vip/Index">
+                                                        @ViewBag.IsLogin
+                                                    </a>
+                                                }
+                                            </li>
+                                            <li class="top-listLi7">您好！亲爱的</li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                            <div class="menu-btn">
+                                <img src="../../img/index/show/menu.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-top-list">
+                    <ul>
+                        <a href="/JinSha/Index">
+                            <li>大众版</li>
+                        </a>
+                        <a href="">
+                            <li>英文版</li>
+                        </a>
+                        <a href="">
+                            <li>学术版</li>
+                        </a>
+                        <a href="">
+                            <li>青教版</li>
+                        </a>
+                        @{
+                            if (ViewBag.IsLogin == null)
+                            {
+                                <a href="/Vip/Sign">
+                                    <li>注册</li>
+                                </a>
+                                <a href="/Vip/Login">
+                                    <li>登录</li>
+                                </a>
+                            }
+                            else
+                            {
+                                <a id="loginout" style="cursor:pointer">
+                                    <li>退出登录</li>
+                                </a>
+                                @if (ViewBag.IsLogin.Length > 4)
+                                {
+                                    ViewBag.IsLogin = ViewBag.IsLogin.Substring(0, 4) + "...";
+                                    <a href="/Vip/Index">
+                                        <li>@ViewBag.IsLogin</li>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="/Vip/Index">
+                                        <li>@ViewBag.IsLogin</li>
+                                    </a>
+                                }
+                            }
+                        }
+                        @if (ViewBag.Head != null)
+                        {
+                            foreach (var item in ViewBag.Head)
+                            {
+                                if (item.ModelName == "首页")
+                                {
+                                    <a href="/JinSha/Index">
+                                        <li>首页</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "关于金沙")
+                                {
+                                    <a href="/About/Index">
+                                        <li>关于金沙</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "参观指南")
+                                {
+                                    <a href="/VisitGuide/Index">
+                                        <li>参观指南</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "展览导览")
+                                {
+                                    <a href="/Exhibition/Index">
+                                        <li>展览导览</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "金沙资讯")
+                                {
+                                    <a href="/NEWS/Index">
+                                        <li>金沙资讯</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "艺术金沙")
+                                {
+                                    <a href="/Creation/Index">
+                                        <li>艺术金沙</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "典藏珍品")
+                                {
+                                    <a href="/Collection/Index">
+                                        <li>典藏珍品</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "文化活动")
+                                {
+                                    <a href="/Culture/Index">
+                                        <li>文化活动</li>
+                                    </a>
+
+                                }
+                                else if (item.ModelName == "金沙会员")
+                                {
+                                    <a href="/Vip/Index">
+                                        <li>金沙会员</li>
+                                    </a>
+
+                                }
+                                else if (item.ModelName == "金沙会员")
+                                {
+                                    <a class="active" href="/Volunteer/Index">
+                                        <li>志愿者</li>
+                                    </a>
+
+                                }
+                            }
+
+                        }
+                    </ul>
+                </div>
+                <div class="row mAp0">
+                    <div class="nav-list">
+                        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                            <ul>
+                                @if (ViewBag.Head != null)
+                                {
+                                    foreach (var item in ViewBag.Head)
+                                    {
+                                        if (item.ModelName == "首页")
+                                        {
+                                            <a href="/JinSha/Index">
+                                                <li>首页</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "关于金沙")
+                                        {
+                                            <a href="/About/Index">
+                                                <li>关于金沙</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "参观指南")
+                                        {
+                                            <a href="/VisitGuide/Index">
+                                                <li>参观指南</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "展览导览")
+                                        {
+                                            <a href="/Exhibition/Index">
+                                                <li>展览导览</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "金沙资讯")
+                                        {
+                                            <a href="/NEWS/Index">
+                                                <li>金沙资讯</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "艺术金沙")
+                                        {
+                                            <a href="/Creation/Index">
+                                                <li>艺术金沙</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "典藏珍品")
+                                        {
+                                            <a href="/Collection/Index">
+                                                <li>典藏珍品</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "文化活动")
+                                        {
+                                            <a href="/Culture/Index">
+                                                <li>文化活动</li>
+                                            </a>
+
+                                        }
+                                        else if (item.ModelName == "金沙会员")
+                                        {
+                                            <a href="/Vip/Index">
+                                                <li>金沙会员</li>
+                                            </a>
+
+                                        }
+                                        else
+                                        {
+                                            <a class="active" href="/Volunteer/Index">
+                                                <li>志愿者</li>
+                                            </a>
+
+                                        }
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--顶部结束-->
+        <div class="content container">
+            <div class="row topShow">
+                <!--隐藏在上面的选项-->
+                <ul class="cont-left cont-left-hide  col-lg-2 col-md-2 col-sm-2">
+                    <li class="liColor">志愿者活动</li>
+                    <li>志愿者风采</li>
+                    <li>服务之星</li>
+                    <li>我要加入</li>
+                    <li>个人中心</li>
+                </ul>
+            </div>
+            <div class="row">
+                <!--左边的选项-->
+                <ul class="cont-left cont-left-show col-lg-2 col-md-2 col-sm-2 mt50">
+                    <li class="activity">志愿者活动</li>
+                    <li>志愿者风采</li>
+                    <li>服务之星</li>
+                    <li>我要加入</li>
+                    <li>个人中心</li>
+                </ul>
+                <!--右边的内容（志愿者活动）-->
+                <div class="cont-right col-lg-10 col-md-10 col-sm-10 show-nav">
+                    <div class="banner">
+                        <img class="center-block img-responsive" src="../../img/volunteer/VOLUNTEER-EVENTS.png" />
+                    </div>
+                    <!--标题-->
+                    <p class="cont-title">
+                        <img src="../../img/volunteer/volunteer1.png" />
+                        <span>志愿者活动</span>
+                    </p>
+                    <!--选项-->
+                    <ul class="tabs">
+                        <li class="sign border-b">正在报名</li>
+                        <li class="end">已结束</li>
+                        <li class="back">精彩回顾</li>
+                    </ul>
+                    <!--切换的内容 正在报名-->
+                    <div class="container-fluid cont-sign show-box" id="issigninfo">
+                    </div>
+                    <!--切换的内容 已结束-->
+                    <div class="cont-end container-fluid show-box" id="nosigninfo">
+                    </div>
+                    <!--切换的内容 精彩回顾-->
+                    <div class="cont-back container-fluid show-box" id="highlights">
+
+                    </div>
+                </div>
+
+                <!--右边的内容（志愿者风采）-->
+                <div class="cont-right col-lg-10 col-md-10 col-sm-10 show-nav hideDiv">
+                    <div class="banner">
+                        <img class="center-block img-responsive" src="../../img/volunteer/VOLUNTEER-EVENTS.png" />
+                    </div>
+                    <!--标题-->
+                    <p class="cont-title">
+                        <img src="../../img/volunteer/volunteer1.png" />
+                        <span>志愿者风采</span>
+                    </p>
+                    <ul class="tabs">
+                        <li class="sign border-b">讲解组</li>
+                        <li class="end">翻译组</li>
+                        <li class="back">摄影组</li>
+                    </ul>
+                    <!--切换的内容 讲解组-->
+                    <div class="container-fluid cont-sign show-box speakItem">
+                        @if (ViewBag.VolunTalk != null)
+                              {
+                                  var row = ViewBag.VolunTalk.Count / 3 + 1;
+                                  var lastnum = ViewBag.VolunTalk.Count % 3;
+                                  for (var i = 0; i < row - 1; i++)
+                                  {
+                                      var src = "/upload/Information/" + ViewBag.VolunTalk[i*3].Id + "/" + ViewBag.VolunTalk[i*3].Photo;
+                                      var src2 = "/upload/Information/" + ViewBag.VolunTalk[i*3+1].Id + "/" + ViewBag.VolunTalk[i*3+1].Photo;
+                                      var src3 = "/upload/Information/" + ViewBag.VolunTalk[i*3+2].Id + "/" + ViewBag.VolunTalk[i*3+2].Photo;
+                                      <div class="row picInfo">
+                                          <div>
+                                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                                                  <img class="img-responsive center-block" src="@src" alt="" />
+                                                  <p>志愿者 <span>@ViewBag.VolunTalk[i*3].Title</span> </p>
+                                              </div>
+                                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                  <img class="img-responsive center-block" src="@src2" alt="" />
+                                                  <p>志愿者 <span>@ViewBag.VolunTalk[i*3+1].Title</span> </p>
+                                              </div>
+                                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right">
+                                                  <img class="img-responsive center-block" src="@src3" alt="" />
+                                                  <p>志愿者 <span>@ViewBag.VolunTalk[i*3+2].Title</span></p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  }
+                                  if (lastnum != 0)
+                                  {
+                                      <div class="row picInfo">
+                                          <div>
+                                              @for (var i = 0; i < lastnum; i++)
+                                              {
+                                                  var src = "/upload/Information/" + ViewBag.VolunTalk[(row - 1) * 3+i].Id + "/" + ViewBag.VolunTalk[(row - 1) * 3+i].Photo;
+                                                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                                                      <img class="img-responsive center-block" src="@src" alt="" />
+                                                      <p>志愿者 <span>@ViewBag.VolunTalk[(row - 1) * 3+i].Title</span> </p>
+                                                  </div>
+                                              }
+                                          </div>
+                                      </div>
+                                  }
+                            }
+                    </div>
+                    <!--切换的内容 翻译组-->
+                    <div class="cont-end container-fluid show-box translate">
+                        @if (ViewBag.VolunTrans != null)
+                              {
+                                  var row = ViewBag.VolunTrans.Count / 3 + 1;
+                                  var lastnum = ViewBag.VolunTrans.Count % 3;
+                                  for (var i = 0; i < row - 1; i++)
+                                  {
+                                      var src = "/upload/Information/" + ViewBag.VolunTrans[i * 3].Id + "/" + ViewBag.VolunTrans[i * 3].Photo;
+                                      var src2 = "/upload/Information/" + ViewBag.VolunTrans[i * 3 + 1].Id + "/" + ViewBag.VolunTrans[i * 3 + 1].Photo;
+                                      var src3 = "/upload/Information/" + ViewBag.VolunTrans[i * 3 + 2].Id + "/" + ViewBag.VolunTrans[i * 3 + 2].Photo;
+                                      <div class="row picInfo">
+                                          <div>
+                                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                                                  <img class="img-responsive center-block" src="@src" alt="" />
+                                                  <p>志愿者 <span>@ViewBag.VolunTrans[i*3].Title</span> </p>
+                                              </div>
+                                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                  <img class="img-responsive center-block" src="@src2" alt="" />
+                                                  <p>志愿者 <span>@ViewBag.VolunTrans[i*3+1].Title</span> </p>
+                                              </div>
+                                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right">
+                                                  <img class="img-responsive center-block" src="@src3" alt="" />
+                                                  <p>志愿者 <span>@ViewBag.VolunTrans[i*3+2].Title</span></p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  }
+                                  if (lastnum != 0)
+                                  {
+                                      <div class="row picInfo">
+                                          <div>
+                                              @for (var i = 0; i < lastnum; i++)
+                                              {
+                                                  var src = "/upload/Information/" + ViewBag.VolunTrans[(row - 1) * 3 + i].Id + "/" + ViewBag.VolunTrans[(row - 1) * 3 + i].Photo;
+                                                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                                                      <img class="img-responsive center-block" src="@src" alt="" />
+                                                      <p>志愿者 <span>@ViewBag.VolunTrans[(row - 1) * 3+i].Title</span> </p>
+                                                  </div>
+                                              }
+                                          </div>
+                                      </div>
+                                  }
+                            }
+                    </div>
+                    <!--切换的内容 摄影组-->
+                    <div class="cont-back container-fluid show-box shoot">
+                        @if (ViewBag.VolunPhoto != null)
+                              {
+                                  var row = ViewBag.VolunPhoto.Count / 3 + 1;
+                                  var lastnum = ViewBag.VolunPhoto.Count % 3;
+                                  for (var i = 0; i < row - 1; i++)
+                                  {
+                                      var src = "/upload/Information/" + ViewBag.VolunPhoto[i * 3].Id + "/" + ViewBag.VolunPhoto[i * 3].Photo;
+                                      var src2 = "/upload/Information/" + ViewBag.VolunPhoto[i * 3 + 1].Id + "/" + ViewBag.VolunPhoto[i * 3 + 1].Photo;
+                                      var src3 = "/upload/Information/" + ViewBag.VolunPhoto[i * 3 + 2].Id + "/" + ViewBag.VolunPhoto[i * 3 + 2].Photo;
+                                    <div class="row picInfo">
+                                        <div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                                                <img class="img-responsive center-block" src="@src" alt="" />
+                                                <p>志愿者 <span>@ViewBag.VolunPhoto[i*3].Title</span> </p>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                <img class="img-responsive center-block" src="@src2" alt="" />
+                                                <p>志愿者 <span>@ViewBag.VolunPhoto[i*3+1].Title</span> </p>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right">
+                                                <img class="img-responsive center-block" src="@src3" alt="" />
+                                                <p>志愿者 <span>@ViewBag.VolunPhoto[i*3+2].Title</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  }
+                                  if (lastnum != 0)
+                                  {
+                                    <div class="row picInfo">
+                                        <div>
+                                            @for (var i = 0; i < lastnum; i++)
+                                            {
+                                                var src = "/upload/Information/" + ViewBag.VolunPhoto[(row - 1) * 3 + i].Id + "/" + ViewBag.VolunPhoto[(row - 1) * 3 + i].Photo;
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                                                    <img class="img-responsive center-block" src="@src" alt="" />
+                                                    <p>志愿者 <span>@ViewBag.VolunPhoto[(row - 1) * 3+i].Title</span> </p>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                  }
+                            }
+                    </div>
+                </div>
+                <!--服务之星-->
+                <div class="cont-right col-lg-10 col-md-10 col-sm-10 show-nav hideDiv">
+                    <div class="banner1">
+                        <img class="center-block img-responsive" src="../../img/volunteer/bgi.png" />
+                    </div>
+                    <!--标题-->
+                    <div class="star-title row">
+                        <p class="col-lg-4 col-md-4 col-sm-4 line-L"></p>
+                        <p class="col-lg-4 col-md-4 col-sm-4 star-text"><img class="center-block img-responsive" src="../../img/volunteer/font-img.png" /></p>
+                        <p class="col-lg-4 col-md-4 col-sm-4 line-R"></p>
+                    </div>
+                    <!--切换的内容 讲解组-->
+                    <div class="container-fluid cont-sign show-box star-box">
+                        @if (ViewBag.ServStar != null)
+                              {
+                                  var row = ViewBag.ServStar.Count / 4 + 1;
+                                  var lastnum = ViewBag.ServStar.Count % 4;
+                                  for (var i = 0; i < row - 1; i++)
+                                  {
+                                      var src = "/upload/Information/" + ViewBag.ServStar[i * 4].Id + "/" + ViewBag.ServStar[i * 4].Photo;
+                                      var src2 = "/upload/Information/" + ViewBag.ServStar[i * 4 + 1].Id + "/" + ViewBag.ServStar[i * 4 + 1].Photo;
+                                      var src3 = "/upload/Information/" + ViewBag.ServStar[i * 4 + 2].Id + "/" + ViewBag.ServStar[i * 4 + 2].Photo;
+                                      var src4 = "/upload/Information/" + ViewBag.ServStar[i * 4 + 3].Id + "/" + ViewBag.ServStar[i * 4 + 3].Photo;
+                                      <div class="row picInfo">
+                                          <div>
+                                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+                                                  <img class="img-responsive center-block" src="@src" alt="" style="border: 6px solid #DAB766;" />
+                                                  <p>志愿者  @ViewBag.ServStar[i * 4].Title</p>
+                                                  <p>
+                                                      @if (ViewBag.ServStar[i * 4].TicketPrice != null)
+                                                      {
+                                                          int half = 0;
+                                                          int num = int.Parse(ViewBag.ServStar[i * 4].TicketPrice);
+                                                          int no = 5;
+                                                          if (ViewBag.ServStar[i * 4].TicketPrice.Contains("."))
+                                                          {
+                                                              half = 1;
+                                                              no = 4 - num;
+                                                          }
+                                                          else
+                                                          {
+                                                              no = 5 - num;
+
+                                                          }
+                                                          for (var j = 0; j < num; j++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-all.png" />
+                                                          }
+                                                          if (half != 0)
+                                                          {
+                                                              <img src="../../img/volunteer/star-half.png" />
+                                                          }
+                                                          for (var k = 0; k < no; k++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-no.png" />
+                                                          }
+                                                      }
+                                                  </p>
+                                              </div>
+                                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+                                                  <img class="img-responsive center-block" src="@src2" alt="" style="border: 6px solid #DAB766;" />
+                                                  <p>志愿者  @ViewBag.ServStar[i * 4+1].Title</p>
+                                                  <p>
+                                                      @if (ViewBag.ServStar[i * 4+1].TicketPrice != null)
+                                                      {
+                                                          int half = 0;
+                                                          int num = int.Parse(ViewBag.ServStar[i * 4+1].TicketPrice);
+                                                          int no = 5;
+                                                          if (ViewBag.ServStar[i * 4+1].TicketPrice.Contains("."))
+                                                          {
+                                                              half = 1;
+                                                              no = 4 - num;
+                                                          }
+                                                          else
+                                                          {
+                                                              no = 5 - num;
+
+                                                          }
+                                                          for (var j = 0; j < num; j++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-all.png" />
+                                                          }
+                                                          if (half != 0)
+                                                          {
+                                                              <img src="../../img/volunteer/star-half.png" />
+                                                          }
+                                                          for (var k = 0; k < no; k++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-no.png" />
+                                                          }
+                                                      }
+                                                  </p>
+                                              </div>
+                                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+                                                  <img class="img-responsive center-block" src="@src3" alt="" style="border: 6px solid #DAB766;" />
+                                                  <p>志愿者  @ViewBag.ServStar[i * 4+2].Title</p>
+                                                  <p>
+                                                      @if (ViewBag.ServStar[i * 4+2].TicketPrice != null)
+                                                      {
+                                                          int half = 0;
+                                                          int num = int.Parse(ViewBag.ServStar[i * 4+2].TicketPrice);
+                                                          int no = 5;
+                                                          if (ViewBag.ServStar[i * 4+2].TicketPrice.Contains("."))
+                                                          {
+                                                              half = 1;
+                                                              no = 4 - num;
+                                                          }
+                                                          else
+                                                          {
+                                                              no = 5 - num;
+
+                                                          }
+                                                          for (var j = 0; j < num; j++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-all.png" />
+                                                          }
+                                                          if (half != 0)
+                                                          {
+                                                              <img src="../../img/volunteer/star-half.png" />
+                                                          }
+                                                          for (var k = 0; k < no; k++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-no.png" />
+                                                          }
+                                                      }
+                                                  </p>
+                                              </div>
+                                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+                                                  <img class="img-responsive center-block" src="@src4" alt="" style="border: 6px solid #DAB766;" />
+                                                  <p>志愿者  @ViewBag.ServStar[i * 4+3].Title</p>
+                                                  <p>
+                                                      @if (ViewBag.ServStar[i * 4+3].TicketPrice != null)
+                                                      {
+                                                          int half = 0;
+                                                          int num = int.Parse(ViewBag.ServStar[i * 4+3].TicketPrice);
+                                                          int no = 5;
+                                                          if (ViewBag.ServStar[i * 4+3].TicketPrice.Contains("."))
+                                                          {
+                                                              half = 1;
+                                                              no = 4 - num;
+                                                          }
+                                                          else
+                                                          {
+                                                              no = 5 - num;
+
+                                                          }
+                                                          for (var j = 0; j < num; j++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-all.png" />
+                                                          }
+                                                          if (half != 0)
+                                                          {
+                                                              <img src="../../img/volunteer/star-half.png" />
+                                                          }
+                                                          for (var k = 0; k < no; k++)
+                                                          {
+                                                              <img src="../../img/volunteer/star-no.png" />
+                                                          }
+                                                      }
+                                                  </p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  }
+                                  if (lastnum != 0)
+                                  {
+                                      <div class="row picInfo">
+                                          <div>
+                                              @for (var i = 0; i < lastnum; i++)
+                                              {
+                                                  var src = "/upload/Information/" + ViewBag.ServStar[(row - 1) * 4 + i].Id + "/" + ViewBag.ServStar[(row - 1) * 4 + i].Photo;
+                                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+                                                      <img class="img-responsive center-block" src="@src" alt="" style="border: 6px solid #DAB766;" />
+                                                      <p>志愿者  @ViewBag.ServStar[i * 4 + i].Title</p>
+                                                      <p>
+                                                          @if (ViewBag.ServStar[i * 4 + i].TicketPrice != null)
+                                                          {
+                                                              int half = 0;
+                                                              int num = int.Parse(ViewBag.ServStar[i * 4 + i].TicketPrice);
+                                                              int no = 5;
+                                                              if (ViewBag.ServStar[i * 4 + i].TicketPrice.Contains("."))
+                                                              {
+                                                                  half = 1;
+                                                                  no = 4 - num;
+                                                              }
+                                                              else
+                                                              {
+                                                                  no = 5 - num;
+
+                                                              }
+                                                              for (var j = 0; j < num; j++)
+                                                              {
+                                                                  <img src="../../img/volunteer/star-all.png" />
+                                                              }
+                                                              if (half != 0)
+                                                              {
+                                                                  <img src="../../img/volunteer/star-half.png" />
+                                                              }
+                                                              for (var k = 0; k < no; k++)
+                                                              {
+                                                                  <img src="../../img/volunteer/star-no.png" />
+                                                              }
+                                                          }
+                                                      </p>
+                                                  </div>
+                                              }
+                                          </div>
+                                      </div>
+                                  }
+                            }
+                    </div>
+                </div>
+                <!--我要加入-->
+                <div class="cont-right col-lg-10 col-md-10 col-sm-10 show-nav hideDiv">
+                    <!--步骤条-->
+                    <div class="steps">
+                        <div class="step-line1">
+                            <ul>
+                                <li class="step2">
+                                    <span>2</span>
+                                    <p>选择分类</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="step-line2"></div>
+                        <ul class="stepInfo">
+                            <li class="step1">
+                                <span>1</span>
+                                <p>阅读章程</p>
+                            </li>
+                            <li class="step3">
+                                <span>3</span>
+                                <p>填写申请表</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--第一个步骤-->
+                    <div class="step-one">
+                        <div class="volunteer-rules">
+                            <h3 class="textCenter">金沙遗址博物馆志愿者章程</h3>
+                            <h5 class="textCenter">第一章  总则</h5>
+                            <ul>
+                                <li>第一条  为了推进金沙遗址博物馆建设，提升社会服务功能，弘扬志愿者精神，向志愿者提供实现社会价值和个人价值的多元舞台，促进和谐社会和个人的全面发展，特制定本章程。</li>
+                                <li>第二条  金沙遗址博物馆吸收热爱博物馆事业，愿意在博物馆为公众服务的人士为本馆志愿者。</li>
+                                <li>第三条 金沙遗址博物馆开放部代表金沙遗址博物馆管理志愿者，并为志愿者提供帮助与服务。</li>
+                                <li>第四条  金沙遗址博物馆志愿者组织及个人均接受金沙遗址博物馆开放部的管理。</li>
+                            </ul>
+                            <h5 class="textCenter">第二章  金沙遗址博物馆志愿者的条件与招募</h5>
+                            <ul>
+                                <li>
+                                    第五条 金沙遗址博物馆志愿者基本条件
+                                    <ol>
+                                        <li>1、热心博物馆公益事业，具有良好文化素养，愿意无偿服务于社会；</li>
+                                        <li>2、年龄在18—65周岁，身心健康，乐观向上，善于交流，诚实守信，具有团队精神；</li>
+                                        <li>3、每周至少服务一次，每次不少于3小时，每年服务时间不少于100小时；</li>
+                                        <li>4、能够自觉遵守金沙遗址博物馆的各项规章制度及各类准则。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    第六条 金沙遗址博物馆志愿者报名招募流程
+                                    <ol>
+                                        <li>1、报名：志愿者常年接受报名，3月和9月集中招募，可到金沙遗址博物馆现场报名或下载报名表发至邮箱zyz@jinshasitemuseum.com，报名相关事宜咨询电话028-87303516；</li>
+                                        <li>2、面试：根据所填报岗位要求进行面试；</li>
+                                        <li>3、培训：面试通过者参加岗前培训，主要内容包括志愿者活动的意义与价值观，金沙遗址博物馆志愿者规章制度及常规工作程序，博物馆基础理论知识，古蜀历史文化知识等；</li>
+                                        <li>4、考核：岗前培训后，按照各岗位要求进行考核；</li>
+                                        <li>5、见习：考核通过者方可进入见习期，见习期时间为4周，服务时间须达到12小时；</li>
+                                        <li>6、转正：见习期表现良好，服务时间达到要求者，可转正成为金沙遗址博物馆志愿者。</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                            <h5 class="textCenter">第三章  金沙遗址博物馆志愿者的工作与管理</h5>
+                            <ul>
+                                <li>第七条  金沙遗址博物馆志愿工作者的工作期限一般为一年，时间从见习期之日起计算。工作优秀者经本人申请并获准后可延长，延长次数不限，志愿者依据本人意愿，亦可随时申请中断志愿工作。</li>
+                                <li>第八条  志愿者在通过4周的见习期后，颁发《金沙遗址博物馆志愿者服务手册》，志愿者服务时须记录每次服务及活动情况，并经负责人确认作为工作考核的依据。</li>
+                                <li>第九条  金沙遗址博物馆向志愿者发放工作证，志愿者工作时必须佩戴此证，且统一着装。</li>
+                                <li>第十条 志愿者的工作时间由志愿者本人根据自己所报时间上岗服务。</li>
+                                <li>第十一条  在志愿服务中表现优秀者，金沙遗址博物馆会在年终进行表彰；在我馆工作满3年，表现良好且继续从事服务的志愿者可获得“金沙遗址博物馆荣誉志愿者”称号；工作满5年，表现良好且继续从事服务的志愿者可获得“金沙遗址博物馆资深志愿者”称号；工作满10年，表现良好且继续从事服务的志愿者可获得“金沙遗址博物馆荣誉馆员”称号。</li>
+                                <li>第十二条  志愿者依据本人的意愿亦可随时申请中断志愿工作；志愿者在从事服务期间表现消极且影响工作者，本馆将劝其退出金沙遗址博物馆志愿者组织；表现与志愿者工作身份不符或以志愿者身份涉及政治、宗教、商业推销等有损金沙遗址博物馆形象者，本馆将予以辞退，被辞退者不得再度成为本馆志愿者。</li>
+                            </ul>
+                            <h5 class="textCenter">第四章 金沙遗址博物馆志愿者的权利和义务</h5>
+                            <ul>
+                                <li>
+                                    第十三条  金沙遗址博物馆志愿者权利
+                                    <ol>
+                                        <li>1、免费参加博物馆的各种讲座、重要活动以及与藏品相关的各种培训；</li>
+                                        <li>2、免费使用金沙遗址博物馆提供的业务书籍和学习资料；</li>
+                                        <li>3、享有金沙遗址博物馆举办的各类文化活动和教育活动的优先参与权或一定程度的优惠；</li>
+                                        <li>4、本人购买博物馆门票、4D电影票可享8折优惠；</li>
+                                        <li>5、本人在博物馆礼品商店消费可享受8.5折优惠；</li>
+                                        <li>6、在博物馆餐厅可享受与博物馆职员一样的折扣；</li>
+                                        <li>7、可以享受在金沙遗址博物馆对外停车场免费停车。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    第十四条  金沙遗址博物馆志愿者义务
+                                    <ol>
+                                        <li>1、履行志愿服务承诺，积极参与志愿服务；</li>
+                                        <li>2、自觉维护志愿者组织和志愿者的形象；</li>
+                                        <li>3、自觉遵守相关法律法规及志愿者组织规定的其它义务；</li>
+                                        <li>4、作为志愿者应举止大方，言辞得体，微笑服务，不说粗话脏话，不能与观众发生争执；</li>
+                                        <li>5、热爱博物馆事业，具有无私奉献，不计回报，爱岗敬业，团结互助的精神；</li>
+                                        <li>6、遵守以上条例，不得以志愿者身份从事任何以赢利为目的或违背社会公德的活动。</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                            <h5 class="textCenter">第五章 附则</h5>
+                            <ul>
+                                <li>第十五条  本章程自发布之日起生效。</li>
+                            </ul>
+
+                            <div class="endInfo">
+                                <p>成都金沙遗址博物馆</p>
+                                <p>2014年5月</p>
+                            </div>
+                        </div>
+                        <!--我已同意遵守该章程内容-->
+                        <p class="agree"><i><img class="hideImg" src="../../img/volunteer/ch.png" /></i><span>我已同意遵守该章程内容</span></p>
+                        <!--下一步按钮-->
+                        <div class="one-nextBtn">下一步</div>
+                    </div>
+                    <!--第二个步骤-->
+                    <div style="display: none;" class="step-two ">
+                        <div id="explain" class="explain">成为小小讲解员</div>
+                        <div id="volunt" class="volunt bgI">成为志愿者</div>
+                        <div class="twoBtns row">
+                            <div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12 two-upBtn">上一步</div>
+                            <div class="col-md-4 col-md-4 col-sm-12 col-xs-12 pull-right two-nextBtn">下一步</div>
+                        </div>
+                    </div>
+
+                    <!--第三个步骤-->
+                    <div class="step-three row" style="display:none;" id="three">
+                        <!--左上-->
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 step3-topL">
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">姓名：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <input id="name" type="text" onblur="testReg(0)" readonly />
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5  col-sm-5  col-xs-5 textRight">性别：</span>
+                                <span class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <span class="man "><i class="bg" tag="M"></i><span>男</span></span>
+                                    <span class="woman "><i tag="F"></i><span>女</span></span>
+                                </span>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5  col-sm-5  col-xs-5 textRight">* 出生日期：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <input type="text" id="date" onblur="testReg(1)" placeholder="YYYY-MM-DD" />
+                                    <b>请输入出生年月</b>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span id="explain_phone" class="col-lg-5 col-md-5  col-sm-5  col-xs-5 textRight">手机号码：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><input id="phone" type="text" onblur="testReg(2)" maxlength="11" readonly /></label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">身体状况：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 ">
+                                    <select name="" id="CONDITIONselect"></select>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span id="explain_school" class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight"><span>*</span> 单位 / 学校：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <input id="school" type="text" onblur="testReg(3)" />
+                                    <b>请输入单位 / 学校</b>
+                                </label>
+                            </p>
+
+                        </div>
+                        <!--右上-->
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 step3-topR">
+                            <p id="familyBox" class="paddingRightPercent" style="display: none;">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">监护人姓名：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <input id="family" type="text" onblur="testReg(8)" />
+                                    <b>请输入监护人姓名</b>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">民族：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <select name="" id="nationselect"></select>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">职业：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 ">
+                                    <select name="" id="OCCUPATIONselect"></select>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">政治面貌：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 ">
+                                    <select name="" id="POLITICALselect"></select>
+                                </label>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">学历：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 ">
+                                    <select name="" id="QUALIFICATIONSselect"></select>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span id="explain_email" class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">邮箱：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 "><input id="email" type="text" onblur="testReg(6)" readonly /></label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span id="explain_idcard" class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">* 身份证号码：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <input id="idCard" type="text" onblur="testReg(4)" />
+                                    <b>请输入身份证号码</b>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span id="explain_idcard" class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">* 身高（CM）：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <input id="height" type="text" onblur="testReg(9)" maxlength="3" />
+                                    <b>请输入身高</b>
+                                </label>
+                            </p>
+                        </div>
+                        <!--中间-->
+                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textAre paddingRightPercent">
+                            <span class="col-lg-2 col-md-2 col-sm-5  col-xs-5 textRight">* 特长及专业：</span>
+                            <label class="col-lg-10 col-md-10 col-sm-7 col-xs-7 ">
+                                <textarea id="good" name="" rows="4" cols="" onblur="testReg(7)"></textarea>
+                                <b>请输入特长及专业</b>
+                            </label>
+                        </p>
+                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textAre paddingRightPercent">
+                            <span class="col-lg-2 col-md-2 col-sm-5  col-xs-5 textRight">申请原因及期望：</span>
+                            <label class="col-lg-10 col-md-10 col-sm-7 col-xs-7 "><textarea id="rande" name="" rows="4" cols=""></textarea></label>
+                        </p>
+
+                        <!--左下-->
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 step3-bottomL">
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5  col-sm-5  col-xs-5 textRight">预计服务时间：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <select name="" id="SERVICETIMEselect"></select>
+                                </label>
+                            </p>
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">意向服务岗位：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 ">
+                                    <select name="" id="SERVICEPOSTselect"></select>
+                                </label>
+                            </p>
+                        </div>
+                        <!--右下-->
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 step3-bottomR">
+                            <p class="paddingRightPercent">
+                                <span class="col-lg-5 col-md-5 col-sm-5  col-xs-5 textRight">预计服务期限：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 ">
+                                    <select name="" id="SERVICETERMselect"></select>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="boxTwo col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <p class="markInfo">标注 * 号的为必填项</p>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 upBtn">
+                                <div>上一步</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 subBtn">
+                                <div>提交</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--个人中心-->
+                <div class="cont-right col-lg-9 col-lg-push-1 col-md-push-1 col-md-9 col-sm-9 show-nav hideDiv personCenter">
+                    <!--基本信息-->
+                    <div class="personCenter-info row">
+                        <div class="basicInfo">基本信息</div>
+                        <p class="p-one">
+                            <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">姓名：</span>
+                            <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 " id="volunteername"></label>
+                        </p>
+                        <p>
+                            <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">星级：</span>
+                            <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 " id="starnum">
+                            </label>
+                        </p>
+                        <p>
+                            <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">岗位名称：</span>
+                            <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 " id="servicePost"></label>
+                        </p>
+                        <p>
+                            <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">政治面貌：</span>
+                            <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 " id="political"></label>
+                        </p>
+                        <p>
+                            <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">身高：</span>
+                            <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 " id="myheight"></label>
+                        </p>
+                        <p>
+                            <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">身体状况：</span>
+                            <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 " id="health"></label>
+                        </p>
+                    </div>
+                    <!--排版查询-->
+                    @*<div class="search row">
+                            <div class="basicInfo">排班查询</div>
+                            <p class="p-one">
+                                <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">时间搜索：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 "><input type="text" /> — <input type="text" /></label>
+                            </p>
+                            <p class="p-one">
+                                <span class="col-lg-2 col-md-2 col-sm-3  col-xs-4 textRight padding_0 pr">我的排班：</span>
+                                <label class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding_0 ">我是排班我是排班我是排班我是排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班排班我是排班</label>
+                            </p>
+                        </div>
+                        个人日志
+                        <div class="person">
+                            <div class="basicInfo">个人日志</div>
+                            <a href="">
+                                <p class="person-one">
+                                    <span class="col-lg-3 col-md-3 col-sm-3  col-xs-4  padding_0 pl40">志愿者服务日志</span>
+                                    <label class="col-lg-2 col-md-2 col-sm-3  col-xs-4 pull-right padding_0 ">2017-09-29</label>
+                                </p>
+                            </a>
+                            <a href="">
+                                <p>
+                                    <span class="col-lg-3 col-md-3 col-sm-3  col-xs-4  padding_0 pl40">日志</span>
+                                    <label class="col-lg-2 col-md-2 col-sm-3  col-xs-4 pull-right padding_0 ">2017-09-29</label>
+                                </p>
+                            </a>
+                            <a href="">
+                                <p>
+                                    <span class="col-lg-3 col-md-3 col-sm-3  col-xs-4  padding_0 pl40">金沙博物馆日志</span>
+                                    <label class="col-lg-2 col-md-2 col-sm-3  col-xs-4 pull-right padding_0 ">2017-09-29</label>
+                                </p>
+                            </a>
+                            <a href="">
+                                <p>
+                                    <span class="col-lg-3 col-md-3 col-sm-3  col-xs-4  padding_0 pl40">金沙博物馆日志</span>
+                                    <label class="col-lg-2 col-md-2 col-sm-3  col-xs-4 pull-right padding_0 ">2017-09-29</label>
+                                </p>
+                            </a>
+                            <a href="">
+                                <p>
+                                    <span class="col-lg-3 col-md-3 col-sm-3  col-xs-4  padding_0 pl40">金沙博物馆日志</span>
+                                    <label class="col-lg-2 col-md-2 col-sm-3  col-xs-4 pull-right padding_0 ">2017-09-29</label>
+                                </p>
+                            </a>
+                        </div>*@
+                    <!--我的活动-->
+                    <div class="me">
+                        <div class="meTabs">
+                            <div class="basicInfo meBtn">我的活动</div>
+                            <div class="ing tabsDiv clickColor">已报名</div>
+                            <div class="ed tabsDiv">已参加</div>
+                        </div>
+                        <!--已报名-->
+                        <div class="me-one" id="enrolactitvty">
+                        </div>
+
+                        <!--已参加-->
+                        <div class="me-two" id="joininactitvty" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页面下面的长线-->
+    <div style="width: 100%;height: 0px;border-bottom: 1px solid #DAB766;"></div>
+    @if (ViewBag.Footer != null)
+    {
+        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../common/common.js"></script>
+        <!--分页插件-->
+        <script type="text/javascript" src="../../js/paging.js"></script>
+        <!--my-js-->
+        <script type="text/javascript" src="../../js/volunteer/volunteer.js"></script>
+        <footer class="container footer ">
+            <div class="row">
+                <!--联系我们-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                    <p class="callmeP1">联系我们</p>
+                    <p class="callmeP2">电话:<span> @ViewBag.Footer.PhoneNumber</span></p>
+                    <p class="callmeP3">地址:<span> @ViewBag.Footer.Address</span></p>
+                    <div class="row twopic">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                            <img class="img-responsive" src="@ViewBag.Footer.Wechat" />
+                            <p><img src="../common/footerImg/bottom_wechat.png" /><span class="weixincolor">关注官方微信</span></p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <img class="img-responsive" src="@ViewBag.Footer.Watermark" />
+                            <p><img src="../common/footerImg/weibo-icon.png" /><span class="color">关注官方微博</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--友情链接-->
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                    <p class="linkP1">友情链接</p>
+                    <!--博物馆-->
+                    <div class="footer-museum divselect">
+                        <cite onchange="window.location=this.href;">博物馆</cite>
+                        <ul id="OtherList" tag="@ViewBag.Footer.MuseumLink"></ul>
+                    </div>
+                    <!--政府-->
+                    <div class="footer-government divselect">
+                        <cite onchange="window.location=this.href;">其他</cite>
+                        <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                        <script>
+                            $(function () {
+                                var data = JSON.parse($('#GovernmentalList').attr('tag'));
+                                var cc1 = "";
+                                $.each(data, function (i, item) {
+                                    cc1 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                
+                                $('#GovernmentalList').append(cc1);
+
+                                var data2 = JSON.parse($('#OtherList').attr('tag'));
+                                var cc2 = "";
+                                $.each(data2, function (i, item) {
+                                    cc2 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                
+                                $('#OtherList').append(cc2);
+
+                            });
+                        </script>
+                    </div>
+
+                    <p class="help">游览帮助</p>
+                    <div class="link-btm-info">
+                        <ul>
+                            @if (ViewBag.JumpLink != null)
+                            {
+                                foreach (var item in ViewBag.JumpLink)
+                                {
+                                    <li>
+                                        <a href="/VisitGuide/Index#@item.Id">@item.Name</a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <!--版权-->
+                <div class="col-xs-12  copyright padding_0">
+                    <div>
+                        <img class="img-responsive" src="../common/footerImg/bottom_logo.png" />
+                    </div>
+                    <p class="copyrightP1">金沙遗址博物馆版权所有</p>
+                    <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                </div>
+            </div>
+            <!--返回顶部-->
+            <div class="toTop" style="display: none;">
+                <img class="bgarr" src="/img/arrows/return_nor.png" />
+                <img class="hoverImg" src="/img/arrows/return_pre.png">
+            </div>
+        </footer>
+    }
+    <script>
+                            $("#loginout").on("click", function () {
+                                $.ajax({
+                                    url: '/api/Members/MembersLoginout',
+                                    type: 'GET',
+                                    dataType: "text",
+                                    contentType: "application/json",
+                                    success: function (data) {
+                                        data = JSON.parse(data)
+                                        alert(data.message);
+                                        window.location.reload();
+                                    }
+                                });
+                            });
+    </script>
+
+    <!-- JiaThis Button BEGIN -->
+    <script type="text/javascript">
+                            var jiathis_config = {
+                                siteNum: 15,
+                                sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+                                summary: "",
+                                boldNum: 6,
+                                showClose: true,
+                                shortUrl: false,
+                                hideMore: false
+                            }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+</body>
+
+</html>

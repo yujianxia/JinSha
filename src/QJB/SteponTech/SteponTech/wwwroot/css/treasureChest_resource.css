@@ -1,0 +1,170 @@
+body{padding: 0;margin: 0;height: 100%;}
+.content{
+    min-width: 1280px;
+    height: 1351px;
+    background-image: url("../img/treasureChest_resource/back2.png");
+    background-position: center;
+    overflow: hidden;
+}
+.content-box{
+    width: 1200px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+    position: relative;
+}
+.pop{
+	position: absolute;
+	left: 479px;
+	top: -21px;
+}
+.crumbs{
+    width: 100%;
+    height: 212px;
+    /*outline: 1px solid red;*/
+}
+.crumbs img{
+    cursor:pointer;
+    /*outline: 1px solid red;*/
+    margin-left: -5px;
+}
+.content-conter{
+    width: 812px;
+    height: 667px;
+    /*outline: 1px solid red;*/
+    margin: auto;
+    margin-top: 60px;
+}
+.resource-box{
+    float: left;
+    width: 226px;
+    height: 240px;
+    background-image: url("../img/treasureChest_resource/ziYuanBox.png");
+    margin: 30px 20px;
+}
+.resource-box-top {
+    width: 214px;
+    height: 150px;
+    /*border: 1px solid red;*/
+    margin-left: 5px;
+    margin-top: 6px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom:12px;
+}
+.resource-box-top img{
+    width: 100%;
+    height: 100%;
+    display:block;
+}
+.resource-box-down{
+    height: 70px;
+    /*outline: 1px solid red;*/
+    margin-left: 28px;
+    margin-bottom: 15px;
+    overflow:hidden;
+}
+.resource-box-down p{
+    width:145px;
+   color: #ffefdb;
+    font-size: 16px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    margin-top:10px;
+    text-align:center;
+}
+.resource-box-down img{
+    position: relative;
+    left: 150px;
+    top: -42px;
+}
+.page{
+    width: 500px;
+    height: 100px;
+    /*outline: 1px solid red;*/
+    margin: auto;
+    margin-top: 20px;
+    background-image: url("../img/treasureChest_resource/pageback.png");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+}
+.page img{
+    height: 49px;
+    margin-top: 30px;
+    cursor:pointer;
+}
+.pageToolbar .ui-paging-container ul {
+    text-align: center;
+}
+
+    .pageToolbar .ui-paging-container ul li {
+        cursor: pointer;
+        margin: 0 10px;
+    }
+
+    .pageToolbar .ui-paging-container ul .js-page-first,
+    .pageToolbar .ui-paging-container ul .js-page-last {
+        width: 60px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #ffda84;
+        font-size: 14px;
+        color: #170801;
+        display: none !important;
+    }
+
+    .pageToolbar .ui-paging-container ul [data-page] {
+        display: none;
+    }
+
+    .pageToolbar .ui-paging-container ul .js-page-prev,
+    .pageToolbar .ui-paging-container ul .js-page-next {
+        width: 164px;
+        height: 49px;
+    }
+
+    .pageToolbar .ui-paging-container ul .js-page-prev {
+        background: url(../img/treasureChest_manual/upPage.png) no-repeat center;
+    }
+
+    .pageToolbar .ui-paging-container ul .js-page-next {
+        background: url(../img/treasureChest_manual/nextPage.png) no-repeat center;
+    }
+
+    .pageToolbar .ui-paging-container ul .ui-paging-toolbar {
+        height: 30px;
+        vertical-align: top;
+        display: none !important;
+    }
+
+        .pageToolbar .ui-paging-container ul .ui-paging-toolbar .ui-paging-count {
+            width: 60px;
+            height: 30px;
+            border: 1px solid #d8b865;
+            background-color: transparent;
+        }
+
+        .pageToolbar .ui-paging-container ul .ui-paging-toolbar a {
+            font-size: 14px;
+            line-height: 30px;
+            border: 0;
+            color: #b59852;
+        }
+
+.ui-paging-container li {
+    display: inline-block;
+    color: #666;
+}
+.glass {
+    width: 100%;
+    min-width: 1280px;
+    height: 280px;
+    background-image: url(../img/common/leaf2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 109px;
+}

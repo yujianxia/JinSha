@@ -1,0 +1,204 @@
+body{padding: 0;margin: 0;height: 100%;}
+.content{
+	position: relative;
+    /*marginm-top: 100px;*/
+    min-width: 1280px;
+    height: 1424px;
+    background-image: url("../img/strategy_intro/back.png");
+    background-position: center;
+}
+/*树叶飘动*/
+.glass{
+    width: 100%;
+    min-width: 1280px;
+    height: 280px;
+    top: 0;
+    background-image: url(../img/common/leaf2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left:0;
+}
+
+.content-box{
+    width: 1280px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+    position: relative;
+}
+.brid1 {
+    position: absolute;
+    left: 800px;
+    top: 94px;
+}
+.crumbs {
+    width: 100%;
+    height: 212px;
+    position: relative;
+    /*outline: 1px solid red;*/
+}
+.inner{
+	position: absolute;
+	width: 100%;
+	height: 210px;
+    z-index:999;
+}
+.nav1 {
+    width: 337px;
+    height: 637px;
+    /*outline: 1px solid red;*/
+    float: left;
+    background-image: url("../img/strategy_intro/pillar.png");
+    background-repeat: no-repeat;
+    background-position:54px 0px;
+    margin-top: 100px;
+}
+.nav1 a{
+	margin-left: 22px;
+}
+.nav1 img{
+    /*outline: 1px solid red;*/
+}
+.nav1-1{
+    margin-top: 10px;
+}
+.nav1-2{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.nav1-3{
+    margin-top: 30px;
+}
+.nav1-4{
+    margin-left: 35px;
+    margin-top: 35px;
+}
+.nav1-5{
+    margin-top: 10px;
+}
+.box{
+	left: 295px;
+	top: 158px;
+    width: 1140px;
+    overflow: hidden;
+    height: 1050px;
+    /*outline: 2px solid red;*/
+    position: absolute;
+    /*margin-right: -100px;*/
+    background-image: url("../img/strategy_intro/muban.png");
+}
+.video {
+    width: 522px;
+    height: 327px;
+    border: 5px solid #dfa053;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    left: 238px;
+    top: 350px;
+    box-shadow: 4px 10px 12px #000;
+}
+.video video{
+	width: 100%!important;
+	height: 100%!important;
+}
+.title{
+
+    position: relative;
+    overflow: hidden;
+    left: 204px;
+    top: 340px;
+    width: 620px;
+}
+.title img{
+	width: 205px;
+	height: 68px;
+}
+.title .intro{
+	cursor: pointer;
+	float: left;
+}
+.title .dibiao{
+	cursor: pointer;
+	float: right;
+}
+.text {
+    width: 657px;
+    height: 175px;
+    background-image: url("../img/strategy_intro/box.png");
+    position: relative;
+    left: 177px;
+    top: 374px;
+    /*white-space:nowrap;*/
+}
+.vr{
+    width: 152px;
+    height: 51px;
+    position: relative;
+    left: 432px;
+    top: 375px;
+    /*background-image: url("../img/strategy_intro/q.png");*/
+}
+.subpage2{
+}
+.text-box{
+    display: inline-block;
+    width: 616px;
+    height: 138px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.text p{
+    font-size: 13px;
+    color: white;
+    padding-right: 14px;
+    line-height:24px;
+}
+/*轮播*/
+#slideBox,#slideBox2 {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#slideBox .bd,#slideBox2 .bd{
+	height: 100%;
+	width: 100%;
+}
+#slideBox .bd .tempWrap,#slideBox .bd .tempWrap ul,#slideBox .bd .tempWrap,#slideBox .bd .tempWrap ul li,#slideBox .bd .tempWrap ul li a,#slideBox .bd .tempWrap,#slideBox .bd .tempWrap ul,#slideBox2 .bd .tempWrap,#slideBox2 .bd .tempWrap ul li,#slideBox2 .bd .tempWrap ul li a{
+	height: 100%;
+	width: 100%;
+}
+.prev {
+    position: absolute;
+    left: -82px;
+    top: 50%;
+    margin-top: -57px;
+}
+.next {
+    top: 50%;
+    margin-top: -57px;
+    position: absolute;
+    right: -82px;
+}
+#slideBox .tempWrap a,#slideBox2 .tempWrap a{
+	position: relative;
+}
+#slideBox .tempWrap a .playIcon,#slideBox2 .tempWrap a .playIcon{
+	display: block;
+	display: none\0/;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	
+}
+#slideBox .tempWrap a .banner,#slideBox2 .tempWrap a .banner{
+	width: 100%;
+	height: 100%;
+}
+#slideBox2 .tempWrap ul{
+	height: 100%;
+}

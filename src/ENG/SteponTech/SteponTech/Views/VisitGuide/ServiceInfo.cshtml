@@ -1,0 +1,378 @@
+﻿@using SteponTech.Data.BaseModels
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Visit</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/common/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/visitGuide/visitguide-serviceInfo.css" />
+   
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if IE 8] -->
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!-- [endif] -->
+</head>
+<body>
+    <!--分享开始   JiaThis Button BEGIN -->
+    <script>
+        var jiathis_config = {
+            siteNum: 15,
+            sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+            summary: "",
+            boldNum: 6,
+            showClose: true,
+            shortUrl: false,
+            hideMore: false
+        }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+    <!--分享结束   JiaThis Button end -->
+    <!--这是hearder-->
+    <div class="container-fluid">
+        <!--顶部开始-->
+        <div class="row nav-bg b3-border">
+            <div class="container padding_0  aa">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                            <img src="/img/index/banner/logo.png" alt="" class="img-responsive center-block" />
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                            <div class="top-list">
+                                <ul>
+                                    <li><a href="/JinSha/Index">English</a></li>
+                                    <li id="China" class="China">Chinese <img class="Uparr" src="/img/arrows/san.png" /></li>
+                                    <ol id="hideOl" class="hideOl">
+                                        <li>General</li>
+                                        <li class="stude">Academic</li>
+                                        <li class="children">Education</li>
+                                    </ol>
+                                </ul>
+                            </div>
+                            <div class="menu-btn">
+                                <img src="/common/headerImg/menu.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-top-list">
+                    <ul>
+                        <a href="">
+                            <li>大众版</li>
+                        </a>
+                        <a href="">
+                            <li><a href="/JinSha/Index">English</a></li>
+                        </a>
+                        <a href="">
+                            <li>学术版</li>
+                        </a>
+                        <a href="">
+                            <li>青教版</li>
+                        </a>
+                        @if (ViewBag.Head?.Count > 0)
+                        {
+                            foreach (Models item in ViewBag.Head)
+                            {
+                                switch (item.ModelName)
+                                {
+                                    case "HOME":
+                                        <a href="/JinSha/Index">
+                                            <li>HOME</li>
+                                        </a>
+                                        break;
+                                    case "ABOUT":
+                                        <a href="/About/Intosands">
+                                            <li>ABOUT</li>
+                                        </a>
+                                        break;
+                                    case "VISIT":
+                                        <a class="active" href="/VisitGuide/VisitGuide">
+                                            <li> VISIT </li>
+                                        </a>
+                                        break;
+                                    case "GUIDE":
+                                        <a href="/Exhibition/Index">
+                                            <li> GUIDE </li>
+                                        </a>
+                                        break;
+                                    case "NEWS":
+                                        <a href="/NEWS/Index">
+                                            <li> NEWS </li>
+                                        </a>
+                                        break;
+                                    case "CREATIVITY":
+                                        <a href="/Creation/Index">
+                                            <li> ARTS </li>
+                                        </a>
+                                        break;
+                                    case "COLLECTIONS":
+                                        <a href="/Collection/Index">
+                                            <li> COLLECTIONS </li>
+                                        </a>
+                                        break;
+                                    case "EVENTS":
+                                        <a href="/Culture/Index">
+                                            <li> EVENTS </li>
+                                        </a>
+                                        break;
+                                }
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="row mAp0">
+                    <div class="nav-list">
+                        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                            <ul>
+                                @if (ViewBag.Head?.Count > 0)
+                                {
+                                    foreach (Models item in ViewBag.Head)
+                                    {
+                                        switch (item.ModelName)
+                                        {
+                                            case "HOME":
+                                                <a href="/JinSha/Index">
+                                                    <li>HOME</li>
+                                                </a>
+                                                break;
+                                            case "ABOUT":
+                                                <a href="/About/Intosands">
+                                                    <li>ABOUT</li>
+                                                </a>
+                                                break;
+                                            case "VISIT":
+                                                <a class="active" href="/VisitGuide/VisitGuide">
+                                                    <li> VISIT </li>
+                                                </a>
+                                                break;
+                                            case "GUIDE":
+                                                <a href="/Exhibition/Index">
+                                                    <li> GUIDE </li>
+                                                </a>
+                                                break;
+                                            case "NEWS":
+                                                <a href="/NEWS/Index">
+                                                    <li> NEWS </li>
+                                                </a>
+                                                break;
+                                            case "CREATIVITY":
+                                                <a href="/Creation/Index">
+                                                    <li> ARTS </li>
+                                                </a>
+                                                break;
+                                            case "COLLECTIONS":
+                                                <a href="/Collection/Index">
+                                                    <li> COLLECTIONS </li>
+                                                </a>
+                                                break;
+                                            case "EVENTS":
+                                                <a href="/Culture/Index">
+                                                    <li> EVENTS </li>
+                                                </a>
+                                                break;
+                                        }
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--顶部结束-->
+    <div class="breadCrumbs container">
+        <div class="row">
+            <a href="/JinSha/Index"><span class="toIndex">Home</span></a>
+            <span>/</span>
+            <a href="/VisitGuide/VisitGuide"><span class="toShow">Visit</span></a>
+            <span>/</span>
+            <a href="javascript:void(0)"><span class="gallery">Services</span></a>
+        </div>
+    </div>
+    <hr class="secondNav" />
+    <!--Banner图下面的内容-->
+    <div class="serviceInfo-content container">
+        @if (Model != null)
+        {
+            <div class="content-banner row">
+                <!--轮播-->
+                <div id="slideBox" class="slideBox">
+                    <div class="bd img-responsive">
+                        <ul>
+                            @if (ViewBag.Imgs?.Count > 0)
+                            {
+                                foreach (var img in ViewBag.Imgs)
+                                {
+                            <li><img src="/upload/Information/@Model.Id/@img" class="img-responsive"></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <!--左右箭头-->
+                    <a class="prev" href="javascript:void(0)">
+                        <img src="/img/show/showGallery/left.png" alt="">
+                    </a>
+                    <a class="next" href="javascript:void(0)">
+                        <img src="/img/show/showGallery/right.png" alt="">
+                    </a>
+
+                </div>
+            </div>
+            <section class="row service-info">
+                @Html.Raw(Model.Content)
+            </section>
+        }
+        <!--页面的相关链接-->
+        <div class="relatedLink">
+            <h3>Related links</h3>
+            @if (ViewBag.RelatedLinks?.Count > 0)
+            {
+                Dictionary<string, string> relatedLinks = ViewBag.RelatedLinks;
+                foreach (var relatedLink in relatedLinks)
+                {
+                    <a href="@relatedLink.Key"><p>@relatedLink.Value</p></a>
+                }
+            }
+            else
+            {
+                
+            }
+        </div>
+    </div>
+    <!--页面下面的长线-->
+    <div class="line"></div>
+    @if (ViewBag.Footer != null)
+    {
+        <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/visitGuide/visitguide-serviceInfo.js"></script>
+        <script type="text/javascript" src="/common/common.js"></script>
+        <footer class="container footer ">
+            <div class="row">
+                <!--联系我们-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                    <p class="callmeP1">Contact Us</p>
+                    <p class="callmeP2">Phone:<span> @ViewBag.Footer.PhoneNumber</span></p>
+                    <p class="callmeP3">Address:<span> @ViewBag.Footer.Address</span></p>
+                    <div class="row twopic">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                            <img class="img-responsive" src="@ViewBag.Footer.Wechat" />
+                            <p><img src="/common/footerImg/bottom_wechat.png" /><span>Follow our WeChat</span></p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <img class="img-responsive" src="@ViewBag.Footer.Watermark" />
+                            <p><img src="/common/footerImg/weibo-icon.png" /><span class="color">Follow our WeiBo</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--友情链接-->
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                    <p class="linkP1">Links of Interest</p>
+                    <!--博物馆-->
+                    <div class="footer-museum divselect">
+                        <cite onchange="window.location=this.href;">Museums</cite>
+                        <ul id="OtherList" tag="@ViewBag.Footer.MuseumLink"></ul>
+                    </div>
+                    <!--政府-->
+                    <div class="footer-government divselect">
+                        <cite onchange="window.location=this.href;">Others</cite>
+                        <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                        <script>
+                            $(function () {
+                                var data = JSON.parse($('#GovernmentalList').attr('tag'));
+                                var cc1 = "";
+                                $.each(data, function (i, item) {
+                                    cc1 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                //console.log(cc1);
+                                $('#GovernmentalList').append(cc1);
+
+                                var data2 = JSON.parse($('#OtherList').attr('tag'));
+                                var cc2 = "";
+                                $.each(data2, function (i, item) {
+                                    cc2 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                //console.log(cc2);
+                                $('#OtherList').append(cc2);
+
+                            });
+                        </script>
+                    </div>
+
+                    <p class="help">Plan Your Visit</p>
+                    <div class="link-btm-info">
+                        @if (ViewBag.VisitColunms?.Count > 0)
+                        {
+                            List<Colunms> visitColunms = ViewBag.VisitColunms;
+                            var openingHours = visitColunms.FirstOrDefault(e => e.Name == "Opening Hours");
+                            var gettingHere = visitColunms.FirstOrDefault(e => e.Name == "Getting Here");
+                            var services = visitColunms.FirstOrDefault(e => e.Name == "Services");
+                            var visitTips = visitColunms.FirstOrDefault(e => e.Name == "Visitor Regulations");
+                            <ul>
+                                @if (openingHours != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@openingHours.Id">
+                                        <li class="opening">Opening Hours</li>
+                                    </a>
+                                }
+                                @if (gettingHere != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@gettingHere.Id">
+                                        <li> Getting Here</li>
+                                    </a>
+                                }
+                            </ul>
+                                <ul>
+                                    @if (services != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@services.Id">
+                                            <li class="Services">Services</li>
+                                        </a>
+                                    }
+                                    @if (visitTips != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@visitTips.Id">
+                                            <li> Visitor Regulations</li>
+                                        </a>
+                                    }
+                                </ul>
+                        }
+                    </div>
+                </div>
+                <!--版权-->
+                <div class="col-xs-12  copyright padding_0">
+                    <div>
+                        <img class="img-responsive" src="/common/footerImg/bottom_logo.png" />
+                    </div>
+                    <p class="copyrightP1">Jinsha Site Museum All Rights Reserved</p>
+                    <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                </div>
+            </div>
+        </footer>
+    }
+    <!--返回顶部-->
+    <div class="toTop" style="display: none;">
+        <img class="bgarr" src="/img/arrows/return_nor.png" />
+        <img class="hoverImg" src="/img/arrows/return_pre.png">
+    </div>
+
+
+</body>
+
+<script>
+                            jQuery(".slideBox").slide({ mainCell: ".bd ul", effect: "leftLoop", autoPlay: true, trigger: "click" });
+</script>
+</html>

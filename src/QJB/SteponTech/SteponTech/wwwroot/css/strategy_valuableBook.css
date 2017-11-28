@@ -1,0 +1,382 @@
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.content {
+	position: relative;
+	min-width: 1280px;
+	height: 1083px;
+	background-image: url("../img/strategy_valuableBook/back.png");
+	background-position: center;
+}
+
+
+/*树叶飘动*/
+
+.glass {
+	position: absolute;
+	top: -20px;
+	width: 100%;
+    left:0;
+}
+
+.content-box {
+	width: 1200px;
+	height: 100%;
+	/*outline: 1px solid red;*/
+	margin: auto;
+}
+
+.crumbs {
+	width: 100%;
+	height: 212px;
+	/*outline: 1px solid red;*/
+}
+
+#time {
+	display: none;
+}
+
+#traffic {
+	display: none;
+}
+
+#map {
+	display: none;
+}
+
+.nav1 {
+	width: 250px;
+	height: 650px;
+	/*outline: 1px solid red;*/
+	float: left;
+}
+
+.nav1 img {
+	/*outline: 1px solid red;*/
+}
+
+.nav1-1 {
+	margin-left: 45px;
+	margin-top: 45px;
+}
+
+.nav1-2 {
+	margin-left: 60px;
+	margin-top: 35px;
+}
+
+.nav1-3 {
+	margin-left: 20px;
+	margin-top: 30px;
+}
+
+.nav1-4 {
+	margin-left: 50px;
+	margin-top: 35px;
+}
+
+.nav1-5 {
+	margin-left: 10px;
+	/*margin-top: 35px;*/
+}
+
+.content-box-middle {
+	width: 293px;
+	height: 400px;
+	/*outline: 1px solid red;*/
+	float: left;
+	margin-left: 62px;
+	margin-top: 145px;
+}
+
+.btn {
+	width: 280px;
+	height: 175px;
+	/*outline: 1px solid red;*/
+	/*float: left;*/
+	/*margin-left: 60px;*/
+	/*margin-top: 130px;*/
+}
+
+.slideBox {
+	height: 100%;
+	position: relative;
+}
+
+.btn1 {
+	/*outline: 1px solid red;*/
+	margin-left: 70px;
+	/*margin-top: 30px;*/
+}
+
+.btn2 {
+	/*outline: 1px solid red;*/
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.panorama {
+	width: 293px;
+	height: 166px;
+	outline: 1px solid darkgoldenrod;
+	margin-top: 55px;
+	position: relative;
+}
+.panorama img{
+	width: 293px;
+	height: 166px;
+}
+.panorama span{
+	font-size: 30px;
+	color: #000;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -20px;
+	margin-left: -71px;
+
+}
+/*购票地点*/
+
+.content-box-right1 {
+	width: 450px;
+	height: 450px;
+	float: left;
+	margin-left: 75px;
+	margin-top: 145px;
+	/*outline: 1px solid red;*/
+}
+
+.right-1 {
+	width: 450px;
+	height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.right-1 img {
+	width: 100%;
+	max-height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.changePage1 {
+	width: 450px;
+	height: 50px;
+	/*outline: 1px solid red;*/
+}
+
+.next1 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-image: url("../img/strategy_valuableBook/next2.png");
+	/*outline: 1px solid red;*/
+}
+
+.next1:hover {
+	background-image: url("../img/strategy_valuableBook/next1.png");
+}
+
+.up1 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	position: absolute;
+	bottom: 0;
+	right: 75px;
+	background-image: url("../img/strategy_valuableBook/up2.png");
+	/*outline: 1px solid red;*/
+}
+
+.up1:hover {
+	background-image: url("../img/strategy_valuableBook/up1.png");
+}
+
+
+/*购票时间*/
+
+.content-box-right2 {
+	width: 450px;
+	height: 450px;
+	float: left;
+	margin-left: 75px;
+	margin-top: 145px;
+	/*outline: 1px solid red;*/
+	display: none;
+}
+
+.right-2 {
+	width: 450px;
+	height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.right-2 img {
+	width: 100%;
+	max-height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.changePage2 {
+	width: 450px;
+	height: 50px;
+	/*outline: 1px solid red;*/
+}
+
+.next2 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	float: right;
+	position: relative;
+	top: -40px;
+	background-image: url("../img/strategy_valuableBook/next2.png");
+	/*outline: 1px solid red;*/
+}
+
+.next2:hover {
+	background-image: url("../img/strategy_valuableBook/next1.png");
+}
+
+.up2 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	float: right;
+	position: relative;
+	top: -40px;
+	background-image: url("../img/strategy_valuableBook/up2.png");
+	/*outline: 1px solid red;*/
+}
+
+.up2:hover {
+	background-image: url("../img/strategy_valuableBook/up1.png");
+}
+
+
+/*交通地理*/
+
+.content-box-right3 {
+	width: 450px;
+	height: 450px;
+	float: left;
+	margin-left: 75px;
+	margin-top: 145px;
+	/*outline: 1px solid red;*/
+	display: none;
+}
+
+.right-3 {
+	width: 450px;
+	height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.right-3 img {
+	width: 100%;
+	max-height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.changePage3 {
+	width: 450px;
+	height: 50px;
+	/*outline: 1px solid red;*/
+}
+
+.next3 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	float: right;
+	position: relative;
+	top: -40px;
+	background-image: url("../img/strategy_valuableBook/next2.png");
+	/*outline: 1px solid red;*/
+}
+
+.next3:hover {
+	background-image: url("../img/strategy_valuableBook/next1.png");
+}
+
+.up3 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	float: right;
+	position: relative;
+	top: -40px;
+	background-image: url("../img/strategy_valuableBook/up2.png");
+	/*outline: 1px solid red;*/
+}
+
+.up3:hover {
+	background-image: url("../img/strategy_valuableBook/up1.png");
+}
+
+
+/*寻觅地图*/
+
+.content-box-right4 {
+	width: 450px;
+	height: 450px;
+	float: left;
+	margin-left: 75px;
+	margin-top: 145px;
+	/*outline: 1px solid red;*/
+	display: none;
+}
+
+.right-4 {
+	width: 450px;
+	height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.right-4 img {
+	width: 100%;
+	max-height: 400px;
+	/*outline: 1px solid red;*/
+}
+
+.changePage4 {
+	width: 450px;
+	height: 50px;
+	/*outline: 1px solid red;*/
+}
+
+.next4 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	float: right;
+	position: relative;
+	top: -40px;
+	background-image: url("../img/strategy_valuableBook/next2.png");
+	/*outline: 1px solid red;*/
+}
+
+.next4:hover {
+	background-image: url("../img/strategy_valuableBook/next1.png");
+}
+
+.up4 {
+	cursor: pointer;
+	width: 65px;
+	height: 60px;
+	float: right;
+	position: relative;
+	top: -40px;
+	background-image: url("../img/strategy_valuableBook/up2.png");
+	/*outline: 1px solid red;*/
+}
+
+.up4:hover {
+	background-image: url("../img/strategy_valuableBook/up1.png");
+}

@@ -1,0 +1,952 @@
+﻿@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Collections</title>
+    <link rel="Shortcut Icon" href="/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/common/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/classic/classic.css" />
+    <link rel="stylesheet" type="text/css" href="/css/classic/jquery.ad-gallery.css" />
+    <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <style type="text/css">
+        /*标题样式共用*/
+        .intosandsTitle {
+            font-family: 'Optima Regular';
+            color: #edc048;
+            font-size: 29px;
+            margin-top: 80px;
+            font-weight: bold;
+        }
+        /*馆长致辞模块*/
+        .boss-speech {
+            width: 100%;
+            border-top: 1px solid #3d2b15 !important;
+            margin: 60px 0px 80px 0px;
+        }
+        .boss-img div span {
+            margin-left: 10px;
+        }
+        /*馆长的致辞*/
+        .boss-speech-info {
+            font-family: 'Futura Bk BT Book';
+            color: #ffda84;
+        }
+
+            .boss-speech-info > div {
+                width: 95%;
+                margin-top: 15%;
+            }
+
+            .boss-speech-info h4 {
+                font-size: 18px;
+                font-family: 'Optima Regular';
+                color: #edc048;
+                margin-bottom: 3%;
+            }
+
+        .infoP {
+            /*限制行数*/
+            position: relative;
+            line-height: 28px;
+            max-height: 196px;
+            overflow: hidden;
+        }
+
+            .infoP::after {
+                content: "...";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding-left: 40px;
+            }
+
+        .boss-speech-info p {
+            font-family: 'Futura Bk BT Book';
+            line-height: 28px;
+            width: 100%;
+            font-size: 16px;
+        }
+        /*展开更多*/
+        .boss-speech-more {
+            cursor: pointer;
+            width: 340px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'Futura Bk BT Book';
+            font-size: 16px;
+            color: #ffda84;
+            border: 1px solid #ffda84;
+            margin: 10% auto;
+        }
+
+            .boss-speech-more:hover {
+                color: #170801;
+                background-color: #ffda84;
+            }
+    </style>
+    <!-- [if IE 8]>
+    <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+    <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+      <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!--分享开始   JiaThis Button BEGIN -->
+    <script>
+        var jiathis_config = {
+            siteNum: 15,
+            sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+            summary: "",
+            boldNum: 6,
+            showClose: true,
+            shortUrl: false,
+            hideMore: false
+        }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+    <!--分享结束   JiaThis Button end -->
+    <!--这是hearder-->
+    <div class="container-fluid ">
+        <!--顶部开始-->
+        <div class="row nav-bg b3-border">
+            <div class="container padding_0  aa">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                            <img src="../img/index/banner/logo.png" alt="" class="img-responsive center-block" />
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                            <div class="top-list">
+                                <ul>
+                                    <li><a href="/JinSha/Index">English</a></li>
+                                    <li id="China" class="China">Chinese <img class="Uparr" src="../img/arrows/san.png" /></li>
+                                    <ol id="hideOl" class="hideOl">
+                                        <li>General</li>
+                                        <li class="stude">Academic</li>
+                                        <li class="children">Education</li>
+                                    </ol>
+                                </ul>
+                            </div>
+                            <div class="menu-btn">
+                                <img src="../common/headerImg/menu.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-top-list">
+                    <ul>
+                        <a href="">
+                            <li>大众版</li>
+                        </a>
+                        <a href="">
+                            <li><a href="/JinSha/Index">English</a></li>
+                        </a>
+                        <a href="">
+                            <li>学术版</li>
+                        </a>
+                        <a href="">
+                            <li>青教版</li>
+                        </a>
+                        @if (ViewBag.Head != null)
+                        {
+                            foreach (var item in ViewBag.Head)
+                            {
+                                if (item.ModelName == "Home")
+                                {
+                                    <a href="/JinSha/Index">
+                                        <li>HOME</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "ABOUT")
+                                {
+                                    <a href="/About/Intosands">
+                                        <li>ABOUT</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "VISIT")
+                                {
+                                    <a href="/VisitGuide/VisitGuide">
+                                        <li>VISIT</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "GUIDE")
+                                {
+                                    <a href="/Exhibition/Index">
+                                        <li>GUIDE</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "NEWS")
+                                {
+                                    <a href="/NEWS/Index">
+                                        <li>NEWS</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "CREATIVITY")
+                                {
+                                    <a href="/Creation/Index">
+                                        <li>ARTS</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "COLLECTIONS")
+                                {
+                                    <a class="active" href="/Collection/Index">
+                                        <li>COLLECTIONS</li>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="/Culture/Index">
+                                        <li>EVENTS</li>
+                                    </a>
+
+                                }
+                            }
+
+                        }
+                    </ul>
+                </div>
+                <div class="row mAp0">
+                    <div class="nav-list">
+                        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                            <ul>
+                                @if (ViewBag.Head != null)
+                                {
+                                    foreach (var item in ViewBag.Head)
+                                    {
+                                        if (item.ModelName == "HOME")
+                                        {
+                                            <a href="/JinSha/Index">
+                                                <li>HOME</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "ABOUT")
+                                        {
+                                            <a href="/About/Intosands">
+                                                <li>ABOUT</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "VISIT")
+                                        {
+                                            <a href="/VisitGuide/VisitGuide">
+                                                <li>VISIT</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "GUIDE")
+                                        {
+                                            <a href="/Exhibition/Index">
+                                                <li>GUIDE</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "NEWS")
+                                        {
+                                            <a href="/NEWS/Index">
+                                                <li>NEWS</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "CREATIVITY")
+                                        {
+                                            <a href="/Creation/Index">
+                                                <li>ARTS</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "COLLECTIONS")
+                                        {
+                                            <a class="active" href="/Collection/Index">
+                                                <li>COLLECTIONS</li>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href="/Culture/Index">
+                                                <li>EVENTS</li>
+                                            </a>
+
+                                        }
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr id="hd_bottom" />
+    <main>
+        <!--banner-->
+        <div class="banner">
+            @if (ViewBag.Banner != null)
+            {
+                var src = "/upload/banner/" + ViewBag.Banner.FileName;
+                <img src="@src" alt="banner" />
+            }
+        </div>
+        <!--Treasures-->
+        <div class="treasures">
+
+            @if (ViewBag.Colect != null)
+            {
+                <div class="container">
+                    <h1 class="title">Collections</h1>
+                    <p class="content">
+                        @ViewBag.Colect.ColDescribe
+
+                    </p>
+                    <div class="row">
+                        <ul class="clearfix">
+                            <li class="col-lg-2 col-md-4 col-sm-6 col-xs-8 classic" onclick="document.location.hash='#金器'">
+                                <a class="treasure_box" href="javascript:void(0)">
+                                    <h3 class="treasures_title">Gold</h3>
+                                    <div class="treasures_content">
+                                        <div class="treasures_img">
+                                            <div class="img_box">
+                                                <img src="/img/classicImg/Gold-Mask.png" />
+                                            </div>
+                                        </div>
+                                        <div class="treasures_info">
+                                            <p>
+                                                Learn more >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                @if (ViewBag.GoldCol!=null)
+                                {
+                                    <div class="mask-show">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                                            </div>
+                                            <div class="modal-body container">
+                                                <div class="row clearfix">
+                                                    @*<div class="cultural_info col-lg-8 col-md-11 col-sm-10">
+                                                        <h3>Gold</h3>
+                                                        <p>
+                                                            @ViewBag.GoldCol.ColDescribe
+                                                        </p>
+                                                        <a class="show" href="javascript:void(0)">Show</a>
+                                                    </div>*@
+                                                    <div class="wrapper">
+                                                        <!--滚动看图-->
+                                                        <div class="ad-gallery">
+                                                            <div class="ad-image-wrapper">
+                                                            </div>
+                                                            <div class="ad-nav hidden-md hidden-xs hidden-sm">
+                                                                <div class="ad-thumbs">
+                                                                    <ul class="ad-thumb-list">
+                                                                        @if (ViewBag.Gold != null)
+                                                                        {
+                                                                            for (var i = 0; i < ViewBag.Gold.Count; i++)
+                                                                            {
+                                                                                var src = "/upload/Information/" + ViewBag.Gold[i].Id + "/" + ViewBag.Gold[i].Photo;
+                                                                                <li>
+                                                                                    <!--href=大图 data-href="3D的链接" -->
+                                                                                    <a href="@src" data-href="@ViewBag.Gold[i].UrlAddress" data-video="@ViewBag.Gold[i].Address">
+                                                                                        <img src="@src" title="@ViewBag.Gold[i].Title" style="width:150px;height:100px;" class="image0" />
+                                                                                        <p>@ViewBag.Gold[i].Intro</p>
+                                                                                    </a>
+                                                                                </li>
+                                                                            }
+                                                                        }
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="font-info">
+                                                            <h3></h3>
+                                                            <p class="content-style"></p>
+                                                            @*<a class="link-3d" href="" style="margin-right:30px;margin-bottom:15px">Show 3D</a>*@
+                                                            <a class="video-link" href="">Video Show</a>
+                                                        </div>
+                                                        <!--end滚动看图-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </li>
+                            <li class="col-lg-2 col-md-4 col-sm-6 col-xs-8 classic" data-toggle="modal" data-target="#myModal" onclick="document.location.hash='#青铜器'">
+                                <a class="treasure_box" href="javascript:void(0)">
+                                    <h3 class="treasures_title">Bronze</h3>
+                                    <div class="treasures_content">
+                                        <div class="treasures_img">
+                                            <div class="img_box">
+                                                <img src="/img/classicImg/classic-two.png" />
+                                            </div>
+                                        </div>
+                                        <div class="treasures_info">
+                                            <p>
+                                                Learn more >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                @if (ViewBag.BronzeCol!=null)
+                                {
+                                    <div class="mask-show">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                                            </div>
+                                            <div class="modal-body container">
+                                                <div class="row clearfix">
+                                                    @*<div class="cultural_info col-lg-8 col-md-11 col-sm-10">
+                                                        <h3>Bronze</h3>
+                                                        <p>
+                                                            @ViewBag.BronzeCol.ColDescribe
+                                                        </p>
+                                                        <a class="show" href="javascript:void(0)">Show</a>
+                                                    </div>*@
+                                                    <div class="wrapper">
+                                                        <!--滚动看图-->
+                                                        <div class="ad-gallery">
+                                                            <div class="ad-image-wrapper">
+                                                            </div>
+                                                            <div class="ad-nav hidden-md hidden-xs hidden-sm">
+                                                                <div class="ad-thumbs">
+                                                                    <ul class="ad-thumb-list">
+                                                                        @if (ViewBag.Bronze != null)
+                                                                        {
+                                                                            for (var i = 0; i < ViewBag.Bronze.Count; i++)
+                                                                            {
+                                                                                var src = "/upload/Information/" + ViewBag.Bronze[i].Id + "/" + ViewBag.Bronze[i].Photo;
+                                                                                <li>
+                                                                                    <!--href=大图 data-href="3D的链接" -->
+                                                                                    <a href="@src" data-href="@ViewBag.Bronze[i].UrlAddress" data-video="@ViewBag.Bronze[i].Address">
+                                                                                        <img src="@src" title="@ViewBag.Bronze[i].Title" style="width:150px;height:100px;"  class="image0" />
+                                                                                        <p>@ViewBag.Bronze[i].Intro</p>
+                                                                                    </a>
+                                                                                </li>
+                                                                            }
+                                                                        }
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end滚动看图-->
+                                                        <div class="font-info">
+                                                            <h3></h3>
+                                                            <p></p>
+                                                            @*<a class="link-3d" href="" style="margin-right:30px;margin-bottom:15px">Show 3D</a>*@
+                                                                <a class="video-link" href="">Video Show</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+
+
+                            </li>
+                            <li class="col-lg-2 col-md-4 col-sm-6 col-xs-8 classic" data-toggle="modal" data-target="#myModal" onclick="document.location.hash='#玉器'">
+                                <a href="javascript:void(0)" class="treasure_box">
+                                    <h3 class="treasures_title">Jade</h3>
+                                    <div class="treasures_content">
+                                        <div class="treasures_img">
+                                            <div class="img_box">
+                                                <img src="/img/classicImg/classic-three.png" />
+                                            </div>
+                                        </div>
+                                        <div class="treasures_info">
+                                            <p>
+                                                Learn more >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                @if (ViewBag.JadeCol != null)
+                                {
+                                    <div class="mask-show">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                                            </div>
+                                            <div class="modal-body container">
+                                                <div class="row clearfix">
+                                                    @*<div class="cultural_info col-lg-8 col-md-11 col-sm-10">
+                                                        <h3>Jade</h3>
+                                                        <p>
+                                                            @ViewBag.JadeCol.ColDescribe
+                                                        </p>
+                                                        <a class="show" href="javascript:void(0)">Show</a>
+                                                    </div>*@
+                                                    <div class="wrapper">
+                                                        <!--滚动看图-->
+                                                        <div class="ad-gallery">
+                                                            <div class="ad-image-wrapper">
+                                                            </div>
+                                                            <div class="ad-nav hidden-md hidden-xs hidden-sm">
+                                                                <div class="ad-thumbs">
+                                                                    <ul class="ad-thumb-list">
+                                                                        @if (ViewBag.Jade != null)
+                                                                        {
+                                                                            for (var i = 0; i < ViewBag.Jade.Count; i++)
+                                                                            {
+                                                                                var src = "/upload/Information/" + ViewBag.Jade[i].Id + "/" + ViewBag.Jade[i].Photo;
+                                                                                <li>
+                                                                                    <!--href=大图 data-href="3D的链接" -->
+                                                                                    <a href="@src" data-href="@ViewBag.Jade[i].UrlAddress" data-video="@ViewBag.Jade[i].Address">
+                                                                                        <img src="@src" title="@ViewBag.Jade[i].Title" style="width:150px;height:100px;"  class="image0" />
+                                                                                        <p>@ViewBag.Jade[i].Intro</p>
+                                                                                    </a>
+                                                                                </li>
+                                                                            }
+                                                                        }
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="font-info">
+                                                            <h3></h3>
+                                                            <p></p>
+                                                            <a class="link-3d" href="" style="margin-right:30px;margin-bottom:15px">Show 3D</a><a class="video-link" href="">Video Show</a>
+                                                        </div>
+                                                        <!--end滚动看图-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </li>
+                            <li class="col-lg-2 col-md-4 col-sm-6 col-xs-8 classic" data-toggle="modal" data-target="#myModal" onclick="document.location.hash='#石器'">
+                                <a href="javascript:void(0)" class="treasure_box">
+                                    <h3 class="treasures_title">Stone</h3>
+                                    <div class="treasures_content">
+                                        <div class="treasures_img">
+                                            <div class="img_box">
+                                                <img src="/img/classicImg/classic-four.png" />
+                                            </div>
+                                        </div>
+                                        <div class="treasures_info">
+                                            <p>
+                                                Learn more >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                @if (ViewBag.StoneCol != null)
+                                {
+                                    <div class="mask-show">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                                            </div>
+                                            <div class="modal-body container">
+                                                <div class="row clearfix">
+                                                    @*<div class="cultural_info col-lg-8 col-md-11 col-sm-10">
+                                                        <h3>Stone</h3>
+                                                        <p>
+                                                            @ViewBag.StoneCol.ColDescribe
+                                                        </p>
+                                                        <a class="show" href="javascript:void(0)">Show</a>
+                                                    </div>*@
+                                                    <div class="wrapper">
+                                                        <!--滚动看图-->
+                                                        <div class="ad-gallery">
+                                                            <div class="ad-image-wrapper">
+                                                            </div>
+                                                            <div class="ad-nav hidden-md hidden-xs hidden-sm">
+                                                                <div class="ad-thumbs">
+                                                                    <ul class="ad-thumb-list">
+                                                                        @if (ViewBag.Stone != null)
+                                                                        {
+                                                                            for (var i = 0; i < ViewBag.Stone.Count; i++)
+                                                                            {
+                                                                                var src = "/upload/Information/" + ViewBag.Stone[i].Id + "/" + ViewBag.Stone[i].Photo;
+                                                                                <li>
+                                                                                    <!--href=大图 data-href="3D的链接" -->
+                                                                                    <a href="@src" data-href="@ViewBag.Stone[i].UrlAddress" data-video="@ViewBag.Stone[i].Address" >
+                                                                                        <img src="@src" title="@ViewBag.Stone[i].Title"  style="width:150px;height:100px;" class="image0" />
+                                                                                        <p>@ViewBag.Stone[i].Intro</p>
+                                                                                    </a>
+                                                                                </li>
+                                                                            }
+                                                                        }
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end滚动看图-->
+                                                        <div class="font-info">
+                                                            <h3></h3>
+                                                            <p></p>
+                                                            <a class="link-3d" href="" style="margin-right:30px;margin-bottom:15px">Show 3D</a><a class="video-link" href="">Video Show</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </li>
+                            <li class="col-lg-2 col-md-4 col-sm-6 col-xs-8 classic" data-toggle="modal" data-target="#myModal" onclick="document.location.hash='#陶器'">
+                                <a href="javascript:void(0)" class="treasure_box">
+                                    <h3 class="treasures_title">Pottery</h3>
+                                    <div class="treasures_content">
+                                        <div class="treasures_img">
+                                            <div class="img_box">
+                                                <img src="/img/classicImg/classic-five.png" />
+                                            </div>
+                                        </div>
+                                        <div class="treasures_info">
+                                            <p>
+                                                Learn more >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                @if (ViewBag.PotteryCol != null)
+                                {
+                                    <div class="mask-show">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                                            </div>
+                                            <div class="modal-body container">
+                                                <div class="row clearfix">
+                                                    @*<div class="cultural_info col-lg-8 col-md-11 col-sm-10">
+                                                        <h3>Pottery</h3>
+                                                        <p>
+                                                            @ViewBag.PotteryCol.ColDescribe
+                                                        </p>
+                                                        <a class="show" href="javascript:void(0)">Show</a>
+                                                    </div>*@
+                                                    <div class="wrapper">
+                                                        <!--滚动看图-->
+                                                        <div class="ad-gallery">
+                                                            <div class="ad-image-wrapper">
+                                                            </div>
+                                                            <div class="ad-nav hidden-md hidden-xs hidden-sm">
+                                                                <div class="ad-thumbs">
+                                                                    <ul class="ad-thumb-list">
+                                                                        @if (ViewBag.Pottery != null)
+                                                                        {
+                                                                            for (var i = 0; i < ViewBag.Pottery.Count; i++)
+                                                                            {
+                                                                                var src = "/upload/Information/" + ViewBag.Pottery[i].Id + "/" + ViewBag.Pottery[i].Photo;
+                                                                                <li>
+                                                                                    <!--href=大图 data-href="3D的链接" -->
+                                                                                    <a href="@src" data-href="@ViewBag.Pottery[i].UrlAddress" data-video="@ViewBag.Pottery[i].Address">
+                                                                                        <img src="@src" title="@ViewBag.Pottery[i].Title" style="width:150px;height:100px;"  class="image0" />
+                                                                                        <p>@ViewBag.Pottery[i].Intro</p>
+                                                                                    </a>
+                                                                                </li>
+                                                                            }
+                                                                        }
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end滚动看图-->
+                                                        <div class="font-info">
+                                                            <h3></h3>
+                                                            <p></p>
+                                                            <a class="link-3d" href="" style="margin-right:30px;margin-bottom:15px">Show 3D</a><a class="video-link" href="">Video Show</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </li>
+                            <li class="col-lg-2 col-md-4 col-sm-6 col-xs-8 border_none classic" data-toggle="modal" data-target="#myModal" onclick="document.location.hash='#漆木器'">
+                                <a href="javascript:void(0)" class="treasure_box">
+                                    <h3 class="treasures_title">Lacquer</h3>
+                                    <div class="treasures_content">
+                                        <div class="treasures_img">
+                                            <div class="img_box">
+                                                <img src="/img/classicImg/classic-six.png" />
+                                            </div>
+                                        </div>
+                                        <div class="treasures_info">
+                                            <p>
+                                                Learn more >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                @if (ViewBag.LacquerCol != null)
+                                {
+                                    <div class="mask-show">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                                            </div>
+                                            <div class="modal-body container">
+                                                <div class="row clearfix">
+                                                    @*<div class="cultural_info col-lg-8 col-md-11 col-sm-10">
+                                                        <h3>Lacquer</h3>
+                                                        <p>
+                                                            @ViewBag.LacquerCol.ColDescribe
+
+                                                        </p>
+                                                        <a class="show" href="javascript:void(0)">Show</a>
+                                                    </div>*@
+                                                    <div class="wrapper">
+                                                        <!--滚动看图-->
+                                                        <div class="ad-gallery">
+                                                            <div class="ad-image-wrapper">
+                                                            </div>
+                                                            <div class="ad-nav hidden-md hidden-xs hidden-sm">
+                                                                <div class="ad-thumbs">
+                                                                    <ul class="ad-thumb-list">
+                                                                        @if (ViewBag.Lacquer != null)
+                                                                        {
+                                                                            for (var i = 0; i < ViewBag.Lacquer.Count; i++)
+                                                                            {
+                                                                                var src = "/upload/Information/" + ViewBag.Lacquer[i].Id + "/" + ViewBag.Lacquer[i].Photo;
+                                                                                <li>
+                                                                                    <!--href=大图 data-href="3D的链接" -->
+                                                                                    <a href="@src" data-href="@ViewBag.Lacquer[i].UrlAddress" data-video="@ViewBag.Lacquer[i].Address">
+                                                                                        <img src="@src" title="@ViewBag.Lacquer[i].Title" style="width:150px;height:100px;"  class="image0" />
+                                                                                        <p>@ViewBag.Stone[i].Intro</p>
+                                                                                    </a>
+                                                                                </li>
+                                                                            }
+                                                                        }
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end滚动看图-->
+                                                        <div class="font-info">
+                                                            <h3></h3>
+                                                            <p></p>
+                                                            <a class="link-3d" href="" style="margin-right:30px;margin-bottom:15px">Show 3D</a><a class="video-link" href="">Video Show</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            }
+        </div>
+        <div class="video-mask">
+            <div class="mask-close">×</div>
+            <video src="" controls="controls"></video>
+        </div>
+        <!--desktop-->
+        <div class="desktop">
+            @if (ViewBag.Wallpapers != null)
+            {
+                <div class="container">
+                    <h1 class="title beaut">Wallpapers<a href="/Collection/Background" class="more">More ></a></h1>
+                    <div class="row">
+                        <div class="desktop_box">
+                            <ul class="clearfix">
+                                @for (var i = 0; i < ViewBag.Wallpapers.Count; i++)
+                                {
+                                    var src = "/upload/Information/" + ViewBag.Wallpapers[i].Id + "/" + ViewBag.Wallpapers[i].Photo;
+                                    <li class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="desktop_pic">
+                                            <a href="/Collection/Wallpaper?id=@ViewBag.Wallpapers[i].Id "><img src="@src" alt="wallpaper" /></a>
+                                            <div class="desktop_title">
+                                                <div class="title_left">
+                                                    @ViewBag.Wallpapers[i].Title
+                                                </div>
+                                                <div class="title_right">
+                                                    <div class="icon"></div>
+                                                    <a href="/Collection/Wallpaper?id=@ViewBag.Wallpapers[i].Id ">Download</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+
+        <!--新增栏目-->
+        @if (ViewBag.NewCol != null)
+            {
+                for (var i = 0; i < ViewBag.NewCol.Count; i++)
+                {
+                    var src = "/upload/Information/" + ViewBag.NewCol[i].Id + "/" + ViewBag.NewCol[i].Photo;
+                <div id="speech" class="boss-speech row">
+                    <div class="boss-introduce">
+                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 intosandsTitle">@ViewBag.NewCol[i].ColumName</p>
+                        <div class="boss-imginfo col-lg-12 col-md-12 col-sm-12 col-xs-12 img-responsive">
+                            <!--图片-->
+                            <div class="boss-img  col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                                <img src="@src" alt="" class="img-responsive">
+                            </div>
+                            <!--文字内容-->
+                            <div class="boss-speech-info clearfix col-lg-7 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
+                                <div class="center-block " id="bossInfoBox">
+                                    <h4>@ViewBag.NewCol[i].Title</h4>
+                                    <p class="infoP">
+                                        @ViewBag.NewCol[i].Intro
+                                    </p>
+                                    <a href="/Jinsha/NewDetail?id=@ViewBag.NewCol[i].Id "><div class="boss-speech-more">Learn more</div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+                
+		</main>
+		<hr id="hd_bottom_1" />
+		@if (ViewBag.Footer != null)
+        {
+            <script src="/js/classic/jquery.ad-gallery.js" type="text/javascript" charset="utf-8"></script>
+            <script src="/js/classic/classic.js" type="text/javascript" charset="utf-8"></script>
+            <script src="/common/common.js" type="text/javascript" charset="utf-8"></script>
+            <footer class="container footer ">
+                <div class="row">
+                    <!--联系我们-->
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                        <p class="callmeP1">Contact Us</p>
+                        <p class="callmeP2">Phone:<span> @ViewBag.Footer.PhoneNumber</span></p>
+                        <p class="callmeP3">Address:<span> @ViewBag.Footer.Address</span></p>
+                        <div class="row twopic">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                                <img class="img-responsive" src="@ViewBag.Footer.Wechat" />
+                                <p><img src="../common/footerImg/bottom_wechat.png" /><span>Follow our WeChat</span></p>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <img class="img-responsive" src="@ViewBag.Footer.Watermark" />
+                                <p><img src="../common/footerImg/weibo-icon.png" /><span class="color">Follow our WeiBo</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--友情链接-->
+                    <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                        <p class="linkP1">Links of Interest</p>
+                        <!--博物馆-->
+                        <div class="footer-museum divselect">
+                            <cite onchange="window.location=this.href;">Museums</cite>
+                            <ul id="OtherList"  tag="@ViewBag.Footer.MuseumLink"></ul>
+                        </div>
+                        <!--政府-->
+                        <div class="footer-government divselect">
+                            <cite onchange="window.location=this.href;">Others</cite>
+                            <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                            <script>
+                                $(function () {
+                                    var data = JSON.parse($('#GovernmentalList').attr('tag'));
+                                    var cc1 = "";
+                                    $.each(data, function (i, item) {
+                                        cc1 += "<li><a style='color: #ffda84' href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                    });
+                                    //console.log(cc1);
+                                    $('#GovernmentalList').append(cc1);
+
+                                    var data2 = JSON.parse($('#OtherList').attr('tag'));
+                                    var cc2 = "";
+                                    $.each(data2, function (i, item) {
+                                        cc2 += "<li><a style='color: #ffda84' href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                    });
+                                    //console.log(cc2);
+                                    $('#OtherList').append(cc2);
+
+                                });
+                            </script>
+                        </div>
+
+                        <p class="help">Plan Your Visit</p>
+                        <div class="link-btm-info">
+                           @if (ViewBag.JumpLink != null)
+                           {
+                               List<SteponTech.Data.BaseModels.ColunmsView> visitColunms = ViewBag.JumpLink;
+                               var openingHours = visitColunms.FirstOrDefault(e => e.Name == "Opening Hours");
+                               var gettingHere = visitColunms.FirstOrDefault(e => e.Name == "Getting Here");
+                               var services = visitColunms.FirstOrDefault(e => e.Name == "Services");
+                               var visitTips = visitColunms.FirstOrDefault(e => e.Name == "Visitor Regulations");
+                            <ul>
+                                @if (openingHours != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@openingHours.Id">
+                                        <li class="opening">Opening Hours</li>
+                                    </a>
+                                }
+                                @if (gettingHere != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@gettingHere.Id">
+                                        <li> Getting Here</li>
+                                    </a>
+                                }
+                            </ul>
+                            <ul>
+                                @if (services != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@services.Id">
+                                        <li class="Services">Services</li>
+                                    </a>
+                                }
+                                @if (visitTips != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@visitTips.Id">
+                                        <li> Visitor Regulations</li>
+                                    </a>
+                                }
+                            </ul>
+
+                           }
+                        </div>
+                    </div>
+                    <!--版权-->
+                    <div class="col-xs-12  copyright padding_0">
+                        <div>
+                            <img class="img-responsive" src="../common/footerImg/bottom_logo.png" />
+                        </div>
+                        <p class="copyrightP1">Jinsha Site Museum All Rights Reserved</p>
+                        <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                    </div>
+                </div>
+            </footer>
+        }
+		<!--返回顶部-->
+		<div class="toTop" style="display: none;">
+			<img class="bgarr" src="/img/arrows/return_nor.png" />
+			<img class="hoverImg" src="/img/arrows/return_pre.png">
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,593 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>考古发掘地图</title>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0cGpwmy0In6Mj8tpcYg29HdLKt9z29Zx"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<style type="text/css">body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}.anchorBL{display:none;}</style>
+</head>
+<body>
+<div id="allmap"></div>
+<script type="text/javascript">
+
+	// 百度地图API功能
+	var map = new BMap.Map("allmap",{minZoom:15,maxZoom:16});
+	var point = new BMap.Point(104.04025,30.666877);
+		
+	var json_site = {
+		"sites":[
+
+					{
+						"xh":"2",
+						"yx":"104.023211,30.693934",
+						"title":"Sanhe Garden",
+						"imgurl":"./webimages/02.jpg",
+						"shijian":"From June 1999 to April 2000",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"“Sanhe Garden” Site, Huangzhong Village, Jinniu District",
+						"scontent":"①Excavation area: 2,026m2; ②Site: 17 building sites, 359 ash pits, 17 kiln sites, 13 tombs; ③Relic: a large number of sharp-bottom cups, small sharp-bottom cups, small flat-bottom pots, high-neck pots, ring-foot pots and other earthenwares; ④Times: from the end of Shang Dynasty to the early and middle periods of the Western Zhou Dynasty; ⑤Meaning: F5—F9 as a group of large building clusters covering a total area of over 1,000m2; Huangzhong Village Site confirmed as a large one of the Shang and Zhou Dynasties in the period from the end of Shang Dynasty to the Western Zhou Dynasty."
+					},
+					{
+						"xh":"6",
+						"yx":"104.01393,30.688508",
+						"title":"Orchid Garden",
+						"imgurl":"./webimages/06.jpg",
+						"shijian":"From July 2001 to March 2002",
+						"fajuezhe":"Led by Wang Yi",
+						"fajuedd":"“Orchid Garden” Site, Group 4, Jinsha Village, Qingyang District",
+						"scontent":"①Excavation area: 13,450m2; ②Site: 17 building sites, 3 kiln sites, 30 cellars, 431 ash pits, over 100 tombs; ③Relic: tens of thousands of earthenwares unearthed; ④Times: from the 3rd-4th periods of Yinxu to the early period of the Western Zhou Dynasty; ⑤Meaning: a relatively complete residence site, with the building sites at the northeastern area, the cellars around the residence, the ach pits next to the residence, the kiln sites at the southwestern area, and the tombs at the west and the south."
+					},
+					{
+						"xh":"7",
+						"yx":"104.017989,30.682508",
+						"title":"Phase I of Zhixin Jinsha Garden",
+						"imgurl":"./webimages/07.jpg",
+						"shijian":"From March 2002 to June 2002",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Phase I of Zhixin Jinsha Garden Site, Group 3, Jinsha Village, Qingyang District",
+						"scontent":"①Excavation area: 950m2; ②Site: 3 building sites, 1 kiln site, 21 ash pits, 10 tombs; ③Relic: 32 jade wares and a large number of earthenwares; ④Times: relics of the 3rd period of Baodun Culture; ⑤Meaning: relics of Baodun Culture discovered in Jinsha Site for the first time."
+					},
+					{
+						"xh":"9",
+						"yx":"104.020752,30.690645",
+						"title":"His Royal Highness Mansion",
+						"imgurl":"./webimages/09.jpg",
+						"shijian":"From March 2002 to August 2002",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"His Royal Highness Mansion Site, Jinniu District",
+						"scontent":"①Excavation area: 1,950m2; ②Site: ash pit, a mound of gravel; ③Relic: dagger-axe, arrowheads and a large number of earthenwares; ④Times: the middle period of Western Zhou Dynasty; ⑤Meaning: the mound of gravel possibly related to building or sacrifice activities."
+					},
+					{
+						"xh":"10",
+						"yx":"104.013561,30.693673",
+						"title":"Boya Tingyun",
+						"imgurl":"./webimages/10.jpg",
+						"shijian":"From June 2002 to May 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Boya Tingyun Site (Wanbo Site), Group 5, Huangzhong Village, Jinniu District",
+						"scontent":"①Excavation area: 7,550m2; ②Site: 353 ash pits, 60 tombs, 2 ash ditches; ③Relic: 5 jade wares, 18 stone wares and a large number of earthenwares; ④Times: from the end of Shang Dynasty to the Western Zhou Dynasty; ⑤Meaning: an important graveyard, pirogue coffin burial discovered for the first time."
+					},
+					{
+						"xh":"11",
+						"yx":"104.021013,30.69264",
+						"title":"Gangzheng",
+						"imgurl":"./webimages/11.jpg",
+						"shijian":"From September 2002 to April 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Gangzheng Site, Jinniu District",
+						"scontent":"①Excavation area: 2,100m2; ②Site: 2 kiln sites, 117 ash pits, 4 ash ditches, 45 tombs; ③Relic: a few of jade wares and a large number of earthenwares; ④Times: main relics from the end period of Shang Dynasty to the Western Zhou Dynasty, a few of relics of Baodun Culture; ⑤Meaning: a relatively large tomb of Jinsha Site period discovered and the joint burial tomb for two grave masters in different coffins discovered for the first time."
+					},
+					{
+						"xh":"12",
+						"yx":"104.014673,30.69018",
+						"title":"People's Air Defense",
+						"imgurl":"./webimages/12.jpg",
+						"shijian":"From September 2002 to November 2002",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"People's Air Defense Site, Qingyang District",
+						"scontent":"①Excavation area: 1,700m2; ②Site: 1 ash pit, 14 earth-pit tombs; ③Relic: earthenwares; 7 tombs thereof with funeral products, 7 bronze swords, 1 bronze spear, 1 piece of calaite, 3 pieces of animal bone, 1 pottery pot unearthed; ④Times: strata accumulation during the period from the late Shang Dynasty to the early Western Zhou Dynasty”; tombs of the Spring and Autumn Period."
+					},
+					{
+						"xh":"13",
+						"yx":"104.019703,30.695972",
+						"title":"Northern Area of Furong Garden",
+						"imgurl":"./webimages/13.jpg",
+						"shijian":"From October 2002 to February 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+
+						"fajuedd":"Northern Area of Furong Garden, Jinniu District",
+						"scontent":"①Excavation area: 2,300m2; ②Site: 96 ash pits, 54 ash ditches, 9 tombs; ③Relic: 1 piece of wooden Si, a few of stone wares and a large number of earthenwares; ④Times: the period from the late Shang Dynasty to the Western Zhou Dynasty”; ⑤Meaning: unearthed wooden Si as the most complete farm tool of the Shang Dynasty in China at present."
+					},
+					{
+						"xh":"14",
+						"yx":"104.018572,30.694776",
+						"title":"Southern Area of Furong Garden",
+						"imgurl":"./webimages/14.jpg",
+						"shijian":"From November 2002 to May 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Southern Area of Furong Garden, Jinniu District",
+						"scontent":"①Excavation area: 1,357m2; ②Site: 1 ash pit of Baodun Culture Period; 7 building sites, 1 well, 176 ash pits and 25 ash ditches of Shang and Zhou Dynasties; ③Relic: tens of thousands of pottery fragments; ④Times: main relics of the period from the late Shang Dynasty to the early Western Zhou Dynasty”; ⑤Meaning: a well discovered in Jinsha Site for the first time."
+					},
+					{
+						"xh":"15",
+						"yx":"104.016344,30.690041",
+						"title":"Yansha Tingyuan",
+						"imgurl":"./webimages/15.jpg",
+						"shijian":"From November 2002 to June 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+
+						"fajuedd":"Yansha Tingyuan Site, Qingyang District",
+						"scontent":"①Excavation area: 12,600m2; ②Site: 321 ash pits, 1 ash ditch, 170 tombs; ③Relic: tens of thousands of earthenwares, a few of jade wares; ④Times: the Western Zhou Dynasty; ⑤Meaning: the first large graveyard discovered in Jinsha Site."
+					},
+					{
+						"xh":"17",
+						"yx":"104.014906,30.695615",
+						"title":"Chunyu Huajian",
+						"imgurl":"./webimages/17.jpg",
+						"shijian":"From December 2002 to March 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Chunyu Huajian Site (Yuanlingyuan Site), Qingyang District",
+						"scontent":"①Excavation area: 2,100m2; ②Site: 2 kiln sites, 42 ash pits, 17 tombs; ③Relic: a large number of earthenwares; ④Times: the Western Zhou Dynasty; ⑤Meaning: at the same graveyard with Boya Tingyun Site."
+					},
+					{
+						"xh":"18",
+						"yx":"104.015804,30.706896",
+						"title":"Home at Winding Corridor",
+						"imgurl":"./webimages/18.jpg",
+						"shijian":"From February 2003 to April 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Home at Winding Corridor Site, Hongse Village, Jinniu District",
+						"scontent":"①Excavation area: 1,700m2; ②Site: 7 ash pits; ③Relic: a large number of earthenwares; ④Times: the Western Zhou Dynasty."
+					},
+					{
+						"xh":"19",
+						"yx":"104.012701,30.686349",
+						"title":"Hanlong",
+						"imgurl":"./webimages/19.jpg",
+						"shijian":"From March 2003 to September 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Hanlong Site, Jinsha Village, Qingyang District",
+						"scontent":"①Excavation area: 5,050m2; ②Site: 50 ash pits, 38 tombs, 1 ash ditch, 4 kiln sites; ③Relic: a large number of earthenwares; ④Times: the period from the late Shang Dynasty to the Western Zhou Dynasty."
+					},
+					{
+						"xh":"20",
+						"yx":"104.027129,30.702024",
+						"title":"Golden Bay",
+						"imgurl":"./webimages/20.jpg",
+						"shijian":"From April 2003 to May 2003",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Golden Bay Site, Jinniu District",
+						"scontent":"①Excavation area: 3,200m2; ②Site: 18 ash pits, 5 ash ditches; ③Relic: a large number of earthenwares; ④Times: the Shang and Zhou Dynasties."
+					},
+					{
+						"xh":"21",
+						"yx":"104.018086,30.697043",
+						"title":"Sunshine Jinsha",
+						"imgurl":"./webimages/21.jpg",
+						"shijian":"From December 2003 to July 2004",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Sunshine Jinsha Site, Jinniu District",
+						"scontent":"①Excavation area: 15,800m2; ②Site: 44 kiln sites, 102 ash pits, 288 tombs; ③Relic: a large number of earthenwares, bronze wares and stone wares; ④Times: the period from the late Shang Dynasty to the Western Zhou Dynasty; ⑤The kiln site discovered in Jinsha Site for the first time on an integrated basis, another large graveyard in Jinsha Site."
+					},
+					{
+						"xh":"22",
+						"yx":"104.014781,30.693907",
+						"title":"Jinsha International",
+						"imgurl":"./webimages/22.jpg",
+						"shijian":"From March 2004 to September 2007",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Jinsha Internation Site, Jiayuan?, Jinniu District",
+						"scontent":"①Excavation area: 7,600m2; ②Site: 11 kiln sites, 46 ash pits, 62 tombs, 2 building sites; ③Relic: a large number of earthenwares, bronze wares and jade wares; ④Times: the Western Zhou Dynasty; ⑤Meaning: a large number of pirogue coffin burial tools discovered for the first time."
+					},
+					{
+						"xh":"23",
+						"yx":"104.021446,30.6974",
+						"title":"Qianhe Xincheng",
+						"imgurl":"./webimages/23.jpg",
+						"shijian":"From March 2004 to October 2004",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Qianhe Xincheng Site, Jinniu District",
+						"scontent":"①Excavation area: 1,900m2; ②Site: 1 kiln site, 117 ash pits, 18 ash ditches, 137 tombs; ③Relic: a large number of earthenwares; ④Times: the Western Zhou Dynasty; ⑤Meaning: another large graveyard in Jinsha Site."
+					},
+					{
+						"xh":"24",
+						"yx":"104.019879,30.687412",
+						"title":"The Second Excavation Site in the Sacrifice Area",
+						"imgurl":"./webimages/24.jpg",
+						"shijian":"From September 2004 to January 2005",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"The Second Excavation Site in the Sacrifice Area, Jinsha Village",
+						"scontent":"①Excavation area: 1,380m2; ②Site: 34 sacrifice sites, 33 ash pits; ③Relic: a few of jade wares, bronze wares and gold wares, over 2,000 pieces of stone wares, a large number of woodenwares, tens of thousands of earthenwares, with stone wares based on stone cake, stone Zhang and stone Bi; ④Times: main relics of the period from the Shang Dynasty to the early Spring and Autumn Period, a few of relics of Baodun Culture; ⑤Meaning: releasing the development progress for about 1,000 years next to Jinsha Village Sacrifice Site."
+					},
+					{
+						"xh":"25",
+						"yx":"104.015116,30.713127",
+						"title":"Exquisite Community Supporting Site of Langjia Village",
+						"imgurl":"./webimages/25.jpg",
+						"shijian":"From November 2004 to December 2004",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Exquisite Community Supporting Site, Langjia Village, Jinniu District",
+						"scontent":"①Excavation area: 400m2; ②Site: 3 small building sites, 15 ash pits; ③Relic: a large number of earthenwares; ④Times: the period from the late Shang Dynasty to the Western Zhou Dynasty."
+					},
+					{
+						"xh":"26",
+						"yx":"104.015881,30.686372",
+						"title":"Tourist Reception Center of Jinsha Site Museum",
+						"imgurl":"./webimages/26.jpg",
+						"shijian":"From March 2005 to December 2005",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Tourist Reception Center Site of Jinsha Site Museum",
+						"scontent":"①Excavation area: 500m2; ②Site: 2 ash pits; ③Relic: a large number of earthenwares; ④Times: relics of Baodun Culture Period and cultural relics of Shang and Zhou Dynasties."
+					},
+					{
+						"xh":"27",
+						"yx":"104.019769,30.700374",
+						"title":"Jinyu Bay",
+						"imgurl":"./webimages/27.jpg",
+						"shijian":"From April 2005 to May 2005",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Jinyu Bay Site, Qingyang District",
+						"scontent":"①Excavation area: 1,500m2; ②Site: 54 ash pits, 4 ash ditches, 7 tombs; ③Relic: a large number of earthenwares; ④Times: the period from the late Shang Dynasty to the Western Zhou Dynasty."
+					},
+					{
+						"xh":"28",
+						"yx":"104.020804,30.689253",
+						"title":"Exhibition Hall of the Jinsha Site Museum",
+						"imgurl":"./webimages/28.jpg",
+						"shijian":"From April 2005 to September 2005",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Exhibition Hall Site of the Jinsha Site Museum",
+						"scontent":"①Excavation area: 8,300m2; ②Site: 72 ash pits, 2 ash ditches; ③Relic: a large number of earthenwares and stone wares unearthed; ④Times: the period from the end Shang Dynasty to the Western Zhou Dynasty."
+					},
+					{
+						"xh":"29",
+						"yx":"104.022185,30.694022",
+						"title":"Xiyan Yashe",
+						"imgurl":"./webimages/29.jpg",
+						"shijian":"From July 2005 to January 2006",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Xiyan Yashe Site, Jinniu District",
+						"scontent":"①Excavation area: 2,925m2; ②Site: 5 kiln sites, 625 ash pits, 24 ash ditches, 130 tombs; ③Relic: dagger-axe, spear, sword, shield and other bronze wares, shield, chisel and other jade wares, stone wares and a large number of earthenwares; ④Times: from the late Shang Dynasty to the early Spring and Autumn Period; ⑤Meaning: at the same graveyard with Sites A &B of Jinniu Urban and Rural Unification, partial tombs with pirogue coffins as the burial tools, funerary object exclusively buried with the dead discovered for the first time."
+					},
+					{
+						"xh":"30",
+						"yx":"104.01523,30.691516",
+						"title":"BRC Yongjin Bay",
+						"imgurl":"./webimages/30.jpg",
+						"shijian":"From August 2005 to April 2006",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Yongjing Bay Site of BRC Group, Qingyang District",
+						"scontent":"①Excavation area: 18,200m2; ②Site: 9 building sites, 29 kiln sites, 714 ash pits, 16 ash ditches, 381 tombs; ③Relic: a few of jade wares and bronze wares, a large number of earthenwares; ④Times: from the end Shang Dynasty to the Western Zhou Dynasty; ⑤Meaning: at the same graveyard with Yansha Tingyuan, a large graveyard in Jinsha Site."
+					},
+					{
+						"xh":"31",
+						"yx":"104.009984,30.701173",
+						"title":"House Demolition Site of Longzui Group 6",
+						"imgurl":"./webimages/31.jpg",
+						"shijian":"From September 2005 to October 2005",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"House Demolition Site of Longzui Group 6, Jinniu District",
+						"scontent":"①Excavation area: 600m2; ②Site: 3 ash pits; ③Relic: a large number of earthenwares; ④Times: Shang and Zhou Dynasties."
+					},
+					{
+						"xh":"32",
+						"yx":"104.019052,30.690448",
+						"title":"Parking Lot and Cultural Relics Protection Center of Jinsha Site Museum",
+						"imgurl":"./webimages/32.jpg",
+						"shijian":"From September 2005 to December 2005",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Parking Lot and Cultural Relics Protection Center Site of Jinsha Site Museum",
+						"scontent":"①Excavation area: 6,050m2; ②Site: 8 building sites and 3 ash ditches of Baodun Culture Period; 286 ash pits, 1 ash ditch and 1 kiln site of Shierqiao Culture Period; ③Relic: a large number of earthenwares, stone wares and jade wares unearthed; ④Times: the period from the late Neolithic Age to the Western Zhou Dynasty; ⑤Meaning: relics of building sites of Baodun Culture Period discovered."
+					},
+					{
+						"xh":"33",
+						"yx":"104.004579,30.706848",
+						"title":"No. 3 Site of Jinniu Urban and Rural Unification",
+						"imgurl":"./webimages/33.jpg",
+						"shijian":"From September 2005 to December 2005",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"No. 3 Site of Jinniu Urban and Rural Unification",
+						"scontent":"①Excavation area: 2,450m2; ②Site: 2 building sites, 112 ash pits, 2 tombs; ③Relic: a large number of earthenwares; ④Times: the Western Zhou Dynasty."
+					},
+					{
+						"xh":"34",
+						"yx":"104.016792,30.704955",
+						"title":"Taiji Huayulang",
+						"imgurl":"./webimages/34.jpg",
+						"shijian":"From November 2005 to June 2006",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Group 1 Site (Taiji ? Huayulang), Langjia, Jinniu District",
+						"scontent":"①Excavation area: 500m2; ②Site: 16 ash pits, 2 ash ditches, 4 tombs; ③Relic: a large number of pottery fragments; ④Times: Shang and Zhou Dynasties."
+					},
+					{
+						"xh":"35",
+						"yx":"104.022803,30.69443",
+						"title":"No. 5-A Site of Jinniu Urban and Rural Unification",
+						"imgurl":"./webimages/35.jpg",
+						"shijian":"From January 2006 to March 2007",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"No. 5-A Site of Jinniu Urban and Rural Unification",
+						"scontent":"①Excavation area: 4,480m2; ②Site: 3 building sites, 5 kiln sites, 714 ash pits, 38 ash ditches, 236 tombs; ③Relic: a few of bronze wares and jade wares, a large number of earthenwares; ④Times: main relics of the period from the middle Shang Dynasty to the early Spring and Autumn Period, a few relics of Baodun Culture; ⑤Meaning: 3 building foundation sites with large wooden columns as the most important discovery, and the constituent part of Palace Area of Huangzhong Village."
+					},
+					{
+						"xh":"36",
+						"yx":"104.020777,30.695114",
+						"title":"No. 5-B Site of Jinniu Urban and Rural Unification",
+						"imgurl":"./webimages/36.jpg",
+						"shijian":"From January 2006 to September 2007",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"No. 5-B Site of Jinniu Urban and Rural Unification",
+						"scontent":"①Excavation area: 14,600m2; ②Site: 46 building sites, 2 ash pits and 1 tomb of Baodun Culture Period; 929 ash pits, 44 ash ditches, 642 tombs, 41 kiln sites and 2 building sites of Shierqiao Culture Period; ③Relic: many jade wares and bronze wares, tens of thousands of earthenwares; ④Times: rather rich relics of Baodun Culture Period, mainly of building sites, relics of the period from the late Shang Dynasty to the Western Zhou Dynasty of a large tomb; ⑤Meaning: at the same graveyard with No. 5-A Site of Jinniu Urban and Rural Unification and Xiyan Yashe."
+					},
+					{
+						"xh":"37",
+						"yx":"104.011191,30.712716",
+						"title":"Yingbin Road Primary School",
+						"imgurl":"./webimages/37.jpg",
+						"shijian":"From January 2006 to March 2006",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Yingbin Road Primary School Site, Jinniu District",
+						"scontent":"①Excavation area: 320m2; ②Site: 2 ash pits, 1 tomb; ③Relic: a large number of earthenwares; ④Times: the Western Zhou Dynasty and the Warring States Period."
+					},
+					{
+						"xh":"39",
+						"yx":"104.020605,30.699807",
+						"title":"Xicheng Tianxia",
+						"imgurl":"./webimages/39.jpg",
+						"shijian":"From April 2006 to July 2006",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Xicheng Tianxia Site, Yangxi Line, Jinniu District",
+						"scontent":"①Excavation area: 2,500m2; ②Site: 2 kiln sites, 57 ash pits; ③Relic: a large number of earthenwares; ④Times: the Western Zhou Dynasty."
+					},
+					{
+						"xh":"40",
+						"yx":"104.012876,30.70035",
+						"title":"House Demolition Site of Longzui Group 5",
+						"imgurl":"./webimages/40.jpg",
+						"shijian":"From October 2006 to November 2006",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"House Demolition Site (Jindi Site) of Longzui Group 5, Qingyang District",
+						"scontent":"①Excavation area: 800m2; ②Site: 12 ash pits, 1 ash ditch, 10 tombs; ③Relic: a large number of earthenwares; ④Times: Shang and Zhou Dynasties."
+					},
+					{
+						"xh":"41",
+						"yx":"104.019744,30.693049",
+						"title":"China Resources Real Estate",
+						"imgurl":"./webimages/41.jpg",
+						"shijian":"From November 2006 to March 2007",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"China Resources Real Estate Site, Jinniu District",
+						"scontent":"①Excavation area: 1,000m2; ②Site: 78 ash pits, 3 tombs, 1 kiln site; ③Relic: a large number of earthenwares; ④Times: from the late Shang Dynasty to the Western Zhou Dynasty."
+					},
+					{
+						"xh":"42",
+						"yx":"104.008603,30.708012",
+						"title":"Shangrui Tianyun",
+						"imgurl":"./webimages/42.jpg",
+						"shijian":"From March 2007 to May 2007",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"West 3rd Ring Project Site, Shangrui Tianyun, Jinniu District",
+						"scontent":"①Excavation area: 2,300m2; ②Site: 2 kiln sites, 85 ash pits; ③Relic: a large number of earthenwares, bronze wares, jade wares and stone wares; ④Times: the Western Zhou Dynasty."
+					},
+					{
+						"xh":"43",
+						"yx":"104.023139,30.693437",
+						"title":"Jinsha Langyu",
+						"imgurl":"./webimages/43.jpg",
+						"shijian":"From April 2007 till now",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Jinsha Langyu Site, Huangzhong Village, Jinniu District",
+						"scontent":"①Excavation area: 1,600m2; ②Site: 7 building sites, 4 kiln sites, 33 ash pits, 2 ash ditches; ③Relic: a large number of earthenwares; ④Times: the period from the late Shang Dynasty to the Western Zhou Dynasty; ⑤Meaning: 2 building sites thereof with large postholes as the building foundation sites of the palace, a part of the Palace Area of Huangzhong Village."
+					},
+					{
+						"xh":"44",
+						"yx":"104.033353,30.704454",
+						"title":"Training Center of Jinniu Disabled Persons Federation",
+						"imgurl":"./webimages/44.jpg",
+						"shijian":"From June 2007 to July 2007",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Training Center of Jinniu Disabled Persons Federation Site",
+						"scontent":"①Excavation area: 700m2; ②Site: 1 building site, 1 ash pit, 1 tomb; ③Relic: earthenwares, bronze wares, jade wares, stone wares; ④Times: the Western Zhou Dynasty."
+					},
+					{
+						"xh":"45",
+						"yx":"104.018305,30.713345",
+						"title":"Zhonghuan Nobiliary Domain",
+						"imgurl":"./webimages/45.jpg",
+						"shijian":"From August 2007 to October 2007",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Zhonghuan Nobiliary Domain Project Site, Jinniu District",
+						"scontent":"①Excavation area: 6,600m2; ②Site: 2 building sites, 7 ash pits; ③Relic: a large number of earthenwares of Baodun Period; ④Times: Baodun Culture Period."
+					},
+					{
+						"xh":"47",
+						"yx":"104.022192,30.691976",
+						"title":"No. 5-C Site of Jinniu Urban and Rural Unification",
+						"imgurl":"./webimages/47.jpg",
+						"shijian":"From October 2007 till now",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"No. 5-C Site of Jinniu Urban and Rural Unification",
+						"scontent":"①Excavation area: 2,550m2; ②Site: 2 building sites, 537 ash pits, 3 kiln sites, 80 ash ditches, 3 tombs; ③Relic: a large number of earthenwares, bronze wares, jade wares and stone wares; ④Times: main accumulation of Shang and Zhou Dynasties. Some strata accumulations of Baodun Period."
+					},
+					{
+						"xh":"48",
+						"yx":"104.015086,30.699543",
+						"title":"Longzui Line G",
+						"imgurl":"./webimages/48.jpg",
+						"shijian":"From October 2007 till now",
+						"fajuezhe":"Chengdu Cultural Relics and Archaeology Research Institute",
+						"fajuedd":"Longzui Line G Site, Qingyang District",
+						"scontent":"①Excavation area: 1,800m2; ②Site: 1 kiln site, 45 ash sites, 5 ash ditches, 110 tombs; ③Relic: earthenwares, bronze wares, stone wares, jade wares; ④Times: the period from the end Shang Dynasty to the Western Zhou Dynasty; ⑤Meaning: another large graveyard in Jinsha Site."
+					}
+		
+				]
+		};
+	
+	
+	
+	
+	map.centerAndZoom(point,15);
+	map.enableScrollWheelZoom(true); 
+
+	addPointall(); 
+
+	function addPointall(){
+		var pointArray = new Array();
+		var map_data = json_site.sites;
+		for(var i=0;i<map_data.length;i++){
+			var urltitle = map_data[i].title;
+			var imgurl = map_data[i].imgurl;
+			var findtime = map_data[i].shijian;
+			var dizhi = map_data[i].fajuedd;
+			var conbox = map_data[i].scontent;
+			var myIcon = new BMap.Icon("./webimages/dian.gif", new BMap.Size(16,16));
+			var marker = new BMap.Marker(new BMap.Point(map_data[i].yx.split(",")[0], map_data[i].yx.split(",")[1]),{icon:myIcon}); // 创建点			
+			var sContent="<div style='height:250px;overflow:hidden'><img src='"+imgurl+"' style='width:500px;'/></div>"+"<div style='width:500px;height:188px;overflow-y:auto;'><p>●Date of excavation："+findtime+"<br/>"+"●Place of excavation："+dizhi+"<br/>"+"●Main discovery："+conbox+"</p></div>";
+			var infoWindow = new BMap.InfoWindow(sContent);
+			
+			map.addOverlay(marker);    //增加点
+			//marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+			pointArray[i] = new BMap.Point(map_data[i].yx.split(",")[0], map_data[i].yx.split(",")[1]);
+			
+
+
+
+			addClickHandler(infoWindow,marker);
+			//marker.addEventListener("click",attribute);
+		}
+		//让所有点在视野范围内
+		map.setViewport(pointArray);
+		//获取覆盖物位置
+		
+		function addClickHandler(infoWindow,marker){
+			marker.addEventListener("click",function(e){
+				this.openInfoWindow(infoWindow);
+				//openInfo(infoWindow,e)
+				}
+			);
+		}
+
+
+	}
+
+map.setMapStyle({
+  styleJson:[
+          {
+                    "featureType": "land",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#212121"
+                    }
+          },
+          {
+                    "featureType": "building",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#2b2b2b"
+                    }
+          },
+          {
+                    "featureType": "highway",
+                    "elementType": "all",
+                    "stylers": {
+                              "lightness": -42,
+                              "saturation": -91
+                    }
+          },
+          {
+                    "featureType": "arterial",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -77,
+                              "saturation": -94
+                    }
+          },
+          {
+                    "featureType": "green",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#1b1b1b"
+                    }
+          },
+          {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#181818"
+                    }
+          },
+          {
+                    "featureType": "subway",
+                    "elementType": "geometry.stroke",
+                    "stylers": {
+                              "color": "#181818"
+                    }
+          },
+          {
+                    "featureType": "railway",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -52
+                    }
+          },
+          {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": {
+                              "color": "#313131"
+                    }
+          },
+          {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": {
+                              "color": "#8b8787"
+                    }
+          },
+          {
+                    "featureType": "manmade",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#1b1b1b"
+                    }
+          },
+          {
+                    "featureType": "local",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -75,
+                              "saturation": -91
+                    }
+          },
+          {
+                    "featureType": "subway",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -65
+                    }
+          },
+          {
+                    "featureType": "railway",
+                    "elementType": "all",
+                    "stylers": {
+                              "lightness": -40
+                    }
+          },
+          {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": {
+                              "color": "#8b8787",
+                              "weight": "1",
+                              "lightness": -29,
+                              "visibility": "off"
+                    }
+          }
+]
+});	
+</script>
+</body>
+</html>

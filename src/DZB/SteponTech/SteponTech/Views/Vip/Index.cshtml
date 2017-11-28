@@ -1,0 +1,627 @@
+﻿@{ 
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+@{ 
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>金沙会员</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/vip/dateSelect.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/vip/city-picker.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/vip/vip-login-sucess.css" />
+    <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js "></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--顶部开始-->
+        <div class="row nav-bg b3-border">
+            <div class="container padding_0 aa">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12 hh ">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                            <img src="../../common/headerImg/logo.png" alt="" class="img-responsive center-block" />
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                            <div class="top-list">
+                                <ul>
+                                    <a href="http://120.25.240.32:8800/"><li>大众版</li></a>
+                                    <a href="http://120.25.240.32:8000/"><li>英文版</li></a>
+                                    <a href="http://118.114.244.3:8014/"><li>学术版</li></a>
+                                    <a href="http://120.25.240.32:8700/"><li>青教版</li></a>
+                                    @{
+                                        if (ViewBag.IsLogin == null)
+                                        {
+                                            <li class="top-listLi5">
+                                                <a href="/Vip/Sign">注册</a>
+                                            </li>
+                                            <li class="top-listLi6">|</li>
+                                            <li class="top-listLi7">
+                                                <a href="/Vip/Login">登录</a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="top-listLi5">
+                                                <a id="loginout" style="cursor:pointer">退出登录</a>
+                                            </li>
+                                            <li class="top-listLi6">
+                                                @if (ViewBag.IsLogin.Length > 4)
+                                                {
+                                                    ViewBag.IsLogin = ViewBag.IsLogin.Substring(0, 4) + "...";
+                                                    <a href="/Vip/Index">
+                                                        @ViewBag.IsLogin
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <a href="/Vip/Index">
+                                                        @ViewBag.IsLogin
+                                                    </a>
+                                                }
+                                            </li>
+                                            <li class="top-listLi7">您好！亲爱的</li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                            <div class="menu-btn">
+                                <img src="../../img/index/show/menu.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-top-list">
+                    <ul>
+                        <a href="http://120.25.240.32:8800/">
+                            <li>大众版</li>
+                        </a>
+                        <a href="http://120.25.240.32:8000/">
+                            <li>英文版</li>
+                        </a>
+                        <a href="http://118.114.244.3:8014/">
+                            <li>学术版</li>
+                        </a>
+                        <a href="http://120.25.240.32:8700/">
+                            <li>青教版</li>
+                        </a>
+                        @{
+                            if (ViewBag.IsLogin == null)
+                            {
+                                <a href="/Vip/Sign">
+                                    <li>注册</li>
+                                </a>
+                                <a href="/Vip/Login">
+                                    <li>登录</li>
+                                </a>
+                            }
+                            else
+                            {
+                                <a id="loginout" style="cursor:pointer">
+                                    <li>退出登录</li>
+                                </a>
+                                @if (ViewBag.IsLogin.Length > 4)
+                                {
+                                    ViewBag.IsLogin = ViewBag.IsLogin.Substring(0, 4) + "...";
+                                    <a href="/Vip/Index">
+                                        <li>@ViewBag.IsLogin</li>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="/Vip/Index">
+                                        <li>@ViewBag.IsLogin</li>
+                                    </a>
+                                }
+                            }
+                        }
+                        @if (ViewBag.Head != null)
+                        {
+                            foreach (var item in ViewBag.Head)
+                            {
+                                if (item.ModelName == "首页")
+                                {
+                                    <a href="/JinSha/Index">
+                                        <li>首页</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "关于金沙")
+                                {
+                                    <a href="/About/Index">
+                                        <li>关于金沙</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "参观指南")
+                                {
+                                    <a href="/VisitGuide/Index">
+                                        <li>参观指南</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "展览导览")
+                                {
+                                    <a href="/Exhibition/Index">
+                                        <li>展览导览</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "金沙资讯")
+                                {
+                                    <a href="/NEWS/Index">
+                                        <li>金沙资讯</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "艺术金沙")
+                                {
+                                    <a href="/Creation/Index">
+                                        <li>艺术金沙</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "典藏珍品")
+                                {
+                                    <a href="/Collection/Index">
+                                        <li>典藏珍品</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "文化活动")
+                                {
+                                    <a href="/Culture/Index">
+                                        <li>文化活动</li>
+                                    </a>
+
+                                }
+                                else if (item.ModelName == "金沙会员")
+                                {
+                                    <a class="active" href="/Vip/Index">
+                                        <li>金沙会员</li>
+                                    </a>
+
+                                }
+                                else
+                                {
+                                    <a href="/Volunteer/Index">
+                                        <li>志愿者</li>
+                                    </a>
+
+                                }
+                            }
+
+                        }
+                    </ul>
+                </div>
+                <div class="row mAp0">
+                    <div class="nav-list">
+                        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                            <ul>
+                                @if (ViewBag.Head != null)
+                                {
+                                    foreach (var item in ViewBag.Head)
+                                    {
+                                        if (item.ModelName == "首页")
+                                        {
+                                            <a href="/JinSha/Index">
+                                                <li>首页</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "关于金沙")
+                                        {
+                                            <a href="/About/Index">
+                                                <li>关于金沙</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "参观指南")
+                                        {
+                                            <a href="/VisitGuide/Index">
+                                                <li>参观指南</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "展览导览")
+                                        {
+                                            <a href="/Exhibition/Index">
+                                                <li>展览导览</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "金沙资讯")
+                                        {
+                                            <a href="/NEWS/Index">
+                                                <li>金沙资讯</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "艺术金沙")
+                                        {
+                                            <a href="/Creation/Index">
+                                                <li>艺术金沙</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "典藏珍品")
+                                        {
+                                            <a href="/Collection/Index">
+                                                <li>典藏珍品</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "文化活动")
+                                        {
+                                            <a href="/Culture/Index">
+                                                <li>文化活动</li>
+                                            </a>
+
+                                        }
+                                        else if (item.ModelName == "金沙会员")
+                                        {
+                                            <a class="active" href="/Vip/Index">
+                                                <li>金沙会员</li>
+                                            </a>
+
+                                        }
+                                        else
+                                        {
+                                            <a href="/Volunteer/Index">
+                                                <li>志愿者</li>
+                                            </a>
+
+                                        }
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container">
+        <div>
+            <div class="row">
+                <!--左边的选项-->
+                <div class="col-sm-2 cont-left cont-left-show ">
+                    <ul>
+                        <li>会员章程</li>
+                        <li class="clicked">我的活动</li>
+                        <li>我的积分</li>
+                        <li>我的兑换</li>
+                        <li>我的信息</li>
+                    </ul>
+                </div>
+                <!--卡片选项-->
+                <article class="cont-right col-sm-9">
+                    <!--不同的版块-->
+                    <!--会员章程-->
+                    <section class="vipRule-cell hide">
+                        <div class="content">
+                            <h4><strong>会员章程</strong></h4>
+                            <h5>（一）会员宗旨</h5>
+                            <p>
+                                遵守国家宪法、法律、法规和政策，坚持科学发展观，增强博物馆与社会的互动性，促进博物馆宣传教育功能的充分发挥，推动文博事业不断发展。
+                            </p>
+                            <h5>（二）如何成为会员</h5>
+                            <p>如果您喜爱历史、尊重知识、热衷于古蜀金沙文化，愿正当行使会员权利、履行会员义务则可通过金沙遗址博物馆微信公众号、官方网站及智能导览APP，提交个人信息则可申请成为会员。</p>
+                            <h5>（三）会员权利</h5>
+                            <p>1、会员可优先参与博物馆举行的各项公众活动；</p>
+                            <p>2、会员可根据累积积分兑换相应礼品；</p>
+                            <p>3、会员可优先加入我馆志愿者队伍；</p>
+                            <p>4、会员可定期获得金沙遗址博物馆馆刊。</p>
+                            <h5>（四）如何成为会员</h5>
+                            <p>金沙遗址博物馆会员分为五个类别：</p>
+                            <p>
+                                V1=90分
+                            </p>
+                            <p>
+                                V2=150分
+                            </p>
+                            <p>
+                                V3=210分
+                            </p>
+                            <p>
+                                V4=270分
+                            </p>
+                            <p> V5=330分</p>
+                            <h5>（五）积分获取途径：</h5>
+                            <p>
+                                1、微信签到1次=1积分。微信登录服务号会员中心即算签到，每周最多2积分；
+                            </p>
+                            <p>
+                                2、转发会员活动信息一条可获得2积分（每条信息仅首次转发有效）；
+                            </p>
+                            <p>3、通过“会员中心-我的活动”报名成功参与博物馆活动每次可获得5积分；</p>
+                            <h5>（六）礼品兑换（礼品兑换方式：快递到付或每月1`5日南门游客中心兑换）</h5>
+                            <p>
+                                V1：90分，可兑换金沙行李牌1个或化妆镜1个，价值30元（相当于参加18次活动）
+                            </p>
+                            <p>
+                                 V2:150分，可兑换3D书签挂件1个或者太阳神鸟徽章1个（相当于参加30次活动）
+                            </p>
+                            <p>
+                                 V3:210分，可兑换太阳神鸟车挂1个或《再现辉煌的古蜀王都》图书1本（相当于参加42次活动）
+                            </p>
+                            <p>
+                                 V4:270分，可兑换金沙太阳神鸟项链1个或者十节玉琮项链1个（相当于参加54次活动）
+                            </p>
+                            <p> V5:330分，可兑换喇叭形器手链1个（相当于参加66次活动）</p>
+                            <h5>（七）积分清零机制</h5>
+                            <p>金沙遗址博物馆会员所累积积分将实行五年清零机制。</p>
+                            <h5>（八）会员注册后首次收到的邮件</h5>
+                            <p>尊敬的先生/女士：</p>
+                            <p>您好！欢迎您成为成都金沙遗址博物馆的会员，您可以享受以下权益：</p>
+                            <p>1、您可以通过会员中心查看金沙遗址博物馆最新的活动信息，还能直接报名参加您喜欢的活动；</p>
+                            <p>2、在会员中心，您可以通过转发会员活动信息、签到和参加活动获取会员积分，根据积分规则到指定地点可兑换精美的金沙小礼品；</p>
+                            <p>3、如果您对我们博物馆有什么问题，可以通过会员中心向我们提问，我们将尽力解答您的疑惑；</p>
+                            <p>4、我们会定期向您的电子邮箱投送金沙遗址博物馆馆刊等您感兴趣的资料。</p>
+                            <p>以上解释权均归金沙遗址博物馆所有。</p>
+                            
+
+</div>
+                    </section>
+                    <!--我的活动-->
+                    <section class="Activity-cell">
+                        <ul class="tabs col-sm-12 clearfix">
+                            <li class="culture tabs-line">文化活动</li>
+                            <li class="volunteer">志愿者活动</li>
+                        </ul>
+                        <section class="culture-activity" id="membersactitvty"></section>
+                        <section class="volunteer-box hide" id="valunteeractitvty"></section>
+
+                    </section>
+                    <!--我的积分-->
+                    <section class="Number-cell clearfix hide" id="contentlistintegral">
+                        <div class="titleAll">
+                            <div class="titleBox center-block">
+                                <div class="myNumber col-sm-4">
+                                    <div class="title-box center-block">
+                                        <span class="num-title">我的积分：</span><span class="points" id="myscore1"></span>
+                                    </div>
+                                </div>
+                                <div class=" col-sm-8">
+                                    <div class="exchange-btn">积分兑换</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-title clearfix">
+
+                            <div class="col-sm-6">用途/来源</div>
+                            <div class="col-sm-3">时间</div>
+                            <div class="col-sm-3">积分变化</div>
+
+                        </div>
+                    </section>
+                    <!--我的兑换-->
+                    <section class="exchange-cell hide">
+                        <!--我的积分信息-->
+                        <div class="exchange-cell-myInfo row">
+                            <div class="col-xs-6">
+                                <div class="myinfo-box1">
+                                    <span class="myinfo-text">我的积分：</span>
+                                    <span class="myInfo-score" id="myscore2"></span>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="myinfo-box2">
+                                    <span class="myinfo-text">我的等级：</span>
+                                    <span class="myInfo-score" id="userlevel1"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Tab切换-->
+                        <div class="exchange-cell-tabNav row">
+                            <ul>
+                                <li class="tabNav-active">积分商城</li>
+                                <li class="second-li">我的兑换</li>
+                            </ul>
+                        </div>
+                        <!--积分商城内容-->
+                        <div class="exchange-cell-shop myshop row">
+                            <!--一个大的div三个图片-->
+                            <div class="threePart-box clearfix" id="myExchangeTab">
+                            </div>
+                        </div>
+                        <!--我的兑换-->
+                        <div class="exchange-cell-shop  myexchange  row">
+                            <!--一个大的div三个图片-->
+                            <div class="threePart-box clearfix" id="myIntegralTab">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--我的信息-->
+                    <section class="informs-cell clearfix hide">
+                        <div class="col-sm-12 col-md-9 col-lg-10 meg-cell my-card"><span class="inform-title col-sm-1 col-md-2">会员卡号</span><span class="infor-meg col-sm-9" id="mycard"></span></div>
+                        <div class="col-sm-12 col-md-9 col-lg-10 meg-cell"><span class="inform-title">会员等级</span><span class="infor-meg" id="mylevel"></span></div>
+                        <div class="col-sm-12 col-md-9 col-lg-10 meg-cell"><span class="inform-title">会员积分</span><span class="infor-meg" id="myscore"></span></div>
+                        <div class="col-sm-12 col-md-9 col-lg-10 meg-cell"><span class="inform-title">分组信息</span><span class="infor-meg" id="mygroup"></span></div>
+                        <div class="row">
+                            <div class=" col-sm-12 col-md-11 col-lg-10 meg-cell">
+                                <label class="inform-title">昵称</label>
+                                <input type="text" id="name" class="meg-input name-width">
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-sm-12 col-md-11 col-lg-10 meg-cell">
+                                <label class="inform-title">姓名</label>
+                                <input type="text" id="myname" class="meg-input name-width">
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-12 col-md-9 col-lg-10 meg-cell">
+                                <span class="inform-title col-sm-2 ">手机号码</span>
+                                <span class="infor-meg col-sm-2"><input type="text" readonly="readonly" class="phone" ></span>
+                                <span class="phone-update">修改</span>
+                            </div> -->
+                        <!-- <div class="col-sm-12 col-md-9 col-lg-10 meg-cell">
+                                 <span class="inform-title col-sm-1 col-md-2">邮箱</span>
+                                <label class="inform-title">邮箱</label>
+                                <span class="infor-meg col-sm-2"><input type="text" readonly="readonly" class="e-mail"></span>
+                                <span class="e-mail-update">修改</span>
+                            </div>  -->
+                        <div class="row">
+                            <div class=" col-sm-12 col-md-11 col-lg-10 meg-cell">
+                                <label class="inform-title">手机号码</label>
+                                <input type="text" readonly="readonly" id="tel" class="phone">
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-sm-12 col-md-11 col-lg-10 meg-cell">
+                                <label class="inform-title">邮箱</label>
+                                <input type="text" readonly="readonly" id="email" class="e-mail">
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-sm-12 col-md-11 col-lg-10 meg-cell">
+                                <label class="inform-title">详细地址</label>
+                                <input type="text" id="addr" class="meg-input">
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+                        <button class="save-btn" id="save-btn">保存</button>
+
+
+                    </section>
+                </article>
+            </div>
+        </div>
+
+
+    </main>
+
+    <div class="bm-line"></div>
+    @if (ViewBag.Footer != null)
+    {
+
+        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/vip/dateSelect.js"></script>
+        <script type="text/javascript" src="../../js/vip/city-picker.data.min.js"></script>
+        <script type="text/javascript" src="../../js/vip/city-picker.min.js"></script>
+        <script type="text/javascript" src="../../js/vip/vip-login-sucess.js"></script>
+        <script src="../common/common.js"></script>
+        <footer class="container footer ">
+            <div class="row">
+                <!--联系我们-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                    <p class="callmeP1">联系我们</p>
+                    <p class="callmeP2">电话:<span> @ViewBag.Footer.PhoneNumber</span></p>
+                    <p class="callmeP3">地址:<span> @ViewBag.Footer.Address</span></p>
+                    <div class="row twopic">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                            <img class="img-responsive" src="@ViewBag.Footer.Wechat" />
+                            <p><img src="../common/footerImg/bottom_wechat.png" /><span class="weixincolor">关注官方微信</span></p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <img class="img-responsive" src="@ViewBag.Footer.Watermark" />
+                            <p><img src="../common/footerImg/weibo-icon.png" /><span class="color">关注官方微博</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--友情链接-->
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                    <p class="linkP1">友情链接</p>
+                    <!--博物馆-->
+                    <div class="footer-museum divselect">
+                        <cite onchange="window.location=this.href;">博物馆</cite>
+                        <ul id="OtherList" tag="@ViewBag.Footer.MuseumLink"></ul>
+                    </div>
+                    <!--政府-->
+                    <div class="footer-government divselect">
+                        <cite onchange="window.location=this.href;">其他</cite>
+                        <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                        <script>
+                            $(function () {
+                                var data = JSON.parse($('#GovernmentalList').attr('tag'));
+                                var cc1 = "";
+                                $.each(data, function (i, item) {
+                                    cc1 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                
+                                $('#GovernmentalList').append(cc1);
+
+                                var data2 = JSON.parse($('#OtherList').attr('tag'));
+                                var cc2 = "";
+                                $.each(data2, function (i, item) {
+                                    cc2 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                
+                                $('#OtherList').append(cc2);
+
+                            });
+                        </script>
+                    </div>
+
+                    <p class="help">游览帮助</p>
+                    <div class="link-btm-info">
+                        <ul>
+                            @if (ViewBag.JumpLink != null)
+                            {
+                                foreach (var item in ViewBag.JumpLink)
+                                {
+                                    <li>
+                                        <a href="/VisitGuide/Index#@item.Id">@item.Name</a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <!--版权-->
+                <div class="col-xs-12  copyright padding_0">
+                    <div>
+                        <img class="img-responsive" src="../common/footerImg/bottom_logo.png" />
+                    </div>
+                    <p class="copyrightP1">金沙遗址博物馆版权所有</p>
+                    <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                </div>
+            </div>
+            <!--返回顶部-->
+            <div class="toTop" style="display: none;">
+                <img class="bgarr" src="/img/arrows/return_nor.png" />
+                <img class="hoverImg" src="/img/arrows/return_pre.png">
+            </div>
+        </footer>
+    }
+    <script>
+                            $("#loginout").on("click", function () {
+                                $.ajax({
+                                    url: '/api/Members/MembersLoginout',
+                                    type: 'GET',
+                                    dataType: "text",
+                                    contentType: "application/json",
+                                    success: function (data) {
+                                        data = JSON.parse(data)
+                                        alert(data.message);
+                                        window.location.reload();
+                                    }
+                                });
+                            });
+    </script>
+
+    <!-- JiaThis Button BEGIN -->
+    <script type="text/javascript">
+                            var jiathis_config = {
+                                siteNum: 15,
+                                sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+                                summary: "",
+                                boldNum: 6,
+                                showClose: true,
+                                shortUrl: false,
+                                hideMore: false
+                            }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+</body>
+
+</html>

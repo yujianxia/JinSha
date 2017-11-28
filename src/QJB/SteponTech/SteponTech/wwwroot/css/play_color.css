@@ -1,0 +1,312 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+    font-size: 0;
+}
+li{
+	list-style: none;
+}
+html,body{
+	height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 0;
+}
+.zIndex{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+.wrapper{
+	height: 1134px;
+    min-width: 1280px;
+    background-image: url("../img/play_color/di.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 15px;
+}
+/*草*/
+.glass{
+	width: 100%;
+	height: 140px;
+    position:relative;
+}
+.glass_div{
+	z-index: 1;
+	width: 100%;
+    min-width: 1280px;
+	position: absolute;
+	height: 280px;
+    left:0;
+    top:0;
+    background-image: url("../img/common/leaf2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*树叶飘动*/
+
+
+.label{
+	width: 1280px;
+	margin: auto;
+	position: relative;
+}
+.label a{
+	float: left;
+}
+.main{
+    margin: 0 auto;
+    width: 1100px;
+    height: 1097px;
+    margin-top: 100px;
+    position: relative;
+    text-align: center;
+}
+.main .left,.main .right{
+	position: relative;
+}
+.main .right{
+	width: 1008px;
+	height:831px;
+    background-image: url("../img/play_color/bg2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+	position: absolute;
+	left: 195px;
+	top: -166px;
+}
+.right ul.list{
+	overflow: hidden;
+	width: 910px;
+	margin: 0 auto;
+	margin-top: 320px;
+}
+.right ul.list li{
+	width: 263px;
+	height: 471px;
+	margin-right: 6px;
+	padding: 0 17px;
+	text-align: left;
+	float: left;
+	font-family: "黑体 Regular";
+	background-image: url("../img/play_color/bg1.png");
+}
+.right ul.list li h3{
+    width:229px;
+    margin:0 auto;
+	margin-top: 59px;
+	font-size: 20px;
+	color: #8a6a4a;
+	line-height: 20px;
+	margin-bottom: 38px;
+}
+.right ul.list li a{
+	display: block;
+}
+.right ul.list li .img{
+	width: 229px;
+	height: 164px;
+	background-image: url("../img/play_color/bg3.png");
+	margin: 0 auto;
+	margin-bottom: 40px;
+    border-radius: 15px;
+}
+.right ul.list li .img img{
+	width: 229px;
+	height: 164px;
+    border-radius: 15px;
+}
+.right ul.list li p{
+	width: 223px;
+	height: 138px;
+	overflow: hidden;
+	color: #988f87;
+	overflow-y: auto;
+	font-size: 17px;
+	line-height: 20px;
+	margin: 0 auto;
+	scrollbar-face-color: #6e3b1b;
+	/*滚动条3D表面（ThreedFace）的颜色*/
+	scrollbar-highlight-color: #fff;
+	/*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+	scrollbar-shadow-color: #6e3b1b;
+	/*滚动条3D界面的暗边（ThreedShadow）颜色*/
+	scrollbar-3dlight-color: #d9b765;
+	/*滚动条亮边框颜色*/
+	scrollbar-arrow-color: #000;
+	/*滚动条方向箭头的颜色 */
+	scrollbar-track-color: #e6af61;
+	/*滚动条的拖动区域(TrackBar)颜色*/
+	scrollbar-darkshadow-color: #fff;
+	/*滚动条暗边框（ThreedDarkShadow）颜色*/
+}
+.right ul.list li p::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+}
+.right ul.list li p::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background: #6e3b1b;
+    border: 1px solid #e6af61;
+}
+.right ul.list li p::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background: #e6af61;
+    border-radius: 10px;
+    border: 2px solid #f1dea5;
+}
+.title{
+    z-index: 888;
+	height: 601px;
+	width: 225px;
+	float: left;
+	position: relative;
+    margin-top: 50px;
+    background-image: url("../img/play_form/line.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+form{
+	width: 174px;
+	height: 51px;
+	position: absolute;
+	right: 63px;
+	top: 280px;
+	cursor: pointer;
+	background: url(../img/play_color/bg4.png) no-repeat left center;
+}
+form ul{
+	display: none;
+	width: 172px;
+	height: 265px;
+	background: url(../img/play_color/bg5.png) no-repeat left top;
+}
+form ul li{
+	line-height: 43px;
+	height: 43px;
+}
+#select,cite{
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 42px;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+cite{
+	background: url(../img/play_color/arr.png) no-repeat 150px 18px;
+}
+.title a{
+	display: block;
+}
+.title_a1{
+    margin-top: 35px;
+}
+.title_a3{
+    margin-left: 35px;
+}
+.title_a4{
+    margin-top: 35px;
+    margin-left: -25px;
+}
+.title_a5{
+    margin-top: 35px;
+    margin-left: 40px;
+}
+.title_a6{
+    margin-top: 35px;
+}
+.ground{
+	height: 424px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+    background-image: url("../img/play_applyInfo/di.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*分页*/
+
+.pageToolbar {
+	margin-top: 30px;
+}
+.pageToolbar .ui-paging-container ul{
+	text-align: center;
+}
+.pageToolbar .ui-paging-container ul li{
+	cursor: pointer;
+	margin: 0 10px;
+}
+.pageToolbar .ui-paging-container ul .js-page-first,
+.pageToolbar .ui-paging-container ul .js-page-last {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #ffda84;
+	font-size: 14px;
+	color: #170801;
+	display: none!important;
+}
+
+.pageToolbar .ui-paging-container ul [data-page] {
+	vertical-align: bottom;
+    margin: 0 5px;
+    color: #525b00;
+    margin-bottom:-5px;
+    font-size: 12px;
+    width: 30px;
+    height: 37px;
+    text-align: center;
+    line-height: 25px;
+    background-image: url(../img/play_color/page.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pageToolbar .ui-paging-container ul .focus{
+	background-image: url(../img/strategy_question/page-nor.png);
+}
+.pageToolbar .ui-paging-container ul .js-page-prev,
+.pageToolbar .ui-paging-container ul .js-page-next {
+	width: 77px;
+	height: 44px;
+}
+.pageToolbar .ui-paging-container ul .js-page-prev{
+	background: url(../img/strategy_question/up.png) no-repeat center ;
+}
+.pageToolbar .ui-paging-container ul .js-page-next{
+	background: url(../img/strategy_question/next.png) no-repeat center ;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar {
+	height: 30px;
+	vertical-align: top;
+	display: none!important;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar .ui-paging-count {
+	width: 60px;
+	height: 30px;
+	border: 1px solid #d8b865;
+	background-color: transparent;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar a {
+	font-size: 14px;
+	line-height: 30px;
+	border: 0;
+	color: #b59852;
+}
+.ui-paging-container li {
+    display: inline-block;
+    color: #666;
+}

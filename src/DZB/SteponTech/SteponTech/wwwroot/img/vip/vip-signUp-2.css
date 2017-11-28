@@ -1,0 +1,71 @@
+.title {
+  text-align: center;
+  width: 200px;
+  padding-top: 107px;
+  padding-bottom: 70px;
+}
+
+.form--control {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #dab766;
+  background-image: none;
+  border: 1px solid #dab766;
+  border-radius: 4px;
+  background-color: #170801;
+  outline: none;
+}
+#signUp-box {
+  margin-bottom: 29px;
+}
+#signUp-btn {
+  background-color: #dab766;
+  color: #170800;
+  margin-top: 56px;
+}
+
+.form-cell {
+  float: none;
+  margin-top: 71px;
+  margin-bottom: 97px;
+  padding-left: 0px;
+  padding-right: 8%;
+}
+.mb-25 {
+  margin-bottom: 24px;
+}
+.form-input {
+  width: 68%;
+}
+#signIn-btn {
+  float: right;
+  width: 300px;
+}
+#signIn-btn>a{
+	margin-left:35%;
+
+}
+.forget-btn > a {
+  color: #dab766;
+  font-size: 12px;
+}
+/*其他方式*/
+#other-login {
+  margin-top: 46px;
+  margin-bottom: 36px;
+}
+#other-login > p {
+  width: 91px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  #signUp-btn {
+		margin-left: 39%;
+  }
+}
+

@@ -1,0 +1,202 @@
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.row {
+		margin: 0;
+	}
+	.desktopWallper .desktop_pic {
+		padding: 15px !important;
+		border: 0 !important;
+		float: none;
+		margin: 0 auto !important;
+	}
+	.desktopWallper .desktop_pic img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+body {
+	background-color: #170801;
+	font-family: "microsoft yahei";
+}
+
+body {
+	background: #170801;
+	color: #d8b866;
+}
+
+#hd_bottom {
+	background-color: #dab766;
+	height: 4px;
+	border: none;
+	margin: 0px;
+}
+
+.row {
+	width: 100%;
+}
+
+.banner {
+    width: 100%;
+    max-height: 570px;
+    overflow: hidden;
+}
+
+p {
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+@media screen and (min-width: 1400px) {
+	.container {
+		width: 74%;
+	}
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+
+.b-border {
+	border: 0;
+}
+
+
+.linkRoute {
+	height: 100px;
+	line-height: 100px;
+	border-bottom: 1px solid #3d2b15;
+	color: #feefc6;
+	margin-bottom: 60px;
+}
+
+.linkRoute a {
+	color: #ffe9b7;
+	margin: 0 15px;
+	font-size: 14px;
+}
+
+.linkRoute a:hover {
+	color: #c8a65c;
+}
+
+.linkRoute .firstLink {
+	margin-left: 0;
+}
+
+.desktopWallper .desktop_pic {
+	margin-bottom: 155px;
+	padding-right: 40px;
+	border-right: 1px solid #3d2b15;
+}
+
+.desktopWallper .desktop_pic img {
+	width: 100%;
+}
+
+.checkbox-inline,
+.radio-inline {
+	display: block;
+	color: #d6c49e;
+	height: 16px;
+	line-height: 16px;
+	font-size: 13px;
+	margin: 7px 0 15px;
+	/*text-indent: 20px;*/
+}
+
+.checkbox-inline+.checkbox-inline,
+.radio-inline+.radio-inline {
+	margin-left: 0;
+}
+
+.desktop_sel {
+	margin-left: 30px;
+}
+
+.desktop_sel h3 {
+	font-size: 16px;
+	height: 82px;
+	line-height: 82px;
+	color: #ffe9b7;
+}
+
+.desktop_sel .select_list {
+	border-bottom: 1px solid #3d2b15;
+	padding-bottom: 26px;
+}
+
+.download_btn {
+	padding-top: 40px;
+}
+
+.download_btn .btn {
+	text-align: center;
+	line-height: 40px;
+	width: 185px;
+	height: 40px;
+	background-color: #dab765;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	outline: none;
+}
+
+.select_list .radio {
+	display: inline-block;
+}
+
+.select_list input[type='radio'].radio {
+	opacity: 0;
+	display: inline-block;
+	height: 20px;
+}
+
+.select_list label.radio {
+	background: url(../../img/classicImg/no_check.png) no-repeat left center;
+	height: 20px;
+	padding-left: 25px;
+	color: #ffe9b7;
+}
+
+.select_list label.checked {
+	background: url(../../img/classicImg/checked.png) no-repeat left center;
+}
+
+#hd_bottom_1 {
+	background-color: #dab766;
+	height: 1px;
+	border: none;
+	margin: 0px;
+}
+
+/*# sourceMappingURL=current.css.map */
+
+/*ÐÞ¸Ä*/
+@media only screen and (max-width:768px) {
+    .linkRoute {
+    display:none;
+    }
+    .desktop_sel {
+        margin-left: 0px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}

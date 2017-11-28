@@ -1,0 +1,235 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+    font-size: 0;
+}
+li{
+	list-style: none;
+}
+html,body{
+	height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+.main {
+    height: 1682px;
+    position: relative;
+    text-align: center;
+    background-image: url("../img/play_news/bg_1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.glass{
+	position: relative;
+	width: 100%;
+	height: 140px;
+	margin-top: -30px;
+	margin-bottom: 30px;
+}
+.glass_nav{
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	height: 280px;
+	background-image: url("../img/common/leaf2.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+    left:0;
+    top:0;
+}
+
+
+.label{
+	width: 1100px;
+	margin: 0 auto;
+	margin-top: -30px;
+	overflow: hidden;
+	height: 211px;
+	position: relative;
+}
+.inner{
+	position: absolute;
+	height: 211px;
+	width: 1100px;
+	z-index: 999;
+}
+.label a{
+	float: left;
+}
+.main  .hImg{
+	display: block;
+	margin: 0 auto;
+	width: 570px;
+	height: 152px;
+}
+.main .contain{
+	overflow: hidden;
+	width: 1284px;
+	height: 1191px;
+	margin: 0 auto;
+	background-image: url("../img/play_news/bg_2.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.box{
+	padding-top: 262px;
+	height: 710px;
+	margin: 0 auto;
+	width: 894px;
+}
+.box dl dt a img{
+	width: 269px;
+	height: 188px;
+}
+.main dl{
+	background-image: url("../img/play_news/cont_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 270px;
+	height: 310px;
+	text-align: left;
+	padding: 3px;
+	margin: 20px 11px;
+	float: left;
+}
+.main dl dt{
+	margin-bottom: 20px;
+}
+.main dl dd{
+	padding: 0 25px;
+}
+.main dl dd p{
+	font-size: 12px;
+	line-height: 20px;
+	color: #845a38;
+}
+.main dl dd p.info{
+	overflow: hidden;
+	height: 40px;
+}
+.main dl dd .xian{
+	height: 0px;
+	width: 45px;
+	font-size: 0;
+	border: 1px solid #6a5222;
+	margin-top: 8px;
+}
+.page{
+	height: 60px;
+	margin:auto;
+	margin-top: 50px;
+	width: 894px;
+}
+.pre{
+	margin-right: 15px;
+}
+.next{
+	margin-left: 15px;
+}
+.main .page a{
+	vertical-align: bottom;
+	margin: 0 5px;
+	color: #525b00;
+	font-size: 12px;
+	width: 30px;
+	height: 37px;
+	text-align: center;
+	line-height: 25px;
+	background-image: url("../img/play_news/Shape-3-copy-21.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.main .page a:hover{
+	background-image: url("../img/play_news/page-nor.png");
+    color: #923400;
+}
+.main .page a.on{
+	background-image: url("../img/play_news/page-nor.png");
+    color: #923400;
+}
+/*分页*/
+
+.pageToolbar {
+	margin-top: 40px;
+}
+.pageToolbar .ui-paging-container ul{
+	text-align: center;
+}
+.pageToolbar .ui-paging-container ul li{
+	cursor: pointer;
+	margin: 0 10px;
+}
+.pageToolbar .ui-paging-container ul .js-page-first,
+.pageToolbar .ui-paging-container ul .js-page-last {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #ffda84;
+	font-size: 14px;
+	color: #170801;
+	display: none!important;
+}
+
+.pageToolbar .ui-paging-container ul [data-page] {
+	vertical-align: bottom;
+    margin: 0 5px;
+    color: #525b00;
+    margin-bottom:-5px;
+    font-size: 12px;
+    width: 30px;
+    height: 37px;
+    text-align: center;
+    line-height: 25px;
+    background-image: url(../img/strategy_question/Shape-3-copy-19.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pageToolbar .ui-paging-container ul .focus{
+	background-image: url(../img/strategy_question/page-nor.png);
+}
+.pageToolbar .ui-paging-container ul .js-page-prev,
+.pageToolbar .ui-paging-container ul .js-page-next {
+	width: 77px;
+	height: 44px;
+}
+.pageToolbar .ui-paging-container ul .js-page-prev{
+	background: url(../img/strategy_question/up.png) no-repeat center ;
+}
+.pageToolbar .ui-paging-container ul .js-page-next{
+	background: url(../img/strategy_question/next.png) no-repeat center ;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar {
+	height: 30px;
+	vertical-align: top;
+	display: none!important;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar .ui-paging-count {
+	width: 60px;
+	height: 30px;
+	border: 1px solid #d8b865;
+	background-color: transparent;
+}
+
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar a {
+	font-size: 14px;
+	line-height: 30px;
+	border: 0;
+	color: #b59852;
+}
+.ui-paging-container li {
+    display: inline-block;
+    color: #666;
+}

@@ -1,0 +1,244 @@
+	* {
+	    margin: 0;
+	    padding: 0;
+	}
+	
+	body {
+	    font-size: 0;
+	    min-width: 1280px;
+	}
+	
+	.banner {
+	    margin-top: 110px;
+	}
+	
+	.banner img {
+	    width: 100%;
+	    min-width: 1280px;
+	    max-height: 750px;
+	}
+	
+	.intoSand {
+	    position: relative;
+	    width: 100%;
+	    height: 101px;
+	    margin-top: -49px;
+	    z-index: 999;
+	    min-width: 1280px;
+	    background-image: url("../img/index/intoSand.png");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+	
+	.wrapper {
+	    height: 1470px;
+	    width: 100%;
+	    min-width: 1280px;
+	    margin-top: -53px;
+	    background-image: url("../img/index/bg.png");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    overflow: hidden;
+        position:relative;
+	}
+	
+	.glass {
+	    width: 100%;
+	    min-width: 1438px;
+	    height: 280px;
+	    margin-top: 16px;
+	    background-image: url("../img/common/leaf2.gif");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    position: relative;
+	}
+	.glass img{
+        margin-left:105px;
+	}
+	.map {
+	    position: relative;
+	    width: 1526px;
+	    height: 1096px;
+	    min-width: 1280px;
+	    margin: auto;
+	    background-image: url("../img/index/map.png");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+	
+	#Layer1 {
+	    z-index: 999;
+	    position: absolute;
+	    left:1200px;
+        top:191px;
+        width:180px;
+	}
+	#Layer1 img{
+	    float:left;
+	}
+	.box {
+	    width: 1526px;
+	    height: 1048px;
+	    overflow: hidden;
+	    z-index: 999;
+	    margin: 0 auto;
+	    position: relative;
+	}
+	
+	.img {
+	    position: absolute;
+	    left: 0;
+	    cursor: pointer;
+	}
+	
+	.img:active {
+	    cursor: move;
+	}
+	
+	#images1 a {
+	    cursor: pointer;
+	    position: absolute;
+	    z-index: 100;
+	}
+	
+	#images1 a:hover {
+	    transition: all .5s;
+	    transform: scale(1.1);
+	}
+	
+	.map-a1 {
+	    left: 1174px;
+	    top: 149px;
+	}
+	
+	.map-a2 {
+	    left: 1092px;
+	    top: 253px;
+	}
+	
+	.map-a3 {
+	    left: 1060px;
+	    top: 572px;
+	}
+	
+	.map-a4 {
+	    left: 796px;
+	    top: 122px;
+	}
+	
+	.map-a5 {
+	    left: 51px;
+	    top: 617px;
+	}
+	
+	.map-a6 {
+	    left: 957px;
+	    top: 169px;
+	}
+	
+	.map-a7 {
+	    left: 855px;
+	    top: 38px;
+	}
+	
+	.map-a8 {
+	    left: 607px;
+	    top: 80px;
+	}
+	
+	.map-a9 {
+	    left: 420px;
+	    top: 371px;
+	}
+	
+	.map-a10 {
+	    left: 538px;
+	    top: 667px;
+	}
+	
+	.map-a11 {
+	    left: 781px;
+	    top: 344px;
+	}
+	
+	.map-a12 {
+	    left: 255px;
+	    top: 295px;
+	}
+	
+	.map-a13 {
+	    left: 136px;
+	    top: 535px;
+	}
+	
+	.alert {
+	    display: none;
+	    width: 1198px;
+	    position: fixed;
+	    height: 579px;
+	    background-image: url("../img/index/bg_2.png");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	    z-index: 1000;
+	}
+	
+	.mask {
+	    width: 1198px;
+	    height: 579px;
+	}
+	
+	.close {
+	    cursor: pointer;
+	    position: absolute;
+	    right: -20px;
+	    top: -20px;
+	    width: 119px;
+	    height: 119px;
+	    background-image: url("../img/index/close.png");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+	
+	.innerText {
+	    width: 600px;
+	    padding-top: 91px;
+	    float: left;
+	    margin-left: 80px;
+	}
+	
+	.innerText h3 {
+	    color: #d47713;
+	    font-weight: bold;
+	    height: 34px;
+	    line-height: 34px;
+	    font-size: 34px;
+	    margin-bottom: 24px;
+	}
+	
+	.innerText p {
+	    font-size: 15px;
+	    line-height: 24px;
+	}
+	
+	.pic {
+	    float: right;
+	    margin-right: 100px;
+	    padding-top: 140px;
+	}
+	
+	.pic img {
+	    width: 317px;
+	    height: 317px;
+	    border-radius: 50%;
+	}
+	
+	.bottomGlass {
+	    width: 100%;
+	    height: 118px;
+	    background: url(../img/index/bottomGlass.png)no-repeat center;
+	}

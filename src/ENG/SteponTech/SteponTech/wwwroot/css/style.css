@@ -1,0 +1,160 @@
+@media screen and (max-width: 996px) {
+  .ui-paging-toolbar .ui-paging-count {
+    display: none;
+  }
+
+  .pageToolbar .js-page-first, .pageToolbar .js-page-last {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pageToolbar .ui-paging-container li {
+    margin-left: 5px;
+  }
+}
+.ui-paging-container {
+  color: #d8b865;
+  font-size: 12px;
+}
+
+.ui-paging-container ul {
+  overflow: hidden;
+  text-align: center;
+}
+
+.ui-paging-container ul, .ui-paging-container li {
+  list-style: none;
+}
+
+.ui-paging-container li {
+  display: inline-block;
+  margin-left: 30px;
+  color: #666;
+}
+
+.ui-paging-container li.ui-pager {
+  cursor: pointer;
+}
+
+.ui-paging-container li.ui-pager:hover, .ui-paging-container li.focus {
+  background-color: #ffda84;
+  color: #160700 !important;
+}
+
+.ui-paging-container li.ui-paging-ellipse {
+  border: none;
+}
+
+.ui-paging-container li.ui-paging-toolbar {
+  padding: 0;
+}
+.Jump {
+  color: #ffda84;
+  font-size: 16px;
+  font-family: 'Futura Bk BT Book';
+}
+.ui-paging-container li.ui-paging-toolbar select {
+  height: 22px;
+  border: 1px solid #ddd;
+  color: #666;
+}
+
+.ui-paging-container li.ui-paging-toolbar input {
+  line-height: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 30px;
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+.ui-paging-container li.ui-paging-toolbar a {
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+  height: 20px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  border-radius: 2px;
+  line-height: 20px;
+  padding: 0 3px;
+  cursor: pointer;
+  margin-left: 5px;
+  color: #666;
+}
+
+.ui-paging-container li.ui-pager-disabled, .ui-paging-container li.ui-pager-disabled:hover {
+  cursor: default;
+  border: none;
+  color: #f6f6f6;
+}
+
+.ui-select-pagesize {
+  display: none;
+}
+.pageToolbar {
+  /*margin-top: 80px;*/
+  /*margin-bottom: 252px;*/
+}
+.pageToolbar .ui-paging-container ul .js-page-first, .pageToolbar .ui-paging-container ul .js-page-last {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ffda84;
+  font-size: 14px;
+  color: #170801;
+  cursor:pointer;
+}
+.pageToolbar .ui-paging-container ul [data-page] {
+  width: 20px;
+  height: 20px;
+  color: #d9b665;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+}
+  .pageToolbar .ui-paging-container ul .js-page-prev, .pageToolbar .ui-paging-container ul .js-page-next {
+    width: 60px;
+    cursor: pointer;
+    height: 30px;
+    font-size: 16px;
+    line-height: 28px;
+    border: 1px solid #ffda84;
+    color: #b59852;
+  }
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar {
+  height: 30px;
+  vertical-align: top;
+}
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar .ui-paging-count {
+  color:#d8b865;
+  width: 60px;
+  font-size:14px;
+  height: 30px;
+  border: 1px solid #d8b865;
+  background-color: transparent;
+  outline:none;
+}
+  .pageToolbar .ui-paging-container ul .ui-paging-toolbar .ui-paging-count input {
+    outline:none;
+  }
+.pageToolbar .ui-paging-container ul .ui-paging-toolbar a {
+  font-size: 14px;
+  line-height: 30px;
+  border: 0;
+  color: #b59852;
+}
+  .pageToolbar .ui-paging-container ul .ui-paging-toolbar a:hover {
+    font-size: 14px;
+    line-height: 30px;
+    border: 0;
+    color: #ffda84;
+  }
+  /*修改*/
+@media screen and (max-width: 996px) {
+  .pageToolbar .ui-paging-container ul .ui-paging-toolbar {
+   display:none;
+  }
+}

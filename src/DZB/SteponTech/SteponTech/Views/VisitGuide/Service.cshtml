@@ -1,0 +1,463 @@
+﻿@using SteponTech.Data.BaseModels
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>服务信息</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/common/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/visitGuide/visitguide-serviceInfo.css" />
+    <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js "></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    </html>
+    <body>
+        <!--这是hearder-->
+        <div class="container-fluid">
+            <!--顶部开始-->
+            <div class="row nav-bg b3-border">
+                <div class="container padding_0  aa">
+                    <div class="row ">
+                        <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12  ">
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                                <img src="/img/index/banner/logo.png" alt="" class="img-responsive center-block" />
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                                <div class="top-list">
+                                    <ul>
+                                        <a href="http://120.25.240.32:8800/"><li>大众版</li></a>
+                                        <a href="http://120.25.240.32:8000/"><li>英文版</li></a>
+                                        <a href="http://118.114.244.3:8014/"><li>学术版</li></a>
+                                        <a href="http://120.25.240.32:8700/"><li>青教版</li></a>
+                                        @{
+                                            if (ViewBag.IsLogin == null)
+                                            {
+                                                <li class="top-listLi5">
+                                                    <a href="/Vip/Sign">注册</a>
+                                                </li>
+                                                <li class="top-listLi6">|</li>
+                                                <li class="top-listLi7">
+                                                    <a href="/Vip/Login">登录</a>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li class="top-listLi5">
+                                                    <a id="loginout" style="cursor:pointer">退出登录</a>
+                                                </li>
+                                                <li class="top-listLi6">
+                                                    @if (ViewBag.IsLogin.Length > 4)
+                                                    {
+                                                        ViewBag.IsLogin = ViewBag.IsLogin.Substring(0, 4) + "...";
+                                                        <a href="/Vip/Index">
+                                                            @ViewBag.IsLogin
+                                                        </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="/Vip/Index">
+                                                            @ViewBag.IsLogin
+                                                        </a>
+                                                    }
+                                                </li>
+                                                <li class="top-listLi7">您好！亲爱的</li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                                <div class="menu-btn">
+                                    <img src="/img/index/show/menu.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide-top-list">
+                        <ul>
+                            <a href="http://120.25.240.32:8800/">
+                                <li>大众版</li>
+                            </a>
+                            <a href="http://120.25.240.32:8000/">
+                                <li>英文版</li>
+                            </a>
+                            <a href="http://118.114.244.3:8014/">
+                                <li>学术版</li>
+                            </a>
+                            <a href="http://120.25.240.32:8700/">
+                                <li>青教版</li>
+                            </a>
+                            @{
+                                if (ViewBag.IsLogin == null)
+                                {
+                                    <a href="/Vip/Sign">
+                                        <li>注册</li>
+                                    </a>
+                                    <a href="/Vip/Login">
+                                        <li>登录</li>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a id="loginout" style="cursor:pointer">
+                                        <li>退出登录</li>
+                                    </a>
+                                    @if (ViewBag.IsLogin.Length > 4)
+                                    {
+                                        ViewBag.IsLogin = ViewBag.IsLogin.Substring(0, 4) + "...";
+                                        <a href="/Vip/Index">
+                                            <li>@ViewBag.IsLogin</li>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="/Vip/Index">
+                                            <li>@ViewBag.IsLogin</li>
+                                        </a>
+                                    }
+                                }
+                            }
+                            @if (ViewBag.Head?.Count > 0)
+                            {
+                                foreach (Models item in ViewBag.Head)
+                                {
+                                    switch (item.ModelName)
+                                    {
+                                        case "首页":
+                                            <a href="/JinSha/Index">
+                                                <li>首页</li>
+                                            </a>
+                                            break;
+                                        case "关于金沙":
+                                            <a href="/About/Index">
+                                                <li>关于金沙</li>
+                                            </a>
+                                            break;
+                                        case "参观指南":
+                                            <a class="active" href="/VisitGuide/Index">
+                                                <li>参观指南</li>
+                                            </a>
+                                            break;
+                                        case "展览导览":
+                                            <a href="/Exhibition/Index">
+                                                <li>展览导览</li>
+                                            </a>
+                                            break;
+                                        case "金沙资讯":
+                                            <a href="/News/Index">
+                                                <li>金沙资讯</li>
+                                            </a>
+                                            break;
+                                        case "艺术金沙":
+                                            <a href="/Creation/Index">
+                                                <li>艺术金沙</li>
+                                            </a>
+                                            break;
+                                        case "典藏珍品":
+                                            <a href="/Collection/Index">
+                                                <li>典藏珍品</li>
+                                            </a>
+                                            break;
+                                        case "文化活动":
+                                            <a href="/Culture/Index">
+                                                <li>文化活动</li>
+                                            </a>
+                                            break;
+                                        case "金沙会员":
+                                            <a href="/Vip/Index">
+                                                <li>金沙会员</li>
+                                            </a>
+                                            break;
+                                        case "志愿者":
+                                            <a href="/Volunteer/Index">
+                                                <li>志愿者</li>
+                                            </a>
+                                            break;
+                                    }
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="nav-list">
+                            <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                                <ul>
+                                    @if (ViewBag.Head?.Count > 0)
+                                    {
+                                        foreach (Models item in ViewBag.Head)
+                                        {
+                                            switch (item.ModelName)
+                                            {
+                                                case "首页":
+                                                    <a href="/JinSha/Index">
+                                                        <li>首页</li>
+                                                    </a>
+                                                    break;
+                                                case "关于金沙":
+                                                    <a href="/About/Index">
+                                                        <li>关于金沙</li>
+                                                    </a>
+                                                    break;
+                                                case "参观指南":
+                                                    <a class="active" href="/VisitGuide/Index">
+                                                        <li>参观指南</li>
+                                                    </a>
+                                                    break;
+                                                case "展览导览":
+                                                    <a href="/Exhibition/Index">
+                                                        <li>展览导览</li>
+                                                    </a>
+                                                    break;
+                                                case "金沙资讯":
+                                                    <a href="/News/Index">
+                                                        <li>金沙资讯</li>
+                                                    </a>
+                                                    break;
+                                                case "艺术金沙":
+                                                    <a href="/Creation/Index">
+                                                        <li>艺术金沙</li>
+                                                    </a>
+                                                    break;
+                                                case "典藏珍品":
+                                                    <a href="/Collection/Index">
+                                                        <li>典藏珍品</li>
+                                                    </a>
+                                                    break;
+                                                case "文化活动":
+                                                    <a href="/Culture/Index">
+                                                        <li>文化活动</li>
+                                                    </a>
+                                                    break;
+                                                case "金沙会员":
+                                                    <a href="/Vip/Index">
+                                                        <li>金沙会员</li>
+                                                    </a>
+                                                    break;
+                                                case "志愿者":
+                                                    <a href="/Volunteer/Index">
+                                                        <li>志愿者</li>
+                                                    </a>
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--顶部结束-->
+        <div class="breadCrumbs container">
+            <div class="row">
+                <a href="/pages/index.html"><span class="toIndex">首页</span></a>
+                <span>/</span>
+                <a href="/VisitGuide/Index"><span class="toShow">参观指南</span></a>
+                <span>/</span>
+                <a href="javascript:void(0)"><span class="gallery">服务信息</span></a>
+            </div>
+        </div>
+        <hr class="secondNav" />
+        <!--Banner图下面的内容-->
+        <div class="serviceInfo-content container">
+            @if (Model != null)
+            {
+                <div class="content-banner row">
+                    <!--轮播-->
+                    <div id="slideBox" class="slideBox mySlideBox">
+                        <div class="bd img-responsive">
+                            <ul>
+                                @if (ViewBag.Imgs?.Count > 0)
+                                {
+                                    foreach (var img in ViewBag.Imgs)
+                                    {
+                                        <li><img src="/upload/Information/@Model.Id/@img" class="img-responsive"></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                        <!--左右箭头-->
+                        <a class="prev" href="javascript:void(0)">
+                            <img src="/img/show/showGallery/left.png" alt="">
+                        </a>
+                        <a class="next" href="javascript:void(0)">
+                            <img src="/img/show/showGallery/right.png" alt="">
+                        </a>
+
+                    </div>
+                </div>
+                <section class="row service-info">
+                    @Html.Raw(Model.Content)
+                </section>
+            }
+            <!--页面的相关链接-->
+            <div class="relatedLink">
+                <h3>相关链接</h3>
+                @{
+                    Dictionary<string, string> relatedLinks = ViewBag.RelatedLinks;
+                    if (relatedLinks?.Count > 0)
+                    {
+                        foreach (var relatedLink in relatedLinks)
+                        {
+                            <a href="@relatedLink.Value"><p>@relatedLink.Key</p></a>
+                        }
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+            </div>
+        </div>
+        <!--页面下面的长线-->
+        <div class="line"></div>
+        @if (ViewBag.Footer != null)
+        {
+            <!--页脚-->
+            <footer class="container footer ">
+                <div class="row">
+                    <!--联系我们-->
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                        <p class="callmeP1">联系我们</p>
+                        <p class="callmeP2">电话：<span>@ViewBag.Footer.PhoneNumber</span></p>
+                        <p class="callmeP3">地址：<span>@ViewBag.Footer.Address</span></p>
+                        <div class="row twopic">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                                <img class="img-responsive" src="@ViewBag.Footer.Wechat" />
+                                <p><img src="/common/footerImg/bottom_wechat.png" /><span class="weixincolor">关注官方微信</span></p>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <img class="img-responsive" src="@ViewBag.Footer.Watermark" />
+                                <p><img src="/common/footerImg/weibo-icon.png" /><span class="color">关注官方微博</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--友情链接-->
+                    <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                        <p class="linkP1">友情链接</p>
+                        <!--博物馆-->
+                        <div class="footer-museum divselect">
+                            <cite onchange="window.location=this.href;">博物馆</cite>
+                            <ul id="OtherList" tag="@ViewBag.Footer.MuseumLink"></ul>
+                        </div>
+                        <!--政府-->
+                        <div class="footer-government divselect">
+                            <cite onchange="window.location=this.href;">其他</cite>
+                            <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                        </div>
+                        <p class="help">游览帮助</p>
+                        <div class="link-btm-info">
+                            <ul>
+                                @if (ViewBag.VisitColunms?.Count > 0)
+                                {
+                                    foreach (Colunms visitColunm in ViewBag.VisitColunms)
+                                    {
+                                        if (visitColunm.Name.Equals("开馆时间") || visitColunm.Name.Equals("交通信息") || visitColunm.Name.Equals("服务信息") || visitColunm.Name.Equals("参观须知"))
+                                        {
+                                            <li>
+                                                <a href="/VisitGuide/Index#@visitColunm.Id">@visitColunm.Name</a>
+                                            </li>
+                                        }
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <!--版权-->
+                    <div class="col-xs-12  copyright padding_0">
+                        <div>
+                            <img class="img-responsive" src="/common/footerImg/bottom_logo.png" />
+                        </div>
+                        <p class="copyrightP1">金沙遗址博物馆版权所有</p>
+                        <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                    </div>
+                </div>
+                <!--返回顶部-->
+                <div class="toTop" style="display: none;">
+                    <img class="bgarr" src="/img/arrows/return_nor.png" />
+                    <img class="hoverImg" src="/img/arrows/return_pre.png">
+                </div>
+            </footer>
+        }
+        <script>
+            $("#loginout").on("click", function () {
+                $.ajax({
+                    url: '/api/Members/MembersLoginout',
+                    type: 'GET',
+                    dataType: "text",
+                    contentType: "application/json",
+                    success: function (data) {
+                        data = JSON.parse(data)
+                        if (data.code == 1) {
+                            window.location.reload();
+                        }
+                        else {
+                            alert(data.message)
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <!-- JiaThis Button BEGIN -->
+        <script type="text/javascript">
+            var jiathis_config = {
+                siteNum: 15,
+                sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+                summary: "",
+                boldNum: 6,
+                showClose: true,
+                shortUrl: false,
+                hideMore: false
+            }
+        </script>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+        <!-- JiaThis Button END -->
+    </body>
+    <script src="/js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/common/common.js"></script>
+    <script type="text/javascript" src="/js/visitGuide/visitguide-serviceInfo.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var data = JSON.parse($('#GovernmentalList').attr('tag'));
+            var cc1 = "";
+            $.each(data, function (i, item) {
+                cc1 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+            });
+            
+            $('#GovernmentalList').append(cc1);
+
+            var data2 = JSON.parse($('#OtherList').attr('tag'));
+            var cc2 = "";
+            $.each(data2, function (i, item) {
+                cc2 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+            });
+            
+            $('#OtherList').append(cc2);
+
+            });
+        $("#loginout").on("click", function () {
+            $.ajax({
+                url: '/api/Members/MembersLoginout',
+                type: 'GET',
+                dataType: "text",
+                contentType: "application/json",
+                success: function (data) {
+                    data = JSON.parse(data)
+                    alert(data.message);
+                    window.location.reload();
+                }
+            });
+        });
+    </script>
+
+</html>

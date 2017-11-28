@@ -1,0 +1,222 @@
+
+.secondNav{
+    background-color:#3d2b15;
+    height: 1px;
+    border:none;
+    margin: 0px;
+}
+/*导航*/
+.breadCrumbs{
+    color:#FFF5DD;
+    font-size: 18px;
+}
+.breadCrumbs>div{
+    height: 100%;
+    margin: auto;
+    padding: 3% 0;
+}
+.breadCrumbs>div span{
+    margin-right: 1%;
+    font-family: 'Optima Regular';
+    color: #ffda84;
+}
+.toIndex:hover,
+.toShow:hover,
+.gallery:hover{
+    color: #edc048;
+    cursor: pointer;
+}
+/*内容*/
+.serviceInfo-content{
+    margin: auto;
+}
+.content-banner {
+    width: 80%;
+    /*height: 400px;*/
+    margin: 5% auto;
+}
+/*轮播*/
+.content-banner {
+    width: 80%;
+    margin: 5% auto;
+}
+.content-banner .slideBox{
+    width: 773px;
+    position: relative;
+    margin: 0 auto;
+}
+.slideBox .bd img{
+    width: 773px;
+}
+.slideBox .bd li{
+    width: 773px;
+}
+.slideBox .prev,.slideBox .next{
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    opacity: .7;
+    filter:alpha(opacity=70);
+    -ms-transform: translate(-50%, -50%);		/* IE 9 */
+    -webkit-transform: translate(-50%, -50%);	/* Safari and Chrome */
+    -o-transform: translate(-50%, -50%);		/* Opera */
+    -moz-transform: translate(-50%, -50%);		/* Firefox */
+    transform: translate(-50%,-50%);
+}
+.slideBox .prev:hover,.slideBox .next:hover{
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+/*左箭头*/
+.slideBox .prev {
+  left: -9%;
+}
+/*右箭头*/
+.slideBox .next{
+    right:-13%;
+}
+.service-info{
+    width: 773px;
+    margin: 30px auto;
+}
+.service-info h4{
+    font-family: 'Optima Regular';
+    color: #edc048;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+.service-info>div{
+    margin-bottom: 2%;
+    line-height: 24px;
+}
+.service-info>div>p {
+    font-family: 'Futura Bk BT Book';
+    color: #ffda84;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+
+
+
+
+/*媒体查询*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+    /* 兼容iphone5 */
+    /*轮播*/
+    .content-banner {
+        width: 100%;
+    }
+    .content-banner .slideBox{
+        width: 80% !important;
+    }
+    .slideBox .bd li{
+        width: 488px !important;
+    }
+  .service-info {
+    /*width: 488px !important;*/
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    /*轮播*/
+    .content-banner {
+        width: 100%;
+    }
+    .content-banner .slideBox{
+        width: 80%;
+    }
+    .slideBox .bd li{
+        width: 576px;
+    }
+    .service-info{
+        width: 576px;
+    }
+    .prev, .next{
+        display: none!important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    /*轮播*/
+    .content-banner {
+        width: 80%;
+    }
+    .content-banner .slideBox{
+        width: 100%;
+    }
+    .slideBox .bd img{
+        width:100%;
+    }
+    .slideBox .bd li{
+        width: 600px;
+    }
+    /*左箭头*/
+    .slideBox .prev{
+        left: -40px;
+    }
+    /*右箭头*/
+    .slideBox .next{
+        right: -80px;
+    }
+    .service-info{
+        width: 90%;
+    }
+
+}
+@media only screen and (min-width: 1400px) {
+    .serviceInfo-content{
+        margin: auto;
+        width: 74% !important;
+    }
+    .breadCrumbs{
+        width: 74% !important;
+    }
+}
+/*页面的相关链接*/
+.relatedLink {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+  .relatedLink h3 {
+    font-family: 'Optima Regular';
+    color: #edc048;
+    margin-bottom: 20px;
+  }
+
+  .relatedLink p {
+    margin: 10px 0px;
+    color: #ffda84;
+  }
+
+  .relatedLink a :hover {
+    text-decoration: underline;
+    color: #ffda84;
+  }
+
+/*修改*/
+@media only screen and (max-width:768px) {
+  .breadCrumbs {
+    display: none;
+  }
+
+  .content-banner {
+    display: none;
+  }
+
+  .relatedLink {
+    display: none;
+  }
+
+  .service-info {
+    width: auto;
+  }
+}

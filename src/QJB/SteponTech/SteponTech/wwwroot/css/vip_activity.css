@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+
+
+/* 内容 */
+.empty{
+    height: 110px;
+}
+
+.content{
+    height: 1016px;
+    width: 100%;
+    background: url(../img/vip_activity/content.png) no-repeat center;
+    /* padding-top: 210px; */
+    min-width: 1280px;
+}
+
+.form{
+    width: 1200px;
+    margin: auto;
+    overflow:hidden;
+}
+
+.label{
+    margin-left: 60px;
+    width: 1140px;
+    height: 211px;
+    position: relative;
+}
+.inner{
+	 width: 1140px;
+    height: 211px;
+    position: absolute;
+    z-index: 99;
+}
+
+.leaf{
+    background: url(../img/common/leaf2.gif) no-repeat center;
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    z-index: 4;
+    top: 110px;
+    min-width: 1280px;
+    left:0;
+}
+
+.rule{
+    font-size: 0;
+}
+   
+.rule>div{
+    float:left;
+}
+
+.ruleContent{
+    width: 780px;
+    height: 791px;
+    background: url(../img/vip_activity/activity_2.png) no-repeat center;
+     /* margin-left: 75px; */
+    margin-top: -60px; 
+    position: relative;
+}
+
+
+.choose{
+    width: 229px;
+    height: 586px;
+    background: url(../img/vip_activity/pillars.png) no-repeat left;
+    vertical-align: top;
+    /* overflow: hidden; */
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.chooseA_1{
+      margin-left: 20px;  
+      margin-top: 60px;
+}
+
+.chooseA_2{
+      margin-left: 10px;  
+      transform: rotate(-10deg);
+}
+
+.chooseA_3{
+    margin-top: 20px; 
+    margin-left: 20px
+}
+
+.chooseA_4{
+     margin-top: 20px; 
+    transform: rotate(10deg);
+}
+
+.apply>div{
+    display: inline-block;
+}
+
+.back{
+    width: 247px;
+    height: 175px;
+    background: url(../img/vip_activity/back.png) no-repeat left;
+    position: relative;
+}
+
+.back img{
+    width: 215px;
+    height: 140px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.tital{
+    font-size: 19px;
+    color: #e57418;
+    margin-top: 15px;
+}
+
+.text{
+    font-size: 14px;
+    color: #46200d;
+    margin-top: 10px;
+}
+
+.activityRight{
+    width: 460px;
+    margin-left: 5px;
+}
+
+.activityRight img{
+    margin-top: 10px;
+}
+
+.tabContent{
+    width: 730px; 
+    height: 390px;
+    overflow: auto;
+    margin: 150px 0 0 20px;
+}
+
+.tabContent::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+}
+.tabContent::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background: #bd8526;
+    border: 5px solid #bd8526;
+}
+.tabContent::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 10px;
+    background: #6e3b1b;
+    border: 1px solid #e6af61;
+}
+
+
+
+
+
+
+
+
+
+
+
+

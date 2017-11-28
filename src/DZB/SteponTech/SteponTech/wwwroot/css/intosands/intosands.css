@@ -1,0 +1,628 @@
+
+@font-face {
+	font-family: 'iconfont';
+	src: url('../../font/intosands/intosands-arrow-icon/iconfont.eot');
+	src: url('../../font/intosands/intosands-arrow-icon/iconfont.eot?#iefix') format('embedded-opentype'),
+	url('../../font/intosands/intosands-arrow-icon/iconfont.woff') format('woff'),
+	url('../../font/intosands/intosands-arrow-icon/iconfont.ttf') format('truetype'),
+	url('../../font/intosands/intosands-arrow-icon/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family:"iconfont" !important;
+	font-size:28px;font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.banner {
+    width: 100%;
+    max-height: 570px;
+    overflow: hidden;
+}
+/*Banner图下面的内容*/
+ .content{
+	 margin: auto;
+ }
+/*内容的导航*/
+.cont-nav{
+	width: 100%;
+	height: 114px;
+	border-bottom:1px solid #3d2b15;
+}
+.cont-nav ul {
+	/*width: 35%;*/
+	height: 114px;
+	font-size: 18px;
+	line-height: 111px;
+	text-align: center;
+	color: #fae1ac;
+    display: table;
+	cursor: pointer;
+}
+.cont-nav ul li{
+	width: 140px;
+	float: left;
+	cursor: pointer;
+}
+.cont-nav ul li:hover{
+	color: #DAB766;
+	border-bottom: 3px solid #DAB766;
+}
+.cont-nav .contNav-active{
+	color: #DAB766;
+	border-bottom: 3px solid #DAB766;
+}
+
+/*金沙简介*/
+.sands-introduce{
+    position:relative;
+	width: 100%;
+	border-top:1px solid #3d2b15;
+}
+.sands-introduce-info>p{
+	color: #DAB766;
+	font-size: 30px;
+	margin-top: 80px;
+}
+.sands-introduce-infotext {
+    margin-top: 30px;
+    /*text-indent: 25px;*/
+    text-align: justify;
+    position: relative;
+    line-height: 28px;
+    max-height: 222px;
+    overflow: hidden;
+}
+.sands-introduce-infobtn {
+    width: 110px;
+    height: 30px;
+    font-size: 14px;
+    color: #DAB766;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 10%;
+    cursor: pointer;
+    border: 1px solid #DAB766;
+    float: right;
+}
+.sands-introduce-infobtn:hover{
+	color: black;
+	background-color:#dab766;
+}
+/*简介图片*/
+.sands-introduce-img{
+	height: 100%;
+}
+.sands-introduce-imgMask:hover .mask{
+	display: block;
+}
+.sands-introduce-imgMask{
+	position: relative;
+	width: 682px;
+	margin: 160px auto 82px;
+    height:386px;
+}
+.sands-introduce-imgMask>video{
+	width: 100%;
+	display: block;
+}
+.sands-introduce-imgMask .mask{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left:0;
+	background-color: rgba(0,0,0,.4);
+	display: none;
+	position: absolute;
+}
+.playBtn {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);		/* IE 9 */
+	-webkit-transform: translate(-50%, -50%);	/* Safari and Chrome */
+	-o-transform: translate(-50%, -50%);		/* Opera */
+	-moz-transform: translate(-50%, -50%);		/* Firefox */
+	transform: translate(-50%, -50%);
+}
+/*视频*/
+.lookVedioMask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+	z-index:10000;
+}
+.viedo{
+	display: block;
+	width: 100%;
+	height: 83%;
+}
+.vedioBox{
+	position:absolute;
+	left:50%;
+	top:20%;
+	margin-left: -429.5px;
+	width: 859px;
+	height: 540px;
+	background-color: white;
+}
+.closeImg{
+	height: 60px;
+	cursor:pointer;
+}
+.closeImg img{
+	float: right;
+}
+/*馆长致辞*/
+.boss-speech{
+	width: 100%;
+	border-bottom: 1px solid #3d2b15;
+}
+.boss-introduce{
+	width: 100%;
+}
+.boss-imginfo{
+	width: 100%;
+	margin-bottom: 80px;
+	background: url(../../img/intosands/meetjinsha_bg_JS.png) no-repeat top right;
+}
+.boss-introduce>p{
+	font-size: 30px;
+	color: #DAB766;
+	margin: 80px 0px;
+}
+/*馆长的帅照*/
+.boss-img>img{
+	position: relative;
+}
+.boss-img>div{
+	position: absolute;
+	bottom: 0;
+	font-size: 20px;
+	line-height: 65px;
+	text-align: center;
+	width:100%;
+	color: #DAB766;
+	height: 65px;
+	background-color: rgba(98,76,52,0.5);
+}
+.boss-img div span{
+    margin-left: 30px;
+}
+/*馆长的致辞*/
+.boss-speech-info{
+	float:left;
+	word-break: break-all;
+}
+.boss-speech-info>div {
+	width: 95%;
+	margin-top: 15%;
+}
+.boss-speech-info h4{
+	font-size: 16px;
+    height:30px;
+	color: #DAB766;
+	margin-bottom: 3%;
+}
+.infoP {
+	/*限制行数*/
+	position: relative;
+	line-height: 28px;
+	max-height: 196px;
+	overflow: hidden;
+}
+.infoP::after{
+	content: "...";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-left: 40px;
+}
+.boss-speech-info p{
+	line-height: 28px;
+	text-indent: 27px;
+	width: 100%;
+}
+/*展开更多*/
+.boss-speech-more{
+	cursor: pointer;
+	width:340px;
+	height: 50px;
+	text-align: center;
+	line-height:50px;
+	border: 1px solid #DAB766;
+	color:#DAB766;
+	margin: 10% auto;
+}
+.boss-speech-more:hover{
+	color: #000000;
+	background-color: #DAB766;
+}
+/*组织机构*/
+.organization{
+	width: 100%;
+	margin-bottom: 60px;
+	display: inline-block;
+}
+/*组织机构的简介*/
+.organization>p{
+	font-size: 30px;
+	color: #DAB766;
+	margin-top: 80px;
+}
+.organization-info{
+	width: 100%;
+	float: left;
+	/*text-indent: 5%;*/
+	margin: 5% 0;
+}
+.organization-info p{
+	font-size: 16px;
+}
+/*组织机构的图例*/
+.organization-example{
+	width: 100%;
+}
+.example-body{
+	width: 100%;
+    margin-bottom:60px;
+}
+.example-body ul {
+	width: 100%;
+	height: auto;
+}
+.example-body .mylist:hover .listP{
+	background-color: #2b190b;
+	border-bottom: 1px solid #170801;
+}
+.focusA{
+	background-color: #2b190b;
+	border-bottom: 1px solid #170801 !important;
+}
+/*箭头变化*/
+.arrowUp{
+	-ms-transform: rotate(180deg);		/* IE 9 */
+	-webkit-transform: rotate(180deg);	/* Safari and Chrome */
+	-o-transform: rotate(180deg);		/* Opera */
+	-moz-transform: rotate(180deg);		/* Firefox */
+	transform: rotate(180deg);
+}
+.parentListBorder{
+	/*border-bottom:1px solid #3d2b15;*/
+}
+.example-body ul>li>p{
+	padding: 0 3%;
+	width: 100%;
+	height: 60px;
+	cursor: pointer;
+	line-height: 60px;
+	border-bottom: 1px solid #3d2b15;
+	font-size: 15px;
+	font-weight: bold;
+	color: #DAB766;
+}
+.example-body ul>li>p .iconfont {
+	float: right;
+}
+.example-body .example-body-li-active {
+	background-color: #2b190b;
+	border-style: none;
+}
+.example-body ul>li:nth-child(1) p {
+	border-top: none;
+}
+.example-body ul>li>ol{
+	color: #d1b061;
+	/*text-indent: 6%;*/
+	width: 100%;
+	margin: 40px 0;
+	/*display: none;*/
+}
+.example-body ul>li>ol>li{
+	height: 20px;
+	line-height: 20px;
+}
+.childList{
+	display: none;
+}
+
+/*媒体查询*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+	/*视频*/
+	.vedioBox{
+		margin-left: -300px !important;
+		width:  600px !important;
+		height: 450px !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.container{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	/*副菜单*/
+	.cont-nav ul {
+		width: 70% !important;
+	}
+	/*视频*/
+	.vedioBox{
+		 margin-left: -350px;
+		 width:  700px;
+	 }
+	/*馆长*/
+	.boss-img>img{
+		margin: auto;
+	}
+
+}
+@media only screen and (min-width: 1600px){
+    .sands-introduce-infobtn {
+        position: absolute;
+        bottom: -77px;
+        right:0px;
+    }
+    .sands-introduce-infotext {
+        margin-top: 30px;
+        /* text-indent: 25px; */
+        text-align: justify;
+        position: relative;
+        line-height: 28px;
+        max-height: 272px;
+        overflow: hidden;
+    }
+}
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        /*.cont-nav ul {
+		width: 50% !important;
+	}*/
+        .sands-introduce-imgMask {
+            margin: 50px auto 82px;
+        }
+
+        .sands-introduce-infotext {
+            margin-top: 30px !important;
+        }
+
+        .sands-introduce-infobtn {
+            width: 110px !important;
+            height: 30px !important;
+            line-height: 30px !important;
+        }
+
+        .sands-introduce-info .sands-introduce-infobtn {
+            margin-top: 5% !important;
+            margin: auto;
+            float: none;
+        }
+
+        .boss-speech-more {
+            width: 240px !important;
+            height: 40px !important;
+            line-height: 40px !important;
+            margin: 10% auto !important;
+        }
+
+        .boss-img > div {
+            font-size: 21px !important;
+        }
+        /*视频*/
+        .vedioBox {
+            margin-left: -365px !important;
+            width: 730px !important;
+            height: 440px !important;
+        }
+
+        .sands-introduce-imgMask .mask {
+            display: block !important;
+        }
+        /*馆长*/
+        .boss-img > img {
+            margin: auto;
+        }
+
+        .boss-img > div {
+            position: absolute;
+            bottom: 0;
+            font-size: 24px;
+            line-height: 65px;
+            text-align: center;
+            /*width:435px !important;
+		left:50%;
+		margin-left: -217.5px;*/
+        }
+    }
+
+.infoall {
+    text-align: justify;
+    word-break: break-word;
+    white-space: pre-wrap;
+    line-height: 26px;
+    border: none;
+    background-color: rgba(10,10,10,0);
+    color: #DAB766;
+}
+
+    @media only screen and (min-width: 1400px) and (max-width: 1500px) {
+        .infoall {
+            height: 396px !important;
+        }
+    }
+
+    @media only screen and (min-width: 1500px) and (max-width: 1630px) {
+        .infoall {
+            height: 450px !important;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+        .sands-introduce-infotext {
+            margin-top: 30px !important;
+            max-height: 280px;
+        }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        .sands-introduce-infotext {
+            margin-top: 30px !important;
+            max-height: 229px;
+        }
+
+        .sands-introduce-infobtn {
+            width: 110px !important;
+            height: 30px !important;
+            line-height: 30px !important;
+        }
+    }
+
+    @media only screen and (min-width: 1400px) {
+        .content {
+            margin: auto;
+            width: 74% !important;
+        }
+    }
+    /*@media only screen and (min-width: 1895px) {
+	.boss-img>div{
+		width: 435px !important;
+	}
+}*/
+    @media only screen and (min-width: 990px) {
+        .newBoss-imginfo .newBoss-img img {
+            height: 258px;
+        }
+    }
+
+    .line {
+        margin-top: 40px;
+    }
+    /*下拉条的样式*/
+    .infoall::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #170a01;
+    }
+
+    .infoall::-webkit-scrollbar {
+        width: 6px;
+        background-color: #170a01;
+    }
+
+    .infoall::-webkit-scrollbar-thumb {
+        background-color: #3d2c15;
+        border-radius: 4px;
+    }
+
+    /* 滑动条ie */
+    .infoall {
+        padding-right: 10px;
+        height: 536px;
+        overflow: hidden;
+        overflow-y: auto;
+        scrollbar-face-color: #3d2c15; /*滚动条3D表面（ThreedFace）的颜色*/
+        scrollbar-highlight-color: #3d2c15; /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+        scrollbar-shadow-color: #3d2c15; /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+        scrollbar-3dlight-color: #3d2c15; /*滚动条亮边框颜色*/
+        scrollbar-arrow-color: #dab766; /*滚动条方向箭头的颜色 */
+        scrollbar-track-color: #170a01; /*滚动条的拖动区域(TrackBar)颜色*/
+        scrollbar-darkshadow-color: #170a01; /*滚动条暗边框（ThreedDarkShadow）颜色*/
+    }
+
+    /*修改*/
+    .sands-introduce-imgMask {
+        height: 100%;
+    }
+
+    .boss-img > img {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .boss-speech-info h4 {
+            font-size: 16px;
+            height: 30px;
+            color: #DAB766;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        .cont-nav {
+            display: none;
+        }
+
+        .jinshaInfo {
+            text-align: center;
+            font-size: 24px !important;
+        }
+
+        .sands-introduce-infobtn {
+            float: none;
+            margin: 20px auto 0px;
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .sands-introduce-imgMask {
+            position: relative;
+            width: 682px;
+            margin: 30px auto 50px;
+        }
+
+            .sands-introduce-imgMask > video {
+                height: auto;
+            }
+
+        .boosSpeakP {
+            text-align: center;
+        }
+
+        .boss-imginfo {
+            width: 100%;
+            margin-bottom: 80px;
+            background: url();
+        }
+
+        .boss-img > img {
+            width: 100%;
+        }
+
+        .boss-img > div {
+            position: absolute;
+            bottom: 0;
+            font-size: 16px;
+            line-height: 65px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .boss-introduce > p {
+            font-size: 24px;
+            margin: 50px 0px;
+        }
+
+        .boss-speech-info p {
+            line-height: 24px;
+        }
+
+        .infoall {
+            padding-right: 0px;
+            height: auto;
+            overflow: initial;
+            overflow-y: initial;
+        }
+
+        .organization > p {
+            font-size: 24px;
+            color: #DAB766;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .sands-introduce-imgMask {
+            margin: 50px auto 82px;
+        }
+    }

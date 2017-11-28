@@ -1,0 +1,1050 @@
+
+*{
+    font-size: 16px;
+}
+#jiathis_sers a span{
+  font-size: 12px!important;
+}
+/*Banner图下面的内容*/
+.cont-nav {
+  width: 100%;
+  height: 114px;
+}
+  .cont-nav ul {
+    display: table;
+    height: 114px;
+    line-height: 112px;
+    text-align: center;
+    color: #ffda84;
+    cursor: pointer;
+  }
+.cont-nav ul li{
+    font-family: 'Optima Regular';
+    padding: 0 20px;
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cont-nav ul li:hover{
+    color: #edc048;
+    border-bottom: 3px solid #edc048;
+}
+.cont-nav .contNav-active{
+    color: #edc048;
+    border-bottom: 3px solid #edc048;
+}
+/*遗迹馆*/
+.relic{
+    width: 100%;
+    border-top:1px solid #3d2b15;
+}
+.ptitle{
+    font-family: 'Optima Regular';
+    color: #edc048;
+    font-size: 30px;
+    margin: 80px 0 0 0;
+    font-weight: bold;
+}
+.ptitle1{
+    color: #edc048;
+    font-size: 30px;
+    margin: 80px 0 40px 0;
+}
+.posiBtn {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  width: 164px;
+  height: 30px;
+  border: 1px solid #ffda84;
+  font-size: 14px;
+  color: #ffda84 !important;
+}
+
+  .posiBtn:hover {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    width: 164px;
+    height: 30px;
+    border: 1px solid #ffda84;
+    font-size: 14px;
+    background-color: #ffda84;
+    color: #170801 !important;
+  }
+
+.posiBtnZLGK {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+}
+
+.posiBtnZLTJ {
+  position: absolute;
+  top: 80px;
+  right: 180px;
+}
+.relic-cont{
+    margin: 5.7% auto;
+}
+
+.relic-cont-infotext{
+    width: 85%;
+}
+
+  .relic-cont-infotext > p {
+    position: relative;
+    text-align: justify;
+    line-height: 28px;
+    max-height: 140px;
+    overflow: hidden !important;
+    font-family: 'Futura Bk BT Book'
+  }
+.relic-cont-btn{
+    width: 168px;
+    height: 40px;
+    font-family: 'Futura Bk BT Book';
+    font-size: 16px;
+    color: #ffda84;
+    border: 1px solid #ffda84;
+    line-height: 40px;
+    margin-top: 114px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom:70px;
+}
+.relic-cont-btn:hover{
+    color: #170801;
+    background-color:#ffda84;
+}
+.relic-cont-btn:hover a{
+    color: #170801;
+}
+.relic-cont-infoimg{
+    text-align: center;
+}
+.relic-cont-infoimg>a{
+    font-family: 'Futura Bk BT Book';
+    color: #ffda84;
+}
+.relic-cont-infoimg p{
+    margin-top: 5px;
+}
+.relic-cont-infoimg img{
+    width:70%;
+}
+/*陈列馆*/
+.display{
+    border-top: 1px solid #3d2b15;
+}
+.secondDisplayBox{
+    display: none;
+}
+.display-first-info0 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall01.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-first-info1 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall02.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-first-info2 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall03.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-second-info0 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall04.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-second-info1 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall05.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-second-info2 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall06.png) no-repeat 100%;
+    background-size: cover;
+}
+.mydisplay {
+  margin: 3.6% auto;
+  overflow: hidden;
+  height: 275px;
+}
+.display-one {
+    margin-top:5.7%;
+}
+.mydisplay img{
+    width: 100%;
+    height: auto;
+}
+.mydisplayInfo a:link,.mydisplayInfo a:visited,.mydisplayInfo a:hover,.mydisplayInfo a:active ,
+.showroom a:link,.showroom a:visited,.showroom a:hover,.showroom a:active {
+    color:#ffda84;
+}
+.mydisplayInfo p span{
+    margin-left: 5%;
+}
+.mydisplayInfo p{
+    font-size: 24px;
+    font-family: 'Optima Regular';
+    color: #ffebbf;
+}
+.mydisplayInfo .exhibitionTitle{
+    margin: 36px 0px 100px 24px;
+}
+.mydisplayInfo>div{
+    width: 88%;
+    height: 40px;
+}
+  .mydisplayInfo > div a div {
+    width: 168px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffebbf;
+    border: 1px solid #ffebbf;
+    font-size: 15px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Optima Regular'
+    /*margin-left: 10px;*/
+  }
+.mydisplayInfo>div a div:hover{
+    background-color:#dab766;
+    border-style: none;
+}
+.mydisplayInfo>div .allshow div{
+    float: right;
+}
+/*陈列馆的两个按钮*/
+.display-twobtn{
+    width: 20%;
+    height: 40px;
+    margin: 5.7% auto;
+}
+.display-twobtn>div {
+    float: left;
+}
+.display-twobtn>div:nth-child(2) {
+    float: right;
+}
+.display-twobtn img{
+    width: 11px;
+}
+.display-twobtn-left,.display-twobtn-right{
+    width: 30%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #786034;
+    cursor: pointer;
+}
+.display-twobtn-left:hover,.display-twobtn-right:hover{
+    background-color: #dab765;
+    color: white;
+}
+.showroom-info {
+  padding-left: 3% !important;
+}
+  .showroom-info a h3 {
+    font-family: 'Optima Regular'
+  }
+  .showroom-info a p {
+    font-family: 'Futura Bk BT Book'
+  }
+
+/*特展厅*/
+.showroom{
+    border-top: 1px solid #3d2b15;
+    position:relative;
+}
+#showroom a, #output a{
+    font-family: 'Futura Bk BT Book';
+    color: #ffda84;
+}
+.showroom-img img{
+   width:100%;
+}
+.showroom>div>div{
+    border-bottom: 1px solid #3d2b15;
+    padding: 40px 0;
+}
+.showroom .pageToolbar{
+    padding: 32px 0 90px;
+    border-bottom: none;
+}
+#pageToolbar2 {
+  padding: 30px 0px;
+}
+.showroom .pageToolbar > div {
+  border-bottom: none;
+}
+.showroom .showroom-info .showTitle{
+    font-size: 19px !important;
+    font-family: 'Optima Regular';
+}
+.showroom-time{
+    margin-top: 5px;
+    font-size: 16px;
+}
+.showroom-p{
+    margin: 35px 0 20px 0;
+    line-height: 28px;
+    /*限制行数*/
+    position: relative;
+    line-height: 28px;
+    max-height: 56px;
+    overflow: hidden;
+}
+.showroom-info{
+    padding-left: 3%;
+}
+  .showroom-info h3 {
+    color: #EDC048 !important;
+    margin-bottom:20px;
+  }
+.showroom-info:hover p,.showroom-info:hover h3{
+    color: #fae1ac;
+}
+/*查看详情*/
+.showroom-btn{
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    width:110px;
+    height: 30px;
+    font-family: 'Futura Bk BT Book';
+    font-size: 16px;
+    color: #ffda84;
+    border: 1px solid #ffda84
+}
+.showroom-info .showroom-btn a{
+    color: #edc048;
+}
+.showroom-btn:hover{
+	 color: #170801;
+    background-color: #ffda84;
+}
+/*文化景观*/
+.culture{
+    width: 100%;
+    border-top: 1px solid #3d2b15;
+    padding-bottom: 80px;
+}
+.culture>div:nth-child(1){
+    margin: 80px 0;
+    margin-bottom:20px; 
+}
+.nav-culture>ul{
+    text-align: right;
+    height: 110px;
+}
+.nav-culture ul li {
+    cursor: pointer;
+    padding: 16px 18px;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Optima Regular';
+    color: #ffda84;
+}
+.nav-culture ul li:hover{
+    color: #edc048;
+    border-bottom: 2px solid #edc048;
+}
+.nav-culture .nav-cultureLi{
+    color: #edc048;
+    border-bottom: 2px solid #edc048;
+}
+.title-culture {
+  color: #edc048;
+  font-family: 'Optima Regular';
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.culture-left-text{
+    width: 80%;
+    line-height: 28px;
+    margin-top: 3%;
+}
+/*.culture-left-text p{
+    text-indent: 5%;
+}*/
+.changeRow,.childrenNav{
+    display: none;
+}
+.part-text {
+  /*限制行数*/
+  position: relative;
+  height: auto;
+  text-align: justify;
+  font-family: 'Futura Bk BT Book'
+  /*overflow: hidden;*/
+}
+.part-all {
+    display: none;
+    margin-bottom: 40px;
+}
+
+#part_div1, #part_div2, #part_div3, #part_div4 {
+    display: none;
+}
+
+.culture-
+{
+    display: none;
+}
+.culture-right-img img{
+    position: relative;
+}
+.positiondiv{
+    width: 215px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Optima Regular';
+    background-color: #edc048;
+    color: #170801;
+    position: absolute;
+    top:-6%;
+    left: -66px;
+}
+.pageToolbar {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+    .pageToolbar > div {
+        border: 0;
+    }
+
+/*媒体查询*/
+
+@media only screen and (max-width: 768px) {
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .cont-nav{
+        width: 100%;
+        height: 80px;
+        /*outline: 1px solid red;*/
+    }
+    .cont-nav ul {
+        width: 100%;
+        height: 80px;
+        font-size: 14px;
+        line-height: 80px;
+        text-align: center;
+        color: #fae1ac;
+        cursor: pointer;
+        /*outline: 1px solid #e4b9b9;*/
+    }
+    .cont-nav ul li{
+        padding:0px 10px;
+        float: left;
+        cursor: pointer;
+    }
+    .cont-nav ul li:hover{
+        color: #DAB766;
+        border-bottom: 3px solid #DAB766;
+    }
+    .cont-nav .contNav-active{
+        color: #DAB766;
+        border-bottom: 3px solid #DAB766;
+    }
+
+    .relic-cont-infoimg img{
+        width:60% !important;
+    }
+    .relic-cont-infoimg p{
+        margin-bottom: 5%;
+    }
+    .relic-cont-img img{
+        width: 80%;
+        margin: auto;
+    }
+    /*陈列馆*/
+    .mydisplayInfo p{
+        font-size: 22px;
+    }
+    /*特展厅*/
+    .showroom-info .showTitle, .showroom-time{
+        text-align: center !important;
+        margin-top: 2% !important;
+    }
+    .showroom-p{
+        width: 80%;
+    }
+    .showroom-btn{
+        width:110px !important;
+        float:none;
+    }
+    .showroom-img img, .showroom-btn, .showroom-p{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .nav-culture>ul {
+        margin-top: 3%;
+        text-align: center !important;
+    }
+    .culture-left-text{
+        margin-top: 0 !important;
+    }
+    .culture-right-img img{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .culture-right{
+        margin-bottom: 5% !important;
+    }
+    .positiondiv{
+        display: none;
+    }
+    .showroom-img img{
+        width: 50% !important;
+    }
+    /*.showroom-p , .showroom-btn{
+        display: none !important;
+    }*/
+}
+/*媒体查询*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+    /* 兼容iphone5 */
+    .culture-right-img img{
+        width: 500px;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .cont-nav ul li{
+        padding: 0 5px;
+        font-size: 17px;
+    }
+    /*遗迹馆*/
+    .relic-cont-btn{
+        margin-top: 8% !important;
+        margin-bottom: 8% !important;
+    }
+    .relic-cont-infoimg img{
+        width:60% !important;
+    }
+    .relic-cont-infoimg p{
+        margin-bottom: 5%;
+    }
+    .relic-cont-img img{
+        width: 80%;
+        margin: 20px auto;
+    }
+    /*特展厅*/
+    .showroom-info .showTitle, .showroom-time{
+        text-align: center !important;
+        margin-top: 2% !important;
+    }
+    .showroom-p{
+        width: 80%;
+    }
+    .showroom-btn{
+        width:20% !important;
+    }
+    .showroom-img img, .showroom-btn, .showroom-p{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .nav-culture>ul {
+        margin-top: 3%;
+        text-align: center !important;
+    }
+    .culture-left-text{
+        margin-top: 0 ;
+        display: block ;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+    .culture-left-btn{
+        float: right;
+    }
+    .culture-right-img img{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .culture-right{
+        margin-bottom: 5% !important;
+    }
+    .positiondiv{
+        display: none;
+    }
+    .showroom-img img{
+        width: 50% !important;
+    }
+    .showroom-p , .showroom-btn{
+        display: none !important;
+    }
+    /*陈列馆*/
+    .mydisplayInfo p{
+        font-size: 22px;
+    }
+    .changeRow{
+        display: block;
+        margin:80px 0 40px;
+        /*outline: 1px solid red;*/
+    }
+    .title-culture{
+        margin: 0;
+    }
+    /*.nav-culture{*/
+        /*height: 42px;*/
+    /*}*/
+    /*.childrenNav{*/
+        /*margin-top: 50px;*/
+        /*margin-left: 10px;*/
+    /*}*/
+    /*.changeRow-nav{*/
+        /*position: relative;*/
+    /*}*/
+    /*.changeRow-nav ul{*/
+        /*width: 380px;*/
+        /*!*background-color: red;*!*/
+        /*display: none;*/
+        /*border:1px solid #ffda84;*/
+        /*border-top: none;*/
+        /*!*position: absolute;*!*/
+    /*}*/
+    /*.changeRow-nav ul li{*/
+        /*padding: 5px 0;*/
+        /*cursor: pointer;*/
+    /*}*/
+    /*.changeRow-nav ul li:hover{*/
+        /*background-color: #edc048;*/
+        /*color: #170801;*/
+    /*}*/
+    .select_result{
+        width:380px;
+        padding: 0 5px;
+        cursor: pointer;
+        border:1px solid #ffda84;
+        line-height:42px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .relic-cont-img {
+    height: 349px;
+    overflow: hidden;
+  }
+    .cont-nav ul li{
+        padding: 0 15px;
+    }
+    .showroom-p{
+        margin: 30px 0 16px 0 !important;
+    }
+    .showroom-info h3{
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+  .relic-cont-btn {
+    width: 168px;
+    height: 40px;
+    font-family: 'Futura Bk BT Book';
+    font-size: 16px;
+    color: #ffda84;
+    border: 1px solid #ffda84;
+    line-height: 40px;
+    margin-top: 56px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1484px) {
+ 
+  .relic-cont-btn {
+    width: 168px;
+    height: 40px;
+    font-family: 'Futura Bk BT Book';
+    font-size: 16px;
+    color: #ffda84;
+    border: 1px solid #ffda84;
+    line-height: 40px;
+    margin-top: 80px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 1320px){
+    .mydisplayInfo>div .allshow div{
+       float: inherit;
+        margin-top: 5px;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .relic-cont-img {
+    height:421px;
+    overflow: hidden;
+  }
+  .relic-cont-img {
+    height: 421px;
+    overflow: hidden;
+  }
+    .cont-nav ul li{
+        padding: 0 20px !important;
+    }
+    .showroom-p{
+        margin: 10px 0 10px 0 !important;
+    }
+    .showroom-info .showTitle{
+        font-size: 18px !important;
+        font-weight: bold;
+    }
+  .relic-cont-btn {
+    width: 168px;
+    height: 40px;
+    font-family: 'Futura Bk BT Book';
+    font-size: 16px;
+    color: #ffda84;
+    border: 1px solid #ffda84;
+    line-height: 40px;
+    margin-top: 86px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+    .content{
+        margin: auto;
+        width: 74% !important;
+    }
+
+}
+@media only screen and (min-width: 1400px) and (max-width: 1487px) {
+    .showroom-p{
+        margin: 8px 0 8px 0 !important;
+    }
+    .showroom-info .showTitle{
+        font-size: 17px !important;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1570px) {
+    .mydisplayInfo>div a div{
+    width: 148px;
+    font-size: 14px;
+}
+    }
+@media only screen and (min-width: 1487px) and (max-width: 1560px) {
+    .showroom-p{
+        margin: 8px 0 8px 0 !important;
+    }
+  .relic-cont-btn {
+    width: 168px;
+    height: 40px;
+    font-family: 'Futura Bk BT Book';
+    font-size: 16px;
+    color: #ffda84;
+    border: 1px solid #ffda84;
+    line-height: 40px;
+    margin-top: 88px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+}
+@media only screen and (min-width: 1560px) and (max-width: 1670px) {
+    .showroom-p{
+        margin: 10px 0 8px 0 !important;
+    }
+  .relic-cont-btn {
+    width: 168px;
+    height: 40px;
+    font-family: 'Futura Bk BT Book';
+    font-size: 16px;
+    color: #ffda84;
+    border: 1px solid #ffda84;
+    line-height: 40px;
+    margin-top: 100px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1670px) and (max-width: 1770px) {
+    .showroom-p {
+        margin: 20px 0 10px 0 !important;
+    }
+  .relic-cont-btn {
+    margin-bottom: 44px;
+  }
+}
+
+@media only screen and (min-width: 1770px) and (max-width: 1880px) {
+    .showroom-p{
+        margin: 25px 0 15px 0 !important;
+    }
+}
+@media (min-width:1400px) and (max-width:1880px) {
+  .relic-cont-info {
+    position: relative;
+    height:490px;
+  }
+  .relic .col-lg-6 {
+    position: absolute !important;
+  }
+  .img11 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  .img22 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .relic-cont-img {
+    height:490px;
+    overflow:hidden;
+  }
+    .relic-cont-img img {
+      width: 100%;
+      height: auto;
+    }
+}
+.showroom-img {
+  min-height: 211px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.content-5-box col-lg-9,
+.content-5-box col-md-8,
+.content-5-box col-sm-12， .content-5-box col-xs-12 {
+  position: absolute !important;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1920px) {
+  .showroom-img{
+    height: 250px;
+    overflow:hidden;
+  }
+  .showroom-img img {
+    height: auto;
+    width:100%;
+  }
+
+  .showroom-one {
+    position: relative !important;
+  }
+
+  .showroom-btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .showroom-info {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .showroom-img {
+    height: 211px;
+    overflow: hidden;
+  }
+
+    .showroom-img img {
+      height: auto;
+      width: 100%;
+    }
+
+  .showroom-one {
+    position: relative !important;
+  }
+
+  .showroom-btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .showroom-info {
+    height: 211px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .showroom-img {
+    height: 211px;
+    overflow: hidden;
+  }
+
+
+    .showroom-img img {
+      height: auto;
+      width: 100%;
+    }
+
+
+  .showroom-one {
+    position: relative !important;
+  }
+
+  .showroom-btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .showroom-info {
+    height: 211px;
+  }
+}
+
+/*修改*/
+@media only screen and (max-width:768px) {
+  .posiBtnZLGK {
+    position: absolute;
+    top: 150px;
+    margin-right: -84px;
+    right: 50%;
+  }
+
+  .posiBtnZLTJ {
+    position: absolute;
+    top: 100px;
+    right: 50%;
+    margin-right: -84px;
+  }
+  .content {
+    padding:0px 15px !important;
+  }
+  .cont-nav {
+    display: none;
+  }
+
+  .relic {
+    width: 100%;
+    border-top: none;
+    margin-bottom: 30px;
+  }
+
+  .ptitle {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+
+  .relic-cont-infotext {
+    width: 100%;
+  }
+
+    .relic-cont-infotext > p {
+      text-indent: 6%;
+      min-height: 0px;
+      max-height: 300px;
+      height: auto;
+      overflow: initial;
+      line-height: 28px;
+      font-family: 'Futura Bk BT Book'
+    }
+
+  .relic-cont-btn {
+    margin: 20px auto 30px;
+  }
+
+  .relic-cont-img img {
+    width: 100%;
+    margin: auto;
+  }
+
+  .mydisplayInfo p {
+    font-size: 16px;
+    /*margin: 35px 0px 70px 24px;*/
+  }
+
+  .mydisplayInfo > div a div {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .display-twobtn {
+    width: 20%;
+    height: 40px;
+    margin: 5.7% auto 50px;
+  }
+
+  .ptitle1 {
+    color: #DAB766;
+    font-size: 24px;
+    margin: 40px 0px 100px 0px;
+  }
+
+  .showroom-img img {
+    width: 100% !important;
+  }
+
+  .showroom h3 {
+    font-size: 20px;
+  }
+
+  .culture-left-text {
+    line-height: 28px;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .title-culture {
+    color: #DAB766;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .culture {
+    width: 100%;
+    border-top: 1px solid #3d2b15;
+    padding-bottom: 10%;
+  }
+  .showroom-info {
+ text-align:center;
+  }
+  .nav-culture > ul {
+    height: auto;
+  }
+  .mydisplayInfo > div a div {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffebbf;
+    border: 1px solid #ffebbf;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .allshow > div {
+    line-height:18px !important;
+  }
+  .relic-cont-img {
+    margin-top:14px;
+  }
+}

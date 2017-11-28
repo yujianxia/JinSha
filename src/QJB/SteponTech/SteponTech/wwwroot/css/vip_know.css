@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+
+/* 内容 */
+.empty{
+    height: 110px;
+}
+
+.content{
+    height: 1516px;
+    width: 100%;
+    min-width: 1280px;
+    background: url(../img/vip_know/tree.png) no-repeat center;
+}
+
+.form{
+    width: 1200px;
+    margin: auto;
+    overflow:hidden;
+}
+
+.label{
+    margin-left: 60px;
+    width: 1140px;
+    height: 211px;
+    position: relative;
+}
+.inner{
+	 width: 1140px;
+    height: 211px;
+    position: absolute;
+    z-index: 99;
+}
+
+.know{
+    width: 902px;
+    height: 1093px;
+    margin: auto;
+    background: url(../img/vip_know/vip.png) no-repeat center;
+    overflow: hidden;
+}
+
+.text{
+    line-height: 23px;
+    font-size: 14px;
+    color: #aa3d38;
+    font-weight: 900;
+    margin-top: 210px;
+    height: 625px;
+    padding-left: 25px;
+    padding-right:10px;
+}
+.text p {
+    margin-left: 20px;
+}
+.knowContent{
+    width: 725px;
+    margin: auto;
+}
+.text h4 {
+    margin-top: 10px;
+    text-align: center;
+}
+.knowContent label{
+    font-size: 14px;
+    color: #aa3d38;
+    font-weight: 900;
+    margin-top: 20px;
+    display: block;
+}
+
+.knowContent label span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aa3d38;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.button{
+    text-align: center;
+    margin-top: 70px;
+    cursor: pointer;
+}
+h3{
+    line-height:50px;
+}
+.leaf{
+    background: url(../img/common/leaf2.gif) no-repeat center;
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    z-index: 4;
+    top: 110px;
+    min-width: 1280px;
+    left:0;
+}
+#isAgree{
+    width: 19px;
+    line-height: 19px;
+    vertical-align: middle;
+    height: 19px;
+    -webkit-appearance: none;
+    border: 1px solid #aa3d38;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    margin-right: 8px;
+}
+
+#isAgree:checked:before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #aa3d38;
+    content: '\2714';
+    font-size: 18px;
+}
+.agreeDiv {
+    position: relative;
+}
+#pleaseAgree {
+    display: none;
+    top: 25px;
+    position: absolute;
+}

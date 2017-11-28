@@ -1,0 +1,458 @@
+@media screen and (max-width: 770px) {
+	.row {
+		margin: 0;
+	}
+	.activity_box .wrapper .btn_baoming a {
+		width: 100% !important;
+	}
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+
+body {
+	background: #170801;
+	color: #d8b866;
+}
+
+#hd_bottom {
+	background-color: #dab766;
+	height: 4px;
+	border: none;
+	margin: 0px;
+}
+
+.row {
+	width: 100%;
+}
+
+.banner {
+  width: 100%;
+  max-height: 570px;
+  overflow: hidden;
+}
+
+p {
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 18px;
+}
+.aside-title {
+  font-family: 'Optima Regular';
+  color: #edc048;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1400px) {
+  .container {
+		width: 74%;
+	}
+}
+
+#hd_bottom_1 {
+	background-color: #dab766;
+	height: 1px;
+	border: none;
+	margin: 0px;
+}
+
+.b-border {
+	border: 0;
+}
+
+
+
+.linkRoute {
+	height: 100px;
+	line-height: 100px;
+	border-bottom: 1px solid #3d2b15;
+	font-family: "Optima Regular";
+	color: #edc048;
+}
+
+  .linkRoute a {
+    font-family: "Optima Regular";
+    color: #c8a65c;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+
+  .linkRoute a:hover {
+    color: #edc048;
+  }
+
+.linkRoute .firstLink {
+	margin-left: 0;
+}
+
+.activity_box .wrapper {
+	margin: 0 auto;
+	float: none;
+	padding: 0;
+}
+
+.activity_box .wrapper .pic {
+	margin-bottom: 50px;
+}
+
+.activity_box .wrapper .pic img {
+	width: 100%;
+}
+
+.activity_box .wrapper .content {
+	border-bottom: 1px solid #3d2b15;
+}
+
+.activity_box .wrapper .content h3 {
+	height: 18px;
+	line-height: 18px;
+	font-family: "Optima Regular";
+	font-size: 18px;
+	margin-bottom: 9px;
+	color: #edc048;
+	margin-bottom: 20px;
+}
+
+.activity_box .wrapper .content p {
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	font-family: "Optima Regular";
+	color: #edc048;
+}
+
+.activity_box .wrapper .content .finish {
+	margin-bottom: 35px;
+}
+
+.activity_box .wrapper .artical {
+	padding: 40px 0 80px;
+	border-bottom: 1px solid #3d2b15;
+}
+
+.activity_box .wrapper .artical p {
+	font-size: 16px;
+	color: #ffda84;
+	font-family: "Futura Bk BT Book";
+	line-height: 24px;
+}
+
+.activity_box .wrapper .btn_baoming a {
+	color: #140a01;
+	display: block;
+	width: 400px;
+	height: 40px;
+	background-color: #dab765;
+	line-height: 40px;
+	text-align: center;
+	margin: 58px auto 160px;
+	border-radius: 5px;
+}
+
+
+/* 文章 */
+
+body {
+	line-height: 23px;
+}
+
+
+/*导航*/
+
+a:hover {
+	color: #ffebbf;
+}
+
+.breadCrumbs {
+	color: #FFF5DD;
+	font-size: 14px;
+}
+
+.breadCrumbs>div {
+	height: 100%;
+	margin: auto;
+	padding: 3% 0;
+}
+
+.breadCrumbs>div span {
+	margin-right: 1%;
+	font-family: "Optima Regular";
+	color: #edc048;
+}
+
+mytitle
+/* 文章 */
+
+body {
+	line-height: 23px;
+	font-family: 'Futura Bk BT Book';
+}
+
+h2 {
+	color: #edc048;
+	font-family: 'Optima Regular';
+}
+
+h3 {
+	font-size: 24px;
+	font-family: 'Optima Regular';
+}
+
+h4 {
+	font-family: 'Optima Regular';
+}
+
+
+/*导航*/
+
+a:hover {
+	color: #ffebbf;
+}
+
+.breadCrumbs {
+	color: #FFF5DD;
+	font-size: 14px;
+}
+
+.breadCrumbs>div {
+	height: 100%;
+	margin: auto;
+	padding: 3% 0;
+}
+
+.breadCrumbs>div span {
+	margin-right: 1%;
+	font-family: "Optima Regular";
+	color: #edc048;
+	font-size: 18px;
+}
+
+.toIndex:hover,
+.toShow:hover,
+.gallery:hover {
+	color: #DAB766;
+	cursor: pointer;
+}
+
+.container-box {
+	width: 100%;
+}
+
+.article-head {
+  margin: 58px 0 50px 0px;
+  margin: auto;
+  width: 74%;
+  text-align: center;
+}
+
+.mytitle {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #edc048;
+}
+
+.time-box {
+  color: #917a41;
+  line-height: 30px;
+}
+
+.summary-box {
+	width: 100%;
+	border-top: 1px solid #3d2c15;
+	border-bottom: 1px solid #3d2c15;
+}
+
+.summary {
+	font-size: 16px;
+	padding: 37px 37px 39px 49px;
+	font-family: 'Futura Bk BT Book';
+}
+
+.content {
+	margin-bottom: 40px;
+	padding: 37px 37px 39px 49px;
+}
+
+  .content p {
+    width: 100%;
+    font-family: 'Futura Bk BT Book';
+    line-height: 28px;
+    margin: auto;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+.content img {
+	max-width: 100%;
+  vertical-align:bottom;
+}
+
+.mg {
+	margin: 30px 0;
+}
+
+.sub-title {
+	font-size: 22px;
+	margin: 23px 0;
+}
+
+.secondNav {
+	background-color: #3d2b15;
+	height: 1px;
+	border: none;
+	margin: 0px;
+}
+
+
+/*侧栏*/
+
+main aside {
+  /*margin-left: 5%;*/
+}
+
+.aside-box {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+.aside-title {
+  /* text-align: center;*/
+}
+
+.link-box {
+  margin-top: 18px;
+  /*border-top: 1px solid #3d2c15;*/
+  padding-top: 10px;
+}
+
+.link-box p {
+	font-family: 'Futura Bk BT Book';
+}
+
+.relate-link {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-height: 25px;
+}
+
+.bm-line {
+	width: 100%;
+	border-top: 1px solid #d8b964;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.content {
+		margin-bottom: 100px;
+	}
+  .article-head {
+    width: 95%;
+  }
+
+  .content {
+    width: 95%;
+    margin-bottom: 100px;
+  }
+
+  .article-head {
+    width: auto;
+  }
+	.aside-box {
+		/*float:left;*/
+		padding: 0;
+		min-height: 100px !important;
+		position: static;
+	}
+	main aside {
+		margin-left: 0;
+	}
+	.aside-title {
+		/*text-align: center;*/
+	}
+	.aside-title h4 {
+		padding-top: 3%;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.container {
+		width: 74%;
+	}
+	main aside {
+		margin-left: 4%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+  .aside-box {
+    width: 15%;
+    min-width: 100px;
+    /*position: fixed;*/
+  }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .article-head {
+    width: auto;
+  }
+
+  .content {
+    width: auto;
+    padding:0 15px;
+    /*margin-bottom: 100px;*/
+  }
+}
+  /*# sourceMappingURL=detail.css.map */
+/*移动端415px*/
+
+@media screen and (max-width: 415px) {
+  .article-head {
+    width: auto;
+  }
+
+  .content {
+    width: auto;
+    /*margin-bottom: 100px;*/
+    padding: 0;
+  }
+
+  .breadCrumbs {
+    display: none;
+  }
+
+  .container-box {
+    padding: 0 15px;
+  }
+
+  .summary-box p {
+    padding: 40px 0;
+  }
+
+  .summary-box {
+    margin-bottom: 0 !important;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .container-box .content {
+    margin-bottom: 40px;
+  }
+}

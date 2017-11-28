@@ -1,0 +1,591 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>考古发掘地图</title>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0cGpwmy0In6Mj8tpcYg29HdLKt9z29Zx"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<style type="text/css">body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}.anchorBL{display:none;}</style>
+</head>
+<body>
+<div id="allmap"></div>
+<script type="text/javascript">
+
+	// 百度地图API功能
+	var map = new BMap.Map("allmap",{minZoom:15,maxZoom:16});
+	var point = new BMap.Point(104.04025,30.666877);
+		
+	var json_site = {
+		"sites":[
+
+					{
+						"xh":"2",
+						"yx":"104.023211,30.693934",
+						"title":"三和花园",
+						"imgurl":"./webimages/02.jpg",
+						"shijian":"1999年6月至2000年4月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区黄忠村“三和花园”地点",
+						"scontent":"①发掘面积：2026平方米；②遗迹：房址17座、灰坑359个、窑址17座、墓葬13座；③遗物：出土了大量的尖底杯、尖底盏、小平底罐、高领罐、圈足罐等陶器；④时代：商末至西周早、中期；⑤意义：F5—F9为一组大型建筑群，建筑群的总面积达1000余平方米；确认黄忠村遗址是一处大型的商周遗址，时代为商末至西周时期。"
+					},
+					{
+						"xh":"6",
+						"yx":"104.01393,30.688508",
+						"title":"兰苑",
+						"imgurl":"./webimages/06.jpg",
+						"shijian":"2001年7月至2002年3月",
+						"fajuezhe":"王毅主持",
+						"fajuedd":"青羊区金沙村四组“兰苑”地点",
+						"scontent":"①发掘面积：13450平方米；②遗迹：房址17座、窑址3座、窖穴30个、灰坑431个、墓葬100余座；③遗物：出土了数以万计的陶器；④时代：殷墟三、四期至西周初期；⑤意义：这是一处较为完整的居址区，房址分布在居址区的东北部，窖穴在房址的周围，灰坑在房址的附近，窑址分布在居址区的西南部、墓葬分布在居址区的西部和南部。"
+					},
+					{
+						"xh":"7",
+						"yx":"104.017989,30.682508",
+						"title":"置信金沙园一期",
+						"imgurl":"./webimages/07.jpg",
+						"shijian":"2002年3月至6月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区金沙村三组置信金沙园一期地点",
+						"scontent":"①发掘面积：950平方米；②遗迹：房址3座、窑址1座、灰坑21个、墓葬10座③遗物：32件玉石器和大量陶器；④时代：宝墩文化三期遗存；⑤意义：金沙遗址首次发现宝墩文化遗存。"
+					},
+					{
+						"xh":"9",
+						"yx":"104.020752,30.690645",
+						"title":"将王府",
+						"imgurl":"./webimages/09.jpg",
+						"shijian":"2002年3月至2002年8月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区将王府地点",
+						"scontent":"①发掘面积：1950平方米；②遗迹：灰坑、砾石堆积1处；③遗物：戈、箭簇等铜器和大量陶器；④时代：西周早中期；⑤意义：砾石堆积可能与建筑或祭祀活动相关。"
+					},
+					{
+						"xh":"10",
+						"yx":"104.013561,30.693673",
+						"title":"博雅庭韵",
+						"imgurl":"./webimages/10.jpg",
+						"shijian":"2002年6月至2003年5月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区黄忠村5组博雅庭韵地点（万博地点）",
+						"scontent":"①发掘面积：7550平方米；②遗迹：灰坑353个、墓葬60座、灰沟2条；③遗物：玉器5件、石器18件和大量陶器；④时代：商代末期至西周时期；⑤意义：是一处较为重要的墓地，第一次发现了船棺葬。"
+					},
+					{
+						"xh":"11",
+						"yx":"104.021013,30.69264",
+						"title":"罡正",
+						"imgurl":"./webimages/11.jpg",
+						"shijian":"2002年9月至2003年4月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区罡正地点",
+						"scontent":"①发掘面积：2100平方米；②遗迹：窑址2座、灰坑117个、灰沟4条、墓葬45座；③遗物：少量玉石器和大量陶器；④时代：主体遗存为商代晚期至西周时期，有少量的宝墩文化遗存；⑤意义：发现了金沙遗址时期一座较大型的墓葬，第一次发现双人异穴合葬墓。"
+					},
+					{
+						"xh":"12",
+						"yx":"104.014673,30.69018",
+						"title":"人防",
+						"imgurl":"./webimages/12.jpg",
+						"shijian":"2002年9月至11月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区人防地点",
+						"scontent":"①发掘面积：1700平主米；②遗迹：灰坑1个、土坑墓14座；③遗物：陶器；土坑墓中有7座墓葬有随葬品，出土了铜剑7件、铜矛1件、绿松石1件、兽骨3件、陶罐1件；④时代：地层堆积为商代晚期至西周早期；墓葬为春秋时期。"
+					},
+					{
+						"xh":"13",
+						"yx":"104.019703,30.695972",
+						"title":"芙蓉苑北区",
+						"imgurl":"./webimages/13.jpg",
+						"shijian":"2002年10月至2003年2月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区芙蓉苑北区",
+						"scontent":"①发掘面积：2300平方米；②遗迹：灰坑96个、灰沟54条、墓葬9座；③遗物：1件木耜、少量石器和大量陶器；④时代：商代晚期至西周时期；⑤意义：出土的木耜是中国商代目前最为完整的木质农具。"
+					},
+					{
+						"xh":"14",
+						"yx":"104.018572,30.694776",
+						"title":"芙蓉苑南区",
+						"imgurl":"./webimages/14.jpg",
+						"shijian":"2002年11月至2003年5月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区芙蓉苑南区",
+						"scontent":"①发掘面积：1357平方米；②遗迹：宝墩文化时期灰坑1个；商周时期房址7座、水井1口、灰坑176个、灰沟25条；③遗物：数以万计的陶片；④时代：主体遗存为商代晚期至西周早期；⑤意义：金沙遗址首次发现水井。"
+					},
+					{
+						"xh":"15",
+						"yx":"104.016344,30.690041",
+						"title":"燕莎庭院",
+						"imgurl":"./webimages/15.jpg",
+						"shijian":"2002年11月至2003年6月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区燕沙庭院地点",
+						"scontent":"①发掘面积：12600平方米；②遗迹：灰坑321个、灰沟1条、墓葬170座；③遗物：数以万计的陶器，另有少量玉石器；④时代：西周时期；⑤意义：金沙遗址发现的第一处大型墓地。"
+					},
+					{
+						"xh":"17",
+						"yx":"104.014906,30.695615",
+						"title":"春雨花间",
+						"imgurl":"./webimages/17.jpg",
+						"shijian":"2002年12月至2003月3月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区春语花间地点（原凌远地点）",
+						"scontent":"①发掘面积：2100平方米；②遗迹：窑址2座、灰坑42个、墓葬17座；③遗物：大量陶器；④时代：西周时期；⑤意义：与博雅庭韵地点属同一墓地。"
+					},
+					{
+						"xh":"18",
+						"yx":"104.015804,30.706896",
+						"title":"家在回廊",
+						"imgurl":"./webimages/18.jpg",
+						"shijian":"2003年2月至4月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区红色村家在回廊地点",
+						"scontent":"①发掘面积：1700平方米；②遗迹：灰坑7个；③遗物：大量陶器；④时代：商周时期。"
+					},
+					{
+						"xh":"19",
+						"yx":"104.012701,30.686349",
+						"title":"汉隆",
+						"imgurl":"./webimages/19.jpg",
+						"shijian":"2003年3月至9月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区金沙村汉隆地点",
+						"scontent":"①发掘面积：5050平方米；②遗迹：灰坑50个、墓葬38座、灰沟1 条、窑址4座；③遗物：大量陶器；④时代：商代晚期至西周时期。"
+					},
+					{
+						"xh":"20",
+						"yx":"104.027129,30.702024",
+						"title":"金港湾",
+						"imgurl":"./webimages/20.jpg",
+						"shijian":"2003年4月至5月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区金港湾地点",
+						"scontent":"①发掘面积：3200平方米；②遗迹：灰坑18个、灰沟5条；③遗物：大量陶器；④时代：商周时期。"
+					},
+					{
+						"xh":"21",
+						"yx":"104.018086,30.697043",
+						"title":"阳光金沙",
+						"imgurl":"./webimages/21.jpg",
+						"shijian":"2003年12月至2004年7月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区阳光金沙地点",
+						"scontent":"①发掘面积：15800平方米；②遗迹：窑址44座、灰坑102个、墓葬288座；③遗物：大量陶器、铜器、石器；④时代：商代晚期至西周时期；⑤是金沙遗址第一次集中发现窑址，是金沙遗址的又一处大型墓地。"
+					},
+					{
+						"xh":"22",
+						"yx":"104.014781,30.693907",
+						"title":"金沙国际",
+						"imgurl":"./webimages/22.jpg",
+						"shijian":"2004年3月至2007年9月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区佳园•金沙国际地点",
+						"scontent":"①发掘面积：7600平方米；②遗迹：窑址11座、灰坑46个、墓葬62座、房址2座；③遗物：大量陶器、铜器、玉器；④时代：西周时期；⑤意义：第一次发现大量船棺葬具。"
+					},
+					{
+						"xh":"23",
+						"yx":"104.021446,30.6974",
+						"title":"千和馨城",
+						"imgurl":"./webimages/23.jpg",
+						"shijian":"2004年3月至10月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区千和馨城地点",
+						"scontent":"①发掘面积：1900平方米；②遗迹：窑址1座、灰坑117座、灰沟18条、墓葬137座；③遗物：大量陶器；④时代：西周时期；⑤意义：是金沙遗址的又一处大型墓地。"
+					},
+					{
+						"xh":"24",
+						"yx":"104.019879,30.687412",
+						"title":"祭祀区第二次发掘地点",
+						"imgurl":"./webimages/24.jpg",
+						"shijian":"2004年9月至2005年1月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金沙村祭祀区二期发掘",
+						"scontent":"①发掘面积：1380平方米；②遗迹：祭祀遗迹34处、灰坑33个；③遗物：少量的玉器、铜器、金器和2000多件石器、大量的木器、数以万计的陶器等，石器以石饼、石璋、石璧为主；④时代：主体遗存为商代至春秋早期，有少量的宝墩文化遗存；⑤意义：揭示了金沙村祭祀场所近1000年的发展历程。"
+					},
+					{
+						"xh":"25",
+						"yx":"104.015116,30.713127",
+						"title":"郎家村精品小区配套地点",
+						"imgurl":"./webimages/25.jpg",
+						"shijian":"2004年11月至12月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区郎家村精品小区配套地点",
+						"scontent":"①发掘面积：400平方米；②遗迹：小型房址3座、灰坑15个；③遗物：大量陶器；④时代：商代晚期至西周时期。"
+					},
+					{
+						"xh":"26",
+						"yx":"104.015881,30.686372",
+						"title":"金沙遗址博物馆游客接待中心",
+						"imgurl":"./webimages/26.jpg",
+						"shijian":"2005年3月至12月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金沙遗址博物馆游客接待中心地点",
+						"scontent":"①发掘面积：500平方米；②遗迹：灰坑2个；③遗物：大量陶器；④时代：宝墩文化时期遗存和商周时期文化遗存。"
+					},
+					{
+						"xh":"27",
+						"yx":"104.019769,30.700374",
+						"title":"金域港湾",
+						"imgurl":"./webimages/27.jpg",
+						"shijian":"2005年4月至5月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区金域港湾地点",
+						"scontent":"①发掘面积：1500平方米；②遗迹：灰坑54个、灰沟4条、墓葬7座；③遗物：大量的陶器；④时代：商代晚期至西周时期。"
+					},
+					{
+						"xh":"28",
+						"yx":"104.020804,30.689253",
+						"title":"金沙遗址博物馆陈列馆",
+						"imgurl":"./webimages/28.jpg",
+						"shijian":"2005年4月至9月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金沙遗址博物馆陈列馆地点",
+						"scontent":"①发掘面积：8300平方米；②遗迹：灰坑72个、灰沟2个；③遗物：出土大量陶器、石器；④时代：商末至西周时期。"
+					},
+					{
+						"xh":"29",
+						"yx":"104.022185,30.694022",
+						"title":"西延雅舍",
+						"imgurl":"./webimages/29.jpg",
+						"shijian":"2005年7月至2006年1月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区西延雅舍地点",
+						"scontent":"①发掘面积：2925平方米；②遗迹：窑址5座、灰坑625个、灰沟24条、墓葬130座；③遗物：戈、矛、剑、牌等铜器，牌、凿等玉器，石器和大量陶器；④时代：商代晚期至春秋早期；⑤意义：与金牛城乡一体化A、B地点同属一大型墓地，部分墓葬用船棺作葬具，第一次发现专为随葬而制作的冥器。"
+					},
+					{
+						"xh":"30",
+						"yx":"104.01523,30.691516",
+						"title":"蓝光雍锦湾",
+						"imgurl":"./webimages/30.jpg",
+						"shijian":"2005年8月至2006年4月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区蓝光集团雍景湾地点",
+						"scontent":"①发掘面积：18200平方米；②遗迹：房址9座、窑址29座、灰坑714个、灰沟16条、墓葬381座；③遗物：少量玉石器、铜器和大量陶器；④时代：商代末期到西周时期；⑤意义：与燕沙庭院属同一墓地，是金沙遗址的一处大型墓地。"
+					},
+					{
+						"xh":"31",
+						"yx":"104.009984,30.701173",
+						"title":"龙嘴六组拆迁房地点",
+						"imgurl":"./webimages/31.jpg",
+						"shijian":"2005年9月至10月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区龙嘴六组拆迁房地点",
+						"scontent":"①发掘面积：600平方米；②遗迹：灰坑3个；③遗物：大量陶器；④时代：商周时期。"
+					},
+					{
+						"xh":"32",
+						"yx":"104.019052,30.690448",
+						"title":"金沙遗址博物馆停车场及文保中心",
+						"imgurl":"./webimages/32.jpg",
+						"shijian":"2005年9月至12月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金沙遗址博物馆停车场及文保中心地点",
+						"scontent":"①发掘面积：6050平方米；②遗迹：宝墩文化时期房址8个、灰坑3个；十二桥文化时期灰坑286个、灰沟1条、窑址1座；③遗物：出土大量陶器、石器、玉器；④时代：新石器时代晚期到西周；⑤意义：发现了宝墩文化时期房址遗存。"
+					},
+					{
+						"xh":"33",
+						"yx":"104.004579,30.706848",
+						"title":"金牛区城乡一体化3号地点",
+						"imgurl":"./webimages/33.jpg",
+						"shijian":"2005年9月至12月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区城乡一体化3号地点",
+						"scontent":"①发掘面积：2450平方米；②遗迹：房址2座、灰坑112个、墓葬2 座；③遗物：大量的陶器；④时代：西周时期。"
+					},
+					{
+						"xh":"34",
+						"yx":"104.016792,30.704955",
+						"title":"泰基花语廊",
+						"imgurl":"./webimages/34.jpg",
+						"shijian":"2005年11月至2006年6月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区郎家一组地点（泰基•花语廊）",
+						"scontent":"①发掘面积：500平方米；②遗迹：灰坑16个、灰沟2条、墓葬4座；③遗物：大量陶片；④时代：商周时期。"
+					},
+					{
+						"xh":"35",
+						"yx":"104.022803,30.69443",
+						"title":"金牛区城乡一体化5号A地点",
+						"imgurl":"./webimages/35.jpg",
+						"shijian":"2006年1月至2007年3月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区城乡一体化5号A地点",
+						"scontent":"①发掘面积：4480平方米；②遗迹：房址3座、窑址5座、灰坑714个、灰沟38条、墓葬236座；③遗物：少量的铜器、玉石器和大量陶器；④时代：主体遗存为商代中期至春秋早期，有少量的宝墩文化遗存；⑤意义：3座带有大型木柱的建筑基址最为重要，是黄忠村宫殿区的组成部分。"
+					},
+					{
+						"xh":"36",
+						"yx":"104.020777,30.695114",
+						"title":"金牛区城乡一体化5号B地点",
+						"imgurl":"./webimages/36.jpg",
+						"shijian":"2006年1月至2007年9月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区城乡一体化5号B地点",
+						"scontent":"①发掘面积：14600平方米；②遗迹：宝墩文化时期房址46座、灰坑2个、墓葬1座；十二桥文化时期灰坑929个、灰沟44条、墓葬642座、窑址41座、房址2座；③遗物：较多的玉石器和铜器，数以万计的陶器；④时代：宝墩时期文化遗存较为丰富，主要是房址，商代晚期至西周时期是一处大型墓地；⑤意义：与金牛城乡一体化5号A地点、西延雅舍地点属同一处大型墓地。"
+					},
+					{
+						"xh":"37",
+						"yx":"104.011191,30.712716",
+						"title":"迎宾路小学",
+						"imgurl":"./webimages/37.jpg",
+						"shijian":"2006年1月至3月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区迎宾路小学地点",
+						"scontent":"①发掘面积：320平方米；②遗迹：灰坑2个，墓葬1座；③遗物：大量陶器；④时代：西周时期和战国时期。"
+					},
+					{
+						"xh":"39",
+						"yx":"104.020605,30.699807",
+						"title":"西城天下",
+						"imgurl":"./webimages/39.jpg",
+						"shijian":"2006年4月至7月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区羊西线西城天下地点",
+						"scontent":"①发掘面积：2500平方米；②遗迹：窑址2座、灰坑57个；③遗物：大量陶器；④时代：西周时期。"
+					},
+					{
+						"xh":"40",
+						"yx":"104.012876,30.70035",
+						"title":"龙嘴五组拆迁房地点",
+						"imgurl":"./webimages/40.jpg",
+						"shijian":"2006年10月至11月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区龙嘴五组拆迁房地点（金地地点）",
+						"scontent":"①发掘面积：800平方米；②遗迹：灰坑12个、灰沟1条、墓葬10座；③遗物：大量陶器；④时代：商周时期。"
+					},
+					{
+						"xh":"41",
+						"yx":"104.019744,30.693049",
+						"title":"华润房产",
+						"imgurl":"./webimages/41.jpg",
+						"shijian":"2006年11月至2007年3月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区华润房产地点",
+						"scontent":"①发掘面积：1000平方米；②遗迹：灰坑78个、墓葬3座、窑址1座；③遗物：大量陶器；④时代：商代晚期至西周时期"
+					},
+					{
+						"xh":"42",
+						"yx":"104.008603,30.708012",
+						"title":"尚瑞天韵",
+						"imgurl":"./webimages/42.jpg",
+						"shijian":"2007年3月至5月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区尚瑞天韵西三环项目地点",
+						"scontent":"①发掘面积：2300平方米；②遗迹：窑址2座、灰坑85个；③遗物：大量陶器、铜器、玉器、石器；④时代：西周时期。"
+					},
+					{
+						"xh":"43",
+						"yx":"104.023139,30.693437",
+						"title":"金沙郎寓",
+						"imgurl":"./webimages/43.jpg",
+						"shijian":"2007年4月至今",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区黄忠村金沙朗寓地点",
+						"scontent":"①发掘面积：1600平方米；②遗迹：房址7座、窑址4座、灰坑33个、灰沟2条；③遗物：大量陶器；④时代：商代晚期至西周时期；⑤意义：其中2座带有大型柱坑的房址，应是宫殿建筑基址，属黄忠村宫殿区的一部分。"
+					},
+					{
+						"xh":"44",
+						"yx":"104.033353,30.704454",
+						"title":"金牛区残联培训中心",
+						"imgurl":"./webimages/44.jpg",
+						"shijian":"2007年6月至7月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区残联培训中心地点",
+						"scontent":"①发掘面积：700平方米；②遗迹：房址1座、灰坑1个、墓葬1座；③遗物：陶器、铜器、玉器、石器；④时代：西周时期。"
+					},
+					{
+						"xh":"45",
+						"yx":"104.018305,30.713345",
+						"title":"中环西岸观邸",
+						"imgurl":"./webimages/45.jpg",
+						"shijian":"2007年8月至10月",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区中环西岸观邸工程地点",
+						"scontent":"①发掘面积：6600平方米；②遗迹：房址2座、灰坑7个；③遗物：大量宝墩时期的陶器；④时代：宝墩文化时期。"
+					},
+					{
+						"xh":"47",
+						"yx":"104.022192,30.691976",
+						"title":"金牛区城乡一体化5号C地点",
+						"imgurl":"./webimages/47.jpg",
+						"shijian":"2007年10月至今",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"金牛区城乡一体化5号C地点",
+						"scontent":"①发掘面积：2550平方米；②遗迹：房址2座、灰坑537个、窑址3座、灰沟80条、墓葬3座；③遗物：大量陶器、铜器、玉器、石器④时代：堆积主体时代为商周时期。此外还发现有一些宝墩时期的地层堆积。"
+					},
+					{
+						"xh":"48",
+						"yx":"104.015086,30.699543",
+						"title":"龙嘴G线",
+						"imgurl":"./webimages/48.jpg",
+						"shijian":"2007年10月至今",
+						"fajuezhe":"成都文物考古研究所",
+						"fajuedd":"青羊区龙嘴G线地点",
+						"scontent":"①发掘面积：1800平方米②遗迹：窑址1座、灰坑45个、灰沟5条、墓葬110座；③遗物：陶器、石器、玉器；④时代：商代末期到西周；⑤意义：是金沙遗址的又一处大型墓地。"
+					}
+		
+				]
+		};
+	
+	
+	
+	
+	map.centerAndZoom(point,15);
+	map.enableScrollWheelZoom(true); 
+
+	addPointall(); 
+
+	function addPointall(){
+		var pointArray = new Array();
+		var map_data = json_site.sites;
+		for(var i=0;i<map_data.length;i++){
+			var urltitle = map_data[i].title;
+			var imgurl = map_data[i].imgurl;
+			var findtime = map_data[i].shijian;
+			var dizhi = map_data[i].fajuedd;
+			var conbox = map_data[i].scontent;
+			var myIcon = new BMap.Icon("./webimages/dian.gif", new BMap.Size(16,16));
+			var marker = new BMap.Marker(new BMap.Point(map_data[i].yx.split(",")[0], map_data[i].yx.split(",")[1]),{icon:myIcon}); // 创建点			
+			var sContent="<div style='height:250px;overflow:hidden'><img src='"+imgurl+"' style='width:500px;'/></div>"+"<div style='width:500px;height:188px;overflow-y:auto;'><p>●发掘时间："+findtime+"<br/>"+"●发掘地点："+dizhi+"<br/>"+"●主要发现："+conbox+"</p></div>";
+			var infoWindow = new BMap.InfoWindow(sContent);
+			
+			map.addOverlay(marker);    //增加点
+			//marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+			pointArray[i] = new BMap.Point(map_data[i].yx.split(",")[0], map_data[i].yx.split(",")[1]);
+			
+
+
+
+			addClickHandler(infoWindow,marker);
+			//marker.addEventListener("click",attribute);
+		}
+		//让所有点在视野范围内
+		map.setViewport(pointArray);
+		//获取覆盖物位置
+		
+		function addClickHandler(infoWindow,marker){
+			marker.addEventListener("click",function(e){
+				this.openInfoWindow(infoWindow);
+				//openInfo(infoWindow,e)
+				}
+			);
+		}
+
+
+	}
+
+map.setMapStyle({
+  styleJson:[
+          {
+                    "featureType": "land",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#212121"
+                    }
+          },
+          {
+                    "featureType": "building",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#2b2b2b"
+                    }
+          },
+          {
+                    "featureType": "highway",
+                    "elementType": "all",
+                    "stylers": {
+                              "lightness": -42,
+                              "saturation": -91
+                    }
+          },
+          {
+                    "featureType": "arterial",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -77,
+                              "saturation": -94
+                    }
+          },
+          {
+                    "featureType": "green",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#1b1b1b"
+                    }
+          },
+          {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#181818"
+                    }
+          },
+          {
+                    "featureType": "subway",
+                    "elementType": "geometry.stroke",
+                    "stylers": {
+                              "color": "#181818"
+                    }
+          },
+          {
+                    "featureType": "railway",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -52
+                    }
+          },
+          {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": {
+                              "color": "#313131"
+                    }
+          },
+          {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": {
+                              "color": "#8b8787"
+                    }
+          },
+          {
+                    "featureType": "manmade",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#1b1b1b"
+                    }
+          },
+          {
+                    "featureType": "local",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -75,
+                              "saturation": -91
+                    }
+          },
+          {
+                    "featureType": "subway",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "lightness": -65
+                    }
+          },
+          {
+                    "featureType": "railway",
+                    "elementType": "all",
+                    "stylers": {
+                              "lightness": -40
+                    }
+          },
+          {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": {
+                              "color": "#8b8787",
+                              "weight": "1",
+                              "lightness": -29,
+                              "visibility": "off"
+                    }
+          }
+]
+});	
+</script>
+</body>
+</html>

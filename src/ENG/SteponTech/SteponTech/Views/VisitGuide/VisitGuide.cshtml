@@ -1,0 +1,831 @@
+@using SteponTech.Data.BaseModels
+@using System.Linq;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Visit</title>
+    <link rel="Shortcut Icon" href="/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" href="/lib/jquery-calendar/css/calendar.css">
+    <link rel="stylesheet" type="text/css" href="/css/visitGuide/visitguide.css" />
+    <link rel="stylesheet" type="text/css" href="/common/common.css" />
+    <!--百度地图-->
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <style type="text/css">
+        /*标题样式共用*/
+        .intosandsTitle {
+            font-family: 'Optima Regular';
+            color: #edc048;
+            font-size: 29px;
+            margin-top: 80px;
+            font-weight: bold;
+        }
+        /*馆长致辞模块*/
+        .boss-speech {
+            width: 100%;
+            border-top: 1px solid #3d2b15 !important;
+            margin: 60px 0px 80px 0px;
+        }
+
+        .boss-introduce {
+            width: 100%;
+        }
+
+            .boss-introduce > p {
+                margin: 80px 0px;
+            }
+        /*馆长的帅照*/
+        .boss-img > img {
+            position: relative;
+        }
+
+        .boss-img div span {
+            margin-left: 10px;
+        }
+        /*馆长的致辞*/
+        .boss-speech-info {
+            font-family: 'Futura Bk BT Book';
+            color: #ffda84;
+        }
+
+            .boss-speech-info > div {
+                width: 95%;
+                margin-top: 15%;
+            }
+
+            .boss-speech-info h4 {
+                font-size: 18px;
+                font-family: 'Optima Regular';
+                color: #edc048;
+                margin-bottom: 3%;
+            }
+
+        .infoP {
+            /*限制行数*/
+            position: relative;
+            line-height: 28px;
+            max-height: 196px;
+            overflow: hidden;
+        }
+
+            .infoP::after {
+                content: "...";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding-left: 40px;
+            }
+
+        .boss-speech-info p {
+            font-family: 'Futura Bk BT Book';
+            line-height: 28px;
+            width: 100%;
+            font-size: 16px;
+        }
+        /*展开更多*/
+        .boss-speech-more {
+            cursor: pointer;
+            width: 340px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'Futura Bk BT Book';
+            font-size: 16px;
+            color: #ffda84;
+            border: 1px solid #ffda84;
+            margin: 10% auto;
+        }
+
+            .boss-speech-more:hover {
+                color: #170801;
+                background-color: #ffda84;
+            }
+        .content-ff {
+            font-family: 'Futura Bk BT Book'
+        }
+    </style>
+
+
+
+    <!-- [if IE 8] -->
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!-- [endif] -->
+</head>
+<body>
+    <!--分享开始   JiaThis Button BEGIN -->
+    <script>
+        var jiathis_config = {
+            siteNum: 15,
+            sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+            summary: "",
+            boldNum: 6,
+            showClose: true,
+            shortUrl: false,
+            hideMore: false
+        }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+    <!--分享结束   JiaThis Button end -->
+    <div class="container-fluid">
+        <div class="container-fluid ">
+            <!--顶部开始-->
+            <div class="row nav-bg b3-border">
+                <div class="container padding_0  aa">
+                    <div class="row ">
+                        <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                                <img src="../img/index/banner/logo.png" alt="" class="img-responsive center-block" />
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                                <div class="top-list">
+                                    <ul>
+                                        <li><a href="/JinSha/Index">English</a></li>
+                                        <li id="China" class="China">Chinese <img class="Uparr" src="../img/arrows/san.png" /></li>
+                                        <ol id="hideOl" class="hideOl">
+                                            <li>General</li>
+                                            <li class="stude">Academic</li>
+                                            <li class="children">Education</li>
+                                        </ol>
+                                    </ul>
+                                </div>
+                                <div class="menu-btn">
+                                    <img src="../common/headerImg/menu.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide-top-list">
+                        <ul>
+                            <a href="">
+                                <li>大众版</li>
+                            </a>
+                            <a href="">
+                                <li><a href="/JinSha/Index">English</a></li>
+                            </a>
+                            <a href="">
+                                <li>学术版</li>
+                            </a>
+                            <a href="">
+                                <li>青教版</li>
+                            </a>
+                            @if (ViewBag.Head?.Count > 0)
+                            {
+                                foreach (Models item in ViewBag.Head)
+                                {
+                                    switch (item.ModelName)
+                                    {
+                                        case "HOME":
+                                            <a href="/JinSha/Index">
+                                                <li>HOME</li>
+                                            </a>
+                                            break;
+                                        case "ABOUT":
+                                            <a href="/About/Intosands">
+                                                <li>ABOUT</li>
+                                            </a>
+                                            break;
+                                        case "VISIT":
+                                            <a class="active" href="/VisitGuide/VisitGuide">
+                                                <li> VISIT </li>
+                                            </a>
+                                            break;
+                                        case "GUIDE":
+                                            <a href="/Exhibition/Index">
+                                                <li> GUIDE </li>
+                                            </a>
+                                            break;
+                                        case "NEWS":
+                                            <a href="/NEWS/Index">
+                                                <li> NEWS </li>
+                                            </a>
+                                            break;
+                                        case "CREATIVITY":
+                                            <a href="/Creation/Index">
+                                                <li> ARTS </li>
+                                            </a>
+                                            break;
+                                        case "COLLECTIONS":
+                                            <a href="/Collection/Index">
+                                                <li> COLLECTIONS </li>
+                                            </a>
+                                            break;
+                                        case "EVENTS":
+                                            <a href="/Culture/Index">
+                                                <li> EVENTS </li>
+                                            </a>
+                                            break;
+                                    }
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div class="row mAp0">
+                        <div class="nav-list">
+                            <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                                <ul>
+                                    @if (ViewBag.Head?.Count > 0)
+                                    {
+                                        foreach (Models item in ViewBag.Head)
+                                        {
+                                            switch (item.ModelName)
+                                            {
+                                                case "HOME":
+                                                    <a href="/JinSha/Index">
+                                                        <li>HOME</li>
+                                                    </a>
+                                                    break;
+                                                case "ABOUT":
+                                                    <a href="/About/Intosands">
+                                                        <li>ABOUT</li>
+                                                    </a>
+                                                    break;
+                                                case "VISIT":
+                                                    <a class="active" href="/VisitGuide/VisitGuide">
+                                                        <li> VISIT </li>
+                                                    </a>
+                                                    break;
+                                                case "GUIDE":
+                                                    <a href="/Exhibition/Index">
+                                                        <li> GUIDE </li>
+                                                    </a>
+                                                    break;
+                                                case "NEWS":
+                                                    <a href="/NEWS/Index">
+                                                        <li> NEWS </li>
+                                                    </a>
+                                                    break;
+                                                case "CREATIVITY":
+                                                    <a href="/Creation/Index">
+                                                        <li> ARTS </li>
+                                                    </a>
+                                                    break;
+                                                case "COLLECTIONS":
+                                                    <a href="/Collection/Index">
+                                                        <li> COLLECTIONS </li>
+                                                    </a>
+                                                    break;
+                                                case "EVENTS":
+                                                    <a href="/Culture/Index">
+                                                        <li> EVENTS </li>
+                                                    </a>
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--顶部结束-->
+    <!--Banner图-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            @if (ViewBag.Banner != null)
+            {
+                <img src='/upload/banner/@ViewBag.Banner.FileName' class="img-responsive center-block .mbb" alt="展览导览">
+            }
+        </div>
+    </div>
+    <!--买票的弹窗-->
+    <div class="buyP">
+        <div class="threeLink">
+            <p class="closeFont">×</p>
+           <a target="_blank" href="http://you.ctrip.com/sight/chengdu104/48863.html">XieCheng</a>
+            <a target="_blank" href="http://www.ly.com/scenery/BookSceneryTicket_17528.html">TongCheng</a>
+            <a target="_blank" href="http://ticket.lvmama.com/scenic-104009">LvMaMa</a>
+            @*<a href="javascript:void(0)">XieCheng</a>
+    <a href="javascript:void(0)">TongCheng</a>
+    <a href="javascript:void(0)">LvMaMa</a>*@
+        </div>
+    </div>
+    <!--Banner图下面的内容-->
+    <div class="content container">
+        <!--内容的导航-->
+        <div class="cont-nav row">
+            <ul class="center-block">
+                @if (ViewBag.Colunms?.Count > 0)
+                {
+                    for (var i = 0; i < ViewBag.Colunms.Count; i++)
+                    {
+                        Colunms colunm = ViewBag.Colunms[i];
+                        var anchorId = "#" + colunm.Id;
+                        if ("Visitor Regulations" == colunm.Name)
+                        {
+                            colunm.Name = "Visitor Regulations";
+                        }
+                        <a href="@anchorId"><li>@colunm.Name</li></a>
+                    }
+                }
+            </ul>
+        </div>
+        @if (ViewBag.Colunms?.Count > 0)
+        {
+            List<Information> infomations = ViewBag.Informations;
+            for (var i = 0; i < ViewBag.Colunms.Count; i++)
+            {
+                Colunms colunm = ViewBag.Colunms[i];
+                var anchorId = colunm.Id;
+                var infos = new List<Information>();
+                if (infomations?.Count > 0)
+                {
+                    infos = infomations.Where(e => e.ColumnId == colunm.Id).OrderBy(e => e.CreationDate).ToList();
+                }
+                switch (colunm.Name)
+                {
+                    case "Opening Hours":
+                        if (infos?.Count > 0)
+                        {
+                            <!--开馆时间-->
+                            <div id="@anchorId" class="openTime">
+                                <p class="row ptitle">Opening Hours</p>
+                                <img class="myImg img1" src="/img/visitguide/OPENING-HOURS.png" alt="">
+                                <!--左边的时间、天气、开馆时间、售票时间-->
+                                <div class="row">
+                                    <div class="openTime-info  col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <!--时间-->
+                                        <div class="openTime-infoTime">
+                                            <div class="timeBox center-block">
+                                                <div class="timeNumber col-lg-5 col-md-5 col-sm-5 col-xs-5"></div>
+                                                <div class="dateInfo col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                    <p class="dateInfo-date">
+                                                        <span id="dataSpan1"></span>
+
+                                                    </p>
+                                                    <span id="dataSpan2"></span>
+                                                    @*<p class="dn center-block"></p>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--天气-->
+                                        <div class="openTime-infoWeather">
+                                            <!--<div id="weather"></div>-->
+                                            <div class="weatherBox temp">
+                                                <p><span class="qiwen">16 ℃</span></p>
+                                            </div>
+                                            <style type="text/css">
+                                                .temp {
+                                                    height: 115px;
+                                                    color: #DAB766;
+                                                    width: 80%;
+                                                    height: 100%;
+                                                    margin: 0 auto;
+                                                    font-size: 18px;
+                                                }
+                                                .temp p {
+                                                    width: 80%;
+                                                    position: relative;
+                                                    min-height: 1px;
+                                                    padding-right: 0;
+                                                    padding-left: 0;
+                                                    padding: 7% 0;
+                                                    margin-left:64px;
+                                                }
+                                                .temp p .qiwen {
+                                                    font-weight: 300;
+                                                    font-size: 28px;
+                                                    margin-left: 15%;
+                                                }
+                                            </style>
+                                        </div>
+                                        <!--开馆时间、售票时间-->
+                                        <div class="openAndSell row">
+                                            <div class="open">
+                                                <div class="openDiv1 col-xs-4 content-ff">Opening hours：</div>
+                                                <div class="openDiv2 col-xs-8 content-ff">
+                                                    <pre class="openTimePre">@infos[0].Intro</pre>
+                                                </div>
+                                            </div>
+                                            <p class="sell content-ff">Ticket time： <span>@infos[0].InformationTime</span></p>
+                                        </div>
+                                    </div>
+                                    <!--右边的日历-->
+                                    <div class="openTime-calendar col-lg-6 col-md-6 col-sm-12 col-xs-12 " id="rightCalendar" data-closedate="@ViewBag.Footer.ClosedDay">
+                                        <!--<p>金沙日历</p>-->
+                                        <div class="dateTable">
+                                            <div id="calendar" class="calendar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        break;
+                    case "Getting Here":
+                        if (infos?.Count > 0)
+                        {
+                            <!--交通信息-->
+                            <div id="@anchorId" class="trafficInfo">
+                                <p class="row ptitle zz">Getting Here</p>
+                                <img class="myImg" src="/img/visitguide/aaa.png" alt="">
+                                <div class="mapBox row">
+                                    <div class="mapInfo col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div id="map"></div>
+                                        <div class="infoBox">
+                    
+                                                <div class="address">Address：<span>@infos[0].Address </span></div>
+                                                <div class="phone">Phone：<span>@infos[0].ConsultingTelephone</span></div>
+                                         
+                                                <div class="email ">Email：<span>@infos[0].Email</span></div>
+                                                <div class="zipCode ">Zip code：<span></span>@infos[0].ZipCode</div>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="goMothods col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        @if (ViewBag.HereColunms?.Count > 0)
+                                        {
+                                            <div class="goMothods-box">
+                                                <ul>
+                                                    @for (var p = 0; p < ViewBag.HereColunms.Count; p++)
+                                                    {
+                                                        Colunms hereColunm = ViewBag.HereColunms[p];
+                                                        var hereId = "#here" + p;
+                                                        if (p == 0)
+                                                        {
+                                                            <li class="contNav-active" id="@hereId">@hereColunm.Name</li>
+                                                        }
+                                                        else
+                                                        {
+                                                            <li id="@hereId">@hereColunm.Name</li>
+                                                        }
+                                                    }
+                                                </ul>
+                                                <div class="scollBox">
+                                                    @for (var q = 0; q < ViewBag.HereColunms.Count; q++)
+                                                    {
+                                                        var hereInfos = new List<Information>();
+                                                        Colunms hereColunm = ViewBag.HereColunms[q];
+                                                        if (infomations?.Count > 0)
+                                                        {
+                                                            hereInfos = infomations.Where(e => e.ColumnId == hereColunm.Id).OrderBy(e => e.CreationDate).ToList();
+                                                        }
+                                                        var hereId = "#hereText" + q;
+                                                        if (hereInfos?.Count > 0)
+                                                        {
+                                                            if (q == 0)
+                                                            {
+                                                                <div class="goMothods-text center-block" id="@hereId">
+                                                                    @Html.Raw(hereInfos[0].Content)
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="goMothods-text center-block tabText" id="@hereId">
+                                                                    @Html.Raw(hereInfos[0].Content)
+                                                                </div>
+                                                            }
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        break;
+                    case "Services":
+                        <!--服务信息-->
+                        <div id="@anchorId" class="serviceInfo">
+                            <p class="row ptitle zz">Services</p>
+                            <img class="myImg" src="/img/visitguide/fuwu.png" alt="">
+                            <div class="serviceInfo-info row">
+                                <ul>
+                                    @if (ViewBag.ServiceColunms?.Count > 0)
+                                    {
+                                        for (var x = 0; x < ViewBag.ServiceColunms.Count; x++)
+                                        {
+                                            var serviceInfos = new List<Information>();
+                                            Colunms serviceColunm = ViewBag.ServiceColunms[x];
+                                            if (infomations?.Count > 0)
+                                            {
+                                                serviceInfos = infomations.Where(e => e.ColumnId == serviceColunm.Id).OrderBy(e => e.CreationDate).ToList();
+                                            }
+                                            switch (serviceColunm.Name)
+                                            {
+                                                case "Ticketing":
+                                                    if (serviceInfos?.Count > 0)
+                                                    {
+                                                        <!--票务服务-->
+                                                        <li class="col-lg-6 col-md-6 col-sm-12  col-xs-12">
+                                                            @if (x == 0 || x == 1)
+                                                            {
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    <img class=" center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" />
+                                                                </div>
+                                                            }
+                                                            <div class="ticketServiceInfo col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <ol>
+                                                                    <li class="ticketServiceInfoLi1">Ticketing</li>
+                                                                    <li class="ticketServiceInfoLi2"></li>
+                                                                    <li class="ticketServiceInfoLi3">
+                                                                        <p class="buyAddress">@serviceInfos[0].Address</p>
+                                                                        <p class="buyTime">Ticket time：@serviceInfos[0].InformationTime</p>
+                                                                        <p class="buyPrice">Price：@serviceInfos[0].TicketPrice</p>
+                                                                    </li>
+                                                                    <a href="/VisitGuide/ServiceInfo/@serviceInfos[0].Id"><li class="button learnmore-ff">Learn more</li></a>
+                                                                </ol>
+                                                            </div>
+                                                            @if (x == 2 || x == 3)
+                                                            {
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    <img class=" center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" />
+                                                                </div>
+                                                            }
+                                                        </li>
+                                                    }
+                                                    break;
+                                                case "Interpreter":
+                                                    if (serviceInfos?.Count > 0)
+                                                    {
+                                                        <!--讲解服务-->
+                                                        <li class="col-lg-6 col-md-6 col-sm-12  col-xs-12">
+                                                            @if (x == 0 || x == 1)
+                                                            {
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    <img class=" center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" alt="" />
+                                                                </div>
+                                                            }
+                                                            <div class="explain col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <ol>
+                                                                    <li class="explainLi1">Interpreter</li>
+                                                                    <li class="explainLi2"></li>
+                                                                    <li class="explainLi3">
+                                                                        <p class="explainAddress">Interpreter service is provided at：</p>
+                                                                        <p class="explainAddress1">@Html.Raw(serviceInfos[0].Intro)</p>
+                                                                    </li>
+                                                                    <a href="/VisitGuide/ServiceInfo/@serviceInfos[0].Id"><li class="button learnmore-ff">Learn more</li></a>
+                                                                </ol>
+                                                            </div>
+                                                            @if (x == 2 || x == 3)
+                                                            {
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    <img class="center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" alt="" />
+                                                                </div>
+                                                            }
+                                                        </li>
+                                                    }
+                                                    break;
+                                                case "Food":
+                                                    <!--餐饮服务-->
+                                                    <li class="col-lg-6 col-md-6 col-sm-12  col-xs-12">
+                                                        @if (x == 0 || x == 1)
+                                                        {
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <img class=" center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" />
+                                                            </div>
+                                                        }
+                                                        <div class="food col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                            <ol>
+                                                                <li class="foodlLi1">Food</li>
+                                                                <li class="foodlLi2"></li>
+                                                                <li class="foodlLi3">
+                                                                    <p class="foodInfo">@serviceInfos[0].Intro</p>
+                                                                </li>
+                                                                <a href="/VisitGuide/ServiceInfo/@serviceInfos[0].Id"><li class="button learnmore-ff">Learn more</li></a>
+                                                            </ol>
+                                                        </div>
+                                                        @if (x == 2 || x == 3)
+                                                        {
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <img class=" center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" />
+                                                            </div>
+                                                        }
+                                                    </li>
+                                                    break;
+                                                case "Online Booking":
+                                                    <!--预约服务-->
+                                                    <li class="col-lg-6 col-md-6 col-sm-12  col-xs-12">
+                                                        @if (x == 0 || x == 1)
+                                                        {
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <img class=" center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" />
+                                                            </div>
+                                                        }
+                                                        <div class="roder col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                            <ol>
+                                                                <li class="roderLi1">Online Booking</li>
+                                                                <li class="roderLi2"></li>
+                                                                <li class="roderLi3">
+                                                                    <p class="foodInfo">@serviceInfos[0].Intro</p>
+                                                                </li>
+                                                                <a id="buy" href="javascript:void(0)" class="buy-box  center-block"><li class="button ticket-box learnmore-ff">Ticket</li></a>
+                                                                <a target="_blank" href="/VisitGuide/Notice?id=@serviceInfos[0].Id"><li class="button learnmore-ff">Learn more</li></a>
+                                                            </ol>
+                                                        </div>
+                                                        @if (x == 2 || x == 3)
+                                                        {
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <img class=" center-block" src="/upload/Information/@serviceInfos[0].Id/@serviceInfos[0].Photo" />
+                                                            </div>
+                                                        }
+                                                    </li>
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        break;
+                    case "Visitor Regulations":
+                        if (infos?.Count > 0)
+                        {
+                            <!--参观须知-->
+                            <div id="@anchorId" class="visitInfo">
+                                <p class="row ptitle zz">Visitor Regulations</p>
+                                <img class="myImg" src="/img/visitguide/VISITOR-REGULATIONS.png" alt="">
+                                <!--参观须知的规则-->
+                                <div class="rulesBox row">
+                                    <ol class="rules col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                                        @Html.Raw(infos[0].Content)
+                                    </ol>
+                                    <!--参观须知的图片-->
+                                    <div class="visitImg1 col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right">
+                                        <img src="/upload/Information/@infos[0].Id/@infos[0].Photo" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        break;
+                    default:
+                        <!--新栏目-->
+                        if (infos?.Count > 0)
+                        {
+                            <div id="@anchorId" class="boss-speech row">
+                                <div class="boss-introduce">
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 intosandsTitle">@colunm.Name</p>
+                                    <div class="boss-imginfo col-lg-12 col-md-12 col-sm-12 col-xs-12 img-responsive">
+                                        <!--图片-->
+                                        <div class="boss-img  col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                                            <img src="/upload/Information/@infos[0].Id/@infos[0].Photo" alt="" class="img-responsive">
+                                        </div>
+                                        <!--文字内容-->
+                                        <div class="boss-speech-info clearfix col-lg-7 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
+                                            <div class="center-block " id="bossInfoBox">
+                                                <h4>@infos[0].Title</h4>
+                                                <p class="infoP">
+                                                    @infos[0].Intro
+                                                </p>
+                                                <a href="/Jinsha/NewDetail?id=@infos[0].Id "><div class="boss-speech-more">Learn more</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        break;
+                }
+            }
+        }
+    </div>
+    <!--页面下面的长线-->
+    <div class="line"></div>
+    @if (ViewBag.Footer != null)
+    {
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/common/common.js"></script>
+        <!--天气-->
+        <script src="/lib/jQuery-weather/js/jquery.leoweather.min.js"></script>
+        <!--日历-->
+        <script src="/lib/jquery-calendar/js/calendar.js"></script>
+        <!--百度地图-->
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0cGpwmy0In6Mj8tpcYg29HdLKt9z29Zx"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js"></script>
+        <!--百度地图的样式-->
+        <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+        <script type="text/javascript" src="/js/visitGuide/visitguide.js"></script>
+        <footer class="container footer ">
+            <div class="row">
+                <!--联系我们-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                    <p class="callmeP1">Contact Us</p>
+                    <p class="callmeP2">Phone:<span> @ViewBag.Footer.PhoneNumber</span></p>
+                    <p class="callmeP3">Address:<span> @ViewBag.Footer.Address</span></p>
+                    <div class="row twopic">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                            <img class="img-responsive" src="@ViewBag.Footer.Wechat" />
+                            <p><img src="../common/footerImg/bottom_wechat.png" /><span>Follow our WeChat</span></p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <img class="img-responsive" src="@ViewBag.Footer.Watermark" />
+                            <p><img src="../common/footerImg/weibo-icon.png" /><span class="color">Follow our WeiBo</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--友情链接-->
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                    <p class="linkP1">Links of Interest</p>
+                    <!--博物馆-->
+                    <div class="footer-museum divselect">
+                        <cite onchange="window.location=this.href;">Museums</cite>
+                        <ul id="OtherList" tag="@ViewBag.Footer.MuseumLink"></ul>
+                    </div>
+                    <!--政府-->
+                    <div class="footer-government divselect">
+                        <cite onchange="window.location=this.href;">Others</cite>
+                        <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                        <script>
+                            $(function () {
+                                var data = JSON.parse($('#GovernmentalList').attr('tag'));
+                                var cc1 = "";
+                                $.each(data, function (i, item) {
+                                    cc1 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                //console.log(cc1);
+                                $('#GovernmentalList').append(cc1);
+
+                                var data2 = JSON.parse($('#OtherList').attr('tag'));
+                                var cc2 = "";
+                                $.each(data2, function (i, item) {
+                                    cc2 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                });
+                                //console.log(cc2);
+                                $('#OtherList').append(cc2);
+
+                            });
+                        </script>
+                    </div>
+
+                    <p class="help">Plan Your Visit</p>
+                    <div class="link-btm-info">
+                        @if (ViewBag.Colunms?.Count > 0)
+                        {
+                            List<Colunms> visitColunms = ViewBag.Colunms;
+                            var openingHours = visitColunms.FirstOrDefault(e => e.Name == "Opening Hours");
+                            var gettingHere = visitColunms.FirstOrDefault(e => e.Name == "Getting Here");
+                            var services = visitColunms.FirstOrDefault(e => e.Name == "Services");
+                            var visitTips = visitColunms.FirstOrDefault(e => e.Name == "Visitor Regulations");
+                            <ul>
+                                @if (openingHours != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@openingHours.Id">
+                                        <li class="opening">Opening Hours</li>
+                                    </a>
+                                }
+                                @if (gettingHere != null)
+                                {
+                                    <a href="/VisitGuide/VisitGuide#@gettingHere.Id">
+                                        <li> Getting Here</li>
+                                    </a>
+                                }
+                            </ul>
+                                <ul>
+                                    @if (services != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@services.Id">
+                                            <li class="Services">Services</li>
+                                        </a>
+                                    }
+                                    @if (visitTips != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@visitTips.Id">
+                                            <li> Visitor Regulations</li>
+                                        </a>
+                                    }
+                                </ul>
+                        }
+                    </div>
+                </div>
+                <!--版权-->
+                <div class="col-xs-12  copyright padding_0">
+                    <div>
+                        <img class="img-responsive" src="../common/footerImg/bottom_logo.png" />
+                    </div>
+                    <p class="copyrightP1">Jinsha Site Museum All Rights Reserved</p>
+                    <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                </div>
+            </div>
+        </footer>
+    }
+    <!--返回顶部-->
+    <div class="toTop" style="display: none;">
+        <img class="bgarr" src="/img/arrows/return_nor.png" />
+        <img class="hoverImg" src="/img/arrows/return_pre.png">
+    </div>
+    <script>
+                            $(document).ready(function () {
+                                $.get('https://free-api.heweather.com/v5/forecast?city=chengdu&key=40ffed6b7121450e9e3f1e4cc3204986').then(function (data) { 
+                                    var free = data.HeWeather5[0];
+                                    var tmp_json = free.daily_forecast[0];
+                                    var tmp = (parseFloat(tmp_json.tmp.max) + parseFloat(tmp_json.tmp.min)) / 2;
+                                    $('.qiwen').html(tmp + ' ℃');
+                                 })
+                            })
+    </script>
+</body>
+</html>

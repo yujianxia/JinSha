@@ -1,0 +1,274 @@
+﻿
+@{
+    Layout = null;
+}
+@model SteponTech.Data.BaseModels.InformationYoungView
+<!doctype html>
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>金沙遗址博物馆青教版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/img/common/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="~/css/book.css">
+    <link rel="stylesheet" type="text/css" href="~/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/common/common.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="head">
+            <div class="versions">
+                <a href="">
+                    <img src="/img/common/Chinese.png" alt="">
+                </a>
+                <div>
+                    <a href="">
+                        <img src="/img/common/English.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="/img/common/xueshu.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="/Strategy/Intro" class="a1"></a>
+                <a href="/PlayJinSha/YoungExperience" class="a2"></a>
+                <a href="/News/NewsList" class="a4"></a>
+                <a href="/JinShaChest/Index" class="a3"></a>
+                <img src="/img/common/logo.gif" id="icon-logo" alt="logo" />
+            </div>
+            <div class="login">
+                <div class="loginoptrator">
+                    <a href="/Member/Login" class="signUp">
+                        <img src="/img/common/signUp.png" alt="">
+                    </a>
+                    <a href="/Member/VIPInstructions" class="signIn">
+                        <img src="/img/common/signIn.png" alt="">
+                    </a>
+                </div>
+                <div class="infoOptrator">
+                    <a class="users">
+                        <img src="/img/common/users.png" alt="">
+                    </a>
+                    <a href="/VIP/MyInformation" class="myInfo">
+                        <img src="/img/common/myInfo.png" alt="">
+                    </a>
+                    <a class="loginOut">
+                        <img src="/img/common/loginOut.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a class="greenTeaching"></a>
+    </div>
+    <div style="height: 105px;"></div>
+    <div class="content">
+        <div class="glass">
+        </div>
+        <div class="content-box">
+            <div class="crumbs">
+                <img src="/img/treasureChest_manual_details/present.png" alt="当前位置">
+                <a href="/Home"><img src="/img/treasureChest_manual_details/home.png" alt="首页"></a>
+                <a href="/JinShaChest"><img src="/img/treasureChest_manual_details/baibao.png" alt="金沙百宝箱"></a>
+                <img src="/img/treasureChest_manual_details/xuexired.png" alt="金沙学习手册">
+            </div>
+            <!--封面-->
+            <div class="cover">
+                @{
+                    var imgsrc = "/upload/Information/" + Model.Id + "/" + Model.Photo + "";
+                    <img class="coverImg" src="@imgsrc">
+                }
+
+            </div>
+            <!--书的内容-->
+            <div class="bookWrapper">
+
+                <div class="bookInner" id="divcontent" tag="@Model.Book">
+
+                </div>
+                <!--operator-->
+                <div class="operator">
+                    <a class="print"></a>
+                    @{
+                        var src = "/upload/Information/" + Model.Id + "/" + Model.FileName + "";
+                        <a class="download" target="_blank" href="@src"></a>
+                    }
+                </div>
+                <!--pageBar-->
+                <div class="pageToolbar"></div>
+            </div>
+            <!--背面-->
+            <div class="cover-bottom">
+            </div>
+        </div>
+    </div>
+    <iframe id="flyso" marginheight="0" marginwidth="0" frameborder="0" width="0" height="0" style="display:none"></iframe>
+    <div class="footer">
+        <div class="mark"></div>
+        @if (ViewBag.Footer != null)
+        {
+            <ul class="foot">
+                <li>
+                    <p>电话：@ViewBag.Footer.Phone</p>
+                    <p class="footText">地址：@ViewBag.Footer.Address</p>
+                    <div class="code wechatcode">
+                        <img src="@ViewBag.Footer.WeChart" alt="" class="footText">
+                        <p class="footWeixin">
+                            <img src="/img/common/weixin_2.png" alt="">
+                            <span>关注官方微信</span>
+                        </p>
+                    </div>
+                    <div class="code weibocode">
+                        <img src="@ViewBag.Footer.WeChart" alt="" class="footText">
+                        <p class="footWeixin">
+                            <img src="/img/common/weibo-icon.png" alt="">
+                            <span>关注官方微博</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="foot-li2">
+                    <a href="http://map.baidu.com/?newmap=1&s=inf%26uid%3Ded4f5b58efb42cd248cc4af2%26wd%3D%E9%87%91%E6%B2%99%E9%81%97%E5%9D%80+%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%26all%3D1%26c%3D75&from=alamap&tpl=map_singlepoint" target="_blank">
+                        动态地图导航
+                        <img src="/img/common/position.png" alt="">
+                    </a>
+                    <p class="group">社教QQ1群号:@ViewBag.Footer.QQGroup</p>
+                    <p class="group2">社教QQ2群号:@ViewBag.Footer.QQGroup2</p>
+                </li>
+                <li>
+                    <p>游览帮助</p>
+                    @if (ViewBag.Infomations?.Count > 0)
+                    {
+                        <div class="group">
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[0].Id">@ViewBag.Infomations[0].Title</a>
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[1].Id">@ViewBag.Infomations[1].Title</a>
+                        </div>
+                        <div class="service">
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[2].Id">@ViewBag.Infomations[2].Title</a>
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[3].Id">@ViewBag.Infomations[3].Title</a>
+                        </div>
+                    }
+                    <p class="number"><span>金沙遗址博物馆版权所有</span><span>@ViewBag.Footer.RegisterNo</span></p>
+                </li>
+            </ul>
+        }
+    </div>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/paging.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            var id = "@Model.Id";
+            var content = JSON.parse($("#divcontent").attr("tag"));
+            $(".cover").on("click", function () {
+                $(this).hide();
+                $(".bookWrapper").show();
+                $("#divcontent").html("<img src='/upload/Information/" + id+"/" + content[1] + "'>")
+            })
+            $(".print").on("click", function () {
+
+                var str = "";
+                $.each(content, function (i, item) {
+                    str += "<img src='/upload/Information/" + id + "/" + item + "'>" + "<br/><br/>";
+                });
+                //window.document.body.innerHTML = str;
+                if (getExplorer() == "IE") {
+                    pagesetup_null();
+                }
+
+
+                var iframeid = document.getElementById('flyso').contentWindow;
+                iframeid.document.body.innerHTML = str
+
+                setTimeout(function () { iframeid.print() },1000);
+                //window.print();
+                //setTimeout("window.location.reload();", 0);
+            })
+            $('.pageToolbar').Paging({
+                pagesize: 1,
+                count: content.length - 1,
+                toolbar: true,
+                callback: function (page, size, count) {
+                    $("#divcontent").html("<img src='/upload/Information/" + id + "/" + content[page] + "'>")
+                    console.log(page == count)
+                    if (page == count) {
+                        $(".js-page-next").on("click", function () {
+                            $(".bookWrapper").hide();
+                            $(".cover-bottom").show();
+                        })
+
+                    }
+                }
+            });
+            $(".cover-bottom").on("click", function () {
+                window.location.reload()
+            })
+        })
+        //function doPrint() {
+            //$(".nextPage").css('display', 'none');
+            //$(".previousPage").css('display', 'none');
+            //$(".downLoad").css('display', 'none');
+            //$(".print").css('display', 'none');
+            //bdhtml = window.document.body.innerHTML;
+            //sprnstr = "<!--startprint-->";
+            //eprnstr = "<!--endprint-->";
+            //prnhtml = bdhtml.substr(bdhtml.indexOf(sprnstr) + 17);
+
+            //prnexthtml = prnhtml.substring(prnhtml.indexOf(eprnstr), prnhtml.Length);
+
+            //xxxhtml = prnexthtml.substr(prnexthtml.indexOf(sprnstr) + 17);
+            //xxxhtml = "<br />" + "<br />" + "<br />" + "<br />" + xxxhtml.substring(0, xxxhtml.indexOf(eprnstr));
+            //prnhtml = prnhtml.substring(0, prnhtml.indexOf(eprnstr));
+
+
+
+
+            //prnhtml += xxxhtml;
+            //prnhtml = bdhtml.substr(bdhtml.indexOf(sprnstr) + 17); //从开始打印标识之后的内容
+            //prnhtml = prnhtml.substring(0, prnhtml.indexOf(eprnstr)); //截取开始标识和结束标识之间的内容
+
+        //}
+
+        // 获取浏览器
+        function getExplorer() {
+            var explorer = window.navigator.userAgent;
+            //ie
+            if (explorer.indexOf("MSIE") >= 0) {
+                return "IE";
+            }
+            //firefox
+            else if (explorer.indexOf("Firefox") >= 0) {
+                return "Firefox";
+            }
+            //Chrome
+            else if (explorer.indexOf("Chrome") >= 0) {
+                return "Chrome";
+            }
+            //Opera
+            else if (explorer.indexOf("Opera") >= 0) {
+                return "Opera";
+            }
+            //Safari
+            else if (explorer.indexOf("Safari") >= 0) {
+                return "Safari";
+            }
+        }
+        // IE设置去除页眉页脚
+        function pagesetup_null() {
+            var hkey_root, hkey_path, hkey_key;
+            hkey_root = "HKEY_CURRENT_USER";
+            hkey_path = "\\Software\\Microsoft\\Internet Explorer\\PageSetup\\";
+            try {
+                var RegWsh = new ActiveXObject("WScript.Shell");
+                hkey_key = "header";
+                RegWsh.RegWrite(hkey_root + hkey_path + hkey_key, "");
+                hkey_key = "footer";
+                RegWsh.RegWrite(hkey_root + hkey_path + hkey_key, "");
+            } catch (e) { }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+body{padding: 0;margin: 0;height: 100%;}
+.content {
+    position: relative;
+    min-width: 1280px;
+    height: 1635px;
+    background-image: url("../img/strategy_question/background-detail.png");
+    background-position: center;
+}
+/*树叶飘动*/
+.glass{
+    width: 100%;
+    min-width: 1280px;
+    height: 280px;
+    top: 0;
+    background-image: url(../img/common/leaf2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left:0;
+}
+
+.content-box{
+    width: 1200px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+    position:relative;
+}
+.crumbs{
+    position:absolute;
+    left:0;
+    width: 100%;
+    height: 212px;
+    /*outline: 1px solid red;*/
+   position: relative;
+}
+.inner{
+	position: absolute;
+	z-index: 88;
+	width: 100%;
+	height: 212px;
+}
+.nav1{
+    width: 176px;
+    height: 600px;
+    /*outline: 1px solid red;*/
+    float: left;
+    /*margin-top: 100px;*/
+    /*background-image: url("../img/strategy_question/zhuzi.png");*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.nav1 img{
+    /*outline: 1px solid red;*/
+}
+.nav1-1{
+    /*margin-top: 30px;*/
+    margin-left: 30px;
+}
+.nav1-2{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+.nav1-3{
+    margin-top: 10px;
+}
+.nav1-4{
+    margin-left: 35px;
+    margin-top: 30px;
+}
+.nav1-5{
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.content-conter{
+    margin-top: -80px;
+    width: 969px;
+    height: 1095px;
+    /*outline: 1px solid red;*/
+    float: right;
+    background-image: url("../img/strategy_question/back3.png");
+}
+.content-text{
+    width: 650px;
+    height: 800px;
+    margin-left: 200px;
+    margin-top: 150px;
+    overflow-x: hidden!important;
+    overflow-y: auto;
+}
+.content-text::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+}
+.content-text::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background: #6e3b1b;
+    border: 1px solid #e6af61;
+}
+.content-text::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background: #e6af61;
+    border-radius: 10px;
+    border: 2px solid #f1dea5;
+}
+.content-text h1{
+    text-align: center;
+    font-size: 40px;
+    color: #4b3115;
+    line-height: 80px;
+}
+.content-text p{
+    text-align: left;
+    display: inline-block;
+    font-size: 18px;
+    color: #4b3115;
+    line-height: 30px;
+    height: 670px;
+    /*text-indent:36px;*/
+    margin-top:50px;
+    padding-right:20px;
+}

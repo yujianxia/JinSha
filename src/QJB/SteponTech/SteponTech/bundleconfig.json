@@ -1,0 +1,166 @@
+﻿// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optinally generate .map file
+    "sourceMap": false
+  },
+  //后端框架文件处理
+  {
+    "outputFileName": "wwwroot/css/material/app.min.css",
+    "inputFiles": [
+      "wwwroot/css/material/app_1.css",
+      "wwwroot/css/material/app_2.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap-sweetalert/dist/sweetalert.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap-sweetalert/dist/sweetalert.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/chosen/chosen.min.css",
+    "inputFiles": [
+      "wwwroot/lib/chosen/chosen.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/farbtastic/farbtastic.min.css",
+    "inputFiles": [
+      "wwwroot/lib/farbtastic/farbtastic.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/requirejs/require.min.js",
+    "inputFiles": [
+      "wwwroot/lib/requirejs/require.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/chosen/chosen.jquery.min.js",
+    "inputFiles": [
+      "wwwroot/lib/chosen/chosen.jquery.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/flot/jquery.flot.min.js",
+    "inputFiles": [
+      "wwwroot/lib/flot/jquery.flot.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/flot/jquery.flot.pie.min.js",
+    "inputFiles": [
+      "wwwroot/lib/flot/jquery.flot.pie.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/flot/jquery.flot.resize.min.js",
+    "inputFiles": [
+      "wwwroot/lib/flot/jquery.flot.resize.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/flot.orderbars/js/jquery.flot.orderbars.min.js",
+    "inputFiles": [
+      "wwwroot/lib/flot.orderbars/js/jquery.flot.orderbars.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/flot.curvedlines/curvedlines.min.js",
+    "inputFiles": [
+      "wwwroot/lib/flot.curvedlines/curvedlines.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/lvldragdrop/script/lvl-uuid.min.js",
+    "inputFiles": [
+      "wwwroot/lib/lvldragdrop/script/lvl-uuid.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/lvldragdrop/script/lvl-drag-drop.min.js",
+    "inputFiles": [
+      "wwwroot/lib/lvldragdrop/script/lvl-drag-drop.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/moment/locale/zh-cn.min.js",
+    "inputFiles": [
+      "wwwroot/lib/moment/locale/zh-cn.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/framework.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/framework.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/stepon.extensions.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/stepon.extensions.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/stepon.mask.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/stepon.mask.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/stepon.module.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/stepon.module.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/stepon.pager.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/stepon.pager.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/stepon.toolalert.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/stepon.toolalert.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/stepon.utils.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/stepon.utils.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/stepon/services/routeresolver.min.js",
+    "inputFiles": [
+      "wwwroot/lib/stepon/services/routeresolver.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/summernote/dist/summernote.min.js",
+    "inputFiles": [
+      "wwwroot/lib/summernote/dist/summernote.js"
+    ]
+  }
+
+
+]

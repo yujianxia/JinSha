@@ -1,0 +1,738 @@
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge,chrome =1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../common/common.css" />
+    <link rel="stylesheet" href="../css/reset.css ">
+    <link href="../css/index.css" rel="stylesheet">
+    <!--[if gte IE 8]>
+        <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+    <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if gte IE 8]
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js "></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--分享开始   JiaThis Button BEGIN -->
+<script>
+        var jiathis_config = {
+            siteNum: 15,
+            sm: "tsina,qzone,cqq,xiaoyou,qq,weixin,tqq,tieba,douban,twitter,139mail,google,189mail,fav,alibaba",
+            summary: "",
+            boldNum: 6,
+            showClose: true,
+            shortUrl: false,
+            hideMore: false
+        }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r2.gif&move=0" charset="utf-8"></script>
+    <!--分享结束   JiaThis Button end -->
+    <div class="container-fluid ">
+        <!--顶部开始-->
+        <div class="row nav-bg b3-border">
+            <div class="container padding_0  aa">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3  padding_0 logo">
+                            <img src="../img/index/banner/logo.png" alt="" class="img-responsive center-block" />
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 padding_0 ">
+                            <div class="top-list">
+                                <!--搜索框-->
+                                <div class="searchBox">
+                                    <span id="searchSpan">Search</span>
+                                    <input id="searchInput" type="text" placeholder="search">
+                                    <div class="S_btn"><img class="center-block" src="../img/index/banner/search.png" id="S_btn" /></div>
+                                </div>
+                                <ul>
+
+
+
+                                    <li><a href="/JinSha/Index">English</a></li>
+                                    <li id="China" class="China">Chinese <img class="Uparr" src="../img/arrows/san.png" /></li>
+                                    <ol id="hideOl" class="hideOl">
+                                        <li>General</li>
+                                        <li class="stude">Academic</li>
+                                        <li class="children">Education</li>
+                                    </ol>
+                                </ul>
+                            </div>
+                            <div class="menu-btn">
+                                <img src="../common/headerImg/menu.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-top-list">
+                    <ul>
+                        <a href="">
+                            <li>大众版</li>
+                        </a>
+                        <a href="">
+                            <li><a href="/JinSha/Index">English</a></li>
+                        </a>
+                        <a href="">
+                            <li>学术版</li>
+                        </a>
+                        <a href="">
+                            <li>青教版</li>
+                        </a>
+                        @if (ViewBag.Head != null)
+                        {
+                            foreach (var item in ViewBag.Head)
+                            {
+                                if (item.ModelName == "Home")
+                                {
+                                    <a class="active" href="/JinSha/Index">
+                                        <li>HOME</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "ABOUT")
+                                {
+                                    <a href="/About/Intosands">
+                                        <li>ABOUT</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "VISIT")
+                                {
+                                    <a href="/VisitGuide/VisitGuide">
+                                        <li>VISIT</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "GUIDE")
+                                {
+                                    <a href="/Exhibition/Index">
+                                        <li>GUIDE</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "NEWS")
+                                {
+                                    <a href="/NEWS/Index">
+                                        <li>NEWS</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "CREATIVITY")
+                                {
+                                    <a href="/Creation/Index">
+                                        <li>ARTS</li>
+                                    </a>
+                                }
+                                else if (item.ModelName == "COLLECTIONS")
+                                {
+                                    <a href="/Collection/Index">
+                                        <li>COLLECTIONS</li>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="/Culture/Index">
+                                        <li>EVENTS</li>
+                                    </a>
+
+                                }
+                            }
+
+                        }
+                    </ul>
+                </div>
+                <div class="row mAp0">
+                    <div class="nav-list">
+                        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0">
+                            <ul>
+                                @if (ViewBag.Head != null)
+                                {
+                                    foreach (var item in ViewBag.Head)
+                                    {
+                                        if (item.ModelName == "HOME")
+                                        {
+                                            <a class="active" href="/JinSha/Index">
+                                                <li>HOME</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "ABOUT")
+                                        {
+                                            <a href="/About/Intosands">
+                                                <li>ABOUT</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "VISIT")
+                                        {
+                                            <a href="/VisitGuide/VisitGuide">
+                                                <li>VISIT</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "GUIDE")
+                                        {
+                                            <a href="/Exhibition/Index">
+                                                <li>GUIDE</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "NEWS")
+                                        {
+                                            <a href="/NEWS/Index">
+                                                <li>NEWS</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "CREATIVITY")
+                                        {
+                                            <a href="/Creation/Index">
+                                                <li>ARTS</li>
+                                            </a>
+                                        }
+                                        else if (item.ModelName == "COLLECTIONS")
+                                        {
+                                            <a href="/Collection/Index">
+                                                <li>COLLECTIONS</li>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href="/Culture/Index">
+                                                <li>EVENTS</li>
+                                            </a>
+
+                                        }
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--banner开始-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="banner">
+                    <div id="slideBox" class="slideBox1 row">
+                        <div class="hd">
+                            <ul>
+                                @if (ViewBag.Banner != null)
+                                {
+                                    foreach (var item in ViewBag.Banner)
+                                    {
+                                        <li></li>
+                                    }
+                                }
+
+                            </ul>
+                        </div>
+                        <div class="bd col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <ul>
+                                @if (ViewBag.Banner != null)
+                                {
+                                    foreach (var item in ViewBag.Banner)
+                                    {
+                                        var src = "/upload/banner/" + item.FileName + "";
+                                        <li class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="@item.ReturnUrl"><img src="@src" class="img-responsive center-block" alt=""></a>
+                                        </li>
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+
+                        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+                        <!--<a class="prev" href="javascript:void(0)">‹</a>
+                        <a class="next" href="javascript:void(0)">›</a>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--banner结束-->
+        <!--搜索框-->
+        <div class="container search-box">
+            <div class="input-group">
+                <input type="text" placeholder="search" id="input-lg" class="input-lg"><span class="input-group-addon"></span>
+            </div>
+        </div>
+        <!--买票的弹窗-->
+        <div class="buyP">
+            <div class="threeLink">
+                <p class="closeFont">×</p>
+                <a target="_blank" href="http://you.ctrip.com/sight/chengdu104/48863.html">XieCheng</a>
+    <a target="_blank" href="http://www.ly.com/scenery/BookSceneryTicket_17528.html">TongCheng</a>
+    <a target="_blank" href="http://ticket.lvmama.com/scenic-104009">LvMaMa</a>
+    @*<a  href="javascript:void(0)">XieCheng</a>
+    <a  href="javascript:void(0)">TongCheng</a>
+    <a  href="javascript:void(0)">LvMaMa</a>*@
+            </div>
+        </div>
+
+        <!--内容展示开始-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="container maxWidth">
+                    <div class="row pt60 cont">
+                        <!--金沙遗址博物馆简介-->
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  box1">
+                            @{<p class="introduction-title hideTitle">About Jinsha</p>
+
+                    if (ViewBag.JinShaSite != null)
+                        {
+                            var videosrc = "/upload/Information/" + ViewBag.JinShaSite.Id + "/" + ViewBag.JinShaSite.FileName + "";
+                                    <div class="img-responsive center-block pull-left col-lg-5 col-md-5 col-sm-5 col-xs-5 viedoshow" style="overflow:hidden">
+                                        <video controls="controls" loop="loop" style="height: 100%; width:100%;" src="@videosrc"></video>
+                                    </div>
+                                    <div class="right-info col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                        <p class="introduction-title showTitle">About Jinsha</p>
+                                        <!--<p class="introduction-Entitle"></p>-->
+                                        <div class="lineIndex"></div>
+                                        <div class="introduction-info">@ViewBag.JinShaSite.Intro</div>
+                                        <a class="more-btn Bbtn mt28 widthB" href="/About/Introduce">Learn more</a>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="position: relative;">
+                            <!--最新特展-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5 l-border box2">
+                                <p class="introduction-title">Featured&nbsp;&nbsp;Exhibition</p>
+                                <!--<p class="introduction-Entitle"></p>-->
+                                <div class="lineIndex"></div>
+                                @{
+                                    if (ViewBag.FirstExhibition != null)
+                                    {
+                                        var imgsrc = "/upload/Information/" + ViewBag.FirstExhibition.Id + "/" + ViewBag.FirstExhibition.Photo + "";
+                                        <div class="center-pic">
+                                            <a href="/Exhibition/Special?id=@ViewBag.FirstExhibition.Id"><img src="@imgsrc" alt=""></a>
+                                        </div>
+                                        <a href="/Exhibition/Special?id=@ViewBag.FirstExhibition.Id">
+                                            <p class="over bottom-text ">Learn more </p>
+                                        </a>
+                                    }
+                                }
+
+                            </div>
+                            <div class="lineCenter"></div>
+                            <!--网上预约-->
+                            @if (ViewBag.OnlineBooking != null)
+                            {
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 box3 pull-right">
+                                    <p class="introduction-title">Online&nbsp;&nbsp;Booking</p>
+                                    <!--<p class="introduction-Entitle"> </p>-->
+                                    <div class="lineIndex"></div>
+                                    <div class="last-pic">
+                                        <img src="/upload/Information/@ViewBag.OnlineBooking.Id/@ViewBag.OnlineBooking.Photo" alt="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <a id="buy" style="margin-top:21px" class="more-btn classic-btn Bbtn width mr18 more-btn" href="javascript:void(0)">Booking</a>
+                                    <a target="_blank" href="/VisitGuide/Notice?id=@ViewBag.OnlineBooking.Id" style="margin-top:21px" class="more-btn Bbtn width infoBtn">Learn more</a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--典藏精品-->
+        <div class="row classicBox">
+            <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12">
+                <div class="container b1-border aa">
+                    <div class="row">
+                        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12 padding_0 mt25 mb25">
+                            <div class="classic-menu fl">
+                                <p class="EStyle">COLLECTIONS</p>
+                                <div class="line width"></div>
+                            </div>
+                            <a href="/Collection/Index">
+                                <div class="classic-btn Bbtn fr">Learn more</div>
+                            </a>
+                        </div>
+                        <div class="pic-box">
+                            @{
+                                if (ViewBag.Collections != null)
+                                {
+                                    for (int i = 0; i < ViewBag.Collections.Count; i++)
+                                    {
+                                        if (i == 0)
+                                        {
+                                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 padding_0">
+                                                @{
+                                                    var imgsrc = "/upload/Information/" + ViewBag.Collections[i].Id + "/" + ViewBag.Collections[i].Photo + "";
+                                                    <img src="@imgsrc" class="img-responsive center-block limitImg" />
+                                                }
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text">
+                                                <p><span>@ViewBag.Collections[i].Title</span></p>
+                                                <div>
+                                                    <span class="contentSpan">@Html.Raw(ViewBag.Collections[i].Content)</span>
+                                                </div>
+                                            </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text" style="display: none;">
+                                                            <p><span>@ViewBag.Collections[i].Title</span></p>
+                                                            <div style="font-size: 16px; color: #ffda84; font-family: Futura Bk BT Book;">
+                                                                <span class="contentSpan">
+                                                                    @Html.Raw(ViewBag.Collections[i].Content)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                            }
+                                                        }
+
+                                                    }
+                            }
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="hover-box">
+                            @{
+                                if (ViewBag.Collections != null)
+                                {
+                                    foreach (var item in ViewBag.Collections)
+                                    {
+                                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 padding_0">
+                                            @{
+                                                var imgsrc = "/upload/Information/" + item.Id + "/" + item.Photo + "";
+                                                <img src="@imgsrc" class="img-responsive center-block" alt="">
+                                            }
+                                        </div>
+                                                    }
+
+                                                }
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--展览导览-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border-bottom: 1px solid #DAB766;">
+                <div class="container aa show-Box">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 padding_0 mt25 mb25">
+                            <div class="classic-menu fl">
+                                <p class="EStyle">GUIDE</p>
+                                <div class="line width"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 padding_0 mt25 mb25 title">
+                            @if (ViewBag.CulturalLandscape != null)
+                            {
+                                <div class="more-btn shows pull-right Enav">Cultural Landscape</div>
+                            }@if (ViewBag.ExhibitionHall != null)
+                            {
+                                <div class="more-btn shows  pull-right Enav">Exhibition Hall</div>
+                            }
+                            @if (ViewBag.RelicsHall != null)
+                            {
+                                <div class="more-btn shows pull-right Enav">Relics Hall</div>
+                            }
+                            @if (ViewBag.GuidesEX != null)
+                            {
+                                <div class="more-btn shows active pull-right Enav">@ViewBag.GuidesEX.Title</div>
+                            }
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding_0 mb60">
+                            @if (ViewBag.CulturalLandscape != null)
+                            {
+                                <div class="shows-box" style="display: none;">
+                                    <div class="show-nav-cont">
+                                        <div class="show-nav-cont-info  col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="info EnInfo">
+                                                @Html.Raw(ViewBag.CulturalLandscape.Content)
+                                            </div>
+                                            <a href="/Exhibition/Index#@ViewBag.CulturalLandscape.ColumnId">
+                                                <div class="show-nav-cont-btn">Learn more</div>
+                                            </a>
+                                            <div class="cont-info-img1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <a href="/Exhibition/Index#@ViewBag.CulturalLandscape.ColumnId">
+                                                    <img class="img-responsive" src="../img/show/showRelics/Gallery.png" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="cont-info-img2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <a target="_blank" href="@ViewBag.CulturalLandscape.UrlAddress">
+                                                    <img class="img-responsive" src="../img/show/showRelics/panoramic.png" />
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!--文化景观里的图片-->
+                                        <div class="show-nav-cont-img col-lg-7 col-md-7 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12">
+                                            @{
+                                                var imgsrc = "/upload/Information/" + ViewBag.CulturalLandscape.Id + "/" + ViewBag.CulturalLandscape.Photo + "";
+                                                <a href="/Exhibition/Index#@ViewBag.CulturalLandscape.ColumnId"><img class="img-responsive" src="@imgsrc" alt="" /></a>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                }
+                            @if (ViewBag.ExhibitionHall != null)
+                            {
+                                <div class="shows-box" style="display: none;">
+                                    <div class="show-nav-cont">
+                                        <div class="show-nav-cont-info  col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="info EnInfo">
+                                                @Html.Raw(ViewBag.ExhibitionHall.Content)
+                                            </div>
+                                            <a href="/Exhibition/Index#@ViewBag.ExhibitionHall.ColumnId">
+                                                <div class="show-nav-cont-btn">Learn more</div>
+                                            </a>
+                                            <div class="cont-info-img1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <a href="/Exhibition/Index#@ViewBag.ExhibitionHall.ColumnId">
+                                                    <img class="img-responsive" src="../img/show/showRelics/Gallery.png" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="cont-info-img2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <a target="_blank" href="@ViewBag.ExhibitionHall.UrlAddress">
+                                                    <img class="img-responsive" src="../img/show/showRelics/panoramic.png" />
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!--文化景观里的图片-->
+                                        <div class="show-nav-cont-img col-lg-7 col-md-7 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12">
+                                            @{
+                                                var imgsrc = "/upload/Information/" + ViewBag.ExhibitionHall.Id + "/" + ViewBag.ExhibitionHall.Photo + "";
+                                                <a href="/Exhibition/Index#@ViewBag.ExhibitionHall.ColumnId"><img class="img-responsive" src="@imgsrc" alt="" /></a>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                }
+                            @if (ViewBag.RelicsHall != null)
+                            {
+                                <div class="shows-box" style="display: none;">
+                                    <div class="show-nav-cont">
+                                        <div class="show-nav-cont-info  col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <div class="info EnInfo">
+                                                @Html.Raw(ViewBag.RelicsHall.Content)
+                                            </div>
+                                            <a href="/Exhibition/Ruins">
+                                                <div class="show-nav-cont-btn">Learn more</div>
+                                            </a>
+                                            <div class="cont-info-img1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <a href="/Exhibition/Ruins#aboutImg">
+                                                    <img class="img-responsive" src="../img/show/showRelics/Gallery.png" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="cont-info-img2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <a target="_blank" href="@ViewBag.RelicsHall.UrlAddress">
+                                                    <img class="img-responsive" src="../img/show/showRelics/panoramic.png" />
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!--文化景观里的图片-->
+                                        <div class="show-nav-cont-img col-lg-7 col-md-7 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12">
+                                            @{
+                                                var imgsrc = "/upload/Information/" + ViewBag.RelicsHall.Id + "/" + ViewBag.RelicsHall.Photo + "";
+                                                <a href="/Exhibition/Index#@ViewBag.RelicsHall.ColumnId"><img class="img-responsive" src="@imgsrc" alt="" /></a>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                }
+                            @if (ViewBag.GuidesEX != null)
+                            {
+                                <!--全景导览-->
+                                <div class="shows-box" style="display: block;">
+                                    @{
+                                        var imgsrc = "/upload/Information/" + ViewBag.GuidesEX.Id + "/" + ViewBag.GuidesEX.Photo + "";
+                                        <a target="_blank" href="@ViewBag.GuidesEX.UrlAddress"><img class="img-responsive center-block all" src="@imgsrc" /></a>
+                                    }
+
+                                </div>
+                                        }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--新增栏目-->
+        @if (ViewBag.NewCol != null)
+            {
+                for (var i = 0; i < ViewBag.NewCol.Count; i++)
+                {
+                    var src = "~/upload/Information/" + ViewBag.NewCol[i].Id + "/" + ViewBag.NewCol[i].Photo;
+                <div id="speech" class="boss-speech row">
+                    <div class="boss-introduce">
+                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 intosandsTitle">@ViewBag.NewCol[i].ColumName</p>
+                        <div class="boss-imginfo col-lg-12 col-md-12 col-sm-12 col-xs-12 img-responsive">
+                            <!--图片-->
+                            <div class="boss-img  col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                                <img src="@src" alt="" class="img-responsive">
+                            </div>
+                            <!--文字内容-->
+                            <div class="boss-speech-info clearfix col-lg-7 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
+                                <div class="center-block " id="bossInfoBox">
+                                    <h4>@ViewBag.NewCol[i].Title</h4>
+                                    <p class="infoP">
+                                        @ViewBag.NewCol[i].Intro
+                                    </p>
+                                    <a href="/Jinsha/NewDetail?id=@ViewBag.NewCol[i].Id "><div class="boss-speech-more">Learn more</div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../common/common.js"></script>
+        <script src="../js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/index.js"></script>
+        @*<script>
+                $("#searchInput").change(function () {
+                    $.ajax({
+                        url: '/api/Search',
+                        type: 'Post',
+                        dataType: "text",
+                        contentType: "application/json",
+                        data: this.value,
+                        success: function (data) {
+                            var aaaa = "";
+                            var data = JSON.parse(data);
+                            $.each(data.data, function (i, item) {
+                                aaaa += "<a href=" + item.key + " tagert='_blank'><p>" + item.value + "</p></a>"
+                            });
+                            $("#showAll").html(aaaa);
+                        }
+                    });
+                });
+            </script>*@
+        @if (ViewBag.Footer != null)
+        {
+            <footer class="container footer ">
+                <div class="row">
+                    <!--联系我们-->
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 callme padding_0">
+                        <p class="callmeP1">Contact Us</p>
+                        <p class="callmeP2">Phone:<span> @ViewBag.Footer.PhoneNumber</span></p>
+                        <p class="callmeP3">Address:<span> @ViewBag.Footer.Address</span></p>
+                        <div class="row twopic">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 twopicDiv1">
+                                <img class="img-responsive" src="@ViewBag.Footer.Wechat" />
+                                <p><img src="../common/footerImg/bottom_wechat.png" /><span>Follow our WeChat</span></p>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <img class="img-responsive" src="@ViewBag.Footer.Watermark" />
+                                <p><img src="../common/footerImg/weibo-icon.png" /><span class="color">Follow our WeiBo</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--友情链接-->
+                    <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1 col-md-offset-1  link padding_0">
+                        <p class="linkP1">Links of Interest</p>
+                        <!--博物馆-->
+                        <div class="footer-museum divselect">
+                            <cite onchange="window.location=this.href;">Museums</cite>
+                            <ul id="OtherList" tag="@ViewBag.Footer.MuseumLink"></ul>
+                        </div>
+                        <!--政府-->
+                        <div class="footer-government divselect">
+                            <cite onchange="window.location=this.href;">Others</cite>
+                            <ul id="GovernmentalList" tag="@ViewBag.Footer.GovernmentLink"></ul>
+                            <script>
+                                $(function () {
+                                    var data = JSON.parse($('#GovernmentalList').attr('tag'));
+                                    var cc1 = "";
+                                    $.each(data, function (i, item) {
+                                        cc1 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                    });
+                                    //console.log(cc1);
+                                    $('#GovernmentalList').append(cc1);
+
+                                    var data2 = JSON.parse($('#OtherList').attr('tag'));
+                                    var cc2 = "";
+                                    $.each(data2, function (i, item) {
+                                        cc2 += "<li><a href='" + item.url + "' selectid='" + i + "'>" + item.name + "</a></li>"
+                                    });
+                                    //console.log(cc2);
+                                    $('#OtherList').append(cc2);
+
+                                });
+                            </script>
+                        </div>
+
+                        <p class="help">Plan Your Visit</p>
+                        <div class="link-btm-info">
+                            @if (ViewBag.JumpLink != null)
+                            {
+                                List<SteponTech.Data.BaseModels.ColunmsView> visitColunms = ViewBag.JumpLink;
+                                var openingHours = visitColunms.FirstOrDefault(e => e.Name == "Opening Hours");
+                                var gettingHere = visitColunms.FirstOrDefault(e => e.Name == "Getting Here");
+                                var services = visitColunms.FirstOrDefault(e => e.Name == "Services");
+                                var visitTips = visitColunms.FirstOrDefault(e => e.Name == "Visitor Regulations");
+                                <ul>
+                                    @if (openingHours != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@openingHours.Id">
+                                            <li class="opening">Opening Hours</li>
+                                        </a>
+                                    }
+                                    @if (gettingHere != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@gettingHere.Id">
+                                            <li> Getting Here</li>
+                                        </a>
+                                    }
+                                </ul>
+                                <ul>
+                                    @if (services != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@services.Id">
+                                            <li class="Services">Services</li>
+                                        </a>
+                                    }
+                                    @if (visitTips != null)
+                                    {
+                                        <a href="/VisitGuide/VisitGuide#@visitTips.Id">
+                                            <li> Visitor Regulations</li>
+                                        </a>
+                                    }
+                                </ul>
+
+                            }
+                        </div>
+                    </div>
+                    <!--版权-->
+                    <div class="col-xs-12  copyright padding_0">
+                        <div>
+                            <img class="img-responsive" src="../common/footerImg/bottom_logo.png" />
+                        </div>
+                        <p class="copyrightP1">Jinsha Site Museum All Rights Reserved</p>
+                        <p class="copyrightP2">@ViewBag.Footer.RegisterNo</p>
+                    </div>
+                </div>
+            </footer>
+        }
+
+        <!--返回顶部-->
+        <div class="toTop" style="display: none;">
+            <img class="bgarr" src="../img/arrows/return_nor.png" />
+            <img class="hoverImg" src="../img/arrows/return_pre.png">
+        </div>
+
+        <!--内容展示结束-->
+    </div>
+</body>
+</html>

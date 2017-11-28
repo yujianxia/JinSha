@@ -1,0 +1,143 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.content {
+    min-width: 1280px;
+    height: 1350px;
+    background-image: url("../img/treasureChest_manual_details/background-cover2.png");
+    background-position: center;
+    overflow: hidden
+}
+
+.content-box {
+    width: 1200px;
+    height: 100%;
+    /*outline: 1px solid red;*/
+    margin: auto;
+    position: relative;
+}
+
+.crumbs {
+    width: 100%;
+    height: 212px;
+    /*outline: 1px solid red;*/
+}
+
+    .crumbs img {
+        cursor: pointer;
+        /*outline: 1px solid red;*/
+        margin-left: -5px;
+    }
+/*树叶飘动*/
+.glass {
+    width: 100%;
+    min-width: 1280px;
+    height: 280px;
+    top: 109px;
+    background-image: url(../img/common/leaf2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.cover {
+    cursor: pointer;
+    width: 637px;
+    height: 718px;
+    background: url("../img/treasureChest_manual_details/cover.png");
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.coverImg {
+    display: block;
+    width: 410px;
+    height: 375px;
+    margin-top: 250px;
+    margin-left: 146px;
+    border-radius: 23px;
+}
+
+.bookWrapper {
+    display: none;
+    width: 1033px;
+    height: 587px;
+    background: url("../img/treasureChest_manual_details/book-bg.png");
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+    padding-top: 80px;
+    margin-top: 90px;
+}
+
+.pageToolbar .js-page-prev {
+    background: url("../img/treasureChest_manual_details/pre.png");
+    width: 110px;
+    height: 221px;
+    cursor: pointer;
+    position: absolute;
+    right: -77px;
+    bottom: 71px;
+}
+
+.pageToolbar .js-page-next {
+    background: url("../img/treasureChest_manual_details/next.png");
+    width: 161px;
+    height: 108px;
+    cursor: pointer;
+    right: -90px;
+    bottom: 0;
+    position: absolute;
+}
+
+.js-page-first, .js-page-last, .ui-paging-toolbar, .pageToolbar .ui-paging-container ul [data-page] {
+    display: none;
+}
+
+.bookInner {
+    width: 890px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+    .bookInner img {
+        width: 100%;
+    }
+
+.cover-bottom {
+    display: none;
+    width: 637px;
+    height: 718px;
+    background: url("../img/treasureChest_manual_details/cover-bottom.png");
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+/*operator*/
+.operator {
+    overflow: hidden;
+}
+
+.download {
+    cursor:pointer;
+    float: right;
+    width: 83px;
+    height: 42px;
+    background: url("../img/treasureChest_manual_details/downLoad.png");
+    margin-right: 12px;
+}
+
+.print {
+    cursor: pointer;
+    float: right;
+    width: 83px;
+    height: 42px;
+    background: url("../img/treasureChest_manual_details/print.png");
+    margin-right: 100px;
+}

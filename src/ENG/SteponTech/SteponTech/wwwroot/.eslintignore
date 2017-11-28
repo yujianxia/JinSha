@@ -1,0 +1,4 @@
+build/*.js
+config/*.js
+src/components/upload-2.vue
+static

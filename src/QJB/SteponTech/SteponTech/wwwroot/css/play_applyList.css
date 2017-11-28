@@ -1,0 +1,214 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+    font-size: 0;
+}
+li{
+	list-style: none;
+}
+html,body{
+	height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+.wrapper{
+	position: relative;
+	height: 1219px;
+	min-width: 1280px;
+	background-image: url("../img/play_applyList/bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*草*/
+.glass{
+	position: relative;
+	width: 100%;
+	height: 140px;
+	margin-top: -30px;
+	margin-bottom: 74px;
+}
+.glass_nav{
+	width: 100%;
+	position: absolute;
+	height: 280px;
+	background-image: url("../img/common/leaf2.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+    left:0;
+    top:0;
+}
+/*树叶飘动*/
+
+
+.label{
+	width: 1100px;
+	margin: 0 auto;
+	margin-top: -30px;
+}
+.label .inner{
+	position: absolute;
+	z-index: 999;
+}
+.label a{
+	cursor: pointer;
+	float: left;
+}
+.label a:nth-child(1){
+	margin-left: 10px;
+}
+.main{
+    margin: 0 auto;
+    width: 1100px;
+    height: 1097px;
+    position: relative;
+    text-align: center;
+	margin-top: 120px;
+}
+.main .left,.main .right{
+	position: relative;
+}
+.main .right{
+	z-index: 998;
+	width: 1121px;
+	height:1035px;
+	background-image: url("../img/play_applyList/bg_2.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	left: 40px;
+	top: -304px;
+}
+.main .title_join{
+	position: absolute;
+	left: 260px;
+	top: 287px;
+}
+.title_join-a1{
+	margin-right: 18px;
+}
+.main .inner_join_1,.main .inner_join_2{
+	width: 658px;
+	height: 600px;
+	overflow-y: auto;
+	position: absolute;
+	left: 280px;
+	top: 330px;
+}
+
+.main .inner_join_2{
+	display: none;
+}
+.inner_join_1 dt,.inner_join_2 dt{
+	width: 207px;
+	height: 150px;
+	background-image: url("../img/play_applyList/bg_3.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+.inner_join_1 dl,.inner_join_2 dl{
+	overflow: hidden;
+	width: 640px;
+}
+.inner_join_1 dt img,.inner_join_2 dt img{
+	width: 168px;
+	height: 109px;
+	margin-top: 25px;
+}
+.inner_join_1 dd,.inner_join_2 dd{
+	margin-top: 15px;
+	position: relative;
+	float: right;
+	width: 429px;
+	height: 120px;
+	background-image: url("../img/play_applyList/bg_4.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.inner_join_1 dd h3,.inner_join_2 dd h3{
+	margin-top: 10px;
+	text-indent: 17px;
+	text-align: left;
+	font-size: 17px;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 13px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.inner_join_1 dd p,.inner_join_2 dd p{
+	text-indent: 8px;
+	text-align: left;
+	line-height: 24px;
+	font-size: 17px;
+}
+.inner_join_1 dd a,.inner_join_2 dd a{
+	width: 107px;
+	height: 39px;
+	display: block;
+	position: absolute;
+	bottom: -14px;
+	left: 4px;
+	background-image: url("../img/play_applyList/btn_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.inner_join_1 dd a img,.inner_join_2 dd a img{
+	margin-top: 10px;
+}
+.title{
+	z-index: 999;
+	height: 601px;
+	width: 175px;
+	float: left;
+	position: relative;
+	margin-left: 15px;
+	background-image: url("../img/play_form/line.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.title a{
+	/*display: block;*/
+	/*position: absolute;*/
+}
+.title_a1{
+	margin-top: 40px;
+}
+.title_a2{
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.title_a3{
+}
+.title_a4{
+	margin-top: 20px;
+	margin-left: -20px;
+}
+.title_a5{
+	margin-top: 20px;
+	margin-left: 35px;
+}
+.title_a6{
+	margin-top: 20px;
+}
+.ground{
+	height: 424px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-image: url("../img/play_applyList/di.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}

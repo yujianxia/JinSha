@@ -1,0 +1,306 @@
+ul,li
+{	
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.clear
+{
+	clear:both;
+	height:0;
+}
+
+.tz-datepicker
+{
+	width:281px;
+	border:solid 1px #dab963;	
+	font-family:"寰蒋闆呴粦";
+	font-size:12px;
+	position:absolute;
+	z-index:999;
+	display:none;
+	background: #3d2c15;
+}
+.tz-datepicker .year-month
+{
+	height:25px;
+	text-align:center;
+	cursor:pointer;
+	margin: 30px 30px 0 30px;
+}
+.tz-datepicker .year-month span
+{
+	display:inline-block;
+	height:25px;
+	line-height:25px;
+	float:left;
+	
+}
+.tz-datepicker .year-month span:hover
+{
+	color:#170a01;
+	background:#dab963;
+}
+.tz-datepicker .year-month span.active
+{
+	color:#170a01;
+	background: #dab963;
+}
+
+.datesel .span-arrow
+{
+	width:14px;
+	height:14px;	
+	display:block;
+	position:absolute;
+	right:10px;
+	top:8px;
+}
+.datesel .span-col
+{
+	background:url(../../image/content/select-dropdown-arrow.png) no-repeat left top;
+}
+.datesel .span-ex
+{
+	background:url(../../image/content/select-dropdown-arrow.png) no-repeat left top -14px;
+}
+
+
+.year-month .left
+{
+	width:25px;
+	margin-left:2px;
+}
+.year-month .month
+{
+	width:74px;
+	margin-left:1px;
+	position:relative;
+}
+.year-month .month span
+{
+	width:74px;
+	position:relative;
+}
+.year-month .year
+{
+	width:74px;
+	margin-right:1px;
+	position:relative;	
+}
+.year-month .year span
+{
+	width:74px;
+	text-align:center;
+}
+.year-month .right
+{
+	width:30px;	
+}
+
+
+.year-month .month span , .year-month .year span
+{
+	background:url(../../img/vip/up-default.png) no-repeat center right 6px;
+}
+
+.year-month .month span:hover , .year-month .year span:hover
+{
+	background:url(../../img/vip/up-active.png) #dab963 no-repeat center right 6px;
+}
+
+.year-month .month span.active , .year-month .year span.active
+{
+	background:url(../../img/vip/up-active.png) #dab963 no-repeat center right 6px;
+}
+
+
+
+/* 鏄熸湡 */
+.week
+{
+	height:25px;
+	color:#dab963;
+	margin: 0 30px;
+}
+.week ul
+{
+	padding:0;
+	margin:0;
+}
+.week ul li
+{
+	width:30px;
+	line-height:25px;
+	float:left;
+	text-align:center;
+}
+
+
+
+/* 澶� */
+.day
+{
+	background:#3d2c15;
+	margin:0 30px 30px 30px;
+}
+.day ul
+{
+	overflow:hidden;
+}
+.day ul li
+{
+	height:30px;
+	line-height:30px;
+	width:30px;
+	float:left;
+	text-align:center;
+	background:#3d2c15;
+	margin-top:1px;
+	cursor:pointer;
+	color: #dab963;
+}
+.day ul li:hover
+{
+	background:#dab963;
+	color:#170a01;
+}
+.day ul li.active
+{
+	background:#dab963;
+	color:#170a01;
+}
+
+
+/* 鏈� */
+.year-month .month .month-list
+{
+	width:72px;
+	border:solid 1px #dab963;
+	border-top:none;
+	position:absolute;
+	top:25px;
+	left:0;
+	background:#3d2c15;
+	display:none;
+	color:#9ea7b3;
+}
+.month-list ul li
+{
+	width:34px;
+	float:left;
+	height:20px;
+	cursor:pointer;
+	text-align:center;
+	line-height:20px;
+	margin:1px;
+	color: #dab963;
+}
+.month-list ul li:hover
+{
+	background:#dab963;
+	color:#170a01;
+}
+
+.month-list ul li.active
+{
+	background:#dab963;
+	color:#170a01;
+}
+
+
+
+/* 閫夋嫨骞� */
+.year-month .year .year-list
+{
+	width:72px;
+	border:solid 1px #dab963;
+	border-top:none;
+	position:absolute;
+	top:25px;
+	left:0;
+	background:#3d2c15;
+	display:none;
+	color: #dab963;
+}
+.year-list ul
+{
+	overflow:hidden;
+}
+.year-list ul li
+{
+	width:34px;
+	float:left;
+	height:20px;
+	cursor:pointer;
+	text-align:center;
+	line-height:20px;
+	margin:1px;
+}
+.year-list ul li:hover
+{
+	background:#dab963;
+	color:#170a01;
+}
+
+.year-list ul li.active
+{
+	background:#dab963;
+	color:#170a01;
+}
+
+.year-list .year-change
+{
+	margin-top:3px;
+	margin-bottom:3px;
+	overflow: hidden;
+    height: 18px;
+    width: 100%;
+}
+.year-change span
+{
+	width:30px !important;
+	height:18px !important;
+}
+.year-change .year-left
+{	
+	margin-left:4px;
+	margin-right:4px;
+	background:url(../../img/vip/left-default.png) #fff no-repeat center !important;
+}
+.year-change .year-left:hover
+{	
+	background:url(../../img/vip/left-active.png) #dab963 no-repeat center !important;
+}
+.year-change .year-right
+{	
+	background:url(../../img/vip/right-default.png) #fff no-repeat center !important;
+}
+.year-change .year-right:hover
+{	
+	background:url(../../img/vip/right-active.png) #dab963 no-repeat center !important;
+}
+
+.tz-datepicker .action
+{
+	height:40px;
+	border-top: solid 1px #dab963;
+}
+.tz-datepicker .action span
+{
+	height:25px;
+	width:70px;
+	color:#dab963;
+	text-align:center;
+	cursor:pointer;
+	display:inline-block;
+	margin:10px 30px;
+			
+}
+.datepicker-box{
+	height:700px;
+	width: 700px;
+	background-color: red;
+}
+
+

@@ -1,0 +1,639 @@
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../font/intosands/intosands-arrow-icon/iconfont.eot');
+  src: url('../../font/intosands/intosands-arrow-icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../../font/intosands/intosands-arrow-icon/iconfont.woff') format('woff'), url('../../font/intosands/intosands-arrow-icon/iconfont.ttf') format('truetype'), url('../../font/intosands/intosands-arrow-icon/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.banner {
+  width: 100%;
+  max-height: 570px;
+  overflow: hidden;
+}
+/*Banner图下面的内容*/
+.content {
+  margin: auto;
+}
+/*内容的导航*/
+.cont-nav {
+  width: 100%;
+  height: 114px;
+  border-bottom: 1px solid #3d2b15;
+}
+
+
+.cont-nav ul {
+  display: table;
+  height: 114px;
+  font-size: 18px;
+  line-height: 111px;
+  text-align: center;
+  color: #ffda84;
+  cursor: pointer;
+}
+
+  .cont-nav ul li {
+    font-family: 'Optima Regular';
+    float: left;
+    font-weight: bold;
+    padding: 0 30px;
+    cursor: pointer;
+  }
+
+    .cont-nav ul li:hover {
+      color: #edc048;
+      border-bottom: 3px solid #edc048;
+    }
+
+.cont-nav .contNav-active {
+  color: #edc048;
+  border-bottom: 3px solid #edc048;
+}
+/*标题样式共用*/
+.intosandsTitle {
+  font-family: 'Optima Regular';
+  color: #edc048;
+  font-size: 29px;
+  margin-top: 80px;
+  font-weight: bold;
+}
+/*金沙简介*/
+.sands-introduce {
+  width: 100%;
+  border-top: 1px solid #3d2b15;
+}
+
+.sands-introduce-infotext {
+  font-family: 'Futura Bk BT Book';
+  color: #ffda84;
+  font-size: 16px;
+  margin-top: 60px;
+  position: relative;
+  line-height: 28px;
+  max-height: 224px;
+  text-align:justify;
+  overflow: hidden;
+}
+
+  .sands-introduce-infotext::after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 40px;
+  }
+
+.sands-introduce-infobtn {
+  width: 220px;
+  height: 50px;
+  font-family: 'Futura Bk BT Book';
+  font-size: 16px;
+  color: #ffda84;
+  border: 1px solid #ffda84;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 10%;
+  cursor: pointer;
+  float: right;
+}
+
+  .sands-introduce-infobtn:hover {
+    color: #170801;
+    background-color: #ffda84;
+  }
+/*简介图片*/
+.sands-introduce-img {
+  height: 100%;
+}
+
+.sands-introduce-imgMask {
+  position: relative;
+  width: 682px;
+  margin: 130px auto 82px;
+  overflow: hidden;
+  height: 386px;
+}
+
+/*馆长致辞模块*/
+.boss-speech {
+  width: 100%;
+  border-bottom: 1px solid #3d2b15;
+}
+
+.boss-introduce {
+  width: 100%;
+}
+
+.boss-imginfo {
+  width: 100%;
+  margin-bottom: 80px;
+  background: url(../../img/intosands/meetjinsha_bg_JS.png) no-repeat top right;
+}
+
+.boss-introduce > p {
+  margin: 80px 0px;
+}
+/*馆长的帅照*/
+.boss-img > img {
+  position: relative;
+}
+
+.boss-img > div {
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  line-height: 65px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Optima Regular';
+  color: #edc048;
+  ;
+  height: 65px;
+  background-color: rgba(98,76,52,0.5);
+}
+
+.boss-img div span {
+  margin-left: 10px;
+}
+/*馆长的致辞*/
+.boss-speech-info {
+  font-family: 'Futura Bk BT Book';
+  color: #ffda84;
+}
+
+  .boss-speech-info > div {
+    width: 95%;
+    /*margin-top: 15%;*/
+  }
+
+  .boss-speech-info h4 {
+    font-size: 18px;
+    font-family: 'Optima Regular';
+    color: #edc048;
+    margin-bottom: 3%;
+  }
+
+  .boss-speech-info p {
+    font-family: 'Futura Bk BT Book';
+    line-height: 28px;
+    width: 100%;
+    font-size: 16px;
+    word-break: keep-all;
+    text-align: justify;
+  }
+
+/*组织机构*/
+.organization {
+  width: 100%;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+/*组织机构的简介*/
+.organization-info {
+  width: 100%;
+  float: left;
+  margin: 5% 0;
+}
+
+  .organization-info p {
+    font-family: 'Futura Bk BT Book';
+    color: #ffda84;
+    font-size: 18px;
+  }
+/*组织机构的图例*/
+.organization-example {
+  width: 100%;
+}
+
+.example-body {
+  width: 100%;
+}
+
+  .example-body ul {
+    width: 100%;
+    height: auto;
+  }
+
+  .example-body .mylist:hover .listP {
+    background-color: #2b190b;
+    border-bottom: 1px solid #170801;
+  }
+
+.focusA {
+  background-color: #2b190b;
+  border-bottom: 1px solid #170801 !important;
+}
+/*箭头变化*/
+.arrowUp {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari and Chrome */
+  -o-transform: rotate(180deg); /* Opera */
+  -moz-transform: rotate(180deg); /* Firefox */
+  transform: rotate(180deg);
+}
+
+.example-body ul > li > p {
+  padding: 0 3%;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  line-height: 60px;
+  border-bottom: 1px solid #3d2b15;
+  font-size: 16px;
+  /*font-weight: bold;*/
+  color: #ffda84;
+  font-family: 'Futura Bk BT Book'
+}
+
+.parentListBorder {
+  /*border-bottom:1px solid #3d2b15;*/
+}
+
+.example-body ul > li > p .iconfont {
+  float: right;
+}
+
+.example-body .example-body-li-active {
+  background-color: #2b190b;
+  border-style: none;
+}
+
+.example-body ul > li:nth-child(1) p {
+  border-top: none;
+}
+
+.example-body ul > li > ol {
+  font-family: 'Futura Bk BT Book';
+  color: #ffda84;
+  font-size: 16px;
+  text-indent: 6%;
+  width: 100%;
+  margin: 40px 0;
+}
+
+  .example-body ul > li > ol > li {
+    height: 20px;
+    line-height: 20px;
+  }
+
+.childList {
+  display: none;
+}
+  .childList p {
+    font-family: 'Futura Bk BT Book'
+  }
+
+/*媒体查询*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+  /*副导航*/
+  .cont-nav ul {
+    width: 100% !important;
+    /*outline: 1px solid red;*/
+  }
+
+    .cont-nav ul li {
+      padding: 0 1% !important;
+      /*outline: 1px solid whitesmoke;*/
+    }
+  /*视频*/
+  .vedioBox {
+    margin-left: -300px !important;
+    width: 600px !important;
+    height: 450px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  /*副导航*/
+  .cont-nav ul {
+    width: 92%;
+  }
+
+    .cont-nav ul li {
+      padding: 0 3%;
+      /*outline: 1px solid whitesmoke;*/
+    }
+  /*视频*/
+  .vedioBox {
+    margin-left: -350px;
+    width: 700px;
+  }
+  /*馆长*/
+  .boss-img > img {
+    margin: auto;
+  }
+  /*.boss-img>div{
+		position: absolute;
+		bottom: 0;
+		line-height: 65px;
+		text-align: center;
+		width:435px !important;
+		left:50%;
+		margin-left: -217.5px;
+	}*/
+  .boss-img div span {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  /*副导航*/
+  .cont-nav ul {
+    width: 662px;
+  }
+
+    .cont-nav ul li {
+      padding: 0 3%;
+    }
+
+  .sands-introduce-infotext {
+    margin-top: 30px !important;
+  }
+
+  .sands-introduce-infobtn {
+    width: 160px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+  }
+
+  .sands-introduce-info .sands-introduce-infobtn {
+    margin-top: 5% !important;
+  }
+
+  .boss-speech-more {
+    width: 240px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    margin: 10% auto !important;
+  }
+  /*视频*/
+  .vedioBox {
+    margin-left: -365px !important;
+    width: 730px !important;
+    height: 440px !important;
+  }
+
+  .sands-introduce-imgMask .mask {
+    display: block !important;
+  }
+  /*馆长*/
+  .boss-img > img {
+    margin: auto;
+  }
+  /*.boss-img>div{
+		position: absolute;
+		bottom: 0;
+		font-size: 16px;
+		line-height: 65px;
+		text-align: center;
+		width:435px !important;
+		left:50%;
+		margin-left: -217.5px;
+	}*/
+  .boss-img div span {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  /*副导航*/
+  .cont-nav ul {
+    width: 662px;
+  }
+
+    .cont-nav ul li {
+      padding: 0 3%;
+    }
+
+  .sands-introduce-infotext {
+    margin-top: 30px !important;
+  }
+
+  .sands-introduce-infobtn {
+    width: 160px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .boss-img > div {
+    line-height: 30px;
+    text-align: center;
+    height: 65px;
+  }
+
+  .boss-img div span {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .content {
+    margin: auto;
+    width: 74% !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .boss-img > div {
+    font-size: 16px;
+    line-height: 65px;
+    text-align: center;
+    height: 65px;
+  }
+
+  .boss-img div span {
+    margin-left: 4%;
+  }
+}
+/*@media only screen and (min-width: 1895px) {
+	.boss-img>div{
+		width: 435px !important;
+	}
+}*/
+.line {
+  margin-top: 60px !important;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+/*滚动条*/
+
+.infoall {
+
+  height: 484px;
+  padding-right: 10px;
+  overflow-y: auto;
+  scrollbar-face-color: #3d2c15; /*滚动条3D表面（ThreedFace）的颜色*/
+  scrollbar-highlight-color: #3d2c15; /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+  scrollbar-shadow-color: #3d2c15; /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+  scrollbar-3dlight-color: #3d2c15; /*滚动条亮边框颜色*/
+  scrollbar-arrow-color: #dab766; /*滚动条方向箭头的颜色 */
+  scrollbar-track-color: #170a01; /*滚动条的拖动区域(TrackBar)颜色*/
+  scrollbar-darkshadow-color: #170a01; /*滚动条暗边框（ThreedDarkShadow）颜色*/
+}
+
+
+  /*---滚动条默认显示样式--*/
+
+  .infoall::-webkit-scrollbar-thumb {
+    background-color: #d9b765;
+    height: 50px;
+    outline-offset: -2px;
+    /*outline:2px solid #fff;*/
+    -webkit-border-radius: 4px;
+    /*border: 2px solid #fff;*/
+  }
+
+
+    /*---鼠标点击滚动条显示样式--*/
+
+    .infoall::-webkit-scrollbar-thumb:hover {
+      background-color: #ffe9b7;
+      height: 50px;
+      -webkit-border-radius: 4px;
+    }
+
+
+  /*---滚动条大小--*/
+
+  .infoall::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+
+  /*---滚动框背景样式--*/
+
+  .infoall::-webkit-scrollbar-track-piece {
+    background-color: #170a01;
+    -webkit-border-radius: 0;
+  }
+
+
+/*修改*/
+.sands-introduce-imgMask {
+  height: 100%;
+}
+
+.boss-img > img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    padding:0px 15px;
+  }
+  .cont-nav {
+    display: none;
+  }
+
+  .sands-introduce-infotext {
+    font-family: 'Futura Bk BT Book';
+    color: #ffda84;
+    font-size: 16px;
+    margin-top: 30px;
+    position: relative;
+    line-height: 28px;
+    height: auto;
+    max-height: 1000px;
+    overflow: initial;
+  }
+
+  .intosandsTitle {
+    text-align: center;
+    font-size: 24px !important;
+    margin-top: 30px;
+  }
+
+  .sands-introduce-infobtn {
+    float: none;
+    margin: 20px auto 0px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .sands-introduce-imgMask {
+    position: relative;
+    width: 682px;
+    margin: 30px auto 50px;
+  }
+
+    .sands-introduce-imgMask > video {
+      height: auto;
+    }
+
+  .boosSpeakP {
+    text-align: center;
+  }
+
+  .boss-imginfo {
+    width: 100%;
+    margin-bottom: 80px;
+    background: url();
+  }
+
+  .boss-img > img {
+    width: 100%;
+  }
+
+  .boss-img > div {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+    .boss-img > div > span {
+      display: block;
+    }
+
+  .boss-introduce > p {
+    font-size: 24px;
+    margin: 50px 0px;
+  }
+
+  .boss-speech-info p {
+    line-height: 24px;
+  }
+
+  .infoall {
+    padding-right: 0px;
+    height: auto;
+    overflow: initial;
+    overflow-y: initial;
+  }
+
+  .organization > p {
+    font-size: 24px;
+    color: #DAB766;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .organization-info p {
+    font-family: 'Futura Bk BT Book';
+    color: #ffda84;
+    font-size: 16px;
+  }
+}

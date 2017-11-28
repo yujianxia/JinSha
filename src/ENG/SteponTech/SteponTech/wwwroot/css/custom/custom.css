@@ -1,0 +1,112 @@
+mytitle/* 文章 */
+body {
+  line-height: 23px;
+  font-family: 'Futura Bk BT Book';
+}
+h2{
+  color:#edc048;
+  font-family: 'Optima Regular';
+}
+h3{
+  font-size: 24px;
+font-family: 'Optima Regular';
+}
+h4{
+  font-family: 'Optima Regular';
+}
+/*导航*/
+a:hover{
+  color:#ffebbf;
+}
+/*侧栏*/
+main aside {
+  margin-left: 5%;
+}
+.aside-box {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  margin-bottom: 80px;
+}
+.aside-title {
+  padding-bottom: 20px;
+}
+.link-box {
+  margin-top: 18px;
+  border-top: 1px solid #3d2c15;
+  padding-top: 10px;
+
+}
+.link-box p {
+  font-family: 'Futura Bk BT Book';
+}
+.relate-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-height: 25px;
+}
+.bm-line{
+	width:100%;
+    border-top: 1px solid #d8b964;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .content {
+    margin-bottom: 100px;
+  }
+  .aside-box {
+    /*float:left;*/
+    padding: 0;
+    min-height: 200px !important;
+    position: static;
+  }
+  main aside {
+    margin-left: 0;
+  }
+
+  .aside-title {
+    text-align: center;
+  }
+  .aside-title h4 {
+    padding-top: 3%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 74%;
+  }
+  main aside {
+    margin-left: 4%;
+  }
+}
+@media screen and (min-width: 992px){
+.aside-box{
+    width:15%;
+  min-width: 220px;
+  position: fixed;
+}
+}
+.mytitle{
+	text-align: center;
+	margin: 100px 0px 80px 0px;
+	    font-family: 'Optima Regular';
+    color: #edc048;
+    font-size: 28px;
+    font-weight: bold;
+}
+.mg{
+	margin-bottom: 80px;
+	    font-family: 'Futura Bk BT Book';
+    line-height: 25px;
+    text-indent: 27px;
+    width: 100%;
+    font-size: 16px;
+    word-break:break-all;
+}
+.mytitle1{
+	text-align: center;
+	margin: 60px 0px 30px 0px;
+	 font-family: 'Optima Regular';
+    color: #edc048;
+    font-size: 24px;
+}

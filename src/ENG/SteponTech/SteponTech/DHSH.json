@@ -1,0 +1,9 @@
+{
+  "XMLFilePath":"aes.xml",
+  "TokenUrl":"http://www.smartjs.org:8013/esb/as/json/gt",
+  "DataUrlHeader":"http://www.smartjs.org:8013/esb/as/json/ac/",
+  "UserName":"datahubsys",
+  "Password":"chengdulifang",
+  "UserCode":"5faaa316",
+  "Version":"v1.0"
+}

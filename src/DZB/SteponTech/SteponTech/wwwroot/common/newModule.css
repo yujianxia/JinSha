@@ -1,0 +1,141 @@
+.newBossSpeech {
+    width: 100%;
+    border-top: 1px solid #3d2b15;
+}
+
+.newBoss-introduce {
+    width: 100%;
+}
+
+.newBoss-imginfo {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.newBoss-introduce > p {
+    font-size:24px;
+    color: #DAB766;
+    margin: 80px 0px;
+}
+/*馆长的帅照*/
+.newBoss-img > img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.newBoss-img {
+    height: 300px;
+    overflow: hidden;
+}
+/*馆长的致辞*/
+.newBossSpeech-info {
+    float: left;
+    word-break: break-all;
+}
+
+    .newBossSpeech-info > div {
+        width: 95%;
+        margin-top: 15%;
+    }
+
+#bossInfoBox {
+    margin-top: 0px !important;
+}
+
+
+    #bossInfoBox h4 {
+        font-size: 18px;
+        color: #DAB766;
+    }
+
+.newInfoP {
+    width: 100%;
+    position: relative;
+    line-height: 28px;
+    margin-top:20px;
+    max-height: 382px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: auto;
+    padding-right: 10px;
+}
+
+.newBoss-speech-info p {
+    line-height: 28px;
+    /*text-indent: 27px;*/
+    width: 100%;
+}
+
+.newBossSpeech-more {
+    cursor: pointer;
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #DAB766;
+    color: #DAB766;
+    margin: 6% 0px;
+    float:right;
+}
+
+    .newBossSpeech-more:hover {
+        color: #000000;
+        background-color: #DAB766;
+    }
+/*组织机构*/
+.organization {
+    width: 100%;
+    margin-bottom: 60px;
+    display: inline-block;
+}
+/*下拉条的样式*/
+.newInfoP::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #170a01;
+}
+
+.newInfoP::-webkit-scrollbar {
+    width: 6px;
+    background-color: #170a01;
+}
+
+.newInfoP::-webkit-scrollbar-thumb {
+    background-color: #3d2c15;
+    border-radius: 4px;
+}
+
+/* 滑动条ie */
+.newInfoP {
+    scrollbar-face-color: #3d2c15; /*滚动条3D表面（ThreedFace）的颜色*/
+    scrollbar-highlight-color: #3d2c15; /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+    scrollbar-shadow-color: #3d2c15; /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+    scrollbar-3dlight-color: #3d2c15; /*滚动条亮边框颜色*/
+    scrollbar-arrow-color: #dab766; /*滚动条方向箭头的颜色 */
+    scrollbar-track-color: #170a01; /*滚动条的拖动区域(TrackBar)颜色*/
+    scrollbar-darkshadow-color: #170a01; /*滚动条暗边框（ThreedDarkShadow）颜色*/
+}
+@media only screen and (max-width:768px) {
+    #bossInfoBox h4 {
+        font-size: 18px;
+        color: #DAB766;
+        margin-top: 20px;
+    }
+    .newBoss-introduce > p {
+        text-align:center;
+    }
+}
+@media only screen and (max-width:992px) {
+    .newBossSpeech-more {
+        cursor: pointer;
+        width: 140px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #DAB766;
+        color: #DAB766;
+        margin: 6% auto;
+        float: none;
+    } 
+
+}

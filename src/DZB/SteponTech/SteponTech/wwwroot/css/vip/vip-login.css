@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../font/vip/vip-icon/iconfont.eot');
+  src: url('../../font/vip/vip-icon/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../../font/vip/vip-icon/iconfont.woff') format('woff'),
+  url('../../font/vip/vip-icon/iconfont.ttf') format('truetype'),
+  url('../../font/vip/vip-icon/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:58px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right:18%;
+}
+.icon-cell{
+    width: 31%;
+    padding-top: 40px;
+    margin-left: 35%;
+    text-align: center;
+}
+.icon-cell>span{
+    width:32%;
+    display:inline-block;
+}
+/* .icon-cell :last-child{
+    margin-right: 0px;
+} */
+.icon-cell a:hover{
+    /*display: inline-block;*/
+    color: #d8b866;
+}
+.mytitle{
+    text-align: center;
+    width: 200px;
+    padding-top:107px;
+    padding-bottom: 70px;
+}
+
+.form--control{
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 6px 12px;
+    font-size: 14px;
+
+    line-height: 1.42857143;
+    color: #dab766;
+    background-image: none;
+    border: 1px solid #dab766;
+    border-radius: 4px;
+    background-color: #170801;
+    outline: none;
+}
+#login-btn{
+    background-color: #dab766;
+    color:#170800;
+    text-align: center;
+}
+#login-btn:hover{
+    cursor: pointer;
+}
+.form-cell{
+    float:none;
+    padding-top: 40px;
+    padding-bottom: 97px;
+    padding-left:0px;
+    padding-right: 8%;
+}
+.login-line{
+border-bottom: 1px solid #3d2c15;
+width:100%;
+height: 1px;
+}
+.fomr-item1{
+    margin-bottom: 24px;
+}
+
+.forget-btn{
+    float:right;
+    margin-right:10%;
+    margin-top: 6px;
+    margin-bottom: 32px;
+}
+.forget-btn>a{
+    color:#dab766;
+    font-size: 12px;
+}
+
+.bm-line{
+	width:100%;
+    border-top: 1px solid #d8b964;
+}
+
+@media screen and (min-width: 1400px){
+.form-horizontal .control-label{
+    margin-left: 3.8%;
+}
+.form--control{
+    width:85%;
+}
+.forget-btn{
+    margin-right: 15%;
+}
+.container{
+    width:74%;
+}
+}
+
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .JumpDiv {
+            width: 110%!important;
+        }
+        #infor-ul > li > a {
+            font-size: 12px;
+        }
+
+        #infor-ul li {
+            width: 60px;
+            height: 100px;
+        }
+
+        .form-input {
+            float: left;
+        }
+         .icon-cell {
+            width: 40%;
+        }
+
+            .icon-cell > span {
+                width: 33.33%;
+                display:inline-block;
+            }
+
+        .mytitle {
+            margin-left: 40%;
+        }
+    }
+
+    #phoneP, #pwdP {
+        visibility: hidden;
+    }
+
+.JumpDiv {
+    width: 68%;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+        .JumpDiv > a:link, .JumpDiv > a:visited, .JumpDiv > a:hover, .JumpDiv > a:active {
+            color: #dab766;
+        }
+
+    .RegA:hover, .ForgetA:hover {
+        text-decoration: underline !important;
+    }
+
+    .ForgetA {
+        float: right;
+        margin-right: 15%;
+    }
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+
+    .ForgetA {
+        float: right;
+        margin-right: 0px;
+    }
+}
+/*ÐÞ¸Ä*/
+.tips {
+text-align:center;
+margin-top:30px;
+}
+@media screen and (min-width: 768px) {
+    .form-input {
+        width: 68%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .form-cell {
+        float: none;
+      padding:40px 15px 60px 15px ;
+    }
+
+    .container, .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .form-horizontal .form-group {
+         margin-right:0px; 
+        margin-left:0px; 
+    }
+    .mytitle {
+        text-align: center;
+        width: 200px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size:24px;
+    }
+    .form--control {
+        height: 34px;
+    }
+    .control-label {
+    text-align:right;
+    height:34px;
+    line-height:34px;
+    }
+    .JumpDiv {
+         width:90%;
+        font-size: 12px;
+        margin: 0px auto 0px auto;
+    }
+    .paddingRightPercent {
+        padding-right: 8%;
+    }
+}

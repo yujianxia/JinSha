@@ -1,0 +1,1220 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #170801;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.container, .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+}
+/*Banner图下面的内容*/
+.content {
+  margin-bottom: 90px !important;
+}
+/*内容的导航*/
+.cont-nav {
+  width: 100%;
+  height: 114px;
+}
+
+  .cont-nav ul {
+    display: table;
+    height: 117px;
+    font-size: 18px;
+    line-height: 112px;
+    text-align: center;
+    color: #fae1ac;
+    cursor: pointer;
+  }
+
+    .cont-nav ul li {
+      padding: 0px 30px;
+      float: left;
+      cursor: pointer;
+      font-family: Optima Regular;
+      font-weight: 700;
+      font-size: 18px;
+      color: #ffda84;
+    }
+
+      .cont-nav ul li:hover {
+        color: #edc048;
+        border-bottom: 3px solid #edc048;
+      }
+
+.cont-nav {
+  color: #DAB766;
+  border-bottom: 1px solid #3E2B15;
+}
+
+.img1 {
+  margin-top: -10.7%;
+}
+
+.ptitle {
+  color: #EDC048;
+  font-size: 30px;
+  margin: 5.7% 0;
+  font-family: Optima Regular !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+}
+
+.mbb {
+  margin-bottom: 5.7% 0;
+}
+/*开馆时间*/
+.openTime {
+  width: 100%;
+  /*border-top: 1px solid #3d2b15;*/
+  margin-bottom: 5.7%;
+}
+/*左边的时间、天气、开馆时间、售票时间*/
+
+/*时间*/
+.openTime-infoTime, .openTime-infoWeather {
+  width: 76%;
+  height: 120px;
+  border: 1px solid #DAB766;
+  margin-bottom: 5%;
+}
+
+.timeBox {
+  width: 80%;
+  height: 120px;
+}
+
+.timeNumber {
+  height: 100%;
+  line-height: 120px;
+  font-size: 54px;
+  color: #ffda84;
+  font-weight: 300;
+  font-family: "Futura Bk BT Book";
+}
+
+.dateInfo {
+  height: 100%;
+  font-size: 20px;
+  font-family: "Futura Bk BT Book";
+}
+
+.dateInfo-date span,
+.dn {
+  color: #ffda84;
+}
+
+.dateInfo-date {
+  margin: 30px 0px 10px 0px;
+}
+/*天气*/
+.openTime-infoWeather {
+  height: 120px;
+  border: 1px solid #DAB766;
+}
+
+#weather {
+  width: 100%;
+  height: 115px;
+  color: #ffda84;
+}
+
+  #weather .weatherBox {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  #weather i {
+    background: no-repeat;
+    display: inline-block;
+    height: 64px;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    background-size: 64px 64px;
+    margin-top: 28px;
+  }
+
+  #weather span {
+    display: inline-block;
+  }
+
+  #weather .weatherBox .weather-text {
+    font-size: 18px;
+  }
+
+    #weather .weatherBox .weather-text .qiwen {
+      font-weight: 300;
+      font-size: 28px;
+      margin-left: 10%;
+    }
+
+.qiwen {
+  color: #ffda84;
+}
+
+#weather .weatherBox .weather-text .tianqi {
+  margin-left: 10%;
+}
+
+.weather-text {
+  padding: 9% 0;
+}
+
+#weather i.icon-xiaoyu {
+  background-image: url(../../lib/jQuery-weather/icon/xiaoyu.png);
+  background-position: center;
+}
+
+#weather i.icon-zhenyu {
+  background-image: url(../../lib/jQuery-weather/icon/zhenyu.png);
+  background-position: center;
+}
+
+#weather i.icon-zhongyu {
+  background-image: url(../../lib/jQuery-weather/icon/zhongyu.png);
+  background-position: center;
+}
+
+#weather i.icon-dayu {
+  background-image: url(../../lib/jQuery-weather/icon/dayu.png);
+  background-position: center;
+}
+
+#weather i.icon-qing {
+  background-image: url(../../lib/jQuery-weather/icon/qing.png);
+  background-position: center;
+}
+
+#weather i.icon-duoyun {
+  background-image: url(../../lib/jQuery-weather/icon/duoyun.png);
+  background-position: center;
+}
+
+#weather i.icon-yin {
+  background-image: url(../../lib/jQuery-weather/icon/yin.png);
+  background-position: center;
+}
+/*开馆时间、售票时间*/
+.openAndSell {
+  height: 120px;
+}
+
+.open {
+  width: 100%;
+  height: 86px;
+  margin-top: 60px;
+}
+
+.openDiv1 {
+  width: 150px;
+  height: 100%;
+  float: left;
+  color: #ffda84;
+  font-size: 16px;
+}
+
+.openDiv2 {
+  float: left;
+  /*width: 280px;*/
+  height: 100%;
+  word-break: break-all;
+  color: #ffda84;
+  font-size: 16px;
+  line-height: 24px;
+}
+.openTimePre {
+  word-break: keep-all;
+  text-align: justify;
+  background-color: #1d0c04;
+  color: #ffda84;
+  border: none;
+  font-size: 16px;
+  font-family: "Futura Bk BT Book";
+  overflow: auto;
+  white-space: pre-wrap;
+}
+.sell {
+  color: #ffda84;
+  font-size: 17px;
+  width: 300px;
+  margin-top: 10px;
+}
+
+  .sell span {
+    color: #ffda84;
+    font-size: 16px;
+    margin-left: 39px;
+  }
+/*右边的日历*/
+.title {
+  float: inherit;
+}
+/*交通信息*/
+.trafficInfo {
+  width: 100%;
+  border-top: 1px solid #3d2b15;
+}
+
+  .trafficInfo .ptitle, .serviceInfo .ptitle, .visitInfo .ptitle {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+.mapBox, .serviceInfo-info, .rulesBox {
+  width: 100%;
+  margin-top: 60px;
+  font-family: 'Futura Bk BT Book'
+}
+  .mapBox, .serviceInfo-info, .rulesBox ol li p {
+    font-family: 'Futura Bk BT Book';
+     word-break: keep-all;   
+	  text-align: justify;
+  }
+
+  .mapBox {
+    margin-bottom: 60px;
+  }
+
+#map {
+  overflow: hidden;
+  width: 80%;
+  height: 514px;
+}
+
+.mapBox .infoBox {
+  width: 80%;
+  height: 40px;
+  margin: 3% 0;
+}
+
+.mapInfo p span {
+  color: #ffda84 !important;
+  font-size: 15px;
+  font-family: Futura Bk BT Book;
+}
+
+.goMothods {
+  margin-top: -22px;
+}
+
+.goMothods-box ul {
+  display: table;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 60px;
+  text-align: center;
+}
+
+  .goMothods-box ul li {
+    padding: 0px 20px;
+    display: table-cell;
+    margin: 0px 4px;
+    height: 59px;
+    float: left;
+    color: #ffda84;
+    cursor: pointer;
+    font-family: Optima Regular;
+    font-size: 20px;
+  }
+
+    .goMothods-box ul li:hover {
+      color: #EDC048;
+      border-bottom: 3px solid #EDC048;
+    }
+
+.goMothods-box .contNav-active {
+  color: #EDC048;
+  border-bottom: 3px solid #EDC048;
+}
+
+.goMothods-text {
+  width: 80%;
+  margin-top: 5%;
+}
+
+  .goMothods-text p {
+    line-height: 28px;
+    font-size: 16px;
+    color: #ffda84 !important;
+    font-family: Futura Bk BT Book;
+  }
+/*服务信息*/
+.serviceInfo {
+  width: 100%;
+  border-top: 1px solid #3d2b15;
+}
+
+.serviceInfo-info {
+  height: 600px;
+  margin-bottom: 90px;
+}
+
+  .serviceInfo-info ul > li {
+    /*width: 600px;*/
+    height: 300px;
+    float: left;
+    overflow: hidden;
+  }
+
+.tabText {
+  display: none;
+}
+
+.serviceInfo-info img {
+  /*width: 100%;*/
+  height: 100%;
+}
+
+.serviceInfo-info ul > li > div {
+  /*width: 300px;*/
+  height: 300px;
+  float: left;
+  color: #fff9ef;
+  overflow: hidden;
+  background-color: #786034;
+}
+
+.ticketServiceInfo ol > li,
+.explain ol > li,
+.food ol > li,
+.roder ol > li {
+  overflow: hidden;
+}
+
+.ticketServiceInfoLi1,
+.explainLi1,
+.foodlLi1,
+.roderLi1 {
+  width: 270px;
+  height: auto;
+  font-size: 20px;
+  margin: 30px 0px 14px 24px;
+  color: #EDC048;
+  font-size: 24px;
+  font-family: Optima Regular !important;
+  font-weight: 700 !important;
+}
+
+.ticketServiceInfoLi2,
+.explainLi2,
+.foodlLi2,
+.roderLi2 {
+  width: 60px;
+  height: 20px;
+  border-top: 2px solid #EDC048;
+  margin-left: 24px;
+  color: #ffebbf;
+}
+
+.ticketServiceInfoLi3,
+.explainLi3,
+.foodlLi3,
+.roderLi3 {
+  padding-right: 6px;
+  height: 146px;
+  font-size: 16px;
+  margin-left: 24px;
+  line-height: 21px;
+  color: #ffebbf;
+}
+  .foodlLi3 p {
+    word-break: keep-all;
+    text-align: justify;
+    font-family: 'Futura Bk BT Book'
+  }
+  .roderLi3 p {
+    word-break: keep-all;
+    text-align: justify;
+    font-family: 'Futura Bk BT Book'
+  }
+  .ticketServiceInfoLi3 p {
+    word-break: keep-all;
+    text-align: justify;
+    font-family: 'Futura Bk BT Book'
+  }
+  .explainLi3 p {
+    word-break: keep-all;
+    text-align: justify;
+    font-family: 'Futura Bk BT Book'
+  }
+  .learnmore-ff {
+    font-family: 'Futura Bk BT Book'
+  }
+.button {
+  width: 120px;
+  height: 30px;
+  border: 1px solid #ffebbf;
+  font-size: 16px;
+  text-align: center;
+  line-height: 28px;
+  margin-left: 24px;
+  color: #fff9ef;
+  float: left;
+  color: #ffebbf;
+  margin-top: 10px;
+}
+
+  .button:hover {
+    color: #170801;
+    background-color: #ffda84;
+    border-color: rgb(218,183,102);
+  }
+
+.ticket-box {
+  margin-left: 25px;
+}
+/*参观须知*/
+.visitInfo {
+  width: 100%;
+  border-top: 1px solid #3d2b15;
+}
+/*参观须知的规则*/
+.rules {
+  padding-left: 6%;
+  min-height: 333px;
+  height: auto;
+  color: #ffda84 !important;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+/*参观须知的图片*/
+.visitImg1 {
+  width: 444px !important;
+  height: 333px;
+  background-color: #DAB766;
+  position: relative;
+  margin-right: 12px;
+}
+
+  .visitImg1 img {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+  }
+/*页面下面的长线*/
+.line {
+  width: 100%;
+  height: 0px;
+  margin-top: 120px;
+  border-top: 1px solid #DAB766;
+}
+
+/*媒体查询*/
+@media only screen and (max-width: 992px) {
+  .goMothods-box {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .content {
+    margin: auto;
+    width: 74% !important;
+  }
+
+  .serviceInfo-info ul > li {
+    margin-right: -1px;
+  }
+}
+
+@media only screen and (min-width: 1487px) and (max-width: 1647px) {
+  .timeNumber {
+    font-size: 56px;
+  }
+
+  .dateInfo {
+    font-size: 18px;
+    color: #ffda84;
+  }
+
+  #weather .weatherBox .weather-text {
+    font-size: 16px;
+  }
+
+    #weather .weatherBox .weather-text .qiwen {
+      font-size: 26px;
+      margin-left: 5%;
+    }
+
+    #weather .weatherBox .weather-text .tianqi {
+      margin-left: 5%;
+    }
+
+  .weather-text {
+    padding: 13% 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1487px) {
+  .timeNumber {
+    font-size: 54px;
+  }
+
+  .dateInfo {
+    font-size: 18px;
+  }
+
+  #weather i {
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    margin-top: 30px;
+  }
+
+  #weather .weatherBox .weather-text {
+    font-size: 16px;
+  }
+
+    #weather .weatherBox .weather-text .qiwen {
+      font-size: 22px;
+      margin-left: 8%;
+    }
+
+    #weather .weatherBox .weather-text .tianqi {
+      margin-left: 8%;
+    }
+
+  .weather-text {
+    width: 70%;
+    padding: 13% 0;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .timeNumber {
+    font-size: 52px;
+  }
+
+  .dateInfo {
+    font-size: 16px;
+  }
+
+  #weather i {
+    width: 58px;
+    height: 58px;
+    background-size: 58px 58px;
+    margin-top: 32px;
+  }
+
+  #weather .weatherBox .weather-text {
+    font-size: 15px;
+  }
+
+    #weather .weatherBox .weather-text .qiwen {
+      font-size: 20px;
+      margin-left: 8%;
+    }
+
+    #weather .weatherBox .weather-text .tianqi {
+      margin-left: 8%;
+    }
+
+  .weather-text {
+    width: 75%;
+    padding: 16% 0;
+  }
+
+  .infoBox .address, .infoBox .phone, .infoBox .email, .infoBox .zipCode {
+    width: 100%;
+    font-family: Futura Bk BT Book !important;
+    font-size: 16px;
+  }
+
+  .openTime-infoTime, .openTime-infoWeather {
+    width: 82%;
+    height: 120px;
+    border: 1px solid #DAB766;
+    margin-bottom: 5%;
+  }
+
+  .button {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ffebbf;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    color: #fff9ef;
+    float: left;
+    color: #ffebbf;
+    cursor: pointer;
+  }
+
+  .ticketServiceInfo ol > li p,
+  .explain ol > li p,
+  .food ol > li p,
+  .roder ol > li p {
+    word-break: break-all !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width:1400px) and (max-width: 1590px) {
+
+  .button {
+    width: 110px;
+    height: 30px;
+    border: 1px solid #ffebbf;
+    font-size: 14px;
+    text-align: center;
+    line-height: 27px;
+    margin-left: 16px;
+    color: #fff9ef;
+    float: left;
+    color: #ffebbf;
+    cursor: pointer;
+  }
+  .openTimePre {
+    word-break: keep-all;
+    text-align: justify;
+    background-color: #1d0c04;
+    color: #ffda84;
+    border: none;
+    font-size: 14px;
+    font-family: "Futura Bk BT Book";
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+}
+@media only screen and (min-width:1400px) and (max-width: 1650px) {
+  .dateInfo {
+    padding-left:10px;
+  }
+  .openTimePre {
+    word-break: keep-all;
+    text-align: justify;
+    background-color: #1d0c04;
+    color: #ffda84;
+    border: none;
+    font-size: 14px;
+    font-family: "Futura Bk BT Book";
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+  }
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .cont-nav ul {
+    width: 100%;
+    font-size: 16px;
+  }
+  .openTimePre {
+    word-break: keep-all;
+    text-align: justify;
+    background-color: #1d0c04;
+    color: #ffda84;
+    border: none;
+    font-size: 13px;
+    font-family: "Futura Bk BT Book";
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+  .openTime-infoTime, .openTime-infoWeather {
+    width: 100%;
+  }
+
+  .timeBox {
+    width: 80%;
+    height: 120px;
+  }
+  .dateTable {
+    margin-top:40px;
+  } .cont-nav ul {
+    width: 100%;
+    height: 117px;
+    font-size: 18px;
+    line-height: 112px;
+    text-align: center;
+    color: #fae1ac;
+    cursor: pointer;
+  }
+
+  .timeNumber {
+    height: 100%;
+    line-height: 120px;
+    font-size: 60px;
+    color: #DAB766;
+    font-weight: 300;
+  }
+
+  .dateInfo {
+    height: 100%;
+    font-size: 20px;
+  }
+
+  .dateInfo-date span,
+  .dn {
+    color: #ffda84;
+    font-family: "times new roman";
+  }
+
+  .dateInfo-date {
+    margin: 30px 0px 10px 0px;
+    font-family: "times new roman";
+  }
+  /*天气*/
+  .openTime-infoWeather {
+    height: 120px;
+    border: 1px solid #DAB766;
+  }
+
+  #weather {
+    width: 100%;
+    height: 115px;
+    color: #DAB766;
+  }
+
+    #weather .weatherBox {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    #weather i {
+      background: no-repeat;
+      display: inline-block;
+      width: 64px;
+      height: 64px;
+      font-size: 20px;
+      font-style: normal;
+      text-align: center;
+      background-size: 64px 64px;
+      margin-top: 28px;
+    }
+
+    #weather span {
+      display: inline-block;
+    }
+
+    #weather .weatherBox .weather-text {
+      font-size: 18px;
+    }
+
+      #weather .weatherBox .weather-text .qiwen {
+        font-weight: 300;
+        font-size: 28px;
+        margin-left: 15%;
+      }
+
+      #weather .weatherBox .weather-text .tianqi {
+        margin-left: 15%;
+      }
+
+  .weather-text {
+    width: 80%;
+    padding: 7% 0;
+  }
+  /*开馆时间和售票时间*/
+  .open {
+    height: 40px;
+  }
+
+  .openDiv2 {
+    width: 80%;
+  }
+  /*地址邮箱*/
+  #map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mapBox .infoBox {
+    margin: 3% auto;
+  }
+
+  .rules {
+    padding-left: 0 !important;
+    /*height: 300px;*/
+  }
+
+  .visitImg {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .openTime-infoTime, .openTime-infoWeather {
+    width: 100%;
+  }
+  .openTimePre {
+    word-break: keep-all;
+    text-align: justify;
+    background-color: #1d0c04;
+    color: #ffda84;
+    border: none;
+    font-size: 13px;
+    font-family: "Futura Bk BT Book";
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+  /*.weather-text{
+		  width:80%;
+		  padding: 7% 0;
+	  }*/
+  .cont-nav ul {
+    width: 100%;
+    font-size: 16px;
+  }
+  /*开馆时间和售票时间*/
+  .open {
+    width: 100%;
+    height: auto;
+  }
+  /*.openDiv2{
+		width: 80%;
+	}*/
+  #map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mapBox .infoBox {
+    margin: 3% auto;
+  }
+
+  .visitImg {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .serviceInfo-info > ul > li {
+    margin-top: 10px;
+  }
+  .openTimePre {
+    word-break: keep-all;
+    text-align: justify;
+    background-color: #1d0c04;
+    color: #ffda84;
+    border: none;
+    font-size: 13px;
+    font-family: "Futura Bk BT Book";
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+}
+/*买票的弹窗*/
+.buyP {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.3);
+  display: none;
+  z-index: 10000;
+}
+
+.threeLink {
+  width: 460px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -230px;
+  background-color: #fbe9b9;
+}
+
+.closeFont {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fbe9b9;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.threeLink a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  background-color: #f9c54a;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+  margin-top: 46px;
+  font-size: 16PX;
+  border-radius: 6px;
+}
+
+  .threeLink a:hover {
+    display: block;
+    background-color: #ecb737;
+  }
+
+/*滚动条*/
+
+.scollBox {
+  height: 477px;
+  overflow-y: auto;
+  scrollbar-face-color: #3d2c15; /*滚动条3D表面（ThreedFace）的颜色*/
+  scrollbar-highlight-color: #3d2c15; /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+  scrollbar-shadow-color: #3d2c15; /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+  scrollbar-3dlight-color: #3d2c15; /*滚动条亮边框颜色*/
+  scrollbar-arrow-color: #dab766; /*滚动条方向箭头的颜色 */
+  scrollbar-track-color: #170a01; /*滚动条的拖动区域(TrackBar)颜色*/
+  scrollbar-darkshadow-color: #170a01; /*滚动条暗边框（ThreedDarkShadow）颜色*/
+}
+  .scollBox div p {
+    word-break: keep-all;
+    text-align: justify;
+  }
+
+  /*---滚动条默认显示样式--*/
+
+  .scollBox::-webkit-scrollbar-thumb {
+    background-color: #d9b765;
+    height: 50px;
+    outline-offset: -2px;
+    /*outline:2px solid #fff;*/
+    -webkit-border-radius: 4px;
+    /*border: 2px solid #fff;*/
+  }
+
+
+    /*---鼠标点击滚动条显示样式--*/
+
+    .scollBox::-webkit-scrollbar-thumb:hover {
+      background-color: #ffe9b7;
+      height: 50px;
+      -webkit-border-radius: 4px;
+    }
+
+
+  /*---滚动条大小--*/
+
+  .scollBox::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+
+  /*---滚动框背景样式--*/
+
+  .scollBox::-webkit-scrollbar-track-piece {
+    background-color: #170a01;
+    -webkit-border-radius: 0;
+  }
+
+.list-paddingleft-2 {
+  width: 100%;
+}
+  .BMapLabel {
+    width: auto !important;
+    max-width: 200px !important;
+    border: 1px solid rgb(128,128,128) !important;
+  }
+/*修改*/
+@media only screen and (max-width: 490px) {
+  .sell span {
+    color: #ffda84;
+    font-size: 16px;
+    margin-left: 6px!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+   padding:0px 15px!important;
+  }
+  .cont-nav, .myImg, .openTime-calendar {
+    display: none;
+  }
+
+  .openTime {
+    border-top: none;
+  }
+
+  .ptitle {
+    color: #DAB766;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .timeNumber {
+    font-size: 36px;
+  }
+
+  .dateInfo {
+    font-size: 16px;
+  }
+
+  #weather .weatherBox {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+    #weather .weatherBox .weather-text {
+      font-size: 16px;
+    }
+
+  .openTime-infoTime, .openTime-infoWeather {
+    width: 96%;
+    margin: 10px auto 0px;
+  }
+
+  /*.weather-text {
+    width: 78%;
+    padding: 10% 0;
+  }*/
+
+  .open {
+    width: 100%;
+    min-height: 70px;
+    margin-top: 40px;
+    padding-left: 10px;
+  }
+
+  .openAndSell {
+    height: auto;
+  }
+
+  .sell {
+    padding-left: 10px;
+  }
+
+  .mapInfo p span {
+    color: #DAB766;
+    font-size: 14px;
+  }
+
+  .mapInfo {
+    margin-bottom: 40px;
+  }
+
+  .goMothods-box ul li {
+    font-size: 16px;
+  }
+
+  .boxImg img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .serviceInfo-info ul > li {
+    height: auto;
+    float: none;
+  }
+
+  .serviceInfo-info {
+    height: auto;
+    margin-bottom: 90px;
+  }
+
+  .visitImg {
+    display: none;
+  }
+
+  .rules {
+    padding: 0px 15px !important;
+    height: auto;
+    color: #DAB766;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  . /*serviceInfo {
+    padding: 0px 10px;
+  }*/
+  .openDiv1 {
+    font-size: 14px;
+    width: 110px;
+  }
+  .openDiv2 {
+    float: left;
+    height: 100%;
+    word-break: break-all;
+    color: #ffda84;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .sell {
+    font-size: 14px;
+    display: inline-block;
+  }
+
+    .sell span {
+      color: #ffda84;
+      font-size: 16px;
+      margin-left:60px;
+    }
+  .visitImg1 {
+    display: none;
+  }
+
+  .rules {
+    margin-left: 0px;
+  }
+
+  .scollBox {
+    height: auto;
+    overflow-y: initial;
+  }
+
+  #map {
+    overflow: hidden;
+    width: 90%;
+    height: 414px;
+  }
+  .threeLink {
+    width: 280px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -140px;
+    background-color: #fbe9b9;
+  }
+  .openTime {
+    margin-bottom: 10.7%;
+  }
+  .goMothods-text {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .openTimePre {
+    word-break: keep-all;
+    text-align: justify;
+    background-color: #1d0c04;
+    color: #ffda84;
+    border: none;
+    font-size: 13px;
+    font-family: "Futura Bk BT Book";
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+}

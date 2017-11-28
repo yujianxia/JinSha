@@ -1,0 +1,505 @@
+
+
+body {
+  position: relative;
+}
+
+/*照片墙*/
+#picBox {
+  width: 90%;
+  display: inline-block;
+  margin: 20px 0px 0px 5%;
+}
+
+.picBoximg1 {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+  .picBoximg1 > div {
+    width: 90%;
+    margin: auto;
+    height: 210px;
+    border: 1px solid #3d2b15;
+    cursor: pointer;
+    padding: 1%;
+  }
+
+.borderBox {
+  width: 100%;
+  height: 100%;
+}
+
+.picBoximg1 > div {
+  height: 210px;
+}
+
+.hoverDiv {
+  display: none;
+  width: 88%;
+  height: 98%;
+  top: 1%;
+  left: 6%;
+  position: absolute;
+  background-color: rgba(23,8,1,0.2);
+}
+
+.picBoximg1:hover .hoverDiv {
+  display: block;
+}
+
+.picBoximg1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.picBoximg1 p {
+  position: absolute;
+  left: 6%;
+  bottom: 1%;
+  height: 40px;
+  width: 88%;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(23,8,1,0.5);
+}
+/*弹框*/
+#modelBox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(29,12,4);
+  overflow-y: auto;
+}
+
+
+
+#closeBox {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+  #closeBox img {
+    width: 100%;
+    height: 100%;
+  }
+.closeHoverImg {
+  display: none;
+}
+
+#closeBox:hover .closeHoverImg {
+  display: block;
+}
+
+#closeBox:hover .closeImg {
+  display: none;
+}
+
+.modelTitle {
+  text-align: center;
+  font-size: 24px;
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  margin: 80px auto 0px;
+  border-bottom: 1px solid #3d2b15;
+  width: 96%;
+}
+
+.showImgBox {
+  width: 50%;
+  margin: 30px auto;
+  height: 600px;
+}
+
+  .showImgBox img {
+    width: 100%;
+    height: 100%;
+  }
+
+.modelBoxInfo {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.leftImg {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+}
+
+.rightImg {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+}
+
+.secondNav{
+    background-color:#3d2b15;
+    height: 1px;
+    border:none;
+    margin: 0px;
+}
+/*导航*/
+.breadCrumbs{
+    color:#FFF5DD;
+    font-size: 18px;
+}
+.breadCrumbs>div{
+    height: 100%;
+    margin: auto;
+    padding: 3% 0;
+}
+.breadCrumbs>div span{
+    margin-right: 1%;
+    font-family: 'Optima Regular';
+    color: #ffda84;
+}
+.toIndex:hover,
+.toShow:hover,
+.gallery:hover{
+    color: #edc048;
+    cursor: pointer;
+}
+/*导航下面的内容*/
+.content{
+    margin: auto;
+}
+/*全景导览背景图*/
+.Panoramic-navigation img{
+    width: 100%;
+}
+.Panoramic-navigation{
+    position: relative;
+    margin: 5% 0 3% 0;
+}
+.Panoramic-navigation>div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%);		/* IE 9 */
+    -webkit-transform: translate(-50%, -50%);	/* Safari and Chrome */
+    -o-transform: translate(-50%, -50%);		/* Opera */
+    -moz-transform: translate(-50%, -50%);		/* Firefox */
+    transform: translate(-50%,-50%);
+}
+/*全景导览图下面的标题时间描述*/
+.textInfo-box .title{
+    padding-left: 5%;
+    text-align:center;
+}
+  .textInfo-box .title h3 {
+    color: #CFAE60;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 3% 0 1% 0;
+    font-family: 'Optima Regular'
+  }
+  .textInfo-box .title p {
+    font-size: 15px;
+    color: #7D6737;
+    font-family: 'Futura Bk BT Book'
+  }
+.textInfo-box .text{
+    width: 90%;
+    margin: 5% auto;
+    color: #CFAE60;
+    border: 1px solid #3d2b15;
+}
+.textInfo-box .text p{
+    line-height: 28px;
+    font-size: 16px;
+    width: 90%;
+    padding: 4% 0;
+}
+/*正文内容*/
+.text-description {
+  margin: 40px auto 40px;
+  width: 90%;
+  /*border-bottom: 1px solid #3d2b15;*/
+}
+.text-description .description{
+    width: 90%;
+    padding-bottom: 4%;
+}
+.description h4{
+    color: #fae1ac;
+    font-weight: bold;
+}
+.description p strong {
+  font-family: 'Optima Regular'
+}
+.description p {
+  font-family: 'Futura Bk BT Book';
+   word-break: keep-all;
+  text-align: justify;
+}
+/*.description
+{
+    text-indent: 3%;
+    color: #CFAE60;
+    line-height: 28px;
+    margin: 3% 0;
+}*/
+.description-img {
+  margin-bottom: 3%;
+}
+
+/*轮播*/
+.relics-carousel .slideBox{
+    width: 750px;
+    min-height:200px;
+    position: relative;
+    margin: 0 auto;
+    margin: 5.7% auto;
+}
+.slideBox .bd img{
+    width: 750px;
+}
+.slideBox .bd li{
+    width: 750px;
+}
+.slideBox .prev,.slideBox .next{
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    opacity: .7;
+    filter:alpha(opacity=70);
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%, -50%);		/* IE 9 */
+    -webkit-transform: translate(-50%, -50%);	/* Safari and Chrome */
+    -o-transform: translate(-50%, -50%);		/* Opera */
+    -moz-transform: translate(-50%, -50%);		/* Firefox */
+}
+.slideBox .prev:hover,.slideBox .next:hover{
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+/*左箭头*/
+.slideBox .prev{
+    left: -9%;
+}
+/*右箭头*/
+.slideBox .next{
+    right:-13%;
+}
+
+
+
+
+/*媒体查询*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+    /* 兼容iphone5 */
+    /*轮播*/
+    .relics-carousel .slideBox{
+        width: 80% !important;
+    }
+    .slideBox .bd li{
+        width: 488px !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+  .showImgBox {
+    width: 50%;
+    margin: 30px auto;
+    height: 150px;
+  }
+  #closeBox {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+    .textInfo-box .text p{
+        width: 80%;
+    }
+    .text-description .description{
+        width: 80%;
+    }
+    /*轮播*/
+    .relics-carousel .slideBox{
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+        margin: 5.7% auto;
+    }
+    .slideBox .bd li{
+        width: 576px;
+    }
+    .prev, .next{
+        display: none!important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .textInfo-box .text p{
+        width: 90%;
+    }
+    .text-description .description{
+        width: 90%;
+    }
+    /*轮播*/
+    .relics-carousel .slideBox{
+        width: 90%;
+    }
+    .slideBox .bd img{
+        width: 100%;
+    }
+    .slideBox .bd li{
+        width: 675px;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .carousel-control {
+        padding-top: 16% !important;
+    }
+
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .carousel-control {
+        padding-top: 16% !important;
+    }
+
+}
+@media only screen and (min-width: 1400px) {
+    .carousel-control {
+        padding-top: 16% !important;
+    }
+    .content{
+        margin: auto;
+        width: 74% !important;
+    }
+    .breadCrumbs{
+        width: 74% !important;
+    }
+
+
+}
+@media only screen and (min-width: 1500px) {
+    .carousel-control {
+        padding-top: 16% !important;
+    }
+
+}
+@media only screen and (min-width: 1600px) {
+    .carousel-control {
+        padding-top: 16% !important;
+    }
+
+}
+@media only screen and (min-width: 1700px) {
+    .carousel-control {
+        padding-top: 16% !important;
+    }
+
+}
+@media only screen and (min-width: 1800px) {
+    .carousel-control {
+        padding-top: 15% !important;
+    }
+
+}
+/*页面的相关链接*/
+.relatedLink {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+  .relatedLink h3 {
+    font-family: 'Optima Regular';
+    color: #edc048;
+    margin-bottom: 20px;
+  }
+
+  .relatedLink p {
+    margin: 10px 0px;
+    color: #ffda84;
+  }
+
+  .relatedLink a :hover {
+    text-decoration: underline;
+    color: #ffda84;
+  }
+
+.tempWrap {
+  overflow:hidden;
+  height:470px;
+}
+/*修改*/
+.BtmLine {
+  width: 90%;
+  border-top: 1px solid #3d2b15 !important;
+}
+
+@media only screen and (max-width:768px) {
+  .breadCrumbs {
+    display: none;
+  }
+
+  .relics-carousel {
+    display: none;
+  }
+
+  .relatedLink {
+    display: none;
+  }
+
+  .BtmLine, .secondNav {
+    display: none;
+  }
+
+  .Panoramic-navigation > div {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .description h4 {
+    text-align: center;
+    font-size: 16px !important;
+  }
+
+  .textInfo-box .title h3 {
+    color: #CFAE60;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3% 0 1% 0;
+    font-family: 'Optima Regular'
+  }
+
+  .textInfo-box .text p {
+    line-height: 28px;
+    font-size: 14px;
+    width: 90%;
+    padding: 4% 0;
+  }
+
+  .text-description .description {
+    width: 100%;
+  }
+}

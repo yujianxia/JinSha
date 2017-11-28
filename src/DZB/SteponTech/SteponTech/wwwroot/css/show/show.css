@@ -1,0 +1,1092 @@
+
+
+/*Banner图下面的内容*/
+.cont-nav {
+    width: 100%;
+    height: 114px;
+    border-bottom: 1px solid #3E2B15;
+}
+.cont-nav ul {
+    display:table;
+    height: 114px;
+    font-size: 18px;
+    line-height: 112px;
+    text-align: center;
+    color: #fae1ac;
+    cursor: pointer;
+}
+.cont-nav ul li{
+    width: 140px;
+    float: left;
+    cursor: pointer;
+}
+/*.showroom-p a:hover {
+    color: #fae1ac!important;
+}*/
+.cont-nav ul li:hover{
+    color: #DAB766;
+    border-bottom: 3px solid #DAB766;
+}
+.cont-nav .contNav-active{
+    color: #DAB766;
+    border-bottom: 3px solid #DAB766;
+}
+/*遗迹馆*/
+.relic{
+    width: 100%;
+    border-top:1px solid #3d2b15;
+}
+.ptitle{
+    color: #DAB766;
+    font-size: 30px;
+    margin-top: 80px;
+}
+.ptitle1{
+    color: #DAB766;
+    font-size: 30px;
+    margin: 80px 0px 40px 0px;
+}
+.posiBtn {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #DAB765;
+    font-size: 14px;
+    color: #DAB765!important;
+}
+    .posiBtn:hover {
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        width: 100px;
+        height: 30px;
+        border: 1px solid #DAB765;
+        font-size: 14px;
+        background-color: #DAB765;
+        color: #170801!important;
+    }
+.posiBtnZLGK {
+    position: absolute;
+    top: 80px;
+    right: 0px;
+}
+.posiBtnZLTJ {
+    position: absolute;
+    top: 80px;
+    right: 130px;
+}
+.relic-cont {
+    margin: 5.7% auto;
+}
+.relic-cont-info{
+    
+}
+.relic-cont-infotext{
+    width: 85%;
+}
+.ui-paging-container ul{
+    margin: 30px  0px!important;
+}
+.infoP{
+    line-height: 28px;
+    /*限制行数*/
+    position: relative;
+    line-height: 28px;
+    max-height: 140px;
+    overflow: hidden;
+}
+
+
+.relic-cont-infotext > p {
+    line-height: 26px;
+}
+.relic-cont-btn {
+    width: 110px;
+    height: 30px;
+    color: #DAB766;
+    line-height: 30px;
+    margin-top: 62px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #DAB766;
+    margin-bottom: 82px;
+}
+.relic-cont-btn:hover{
+    color: #170801;
+    background-color:#dab766;
+}
+.relic-cont-btn:hover a{
+    color: #170801;
+}
+.relic-cont-infoimg img{
+    width:70%;
+}
+/*陈列馆*/
+.display{
+    border-top: 1px solid #3d2b15;
+}
+.secondDisplayBox{
+    display: none;
+}
+.display-first-info0 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall01.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-first-info1 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall02.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-first-info2 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall03.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-second-info0 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall04.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-second-info1 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall05.png) no-repeat 100%;
+    background-size: cover;
+}
+
+.display-second-info2 {
+    height: 275px;
+    background: url(../../img/show/exhibition_exhibition-hall06.png) no-repeat 100%;
+    background-size: cover;
+}
+.mydisplay {
+    margin: 3.6% auto;
+    overflow:hidden;
+    height:275px;
+}
+.display-one {
+    margin-top:5.7%;
+}
+.mydisplay img {
+    width: 100%;
+    /*height: 275px;*/ 
+    height: auto;
+}
+.mydisplayInfo p span{
+    margin-left: 5%;
+}
+.mydisplayInfo p{
+    margin: 36px 0px 100px 24px;
+    font-size: 28px;
+    color: #ffebbf;
+}
+.mydisplayInfo>div{
+    width: 88%;
+    height: 40px;
+}
+.mydisplayInfo>div a div{
+    width: 40%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffebbf;
+    border: 1px solid #ffebbf;
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+}
+.mydisplayInfo>div a div:hover{
+    background-color:#dab766;
+    border-style: none;
+}
+.mydisplayInfo>div .allshow div{
+    float: right;
+}
+/*陈列馆的两个按钮*/
+.display-twobtn{
+    width: 20%;
+    height: 40px;
+    margin: 5.7% auto;
+}
+.display-twobtn>div {
+    float: left;
+}
+.display-twobtn>div:nth-child(2) {
+    float: right;
+}
+.display-twobtn img{
+    width: 11px;
+}
+.display-twobtn-left,.display-twobtn-right{
+    width: 30%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #786034;
+    cursor: pointer;
+}
+.display-twobtn-left:hover,.display-twobtn-right:hover{
+    background-color: #dab765;
+    color: white;
+}
+
+/*特展厅*/
+.showroom{
+    border-top: 1px solid #3d2b15;
+    position:relative;
+}
+#showroom a, #output a{
+    color: #dab765;
+}
+.showroom-img img{
+   width:100%;
+}
+.showroom > div > div {
+    border-bottom: 1px solid #3d2b15;
+    padding: 40px 0;
+}
+.showroom .pageToolbar{
+    border-bottom: none;
+}
+.showroom-info>h3{
+    font-size: 22px;
+}
+.showroom-time{
+    margin-top: 2%;
+    font-size: 16px;
+}
+.showroom-p{
+    margin: 5% 0 20px 0;
+    line-height: 28px;
+    /*限制行数*/
+    position: relative;
+    line-height: 28px;
+    max-height: 56px;
+    overflow: hidden;
+}
+
+.showroom-info{
+    padding-left: 3%;
+}
+    .showroom-info:hover p, .showroom-info:hover h3, .showroom-info:hover a{
+        color: #fae1ac !important;
+    }
+/*查看详情*/
+.showroom-btn{
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    width: 12%;
+    height: 30px;
+    border: 1px solid #DAB765;
+    font-size: 14px;
+    color: #DAB765;
+}
+.showroom-info .showroom-btn a{
+    color: #DAB765;
+}
+.showroom-btn:hover{
+	 color: #170801;
+    background-color: #dab765;
+}
+/*文化景观*/
+.culture{
+    width: 100%;
+    border-top: 1px solid #3d2b15;
+    padding-bottom: 3%;
+}
+.culture>div:nth-child(1){
+    margin: 80px 0;
+}
+.nav-culture>ul{
+    text-align: right;
+}
+.nav-culture ul li {
+    cursor: pointer;
+    padding: 16px 2%;
+    font-size: 16px;
+    display: inline-block;
+}
+.nav-culture ul li:hover{
+    border-bottom: 2px solid #DAB766;
+}
+.nav-cultureLi{
+    border-bottom: 2px solid #DAB766;
+}
+.title-culture{
+    color: #DAB766;
+    font-size: 30px;
+}
+.culture-left-text{
+    line-height: 28px;
+    margin-top: 0px;
+    width: 80%;
+}
+/*.culture-left-text p{
+    text-indent: 5%;
+}*/
+.part-text{
+    /*限制行数*/
+    position: relative;
+    line-height: 28px;
+    max-height: 196px;
+    overflow: hidden;
+}
+
+.part-all{
+    margin-bottom: 40px;
+}
+#part_div1, #part_div2, #part_div3, #part_div4 {
+    display: none;
+}
+.culture-textP{
+    display: none;
+}
+
+
+.culture-right-img img {
+    position: relative;
+    width: 100%;
+}
+.positiondiv{
+    width: 215px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #DAB765;
+    color: #000000;
+    position: absolute;
+    top:-6%;
+    left: -66px;
+}
+.pageToolbar {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#pageToolbar1 > div {
+    border: 0
+}
+#pageToolbar2 > div {
+    border: 0
+}
+.line {
+margin-top:50px;
+}
+/*媒体查询*/
+
+@media only screen and (max-width: 768px) {
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    /*副导航*/
+    .cont-nav ul {
+        width: 80% !important;
+    }
+    .relic-cont-infoimg img{
+        width:60% !important;
+        margin-bottom: 5%;
+    }
+    .relic-cont-img img{
+        width: 80%;
+        margin: auto;
+    }
+    /*陈列馆*/
+    /*.mydisplayInfo p{
+        font-size: 22px;
+    }*/
+    /*特展厅*/
+    .showroom-info h3, .showroom-time{
+        text-align: center !important;
+        margin-top: 2% !important;
+    }
+    .showroom-p{
+        width: 80%;
+    }
+    .showroom-btn{
+        width:100px !important;
+    }
+    .showroom-img img, .showroom-btn, .showroom-p{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .nav-culture>ul {
+        margin-top: 3%;
+        text-align: center !important;
+    }
+    .culture-left-text{
+        margin-top: 0 !important;
+    }
+    .culture-right-img img{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .culture-right{
+        margin-bottom: 5% !important;
+    }
+    .positiondiv{
+        display: none;
+    }
+    .showroom-img img{
+        width: 50% !important;
+    }
+    /*.showroom-btn {
+        float: inherit !important;
+    }*/
+}
+/*媒体查询*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+    /* 兼容iphone5 */
+    .culture-right-img img{
+        width: 500px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    /*.cont-nav ul {
+        width: 70% !important;
+    }*/
+    /*遗迹馆*/
+    .relic-cont-btn{
+        margin-top: 8% !important;
+        margin-bottom: 8% !important;
+    }
+    .relic-cont-infoimg img{
+        width:60% !important;
+        margin-bottom: 5%;
+    }
+    .relic-cont-img img{
+        width: 80%;
+        margin: auto;
+    }
+    /*特展厅*/
+    .showroom-info h3, .showroom-time{
+        text-align: center !important;
+        margin-top: 2% !important;
+    }
+    .showroom-p{
+        width: 80%;
+    }
+    .showroom-btn{
+        width:20% !important;
+    }
+    .showroom-img img, .showroom-btn, .showroom-p{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .nav-culture>ul {
+        margin-top: 3%;
+        text-align: center !important;
+    }
+    .culture-left-text{
+        margin-top: 0 ;
+        display: block ;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+    .culture-left-btn{
+        float: right;
+    }
+    .culture-right-img img{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .culture-right{
+        margin-bottom: 5% !important;
+    }
+    .positiondiv{
+        display: none;
+    }
+    .showroom-img img{
+        width: 50% !important;
+    }
+    .showroom-btn {
+        float: inherit !important;
+    }
+    /*陈列馆*/
+    .mydisplayInfo p{
+        font-size: 22px;
+    }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .relic-cont-img {
+        height: 349px;
+        overflow: hidden;
+    }
+    .showroom-p {
+        margin: 5% 0 16px 0 !important;
+    }
+    .showroom-info h3{
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+    .relic-cont-btn {
+        width: 110px;
+        height: 30px;
+        color: #DAB766;
+        line-height: 30px;
+        border-radius:2px;
+        margin-top: 22px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #DAB766;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .showroom-p {
+        margin: 5% 0 10px 0 !important;
+    }
+    .showroom-info h3{
+        font-size: 18px !important;
+        font-weight: bold;
+    }
+    .relic-cont-btn {
+        width: 110px;
+        height: 30px;
+        color: #DAB766;
+        line-height: 30px;
+        border-radius: 2px;
+        margin-top: 40px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #DAB766;
+        margin-bottom: 56px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .content{
+        margin: auto;
+        width: 74% !important;
+    }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1487px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 300px;
+        overflow: hidden;
+    }
+    .showroom-p {
+        margin: 5% 0 8px 0 !important;
+    }
+    .showroom-info h3{
+        font-size: 17px !important;
+        font-weight: bold;
+    }
+    .relic-cont-btn {
+        width: 110px;
+        height: 30px;
+        color: #DAB766;
+        line-height: 30px;
+        border-radius: 2px;
+        margin-top: 40px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #DAB766;
+        margin-bottom: 33px;
+    }
+}
+@media only screen and (min-width: 1487px) and (max-width: 1560px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 280px;
+        overflow: hidden;
+    }
+    .showroom-p {
+        margin: 5% 0 8px 0 !important;
+    }
+    .showroom-info h3{
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+    .relic-cont-btn {
+        width: 110px;
+        height: 30px;
+        color: #DAB766;
+        line-height: 30px;
+        border-radius: 2px;
+        margin-top: 53px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #DAB766;
+        margin-bottom: 33px;
+    }
+}
+@media only screen and (min-width: 1560px) and (max-width: 1670px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 280px;
+        overflow: hidden;
+    }
+    .showroom-p {
+        margin: 5% 0 8px 0 !important;
+    }
+    .showroom-info h3{
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+    .relic-cont-btn {
+        width: 110px;
+        height: 30px;
+        color: #DAB766;
+        line-height: 30px;
+        border-radius: 2px;
+        margin-top: 49px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #DAB766;
+        margin-bottom: 53px;
+    }
+}
+@media only screen and (min-width: 1670px) and (max-width: 1770px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 260px;
+        overflow: hidden;
+    }
+    .showroom-p {
+        margin: 5% 0 10px 0 !important;
+    }
+    .relic-cont-btn {
+        width: 110px;
+        height: 30px;
+        color: #DAB766;
+        line-height: 30px;
+        border-radius: 2px;
+        margin-top: 60px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #DAB766;
+        margin-bottom: 62px;
+    }
+}
+
+@media only screen and (min-width: 1770px) and (max-width: 1880px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 244px;
+        overflow: hidden;
+    }
+    .showroom-p {
+        margin: 5% 0 15px 0 !important;
+    }
+    .relic-cont-btn {
+        width: 110px;
+        height: 30px;
+        color: #DAB766;
+        line-height: 30px;
+        border-radius: 2px;
+        margin-top: 68px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #DAB766;
+        margin-bottom: 76px;
+    }
+}
+.relic-cont-img img{
+    height: auto;
+    width:100%;
+}
+@media only screen and (min-width: 1880px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 244px;
+        overflow: hidden;
+    }
+    }
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 284px;
+        overflow: hidden;
+    }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .relic-cont-infotext > div {
+        min-height: 180px;
+        max-height: 322px;
+        overflow: hidden;
+    }
+}
+    @media only screen and (min-width:1400px) {
+        .relic-cont-info {
+            position: relative;
+            height: 490px;
+        }
+
+
+        .relic .col-lg-6 {
+            position: absolute !important;
+        }
+
+        .img11 {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .img22 {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+
+
+        .relic-cont-img img {
+            height: auto;
+        }
+    }
+
+    @media only screen and (min-width:992px) {
+        .relic-cont-img {
+            height: 490px;
+            overflow: hidden;
+        }
+
+        .relic-cont-info {
+            height: 490px;
+            position: relative;
+        }
+
+        .img11 {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .img22 {
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+        }
+    }
+
+    .showroom col-lg-9,
+    .showroom col-md-8,
+    .showroom col-sm-12， .showroom col-xs-12 {
+        position: absolute !important;
+    }
+
+    @media only screen and (min-width: 1400px) and (max-width: 1920px) {
+        .showroom-img img {
+            width: 100%;
+        }
+
+        .showroom-one {
+            position: relative !important;
+        }
+
+        .showroom-btn {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .showroom-info {
+            height: 250px;
+        }
+    }
+
+    .boxxx {
+        /*min-height: 993px;*/
+        height: auto;
+    }
+
+    .asdasdasdasdas2 {
+        min-height: 993px;
+        height: auto;
+    }
+
+    .pageToolbar {
+        min-height: 170px;
+        height: auto;
+    }
+
+    @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+        .showroom-img img {
+            height: 211px;
+        }
+
+        .showroom-one {
+            position: relative !important;
+        }
+
+        .showroom-btn {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .showroom-info {
+            height: 211px;
+        }
+    }
+
+    .showroom-img {
+        min-height: 211px;
+        max-height: 250px;
+        overflow: hidden;
+    }
+
+    @media only screen and (min-width: 1400px) and (max-width: 1920px) {
+        .showroom-img {
+            height: 250px;
+        }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        .showroom-img {
+            height: 211px;
+            overflow: hidden;
+        }
+
+            .showroom-img img {
+                width: 100%;
+            }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        .showroom-img {
+            height: 211px;
+        }
+
+            .showroom-img img {
+                height: 211px;
+            }
+
+        .showroom-one {
+            position: relative !important;
+        }
+
+        .showroom-btn {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .showroom-info {
+            height: 211px;
+        }
+    }
+
+    /*修改*/
+    .panoramicTour {
+        text-align: center;
+        line-height: 30px;
+        width: 100px;
+        height: 30px;
+        border: 1px solid #DAB765;
+        font-size: 14px;
+        margin-top: 20px;
+        color: #DAB765;
+    }
+
+        .panoramicTour:hover {
+            color: #170801;
+            background-color: #dab765;
+        }
+
+
+    @media only screen and (min-width:992px) and (max-width: 1400px) {
+        .culture-right {
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .culture-left {
+            height: 450px;
+            position: relative;
+        }
+
+        .panoramicTour {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .culture-left-text {
+            height: 352px;
+            overflow-y: scroll;
+            padding-right: 16px;
+        }
+    }
+@media only screen and (min-width:1400px) {
+    .culture-right {
+        height: 490px;
+        overflow: hidden;
+    }
+    .culture-left {
+        height: 490px;
+        position:relative;
+    }
+    .panoramicTour {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    }
+    .culture-left-text {
+        height:426px;
+        overflow-y: scroll;
+        padding-right: 16px;
+    }
+    }
+
+    @media only screen and (max-width:992px) {
+        .panoramicTour {
+            margin: 20px auto;
+        }
+    }
+
+    /*下拉条的样式*/
+    .culture-left-text::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #170a01;
+    }
+
+    .culture-left-text::-webkit-scrollbar {
+        width: 6px;
+        background-color: #170a01;
+    }
+
+    .culture-left-text::-webkit-scrollbar-thumb {
+        background-color: #3d2c15;
+        border-radius: 4px;
+    }
+
+    /* 滑动条ie */
+    .culture-left-text {
+        scrollbar-face-color: #3d2c15; /*滚动条3D表面（ThreedFace）的颜色*/
+        scrollbar-highlight-color: #3d2c15; /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+        scrollbar-shadow-color: #3d2c15; /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+        scrollbar-3dlight-color: #3d2c15; /*滚动条亮边框颜色*/
+        scrollbar-arrow-color: #dab766; /*滚动条方向箭头的颜色 */
+        scrollbar-track-color: #170a01; /*滚动条的拖动区域(TrackBar)颜色*/
+        scrollbar-darkshadow-color: #170a01; /*滚动条暗边框（ThreedDarkShadow）颜色*/
+    }
+
+    @media only screen and (max-width:768px) {
+        .posiBtnZLGK {
+            position: absolute;
+            margin-right: -50px;
+            top: 150px;
+            right: 50%;
+        }
+
+        .posiBtnZLTJ {
+            position: absolute;
+            top: 100px;
+            margin-right: -50px;
+            right: 50%;
+        }
+
+        .cont-nav {
+            display: none;
+        }
+
+        .relic {
+            width: 100%;
+            border-top: none;
+            margin-bottom: 30px;
+        }
+
+        .ptitle {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .relic-cont-infotext {
+            width: 100%;
+        }
+
+            .relic-cont-infotext > p {
+                /*text-indent: 6%;*/
+                min-height: 180px;
+                max-height: 300px;
+                height: auto;
+                overflow: initial;
+                line-height: 28px;
+            }
+
+        .relic-cont-btn {
+            margin: 20px auto 30px;
+        }
+
+        .relic-cont-img img {
+            width: 100%;
+            margin: auto;
+        }
+
+        .mydisplayInfo p {
+            font-size: 16px;
+            margin: 35px 0px 70px 24px;
+        }
+
+        .mydisplayInfo > div a div {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .display-twobtn {
+            width: 20%;
+            height: 40px;
+            margin: 5.7% auto 50px;
+        }
+
+        .ptitle1 {
+            color: #DAB766;
+            font-size: 24px;
+            margin: 40px 0px 100px 0px;
+        }
+
+        .showroom-img img {
+            width: 100% !important;
+        }
+
+        .showroom h3 {
+            font-size: 20px;
+        }
+
+        .culture-left-text {
+            line-height: 28px;
+            margin-top: 5%;
+            width: 100%;
+        }
+
+        .title-culture {
+            color: #DAB766;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .culture {
+            width: 100%;
+            border-top: 1px solid #3d2b15;
+            padding-bottom: 10%;
+        }
+
+        .showroom-btn {
+            float: inherit !important;
+        }
+    }
+
+    .showroom-info a:link, .showroom-info a:visited, .showroom-info a:hover, .showroom-info a:active {
+        text-decoration: none;
+        color: #dab766;
+    }

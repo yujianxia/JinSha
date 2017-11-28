@@ -1,0 +1,234 @@
+/*面包屑*/
+.breadCrumbs{
+    color:#FFF5DD;
+    font-size: 14px;
+}
+.breadCrumbs>div{
+    height: 100%;
+    margin: auto;
+    padding: 3% 0;
+}
+.breadCrumbs>div span{
+    margin-right: 1%;
+    color: #ECD8B1;
+}
+.toIndex:hover,
+.toShow:hover,
+.gallery:hover{
+    color: #DAB766;
+    cursor: pointer;
+}
+/*面包屑下面的线*/
+.secondNav{
+    background-color:#3d2b15;
+    height: 1px;
+    border:none;
+    margin: 0 0 20px 0;
+}
+
+a:focus, a:visited  {
+  color: #dab766;
+}
+a:hover{
+  color: #fae1ac;
+}
+/*公告*/
+.content-nav-two {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+.content-notice {
+  width: 100%;
+  margin-top: 70px;
+}
+.notice {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #34230f;
+  color: #a99150;
+  line-height: 80px;
+  text-align: center;
+}
+.notice-span{
+  display: block;
+  float: left;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width: 70%;
+
+}
+.time-span{
+  display: block;
+  float: right;
+}
+.notice-cell {
+  width: 100%;
+  display: block;
+}
+.notice span,
+p {
+  /*display: inline-block;*/
+}
+.notice:hover {
+  background-color: #34230f;
+  color: #fefaec;
+}
+.change-page-notice {
+  width: 100%;
+  padding-top: 50px;
+}
+
+
+
+/*页面下面的长线*/
+.line {
+  width: 100%;
+  height: 0px;
+  border-top: 1px solid #dab766;
+}
+/*左上的搜索提示*/
+.resultP1{
+	font-size: 18px;
+	color: #DAB766;
+}
+.resultP2{
+	font-size: 14px;
+	margin-top: 16px;
+	color: #8f763e;
+}
+/*右上的搜索框*/
+.searchInput{
+	float: right;
+	width: 370px;
+	height: 40px;
+	outline: none;
+	border: 1px solid #DAB766;
+	border-radius: 4px;
+	font-size: 16px;
+	color: #DAB766;
+	padding-left: 4px;
+	background-color: #170801;
+}
+#searchBtn{
+	margin-left: 30px;
+	float: right;
+	cursor: pointer;
+	width: 88px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #170801;
+	background-color: #DAB765;
+	border-radius: 4px;
+}
+#searchBtn:hover{
+	color: #170801;
+	background-color: #f1d082;
+}
+
+#downup{
+    visibility:hidden;
+	height: 64px;
+	width: 63px;
+	text-align: center;
+	margin:80px auto 140px;
+}
+.downupImg2{
+	display: none;
+}
+#downup:hover .downupImg2{
+	display: block;
+}
+#downup:hover .downupImg1{
+	display: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 410px) {
+.notice-cell p{
+  float:left;
+  width:70%;
+}
+}
+
+@media screen and (min-width: 410px) and (max-width: 768px) {
+
+  #infor-ul > li {
+    text-align: center;
+    width: 100%;
+  }
+  .container,.container-fluid{
+    padding-left:15px;
+    padding-right:15px;
+  }
+  aside{
+    width:100%;
+  }
+  aside ul{
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #infor-ul > li > a {
+    font-size: 11px;
+  }
+  #infor-ul li {
+    width: 60px;
+    height: 100px;
+  }
+  .notice span, p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #infor-ul li {
+    width: 86px;
+  }
+  #infor-ul > li:nth-child(1) {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1500px) {
+  .container{
+    width:74%;
+  }
+  .showroom-img {
+    width: 325px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .container{
+    width:74%;
+  }
+  .showroom-img {
+    width: 360px;
+    height: 200px;
+  }
+}
+/*修改*/
+@media screen and (max-width:768px) {
+    .searchInput {
+        margin-top:20px;
+        width: 50%;
+    }
+    #searchBtn {
+        margin: 20px 15px 0px 10px;
+    }
+    .notice, .result, .breadCrumbs {
+        padding: 0px 15px;
+    }
+    .content-notice {
+        margin-top: 0px;
+    }
+    .breadCrumbs {
+        display:none;
+    }
+}
+

@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+}
+
+
+
+
+/* 内容 */
+.empty{
+    height: 188px;
+}
+
+.content{
+    height: 1151px;
+    width: 100%;
+    background: url(../img/vip_login/tree.png) no-repeat center;
+    min-width: 1280px;
+}
+
+.form{
+    width: 1200px;
+    margin: auto;
+}
+
+.label{
+    margin-left: 60px;
+    margin-top: -80px;
+    width: 1140px;
+    height: 211px;
+    position: relative;
+}
+.inner{
+	 width: 1140px;
+    height: 211px;
+    position: absolute;
+    z-index: 99;
+}
+.input{
+    width: 873px;
+    height: 632px;
+    background: url(../img/vip_login/content.png) no-repeat center;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+
+.input form{
+    width: 320px;
+    margin: 160px auto 0;
+    text-align: center;
+}
+
+.input #registrationbtn{
+    border:none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.userTop{
+    margin-top: 10px;
+}
+
+.userFirst{
+    margin-top: 16px;
+}
+
+.input form div:nth-child(3) a{
+    font-size: 14px;
+    color: #c2433e;
+    font-weight: 900;
+}
+
+.user span{
+    color: #fcfade;
+    font-size: 16px;
+    vertical-align: text-bottom;
+}
+.user span em{
+	font-size: 12px;
+}
+form input {
+    height: 40px;
+    width: 195px;
+    line-height: 40px;
+    font-size: 17px;
+    padding-left: 10px;
+    outline: none;
+    background: #fcfade;
+    border: none;
+    float: left;
+    vertical-align: bottom;
+    /*outline: 1px solid gold;*/
+}
+
+.user{
+    font-size: 0;
+    border: 1px solid #c2433e; 
+    height: 40px;
+    text-align: left;
+    position: relative;
+    background: #fcfade;
+}
+  
+.user p{
+    display: inline-block;
+    font-size: 0;
+    width: 95px;    
+    height: 40px;
+    line-height: 40px;
+    background-color: #c2433e;
+    padding-left: 15px;
+    vertical-align: top;
+    float: left;
+}
+
+.optional{
+    font-size: 11px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.leaf{
+    background: url(../img/common/leaf2.gif) no-repeat center;
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    z-index: 4;
+    top: 110px;
+    min-width: 1280px;
+    left:0;
+}
+
+#forget {
+    margin-top: 16px;
+    text-align: right;
+}
+#forget a {
+    font-size: 14px;
+    color: #c2433e;
+    font-weight: 900;
+}
+.form i{
+	display: none;
+	height: 42px;
+	line-height: 42px;
+	position: absolute;
+	font-size: 14px;
+	top: 0;
+	left: 330px;
+	color: #c2433e;
+	width: 200px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+　　color:#999;
+font-size: 14px;
+　　}
+　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+　　color:#999;
+font-size: 14px;
+　　}
+　　::-moz-placeholder { /* Mozilla Firefox 19+ */
+　　color:#999;
+font-size: 14px;
+　　}
+　　:-ms-input-placeholder { /* Internet Explorer 10+ */
+　　color:#999;
+font-size: 14px;
+　　}
+

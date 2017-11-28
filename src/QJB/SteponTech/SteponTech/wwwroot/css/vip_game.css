@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "黑体 Regular";
+}
+
+body {
+    font-size: 0;
+}
+
+
+/* 内容 */
+
+.content {
+    height: 1179px;
+    width: 100%;
+    background-image: url("../img/vip_game/back.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+}
+
+.form {
+    width: 1200px;
+    margin: auto;
+}
+
+.label {
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.choose {
+    width: 225px;
+    height: 620px;
+    margin-top: -20px;
+    background-image: url("../img/vip_game/pillars.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    float:left;
+}
+
+.rule {
+    font-size: 0;
+    margin-top: 50px;
+    position: relative;
+}
+
+.rule>div {
+    float:left;
+}
+
+.gameBg {
+    position: absolute;
+    top: -20px;
+    left: 216px;
+    width: 1033px;
+    height: 598px;
+    background-image: url("../img/vip_game/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sectionBg {
+    margin: auto;
+    width: 900px;
+    height: 480px;
+    overflow: hidden;
+    /*outline: 1px solid red;*/
+    margin-top: 50px;
+}
+
+.chooseA_1 {
+    margin-left: 40px;
+    margin-top: 65px;
+}
+
+.chooseA_2 {
+    margin-top: 25px;
+    margin-left: 60px;
+}
+
+.chooseA_3 {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.chooseA_4 {
+    margin-left: 20px;
+}
+
+.chooseA_4 img {
+    width: 100%;
+}
+
+.chooseA_5 {
+    margin-left: 10px;
+}
+
+.picScroll-left {
+    width: 700px;
+    position: relative;
+    margin: 85px auto 0;
+}
+
+.picScroll-left .hd .prev,
+.picScroll-left .hd .next {
+    display: block;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 120px;
+    line-height: 120px;
+}
+
+.picScroll-left .hd .prev {
+    width: 81px;
+    height: 119px;
+    display: block;
+    left: -86px;
+    top: 140px;
+}
+
+.picScroll-left .hd .next {
+    width: 81px;
+    height: 119px;
+    display: block;
+    right: -86px;
+    top: 140px;
+}
+
+.picScroll-left .hd .prevStop {
+    background-position: -60px 0;
+}
+
+.picScroll-left .hd .nextStop {
+    background-position: -60px -50px;
+}
+
+.picScroll-left .hd ul {
+    float: right;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 10px;
+    zoom: 1;
+}
+
+.picScroll-left .hd ul li {
+    float: left;
+    width: 9px;
+    height: 9px;
+    overflow: hidden;
+    margin-right: 5px;
+    text-indent: -999px;
+    cursor: pointer;
+}
+
+.picScroll-left .hd ul li.on {
+    background-position: 0 0;
+}
+
+.picScroll-left .bd {
+    padding: 10px;
+}
+
+.picScroll-left .bd ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.picScroll-left .bd ul li {
+    margin: 0 20px;
+    float: left;
+    _display: inline;
+    overflow: hidden;
+    text-align: center;
+}
+
+.picScroll-left .bd ul li .pic {
+    text-align: center;
+}
+
+.picScroll-left .bd ul li .pic img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    padding: 2px;
+    border-radius: 40px;
+}
+
+.picScroll-left .bd ul li .pic a:hover img {
+    border-color: #999;
+}
+
+.picScroll-left .bd ul li .title {
+    line-height: 24px;
+}
+
+.picScroll-left .bd ul li .title a {
+    font-family:"微软雅黑";
+    color: #46aaec!important;
+    margin-top: 20px;
+    width: 174px;
+    height: 53px;
+    line-height: 53px!important;
+    overflow: hidden;
+    background: url(../img/vip_game/btn-title.png) no-repeat center;
+    color: #000;
+    line-height: 24px;
+    font-size: 26px;
+    text-align: center;
+}

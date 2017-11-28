@@ -1,0 +1,253 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金沙遗址博物馆青教版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/img/common/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="~/css/treasureChest_resource.css">
+    <link rel="stylesheet" type="text/css" href="~/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/common/common.css">
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <div class="versions">
+                <a href="">
+                    <img src="/img/common/Chinese.png" alt="">
+                </a>
+                <div>
+                    <a href="">
+                        <img src="/img/common/English.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="/img/common/xueshu.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="/Strategy/Intro" class="a1"></a>
+                <a href="/PlayJinSha/YoungExperience" class="a2"></a>
+                <a href="/News/NewsList" class="a4"></a>
+                <a href="/JinShaChest/Index" class="a3"></a>
+                <img src="/img/common/logo.gif" id="icon-logo" alt="logo" />
+            </div>
+            <div class="login">
+                <div class="loginoptrator">
+                    <a href="/Member/Login" class="signUp">
+                        <img src="/img/common/signUp.png" alt="">
+                    </a>
+                    <a href="/Member/VIPInstructions" class="signIn">
+                        <img src="/img/common/signIn.png" alt="">
+                    </a>
+                </div>
+                <div class="infoOptrator">
+                    <a class="users">
+                        <img src="/img/common/users.png" alt="">
+                    </a>
+                    <a href="/VIP/MyInformation" class="myInfo">
+                        <img src="/img/common/myInfo.png" alt="">
+                    </a>
+                    <a class="loginOut">
+                        <img src="/img/common/loginOut.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a class="greenTeaching"></a>
+    </div>
+    <div style="height: 105px;"></div>
+    <div class="content">
+        <div class="glass">
+        </div>
+        <div class="content-box">
+            <div class="crumbs">
+                <img src="/img/treasureChest_resource/present.png" alt="当前位置">
+                <a href="/Home/Index"><img src="/img/treasureChest_resource/home.png" alt="首页"></a>
+                <a href="/JinShaChest"><img src="/img/treasureChest_resource/baibao.png" alt="金沙百宝箱"></a>
+                <img src="/img/treasureChest_resource/ziyuanred.png" alt="金沙学习资源">
+            </div>
+            <div id="content-conter" class="content-conter">
+            </div>
+            <div class="pageToolbar"></div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="mark"></div>
+        @if (ViewBag.Footer != null)
+        {
+            <ul class="foot">
+                <li>
+                    <p>电话：@ViewBag.Footer.Phone</p>
+                    <p class="footText">地址：@ViewBag.Footer.Address</p>
+                    <div class="code wechatcode">
+                        <img src="@ViewBag.Footer.WeChart" alt="" class="footText">
+                        <p class="footWeixin">
+                            <img src="/img/common/weixin_2.png" alt="">
+                            <span>关注官方微信</span>
+                        </p>
+                    </div>
+                    <div class="code weibocode">
+                        <img src="@ViewBag.Footer.WeChart" alt="" class="footText">
+                        <p class="footWeixin">
+                            <img src="/img/common/weibo-icon.png" alt="">
+                            <span>关注官方微博</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="foot-li2">
+                    <a href="http://map.baidu.com/?newmap=1&s=inf%26uid%3Ded4f5b58efb42cd248cc4af2%26wd%3D%E9%87%91%E6%B2%99%E9%81%97%E5%9D%80+%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%26all%3D1%26c%3D75&from=alamap&tpl=map_singlepoint" target="_blank">
+                        动态地图导航
+                        <img src="/img/common/position.png" alt="">
+                    </a>
+                    <p class="group">社教QQ1群号:@ViewBag.Footer.QQGroup</p>
+                    <p class="group2">社教QQ2群号:@ViewBag.Footer.QQGroup2</p>
+                </li>
+                <li>
+                    <p>游览帮助</p>
+                    @if (ViewBag.Infomations?.Count > 0)
+                    {
+                        <div class="group">
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[0].Id">@ViewBag.Infomations[0].Title</a>
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[1].Id">@ViewBag.Infomations[1].Title</a>
+                        </div>
+                        <div class="service">
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[2].Id">@ViewBag.Infomations[2].Title</a>
+                            <a href="/Strategy/ValuableBook#@ViewBag.Infomations[3].Id">@ViewBag.Infomations[3].Title</a>
+                        </div>
+                    }
+                    <p class="number"><span>金沙遗址博物馆版权所有</span><span>@ViewBag.Footer.RegisterNo</span></p>
+                </li>
+            </ul>
+        }
+    </div>
+    <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/css/common/common.js"></script>
+    <script src="/js/paging.js"></script>
+    <script>
+        $(function () {
+            var parameter = {
+                Index: 0,
+                Size: 6,
+                Name: '"InformationYoungView"',
+                OrderBy: '"LastUpdate" desc',
+                Condition: {
+                    Collection: [
+                        { F: '"ColumName"', O: "=", P: "@@ColumName", V: "金沙教学资源" }
+                    ]
+                }
+            };
+            $.ajax({
+                url: '/api/DataSearch',
+                type: 'Post',
+                dataType: "text",
+                contentType: "application/json",
+                data: JSON.stringify(parameter),
+                success: function (data) {
+                    var aaaa = "";
+                    var data = JSON.parse(data);
+                    $.each(data.data, function (i, item) {
+                        if (item.FileName == "")
+                        { 
+                            aaaa += "<div class='resource-box'>" +
+                                "<div class='resource-box-top'>" +
+                                "<img src='/upload/Information/" + item.Id + "/" + item.Photo + "' alt=''>" +
+                                "</div>" +
+                                "<div class='resource-box-down'>" +
+                                "<p>" + tt(item.FileName) + "文件</p>" +
+                                "<p>" + item.Title + "</p>" +
+                                "</div>" +
+                                "</div>"
+                        }
+                        else
+                        {
+
+                            aaaa += "<div class='resource-box'>" +
+                                "<div class='resource-box-top'>" +
+                                "<img src='/upload/Information/" + item.Id + "/" + item.Photo + "' alt=''>" +
+                                "</div>" +
+                                "<div class='resource-box-down'>" +
+                                "<p>" + tt(item.FileName) + "文件</p>" +
+                                "<p>" + item.Title + "</p>" +
+                                "<a href='/upload/Information/" + item.Id + "/" + item.FileName + "'><img src='/img/treasureChest_resource/download.png' alt=''></a>" +
+                                "</div>" +
+                                "</div>"
+
+                        }
+                    });
+
+                    $("#content-conter")[0].innerHTML = aaaa;
+                    $('.pageToolbar').Paging({
+                        pagesize: 6, count: data.total, toolbar: true, callback: function (page, size, count) {
+                            var parameter = {
+                                Index: page - 1,
+                                Size: 6,
+                                Name: '"InformationYoungView"',
+                                OrderBy: '"LastUpdate" desc',
+                                Condition: {
+                                    Collection: [
+                                        { F: '"ColumName"', O: "=", P: "@@ColumName", V: "金沙教学资源" }
+                                    ]
+                                }
+                            };
+                            $.ajax({
+                                url: '/api/DataSearch',
+                                type: 'Post',
+                                dataType: "text",
+                                contentType: "application/json",
+                                data: JSON.stringify(parameter),
+                                success: function (data) {
+                                    var aaaa = "";
+                                    var data = JSON.parse(data);
+                                    $.each(data.data, function (i, item) {
+                                        if (item.FileName == "") {
+                                            aaaa += "<div class='resource-box'>" +
+                                                "<div class='resource-box-top'>" +
+                                                "<img src='/upload/Information/" + item.Id + "/" + item.Photo + "' alt=''>" +
+                                                "</div>" +
+                                                "<div class='resource-box-down'>" +
+                                                "<p>" + tt(item.FileName) + "文件</p>" +
+                                                "<p>" + item.Title + "</p>" +
+                                                "</div>" +
+                                                "</div>"
+                                        }
+                                        else {
+
+                                            aaaa += "<div class='resource-box'>" +
+                                                "<div class='resource-box-top'>" +
+                                                "<img src='/upload/Information/" + item.Id + "/" + item.Photo + "' alt=''>" +
+                                                "</div>" +
+                                                "<div class='resource-box-down'>" +
+                                                "<p>" + tt(item.FileName) + "文件</p>" +
+                                                "<p>" + item.Title + "</p>" +
+                                                "<a href='/upload/Information/" + item.Id + "/" + item.FileName + "'><img src='/img/treasureChest_resource/download.png' alt=''></a>" +
+                                                "</div>" +
+                                                "</div>"
+
+                                        }
+                                    });
+                                    $("#content-conter")[0].innerHTML = aaaa;
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        });
+
+        function tt(aa) {
+            var file = aa;
+            var filename = file.replace(/.*(\/|\\)/, "");
+            var fileExt = (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename.toLowerCase()) : '';
+            return fileExt;
+        }
+    </script>
+
+</body>
+</html>

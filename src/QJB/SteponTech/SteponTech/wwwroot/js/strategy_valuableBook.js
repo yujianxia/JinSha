@@ -1,0 +1,9 @@
+(function($){
+    //显示弹窗
+    $(".right-1").on("click",function(){
+        $(".alert").show();
+    })
+    $(".alert").on("click",function(){
+        $(".alert").hide();
+    })
+})(jQuery)
